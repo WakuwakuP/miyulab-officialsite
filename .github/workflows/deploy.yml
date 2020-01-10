@@ -1,3 +1,5 @@
+name: Deploy
+
 on:
   push:
     branches:
@@ -27,7 +29,7 @@ jobs:
   
   lint:
     name: Lint
-    need: build
+    needs: build
     run-on: ubuntu-latest
     steps:
       - name: Checkout Repo
