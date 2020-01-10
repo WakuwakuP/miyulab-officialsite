@@ -9,7 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@2
+        uses: actions/checkout@master
+      - name: Use Node.js 10
+        uses: actions/setup-node@master
+        with:
+          node-version: 10.x
+          registry-url: 'https://registry.npmjs.org'
       - name: Install Dependencies
         run: npm install
       - name: Build
