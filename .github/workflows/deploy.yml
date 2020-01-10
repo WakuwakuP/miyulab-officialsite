@@ -6,49 +6,8 @@ on:
       - master
 
 jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Use Node.js 10
-        uses: actions/setup-node@master
-        with:
-          node-version: 10.x
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install Dependencies
-        run: npm install
-      - name: Build
-        run: npm run preserve
-      - name: Archive Production Artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: dist
-          path: dist
-  
-  lint:
-    name: Lint
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-      - name: Use Node.js 10
-        uses: actions/setup-node@master
-        with:
-          node-version: 10.x
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install Dependencies
-        run: npm install
-      - name: lint app
-        run: npm run lint-app
-      - name: lint functions
-        run: npm run lint-functions
-
   deploy:
     name: Deploy
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -57,4 +16,3 @@ jobs:
         run: npm install
       - name: GitHub Action for Firebase
         uses: w9jds/firebase-action@v1.1.0
-
