@@ -1,21 +1,13 @@
 import { NextPage } from 'next';
-import Link from 'next/link';
 
-interface Props {
-  pathname: string;
-}
-
-const Footer: NextPage<Props> = (props) => (
+const Footer: NextPage = () => (
   <footer>
-    <Link href='/'>
-      <a className={props.pathname === '/' ? 'is-active' : ''}>Home</a>
-    </Link>
-    <Link href='/profile'>
-      <a className={props.pathname === '/profile' ? 'is-active' : ''}>Profile</a>
-    </Link>
-    <Link href='/about'>
-      <a className={props.pathname === '/about' ? 'is-active' : ''}>About</a>
-    </Link>
+    なにかが入る
+    <style jsx>{`
+      .footer {
+        background-color: #
+      }
+    `}</style>
   </footer>
 );
 

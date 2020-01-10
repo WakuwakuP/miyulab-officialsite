@@ -1,20 +1,10 @@
 import { NextPage } from 'next';
 import Link from 'next/link';
 
-interface Props {
-  pathname: string;
-}
-
-const Header: NextPage<Props> = (props) => (
+const Header: NextPage = () => (
   <header>
     <Link href='/'>
-      <a className={props.pathname === '/' ? 'is-active' : ''}>Home</a>
-    </Link>
-    <Link href='/profile'>
-      <a className={props.pathname === '/profile' ? 'is-active' : ''}>Profile</a>
-    </Link>
-    <Link href='/about'>
-      <a className={props.pathname === '/about' ? 'is-active' : ''}>About</a>
+      <h1>みゆ開発室</h1>
     </Link>
   </header>
 );
