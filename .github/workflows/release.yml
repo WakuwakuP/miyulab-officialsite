@@ -43,7 +43,7 @@ jobs:
 
   deploy:
     name: Deploy
-    needs: build
+    needs: lint
     runs-on: ubuntu-latest
     steps:
     - name: checkout
