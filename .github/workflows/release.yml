@@ -1,5 +1,3 @@
-name: Automatic release
-
 on:
   push:
     branches:
@@ -28,9 +26,9 @@ jobs:
     run-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@2
+        uses: actions/checkout@master
       - name: Use Node.js 10
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@master
         with:
           node-version: 10.x
           registry-url: 'https://registry.npmjs.org'
@@ -46,10 +44,10 @@ jobs:
     needs: lint
     runs-on: ubuntu-latest
     steps:
-    - name: checkout
-      uses: actions/checkout@v2
-    - name: npm install
-      run: npm install
-    - name: GitHub Action for Firebase
-      uses: w9jds/firebase-action@v1.1.0
+      - name: checkout
+        uses: actions/checkout@master  
+      - name: npm install
+        run: npm install
+      - name: GitHub Action for Firebase
+        uses: w9jds/firebase-action@v1.1.0
 
