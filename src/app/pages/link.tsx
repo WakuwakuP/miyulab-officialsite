@@ -6,14 +6,14 @@ interface Props {
   pathname: string;
 }
 
-const About: NextPage<Props> = ({ pathname }) => (
+const Link: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
     <p>About Page</p>
   </App>
 );
 
-About.getInitialProps = ({ pathname }) => {
+Link.getInitialProps = ({ pathname }) => {
   return { pathname };
 };
 
-export default About;
+export default Link;

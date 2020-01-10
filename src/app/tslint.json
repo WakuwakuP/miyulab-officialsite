@@ -9,8 +9,20 @@
       "single"
     ],
     "no-submodule-imports": false,
+    "jsx-no-multiline-js": false,
+    "jsx-boolean-value": false,
     "interface-name": [
       false
     ]
-  }
+  },
+  "plugins": [
+    [
+      "styled-jsx/babel",
+      {
+        "plugins": [
+          "styled-jsx-plugin-stylelint"
+        ]
+      }
+    ]
+  ]
 }

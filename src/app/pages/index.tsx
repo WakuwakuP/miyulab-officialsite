@@ -8,7 +8,7 @@ interface Props {
 
 const Index: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
-    <p>ホームページ</p>
+    <img src='/img/miyu.png' alt='みゆ立ち絵' />
   </App>
 );
 

@@ -1,7 +1,10 @@
 import { NextPage } from 'next';
+import React from 'react';
 
 import Footer from './Footer';
 import Header from './Header';
+import Main from './Main';
+import Nav from './Nav';
 
 interface Props {
   children: React.ReactNode;
@@ -10,11 +13,12 @@ interface Props {
 
 const App: NextPage<Props> = (props) => (
   <div>
-    <Header pathname={props.pathname} />
-    <main>
+    <Header />
+    <Main pathname={props.pathname}>
+      <Nav pathname={props.pathname} />
       {props.children}
-    </main>
-    <Footer pathname={props.pathname} />
+    </Main>
+    <Footer />
   </div>
 );
 
