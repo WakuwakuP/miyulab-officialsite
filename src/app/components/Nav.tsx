@@ -41,6 +41,9 @@ const Nav: NextPage<Props> = (props) => (
         background-color: #fa77fa;
         color: #ffffff;
       }
+      .header button:focus {
+        outline: none;
+      }
       @media (min-width: 1024px) {
         .header {
           display: block;
