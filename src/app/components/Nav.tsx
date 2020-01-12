@@ -44,10 +44,10 @@ const Nav: NextPage<Props> = (props) => (
       .header button:focus {
         outline: none;
       }
-      @media (min-width: 1024px) {
+      @media (min-width: 768px) {
         .header {
           display: block;
-          width: 341px;
+          width: 300px;
         }
         .header button {
           text-align: center;
