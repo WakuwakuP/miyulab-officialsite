@@ -1,6 +1,6 @@
+import { PageTransition } from 'next-page-transitions';
 import App from 'next/app';
 import React from 'react';
-import { PageTransition } from 'next-page-transitions';
 
 import Main from '../components/Main';
 
