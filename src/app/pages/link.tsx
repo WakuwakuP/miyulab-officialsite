@@ -12,7 +12,7 @@ const Link: NextPage<Props> = ({ pathname }) => (
   </App>
 );
 
-Link.getInitialProps = ({ pathname }) => {
+Link.getInitialProps = async ({ pathname }) => {
   return { pathname };
 };
 

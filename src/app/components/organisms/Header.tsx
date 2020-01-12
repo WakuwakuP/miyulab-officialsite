@@ -10,6 +10,7 @@ const Header: NextPage = () => (
       .title {
         width:100%;
         margin: 0.5rem 0;
+        color: #fa77fa;
       }
       @media (min-width: 820px) {
         .title {
