@@ -8,7 +8,150 @@ interface Props {
 
 const Profile: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
-    <p>プロフィール</p>
+    <section className='content'>
+      <div className='profile'>
+        <div className='profile-content'>
+          <div className='table'>
+            <table>
+              <tr>
+                <td className='key'>名前</td>
+                <td className='value'>みゆ</td>
+              </tr>
+              <tr>
+                <td className='key'>年齢</td>
+                <td className='value'>16</td>
+              </tr>
+              <tr>
+                <td className='key'>性別</td>
+                <td className='value'>女の子</td>
+              </tr>
+              <tr>
+                <td className='key'>身長</td>
+                <td className='value'>154cm</td>
+              </tr>
+              <tr>
+                <td className='key'>体重</td>
+                <td className='value'>ないしょ!</td>
+              </tr>
+              <tr>
+                <td className='key'>活動内容</td>
+                <td className='value'>ライブコーディング, ゲーム</td>
+              </tr>
+              <tr>
+                <td className='key'>チャンネル</td>
+                <td className='value'>
+                  <a href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' target='_blank'>
+                    みゆ開発室
+              </a>
+                </td>
+              </tr>
+              <tr>
+                <td className='key'>ハッシュタグ</td>
+                <td className='value'>
+                  <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
+                    #みゆ開発室
+              </a>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+          <div className='img-effect' />
+        </div>
+      </div>
+      <div className='img'>
+        <div>
+          <img className='miyu' src='/img/miyu.png' alt='' />
+        </div>
+      </div>
+    </section>
+    <style jsx>{`
+      .content {
+        position: relative;
+        width: 100%;
+        height: 80vh;
+        margin: 0.5rem 0 0;
+      }
+
+      .content .profile {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+      }
+      .profile-content {
+        position: relative;
+        width: calc(100% - 1rem);
+        max-width: 300px;
+        margin: 0 auto 0.5rem;
+        padding: 5px;
+        border: solid 1px #fa77fa;
+        box-sizing: border-box;
+        border-radius: 16px;
+      }
+      .profile-content .table {
+        color: #000000;
+        text-shadow: 0px 0px 4px #ffffff;
+      }
+      .profile-content .img-effect {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 14px;
+        background-color: rgba(256, 256, 256, 0.4);
+        backdrop-filter: blur(5px);
+      }
+
+      .profile .key {
+        width: 6rem;
+        font-size: 0.9rem;
+      }
+      .content .img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -2;
+      }
+      .content .img>div {
+        width: 65%;
+        height: 100%;
+        margin: auto;
+      }
+      .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 0;
+      }
+
+      @media (min-width: 768px) {
+        .content .img>div {
+          width: 100%;
+        }
+        .profile-content {
+          margin: 0 0 0.5rem;
+          max-width: initial;
+          font-size: 1.3rem;
+          width: 400px;
+        }
+        .profile .key {
+          width: 7rem;
+          font-size: 1.1rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .content .img {
+          width: 600px;
+        }
+        .profile-content {
+          margin: 0 0 10vh;
+        }
+      }
+    `}</style>
   </App>
 );
 
