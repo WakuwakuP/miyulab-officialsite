@@ -11,52 +11,54 @@ const Profile: NextPage<Props> = ({ pathname }) => (
     <section className='content'>
       <div className='profile'>
         <div className='profile-content'>
-          <div className='table'>
-            <table>
-              <tr>
-                <td className='key'>名前</td>
-                <td className='value'>みゆ</td>
-              </tr>
-              <tr>
-                <td className='key'>年齢</td>
-                <td className='value'>16</td>
-              </tr>
-              <tr>
-                <td className='key'>性別</td>
-                <td className='value'>女の子</td>
-              </tr>
-              <tr>
-                <td className='key'>身長</td>
-                <td className='value'>154cm</td>
-              </tr>
-              <tr>
-                <td className='key'>体重</td>
-                <td className='value'>ないしょ!</td>
-              </tr>
-              <tr>
-                <td className='key'>活動内容</td>
-                <td className='value'>ライブコーディング, ゲーム</td>
-              </tr>
-              <tr>
-                <td className='key'>チャンネル</td>
-                <td className='value'>
-                  <a href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' target='_blank'>
-                    みゆ開発室
-              </a>
-                </td>
-              </tr>
-              <tr>
-                <td className='key'>ハッシュタグ</td>
-                <td className='value'>
-                  <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
-                    #みゆ開発室
-              </a>
-                </td>
-              </tr>
-            </table>
-
+          <div className='Card'>
+            <div className='table'>
+              <table>
+                <tr>
+                  <td className='key'>名前</td>
+                  <td className='value'>みゆ</td>
+                </tr>
+                <tr>
+                  <td className='key'>年齢</td>
+                  <td className='value'>16</td>
+                </tr>
+                <tr>
+                  <td className='key'>性別</td>
+                  <td className='value'>女の子</td>
+                </tr>
+                <tr>
+                  <td className='key'>身長</td>
+                  <td className='value'>154cm</td>
+                </tr>
+                <tr>
+                  <td className='key'>体重</td>
+                  <td className='value'>ないしょ!</td>
+                </tr>
+                <tr>
+                  <td className='key'>活動内容</td>
+                  <td className='value'>ライブコーディング, ゲーム</td>
+                </tr>
+                <tr>
+                  <td className='key'>チャンネル</td>
+                  <td className='value'>
+                    <a href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' target='_blank'>
+                      みゆ開発室
+                      </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td className='key'>ハッシュタグ</td>
+                  <td className='value'>
+                    <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
+                      #みゆ開発室
+                      </a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div className='img-effect' />
           </div>
-          <div className='img-effect' />
+
         </div>
       </div>
       <div className='img'>
@@ -69,8 +71,9 @@ const Profile: NextPage<Props> = ({ pathname }) => (
       .content {
         position: relative;
         width: 100%;
-        height: 80vh;
-        margin: 0.5rem 0 0;
+        box-sizing: border-box;
+        height: calc(100vh - 3rem);
+        padding: 0.5rem 0 0;
       }
 
       .content .profile {
@@ -84,9 +87,9 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         max-width: 300px;
         margin: 0 auto 0.5rem;
         padding: 5px;
-        border: solid 1px #fa77fa;
         box-sizing: border-box;
         border-radius: 16px;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
       }
       .profile-content .table {
         color: #000000;
@@ -100,7 +103,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         right: 0;
         z-index: -1;
         border-radius: 14px;
-        background-color: rgba(256, 256, 256, 0.4);
+        background-color: rgba(256, 256, 256, 0.5);
         backdrop-filter: blur(5px);
       }
 
@@ -117,7 +120,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         z-index: -2;
       }
       .content .img>div {
-        width: 65%;
+        width: 100%;
         height: 100%;
         margin: auto;
       }
@@ -128,7 +131,20 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         object-position: 50% 0;
       }
 
+      a {
+        transition: transform 100ms ease;
+      }
+
+      a:hover {
+        display: inline-block;
+        transform: rotate(-3deg);
+        transform-origin: 0 50%;
+      }
       @media (min-width: 768px) {
+        .content {
+          margin: 1.5rem 0 0;
+          height: calc(100vh - 1.5rem);
+        }
         .content .img>div {
           width: 100%;
         }
@@ -155,7 +171,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
   </App>
 );
 
-Profile.getInitialProps = ({ pathname }) => {
+Profile.getInitialProps = async ({ pathname }) => {
   return { pathname };
 };
 

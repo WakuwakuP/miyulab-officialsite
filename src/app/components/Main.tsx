@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
 
-import Nav from './Nav';
+import Nav from './organisms/Nav';
 
 interface Props {
   children: React.ReactNode;
@@ -10,13 +10,11 @@ interface Props {
 const App: NextPage<Props> = (props) => (
   <main className='main'>
     <Nav pathname={props.pathname} />
-    <div>
-      {props.children}
-    </div>
+    {props.children}
     <style jsx>{`
       .main {
         width: 100%;
-        margin: auto;
+        margin: 0 auto;
       }
       @media (min-width: 768px) {
         .main {
