@@ -2,6 +2,7 @@ import { PageTransition } from 'next-page-transitions';
 import App from 'next/app';
 import React from 'react';
 
+import Background from '../components/atoms/Background';
 import Main from '../components/Main';
 
 export default class MyApp extends App {
@@ -18,11 +19,13 @@ export default class MyApp extends App {
   public render() {
     const { Component, pageProps, router } = this.props;
     return (
-      <Main pathname={pageProps.pathname}>
-        <PageTransition timeout={300} classNames='page-transition'>
-          <Component {...pageProps} key={router.route} />
-        </PageTransition>
-        <style jsx global>{`
+      <div>
+        <Background />
+        <Main pathname={pageProps.pathname}>
+          <PageTransition timeout={300} classNames='page-transition'>
+            <Component {...pageProps} key={router.route} />
+          </PageTransition>
+          <style jsx global>{`
           .page-transition-enter {
             opacity: 0;
           }
@@ -38,8 +41,8 @@ export default class MyApp extends App {
             transition: opacity 150ms;
           }
         `}</style>
-      </Main>
-
+        </Main>
+      </div>
     );
   }
 }

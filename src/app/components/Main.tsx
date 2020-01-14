@@ -19,7 +19,7 @@ const App: NextPage<Props> = (props) => (
       @media (min-width: 768px) {
         .main {
           display: grid;
-          grid-template-columns: 300px 1fr;
+          grid-template-columns: 200px 1fr;
           width: 100%;
         }
       }
