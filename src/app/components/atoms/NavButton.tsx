@@ -10,6 +10,7 @@ const NavButton: FC<Props> = (props) => (
     <div className='underline' />
     <style jsx>{`
       button {
+        display: block;
         position: relative;
         border: none;
         background-color: #ffffff;
@@ -17,7 +18,8 @@ const NavButton: FC<Props> = (props) => (
         font-size: 1.3rem;
         text-align: center;
         height: 3rem;
-        width: 100%;
+        width: 7rem;
+        margin: auto;
       }
       button:focus {
         outline: none;
@@ -37,12 +39,18 @@ const NavButton: FC<Props> = (props) => (
       }
       button.is-active > .underline {
         width: 7rem;
+        border-left: solid 2px #fa77fa;
+        border-right: solid 2px #fa77fa;
       }
       button:not(.is-active) > .underline {
         width: 0;
       }
       button:hover:not(.is-active) > .underline {
         width: 7rem;
+      }
+      button:active:hover:not(.is-active) > .underline {
+        border-left: solid 2px #fa77fa;
+        border-right: solid 2px #fa77fa;
       }
     `}</style>
   </button>

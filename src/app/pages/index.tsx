@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 import App from '../components/App';
 
@@ -8,12 +9,15 @@ interface Props {
 
 const Index: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
+    <Head>
+      <title>みゆ開発室</title>
+    </Head>
     <div>
       <img src='/img/miyu.png' />
     </div>
     <style jsx>{`
       div {
-        height: 100vh;
+        height: 100%;
       }
       img {
         width: 100%;
@@ -23,7 +27,7 @@ const Index: NextPage<Props> = ({ pathname }) => (
       }
       @media (min-width: 768px) {
         img {
-          height: 100vh;
+          height: 100%;
         }
       }
     `}</style>

@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 
 import App from '../components/App';
 
@@ -8,7 +9,10 @@ interface Props {
 
 const Profile: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
-    <section className='content'>
+    <Head>
+      <title>プロフィール - みゆ開発室</title>
+    </Head>
+    <div className='content'>
       <div className='profile'>
         <div className='profile-content'>
           <div className='Card'>
@@ -66,14 +70,14 @@ const Profile: NextPage<Props> = ({ pathname }) => (
           <img className='miyu' src='/img/miyu.png' alt='' />
         </div>
       </div>
-    </section>
+    </div>
     <style jsx>{`
       .content {
         position: relative;
         width: 100%;
         box-sizing: border-box;
-        height: calc(100vh - 3rem);
-        padding: 0.5rem 0 0;
+        height: 100%;
+        padding: 0;
       }
 
       .content .profile {
@@ -84,11 +88,10 @@ const Profile: NextPage<Props> = ({ pathname }) => (
       .profile-content {
         position: relative;
         width: calc(100% - 1rem);
-        max-width: 300px;
+        max-width: 320px;
         margin: 0 auto 0.5rem;
         padding: 5px;
         box-sizing: border-box;
-        border-radius: 16px;
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.6);
       }
       .profile-content .table {
@@ -102,7 +105,6 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         left: 0;
         right: 0;
         z-index: -1;
-        border-radius: 14px;
         background-color: rgba(256, 256, 256, 0.5);
         backdrop-filter: blur(5px);
       }
@@ -142,8 +144,8 @@ const Profile: NextPage<Props> = ({ pathname }) => (
       }
       @media (min-width: 768px) {
         .content {
-          margin: 1.5rem 0 0;
-          height: calc(100vh - 1.5rem);
+          margin: 0;
+          height: 100%;
         }
         .content .img>div {
           width: 100%;
