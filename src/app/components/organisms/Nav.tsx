@@ -19,8 +19,8 @@ const Nav: NextPage<Props> = (props) => (
       </Link>
     </div>
     <div>
-      <Link href='/link'>
-        <NavButton isActive={props.pathname === '/link'}>Link</NavButton>
+      <Link href='/links'>
+        <NavButton isActive={props.pathname === '/links'}>Link</NavButton>
       </Link>
     </div>
     <style jsx>{`
@@ -31,8 +31,10 @@ const Nav: NextPage<Props> = (props) => (
       @media (min-width: 768px) {
         .header {
           display: block;
-          width: 300px;
           margin-top: 3rem;
+        }
+        .header > div {
+          margin: 0.5rem;
         }
       }
     `}</style>

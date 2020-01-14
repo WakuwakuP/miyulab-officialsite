@@ -10,7 +10,7 @@ interface Props {
 const Profile: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
     <Head>
-      <title>プロフィール - みゆ開発室</title>
+      <title>Profile - みゆ開発室</title>
     </Head>
     <div className='content'>
       <div className='profile'>

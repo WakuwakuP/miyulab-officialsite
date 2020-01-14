@@ -26,7 +26,6 @@ const App: NextPage<Props> = (props) => (
         width: 100%;
         box-sizing: border-box;
         height: calc(100vh - 3rem);
-        padding: 0.5rem 0 0;
       }
       a {
         color: #fa77fa;
@@ -34,8 +33,8 @@ const App: NextPage<Props> = (props) => (
       }
       @media (min-width: 768px) {
         section {
-          margin: 1.5rem 0 0;
-          height: calc(100vh - 1.5rem);
+          margin: 0;
+          height: 100vh;
         }
       }
     `}</style>
