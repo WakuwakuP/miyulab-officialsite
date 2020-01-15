@@ -36,12 +36,12 @@ const NavButton: FC<Props> = (props) => (
         border-top: solid 2px #fa77fa;
         border-bottom: solid 2px #fa77fa;
         transition: width 150ms ease;
-        backdrop-filter: blur(50px);
       }
       button.is-active > .underline {
         width: 100%;
         border-left: solid 2px #fa77fa;
         border-right: solid 2px #fa77fa;
+        backdrop-filter: blur(50px);
       }
       button:not(.is-active) > .underline {
         width: 0;
