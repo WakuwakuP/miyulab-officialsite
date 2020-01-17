@@ -27,9 +27,13 @@ const App: NextPage<Props> = (props) => (
       {props.children}
     </section>
     <style jsx global>{`
+      @font-face {
+        font-family: 'Mamelon';
+        src: url(/font/Mamelon.otf);
+      }
       body {
         margin: 0;
-        font-family: 'Comfortaa', 'Noto Sans JP';
+        font-family: 'Comfortaa', 'Mamelon';
       }
       .wf-comfortaa {
         font-family: 'Comfortaa', cursive;
@@ -41,7 +45,7 @@ const App: NextPage<Props> = (props) => (
         height: calc(100vh - 3rem);
       }
       a {
-        color: #fa77fa;
+        color: #00BCD4;
         text-decoration: none;
       }
       @media (min-width: 768px) {

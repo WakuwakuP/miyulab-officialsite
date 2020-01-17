@@ -14,7 +14,7 @@ const NavButton: FC<Props> = (props) => (
         position: relative;
         border: none;
         background-color: rgba(0, 0, 0, 0);
-        color: #fa77fa;
+        color: #00BCD4;
         font-size: 1.3rem;
         text-align: center;
         height: 3rem;
@@ -34,14 +34,14 @@ const NavButton: FC<Props> = (props) => (
         height: 3rem;
         margin: auto;
         z-index: -1;
-        border-top: solid 2px #fa77fa;
-        border-bottom: solid 2px #fa77fa;
+        border-top: solid 2px #00BCD4;
+        border-bottom: solid 2px #00BCD4;
         transition: width 150ms ease;
       }
       button.is-active > .underline {
         width: 100%;
-        border-left: solid 2px #fa77fa;
-        border-right: solid 2px #fa77fa;
+        border-left: solid 2px #00BCD4;
+        border-right: solid 2px #00BCD4;
         backdrop-filter: blur(50px);
       }
       button:not(.is-active) > .underline {
@@ -51,8 +51,8 @@ const NavButton: FC<Props> = (props) => (
         width: 100%;
       }
       button:active:hover:not(.is-active) > .underline {
-        border-left: solid 2px #fa77fa;
-        border-right: solid 2px #fa77fa;
+        border-left: solid 2px #00BCD4;
+        border-right: solid 2px #00BCD4;
       }
     `}</style>
   </button>
