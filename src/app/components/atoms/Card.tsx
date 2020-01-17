@@ -1,4 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
+import LazyLoad from 'react-lazyload';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   title: string;
@@ -21,7 +22,7 @@ const Card: FC<Props> = (props) => (
         </div>
         {
           props.src !== undefined
-            ? <img src={props.src} alt={props.alt} />
+            ? <LazyLoad><img src={props.src} alt={props.alt} /></LazyLoad>
             : <div className='effect' />
         }
       </div>

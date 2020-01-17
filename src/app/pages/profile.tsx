@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import LazyLoad from 'react-lazyload';
 
 import App from '../components/App';
 
@@ -66,9 +67,9 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         </div>
       </div>
       <div className='img'>
-        <div>
+        <LazyLoad>
           <img className='miyu' src='/img/miyu.png' alt='' />
-        </div>
+        </LazyLoad>
       </div>
     </div>
     <style jsx>{`
