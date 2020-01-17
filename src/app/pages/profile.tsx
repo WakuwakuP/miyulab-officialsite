@@ -129,6 +129,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
       .img img {
         width: 100%;
         height: 100%;
+        box-sizing: border-box;
         object-fit: cover;
         object-position: 50% 0;
       }
@@ -159,6 +160,9 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         .profile .key {
           width: 7rem;
           font-size: 1.1rem;
+        }
+        .img img {
+          padding: 0 1rem 0 3rem;
         }
       }
       @media (min-width: 1024px) {

@@ -39,17 +39,17 @@ class Background extends Component {
                     enable: true,
                     value_area: 800,
                   },
-                  value: 14,
+                  value: 20,
                 },
                 opacity: {
                   anim: {
                     enable: true,
-                    opacity_min: 0,
+                    opacity_min: 0.4,
                     speed: 0.4,
                     sync: false,
                   },
                   random: true,
-                  value: 0.5,
+                  value: 0.4,
                 },
                 shape: {
                   polygon: {
@@ -69,7 +69,7 @@ class Background extends Component {
                     sync: false,
                   },
                   random: true,
-                  value: 150,
+                  value: 100,
                 },
               },
               retina_detect: true,

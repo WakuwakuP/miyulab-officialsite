@@ -12,6 +12,7 @@ const App: NextPage<Props> = (props) => (
     <Head>
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap' rel='stylesheet' />
     </Head>
     <section>
       {props.children}
@@ -19,7 +20,10 @@ const App: NextPage<Props> = (props) => (
     <style jsx global>{`
       body {
         margin: 0;
-        font-family: "Noto Sans JP";
+        font-family: 'Noto Sans JP';
+      }
+      .wf-comfortaa {
+        font-family: 'Comfortaa', cursive;
       }
       section {
         position: relative;

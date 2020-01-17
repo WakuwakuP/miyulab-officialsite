@@ -12,23 +12,45 @@ const Index: NextPage<Props> = ({ pathname }) => (
     <Head>
       <title>みゆ開発室</title>
     </Head>
-    <div>
-      <img src='/img/miyu.png' />
+    <div className='content'>
+      <div className='title'>
+        <h1 className='wf-nicomoji'>みゆ開発室</h1>
+        <span className='wf-comfortaa'>Miyu Dev room</span>
+      </div>
+      <img src='/img/miyu_silhouette.png' />
     </div>
     <style jsx>{`
-      div {
+      div.content {
+        position: relative;
         height: 100%;
       }
-      img {
-        width: 100%;
-        height: calc(100vh - 3rem);
-        object-fit: cover;
-        object-position: 50% 0%;
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right:0;
+        color: #fa30fa;
+        z-index: 1;
+        text-align: center;
+        transform:translateY(-100%);
       }
-      @media (min-width: 768px) {
-        img {
-          height: 100%;
-        }
+      .title > h1 {
+        font-size: 5rem;
+        margin: 0;
+      }
+      .title > span {
+        font-size: 2rem;
+      }
+      img {
+        position: absolute;
+        box-sizing: border-box;
+        padding: 5rem;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: 50% 0%;
+        z-index: -1;
+        mix-blend-mode: color-dodge;
       }
     `}</style>
   </App>
