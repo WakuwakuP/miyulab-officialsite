@@ -29,7 +29,7 @@ const App: NextPage<Props> = (props) => (
     <style jsx global>{`
       body {
         margin: 0;
-        font-family: 'Noto Sans JP';
+        font-family: 'Comfortaa', 'Noto Sans JP';
       }
       .wf-comfortaa {
         font-family: 'Comfortaa', cursive;

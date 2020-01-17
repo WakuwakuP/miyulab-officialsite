@@ -20,6 +20,7 @@ const NavButton: FC<Props> = (props) => (
         height: 3rem;
         width: 100%;
         margin: auto;
+        font-family: 'Comfortaa', cursive;
       }
       button:focus {
         outline: none;
