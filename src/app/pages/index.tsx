@@ -1,5 +1,6 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
+import LazyLoad from 'react-lazyload';
 
 import App from '../components/App';
 
@@ -17,7 +18,9 @@ const Index: NextPage<Props> = ({ pathname }) => (
         <h1 className='wf-nicomoji'>みゆ開発室</h1>
         <span className='wf-comfortaa'>Miyu Dev room</span>
       </div>
-      <img src='/img/miyu_silhouette.png' />
+      <LazyLoad>
+        <img src='/img/miyu_silhouette.png' />
+      </LazyLoad>
     </div>
     <style jsx>{`
       div.content {
@@ -50,7 +53,7 @@ const Index: NextPage<Props> = ({ pathname }) => (
         object-fit: contain;
         object-position: 50% 0%;
         z-index: -1;
-        mix-blend-mode: color-dodge;
+        mix-blend-mode: color-burn;
       }
     `}</style>
   </App>
