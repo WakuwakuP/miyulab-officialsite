@@ -11,7 +11,7 @@ interface Props {
 const Index: NextPage<Props> = ({ pathname }) => (
   <App pathname={pathname}>
     <Head>
-      <title>みゆ開発室</title>
+      <title>みゆ開発室 official</title>
     </Head>
     <div className='content'>
       <div className='title'>

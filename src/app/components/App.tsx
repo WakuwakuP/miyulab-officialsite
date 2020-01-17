@@ -13,6 +13,13 @@ const App: NextPage<Props> = (props) => (
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP' rel='stylesheet' />
       <link href='https://fonts.googleapis.com/css?family=Comfortaa&display=swap' rel='stylesheet' />
+      <meta property='og:title' content='みゆ開発室 official' />
+      <meta property='og:type' content='website' />
+      <meta property='og:url' content='https://miyulab.dev/img/ogp.png' />
+      <meta property='og:image' content='サムネイル画像のURL' />
+      <meta property='og:site_name' content='みゆ開発室 official' />
+      <meta property='og:description' content='バーチャルWebエンジニアみゆ のオフィシャルサイトです。' />
+      <meta name='twitter:card' content='summary_large_image' />
     </Head>
     <section>
       {props.children}
