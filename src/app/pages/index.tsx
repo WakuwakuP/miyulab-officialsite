@@ -15,8 +15,7 @@ const Index: NextPage<Props> = ({ pathname }) => (
     </Head>
     <div className='content'>
       <div className='title'>
-        <h1 className='wf-nicomoji'>みゆ開発室</h1>
-        <span className='wf-comfortaa'>Miyu Dev room</span>
+        <h1 className='wf-comfortaa'>Miyu Dev room</h1>
       </div>
       <LazyLoad>
         <img src='/img/miyu_silhouette.png' />
@@ -32,17 +31,17 @@ const Index: NextPage<Props> = ({ pathname }) => (
         top: 50%;
         left: 0;
         right:0;
-        color: #fa30fa;
+        color: #00ACC1;
         z-index: 1;
         text-align: center;
         transform:translateY(-100%);
       }
       .title > h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 0;
       }
       .title > span {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       img {
         position: absolute;
@@ -53,7 +52,17 @@ const Index: NextPage<Props> = ({ pathname }) => (
         object-fit: contain;
         object-position: 50% 0%;
         z-index: -1;
+        opacity: 0.6;
         mix-blend-mode: color-burn;
+      }
+      @media (min-width: 768px) {
+        .title > h1 {
+          font-size: 6rem;
+          margin: 0;
+        }
+        .title > span {
+          font-size: 2rem;
+        }
       }
     `}</style>
   </App>

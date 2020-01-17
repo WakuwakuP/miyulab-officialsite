@@ -11,7 +11,7 @@ class Background extends Component {
             {
               particles: {
                 color: {
-                  value: '#fa77fa',
+                  value: '#80DEEA',
                 },
                 line_linked: {
                   color: '#ffffff',
@@ -44,12 +44,12 @@ class Background extends Component {
                 opacity: {
                   anim: {
                     enable: true,
-                    opacity_min: 0.4,
-                    speed: 0.4,
+                    opacity_min: 0.1,
+                    speed: 0.1,
                     sync: false,
                   },
                   random: true,
-                  value: 0.4,
+                  value: 0.3,
                 },
                 shape: {
                   polygon: {

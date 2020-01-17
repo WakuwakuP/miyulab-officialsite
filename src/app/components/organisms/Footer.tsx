@@ -7,7 +7,7 @@ const Footer: NextPage = () => (
     </div>
     <style jsx>{`
       .footer {
-        background-color: #fa77fa;
+        background-color: #00B7CE;
         color: #ffffff;
         padding: 1rem 2rem 1.5rem;
       }
