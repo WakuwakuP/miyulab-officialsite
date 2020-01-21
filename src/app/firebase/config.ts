@@ -1,6 +1,3 @@
-// tslint:disable-next-line: no-var-requires
-require('dotenv').config();
-
 export default {
   apiKey: process.env.FIREBASE_APIKEY,
   appId: process.env.FIREBASE_APPID,
