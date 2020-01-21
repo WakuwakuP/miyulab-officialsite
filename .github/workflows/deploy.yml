@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@master  
-      - name: npm rebuild & npm install
-        run: npm install
+      - name: npm install
+        run: npm rebuild & npm install
       - name: set config
         run: |
           touch ./src/app/.env
