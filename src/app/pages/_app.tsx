@@ -16,16 +16,6 @@ interface Props {
 }
 
 class MyApp extends App<Props> {
-  public static async getInitialProps({ Component, ctx }) {
-    let pageProps = {};
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps({ ctx });
-    }
-
-    return { pageProps };
-  }
-
   public render() {
     const { Component, pageProps, router, store } = this.props;
     return (
