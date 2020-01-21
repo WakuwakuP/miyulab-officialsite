@@ -1,0 +1,10 @@
+export default {
+  apiKey: 'FIREBASE_APIKEY',
+  appId: 'FIREBASE_APPID',
+  authDomain: 'FIREBASE_AUTHDOMAIN',
+  databaseURL: 'FIREBASE_DATABASEURL',
+  measurementId: 'FIREBASE_MEASUREMENT_ID',
+  messagingSenderId: 'FIREBASE_MESSAGING_SENDER_ID',
+  projectId: 'FIREBASE_PROJECTID',
+  storageBucket: 'FIREBASE_STORAGEBUCKET',
+}
