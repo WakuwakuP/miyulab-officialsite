@@ -1,27 +1,37 @@
 import { PageTransition } from 'next-page-transitions';
+import withReduxSaga from 'next-redux-saga';
+import withRedux from 'next-redux-wrapper';
 import App from 'next/app';
 import React from 'react';
+import { Provider } from 'react-redux';
+
+import createStore from '../store';
 
 import Background from '../components/atoms/Background';
 import Main from '../components/Main';
 
-export default class MyApp extends App {
+interface Props {
+  Component: React.Component;
+  store: any;
+}
+
+class MyApp extends App<Props> {
   public static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx);
+      pageProps = await Component.getInitialProps({ ctx });
     }
 
     return { pageProps };
   }
 
   public render() {
-    const { Component, pageProps, router } = this.props;
+    const { Component, pageProps, router, store } = this.props;
     return (
-      <div>
+      <Provider store={store}>
         <Background />
-        <Main pathname={pageProps.pathname}>
+        <Main pathname={router.pathname}>
           <PageTransition timeout={300} classNames='page-transition'>
             <Component {...pageProps} key={router.route} />
           </PageTransition>
@@ -42,7 +52,9 @@ export default class MyApp extends App {
           }
         `}</style>
         </Main>
-      </div>
+      </Provider>
     );
   }
 }
+
+export default withRedux(createStore)(withReduxSaga(MyApp));
