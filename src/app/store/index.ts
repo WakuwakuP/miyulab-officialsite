@@ -1,5 +1,4 @@
 import { applyMiddleware, createStore } from 'redux';
-// tslint:disable-next-line: no-implicit-dependencies
 import { composeWithDevTools } from 'redux-devtools-extension';
 import createSagaMiddleware from 'redux-saga';
 

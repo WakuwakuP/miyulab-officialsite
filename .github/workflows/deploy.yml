@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@master  
-      - name: npm install
+      - name: npm rebuild & npm install
         run: npm install
       - name: set config
         run: |
