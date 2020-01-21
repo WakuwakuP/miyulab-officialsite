@@ -1,17 +1,30 @@
 import { NextPage } from 'next';
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+import Actions from '../actions';
 import Nav from './organisms/Nav';
 
 interface Props {
+  actions: any;
+  state: any;
   children: React.ReactNode;
   pathname: string;
 }
 
-const App: NextPage<Props> = (props) => (
-  <main className='main'>
-    <Nav pathname={props.pathname} />
-    {props.children}
-    <style jsx>{`
+const App: NextPage<Props> = (props) => {
+  useEffect(() => {
+    if (props.state.ui.firstView) {
+      props.actions.firstView();
+      props.actions.refLogin();
+    }
+  });
+  return (
+    <main className='main'>
+      <Nav pathname={props.pathname} />
+      {props.children}
+      <style jsx>{`
       .main {
         width: 100%;
         margin: 0 auto;
@@ -30,7 +43,18 @@ const App: NextPage<Props> = (props) => (
         }
       }
     `}</style>
-  </main>
-);
+    </main>
+  );
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return { state };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(Actions, dispatch),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

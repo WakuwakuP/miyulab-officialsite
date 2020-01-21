@@ -1,11 +1,11 @@
 import { ButtonHTMLAttributes, FC } from 'react';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  isActive: boolean;
+  active: boolean;
 }
 
 const NavButton: FC<Props> = (props) => (
-  <button  {...props} className={props.isActive ? 'is-active' : ''} >
+  <button className={props.active ? 'is-active' : ''} >
     {props.children}
     <div className='underline' />
     <style jsx>{`

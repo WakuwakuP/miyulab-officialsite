@@ -15,7 +15,7 @@ const LoginCheck: NextPage<Props> = (props) => {
 
   useEffect(() => {
     if (!props.state.auth.isLoggedIn) {
-      Router.push('/_error', undefined, { shallow: true });
+      Router.push('/', undefined, { shallow: true });
     }
   });
 
