@@ -5,3 +5,5 @@ node_modules/
 .firebase/
 .next/
 firebase-debug.log
+
+.env
