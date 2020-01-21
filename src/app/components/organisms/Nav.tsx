@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Actions from '../../actions';
+import LogoutButton from '../atoms/LogoutButton';
 import NavButton from '../atoms/NavButton';
 
 interface Props {
@@ -17,24 +18,37 @@ const Nav: NextPage<Props> = (props) => {
     <header className='header'>
       <div>
         <Link href='/'>
-          <NavButton isActive={props.pathname === '/'}>Home</NavButton>
+          <a>
+            <NavButton active={props.pathname === '/'}>Home</NavButton>
+          </a>
         </Link>
       </div>
       <div>
         <Link href='/profile'>
-          <NavButton isActive={props.pathname === '/profile'}>Profile</NavButton>
+          <a>
+            <NavButton active={props.pathname === '/profile'}>Profile</NavButton>
+          </a>
         </Link>
       </div>
       <div>
         <Link href='/links'>
-          <NavButton isActive={props.pathname === '/links'}>Link</NavButton>
+          <a>
+            <NavButton active={props.pathname === '/links'}>Link</NavButton>
+          </a>
         </Link>
       </div>
       {
         props.state.auth.isLoggedIn ? (<div>
           <Link href='/mypage'>
-            <NavButton isActive={props.pathname === '/mypage'}>My page</NavButton>
+            <a>
+              <NavButton active={props.pathname === '/mypage'}>My page</NavButton>
+            </a>
           </Link>
+        </div>) : undefined
+      }
+      {
+        props.state.auth.isLoggedIn ? (<div>
+          <LogoutButton>Logout</LogoutButton>
         </div>) : undefined
       }
 

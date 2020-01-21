@@ -2112,6 +2112,13 @@ babel-plugin-dynamic-import-node@^2.3.0:
   dependencies:
     object.assign "^4.1.0"
 
+babel-plugin-redux-saga@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-redux-saga/-/babel-plugin-redux-saga-1.1.2.tgz#367b4ad5ed5950918d6ed3bbf984944170fe7b6f"
+  integrity sha512-DfZ/SZzm62aDTjMya4s4yfuFMeKyJMdVlTcYDZnXsd8TmqLXKAEoi2biCzG1tNCIcXgr2V0O3qhTnU5LcygjSA==
+  dependencies:
+    source-map "^0.6.1"
+
 babel-plugin-syntax-jsx@6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"

@@ -17,11 +17,12 @@ export interface LoginSuccess {
 const authActions = {
   login: actionCreator<Login>('AUTH_LOGIN'),
   loginFailure: actionCreator<void>('AUTH_LOGIN_FAILURE'),
-  loginSuccess: actionCreator<LoginSuccess>('AUTH_LOGIN_SUCCESS'),
+  loginGoogle: actionCreator<void>('AUTH_LOGIN_GOOGLE'),
+  loginSuccess: actionCreator<any>('AUTH_LOGIN_SUCCESS'),
   logout: actionCreator<void>('AUTH_LOGOUT'),
   logoutFailure: actionCreator<void>('AUTH_LOGOUT_FAULURE'),
   logoutSuccess: actionCreator<void>('AUTH_LOGOUT_SUCCESS'),
-  refLogin: actionCreator<string>('AUTH_REF_LOGIN'),
+  refLogin: actionCreator<void>('AUTH_REF_LOGIN'),
 };
 
 export default authActions;

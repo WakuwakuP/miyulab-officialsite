@@ -26,4 +26,15 @@ export const authReducer = reducerWithInitialState(initialState)
   })
   .case(authActions.loginFailure, (state) => {
     return { ...state, errorMessage: 'ログインに失敗しました' };
+  })
+  .case(authActions.logoutSuccess, (state) => {
+    const isLoggedIn = false;
+    const displayName = '';
+    const email = '';
+    const photoURL = '';
+    const uid = '';
+    return { ...state, displayName, email, photoURL, uid, isLoggedIn };
+  })
+  .case(authActions.loginFailure, (state) => {
+    return { ...state, errorMessage: 'ログアウトに失敗しました' };
   });
