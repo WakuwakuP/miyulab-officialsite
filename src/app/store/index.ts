@@ -8,7 +8,10 @@ import sagas from '../sagas';
 
 export default function configurationStore(initialState = {}) {
   const sagaMiddleware = createSagaMiddleware();
-  const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+  const store = process.env.NODE_ENV === 'production'
+    ? createStore(reducer, initialState, applyMiddleware(sagaMiddleware))
+    : createStore(reducer, initialState, composeWithDevTools(applyMiddleware(sagaMiddleware)));
+
   store.sagaTask = sagaMiddleware.run(sagas);
   return store;
 }
