@@ -7,4 +7,4 @@ export default {
   messagingSenderId: 'FIREBASE_MESSAGING_SENDER_ID',
   projectId: 'FIREBASE_PROJECTID',
   storageBucket: 'FIREBASE_STORAGEBUCKET',
-}
+};
