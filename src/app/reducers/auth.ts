@@ -42,7 +42,7 @@ export const authReducer = reducerWithInitialState(initialState)
     const uid = '';
     return { ...state, displayName, email, photoURL, uid, isLoggedIn };
   })
-  .case(authActions.logoutSuccess, (state) => {
+  .case(authActions.logoutFailure, (state) => {
     return { ...state, errorMessage: 'ログアウトに失敗しました' };
   })
   .case(authActions.getAdminQuestionsSuccess, (state, questions) => {
