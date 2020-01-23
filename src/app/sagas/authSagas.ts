@@ -5,7 +5,8 @@ import firebase from 'firebase/app';
 
 import { eventChannel } from 'redux-saga';
 import authActions, { LoginSuccess } from '../actions/authActions';
-import { reduxSagaFirebase } from '../firebase/firebase';
+import { Question } from '../actions/questionActions';
+import { db, reduxSagaFirebase } from '../firebase/firebase';
 
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
@@ -57,6 +58,7 @@ function* refLogin() {
       yield put(authActions.loginSuccess(loginSuccess));
     }
   }
+  yield put(authActions.loginFailure());
 }
 
 function* logout() {
@@ -68,11 +70,39 @@ function* logout() {
   }
 }
 
+function* syncQuestions() {
+  const channel = reduxSagaFirebase.firestore
+    .channel(db.collection('question').orderBy('created_at', 'desc'), 'collection');
+  while (true) {
+    try {
+      const snapshot = yield take(channel);
+      const questions: Question[] = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        const date: Date = data.created_at.toDate();
+        const createdAt = `${date.getFullYear()}/${('0' + date.getDate()).slice(-2)}/${('0' + date.getHours()).slice(-2)} ${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
+        questions.push({
+          answer: data.answer,
+          createdAt,
+          id: doc.id,
+          public: data.public,
+          question: data.question,
+        });
+      });
+      yield put(authActions.getAdminQuestionsSuccess(questions));
+    } catch (error) {
+      // tslint:disable-next-line: no-console
+      console.log(error);
+    }
+  }
+}
+
 function* authSaga() {
   yield takeEvery(authActions.refLogin, refLogin);
   yield takeEvery(authActions.login, login);
   yield takeEvery(authActions.loginGoogle, loginGoogle);
   yield takeEvery(authActions.logout, logout);
+  yield takeEvery(authActions.loginSuccess, syncQuestions);
 }
 
 export default authSaga;
