@@ -1,4 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
+import { Question } from './questionActions';
 
 const actionCreator = actionCreatorFactory();
 
@@ -15,6 +16,9 @@ export interface LoginSuccess {
 }
 
 const authActions = {
+  getAdminQuestions: actionCreator<void>('AUTH_GET_ADMIN_QUESTIONS'),
+  getAdminQuestionsFailure: actionCreator<void>('AUTH_GET_ADMIN_QUESTIONS_FAILURE'),
+  getAdminQuestionsSuccess: actionCreator<Question[]>('AUTH_GET_ADMIN_QUESTIONS_SUCCESS'),
   login: actionCreator<Login>('AUTH_LOGIN'),
   loginFailure: actionCreator<void>('AUTH_LOGIN_FAILURE'),
   loginGoogle: actionCreator<void>('AUTH_LOGIN_GOOGLE'),

@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import Router from 'next/router';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -12,20 +12,18 @@ interface Props {
 }
 
 const LoginCheck: NextPage<Props> = (props) => {
-
+  const router = useRouter();
   useEffect(() => {
-    if (!props.state.auth.isLoggedIn) {
-      Router.push('/', undefined, { shallow: true });
+    if (!props.state.auth.isLoggedIn && props.state.auth.check) {
+      process.nextTick(() => {
+        router.replace('/');
+      });
     }
   });
 
   return (
     <div>
-      {
-        props.state.auth.isLoggedIn
-          ? props.children
-          : undefined
-      }
+      {props.children}
     </div>
   );
 };

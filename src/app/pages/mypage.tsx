@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 import App from '../components/App';
-import LoginCheck from '../components/atoms/LoginCheck';
+import AdminQuestionList from '../components/organisms/admin/AdminQuestionList';
 
 interface Props {
   pathname: string;
@@ -13,9 +13,7 @@ const Mypage: NextPage<Props> = ({ pathname }) => (
     <Head>
       <title>mypage - みゆ開発室</title>
     </Head>
-    <LoginCheck>
-      マイページへようこそ
-    </LoginCheck>
+    <AdminQuestionList />
   </App>
 );
 

@@ -11,6 +11,10 @@
       "npm run install-deps"
     ]
   },
+  "firestore": {
+    "rules": "src/firestore/firestore.rules",
+    "indexes": "src/firestore/firestore.indexes.json"
+  },
   "hosting": {
     "public": "dist/public",
     "rewrites": [
