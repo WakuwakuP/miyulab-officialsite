@@ -24,6 +24,12 @@ const LoginCheck: NextPage<Props> = (props) => {
   return (
     <div>
       {props.children}
+      <style jsx>{`
+        div {
+          overflow-x: auto;
+          height: 100%;
+        }
+      `}</style>
     </div>
   );
 };
