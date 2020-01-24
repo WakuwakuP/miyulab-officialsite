@@ -2,7 +2,6 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 
 import App from '../components/App';
-import AdminLogout from '../components/organisms/admin/AdminLogout';
 import AdminQuestionList from '../components/organisms/admin/AdminQuestionList';
 
 interface Props {
