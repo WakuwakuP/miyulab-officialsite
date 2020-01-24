@@ -3,6 +3,9 @@ import Head from 'next/head';
 import LazyLoad from 'react-lazyload';
 
 import App from '../components/App';
+import Card from '../components/atoms/Card';
+import ScrollX from '../components/atoms/ScrollX';
+import Cards from '../components/organisms/Cards';
 
 interface Props {
   pathname: string;
@@ -13,65 +16,78 @@ const Profile: NextPage<Props> = ({ pathname }) => (
     <Head>
       <title>Profile - みゆ開発室</title>
     </Head>
-    <div className='content'>
-      <div className='profile'>
-        <div className='profile-content'>
-          <div className='Card'>
-            <div className='table'>
-              <table>
-                <tr>
-                  <td className='key'>名前</td>
-                  <td className='value'>みゆ</td>
-                </tr>
-                <tr>
-                  <td className='key'>年齢</td>
-                  <td className='value'>16</td>
-                </tr>
-                <tr>
-                  <td className='key'>性別</td>
-                  <td className='value'>女の子</td>
-                </tr>
-                <tr>
-                  <td className='key'>身長</td>
-                  <td className='value'>154cm</td>
-                </tr>
-                <tr>
-                  <td className='key'>体重</td>
-                  <td className='value'>ないしょ!</td>
-                </tr>
-                <tr>
-                  <td className='key'>活動内容</td>
-                  <td className='value'>ライブコーディング, ゲーム</td>
-                </tr>
-                <tr>
-                  <td className='key'>チャンネル</td>
-                  <td className='value'>
-                    <a href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' target='_blank'>
-                      みゆ開発室
-                      </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='key'>ハッシュタグ</td>
-                  <td className='value'>
-                    <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
-                      #みゆ開発室
-                      </a>
-                  </td>
-                </tr>
-              </table>
-            </div>
-            <div className='img-effect' />
-          </div>
 
+    <ScrollX>
+      <div className='content'>
+        <div className='profile'>
+          <div className='profile-content'>
+            <div className='Card'>
+              <div className='table'>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td className='key'>名前</td>
+                      <td className='value'>みゆ</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>年齢</td>
+                      <td className='value'>16</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>性別</td>
+                      <td className='value'>女の子</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>身長</td>
+                      <td className='value'>154cm</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>体重</td>
+                      <td className='value'>ないしょ!</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>活動内容</td>
+                      <td className='value'>ライブコーディング, ゲーム</td>
+                    </tr>
+                    <tr>
+                      <td className='key'>チャンネル</td>
+                      <td className='value'>
+                        <a href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' target='_blank'>
+                          みゆ開発室
+                      </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className='key'>ハッシュタグ</td>
+                      <td className='value'>
+                        <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
+                          #みゆ開発室
+                      </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className='img-effect' />
+            </div>
+
+          </div>
+        </div>
+        <div className='img'>
+          <LazyLoad>
+            <img className='miyu' src='/img/miyu.png' alt='' />
+          </LazyLoad>
         </div>
       </div>
-      <div className='img'>
-        <LazyLoad>
-          <img className='miyu' src='/img/miyu.png' alt='' />
-        </LazyLoad>
-      </div>
-    </div>
+      <Cards>
+        <Card title='Youtube' href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' src='/img/youtube.jpg'>
+          みゆ開発室
+        </Card>
+        <Card title='Twitter' href='https://twitter.com/waku_P'>
+          みゆ @waku_P
+        </Card>
+      </Cards>
+    </ScrollX>
     <style jsx>{`
       .content {
         position: relative;
@@ -115,9 +131,8 @@ const Profile: NextPage<Props> = ({ pathname }) => (
         font-size: 0.9rem;
       }
       .content .img {
-        position: absolute;
+        position: sticky;
         width: 100%;
-        height: 100%;
         top: 0;
         right: 0;
         z-index: -2;
@@ -153,7 +168,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
           width: 100%;
         }
         .profile-content {
-          margin: 0 0 0.5rem;
+          margin: 0 0 0.5rem 0.5rem;
           max-width: initial;
           font-size: 1.3rem;
           width: 400px;
@@ -171,7 +186,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
           width: 600px;
         }
         .profile-content {
-          margin: 0 0 10vh;
+          margin: 0 0 10vh 1rem;
         }
       }
     `}</style>

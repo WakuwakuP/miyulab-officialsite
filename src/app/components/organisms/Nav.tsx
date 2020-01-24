@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Actions from '../../actions';
-import LogoutButton from '../atoms/LogoutButton';
 import NavButton from '../atoms/NavButton';
 
 interface Props {
@@ -31,31 +30,34 @@ const Nav: NextPage<Props> = (props) => {
         </Link>
       </div>
       <div>
-        <Link href='/links'>
+        <Link href='/question'>
           <a>
-            <NavButton active={props.pathname === '/links'}>Link</NavButton>
+            <NavButton active={props.pathname === '/question'}>Question</NavButton>
           </a>
         </Link>
       </div>
       {
-        props.state.auth.isLoggedIn ? (<div>
-          <Link href='/mypage'>
-            <a>
-              <NavButton active={props.pathname === '/mypage'}>My page</NavButton>
-            </a>
-          </Link>
-        </div>) : undefined
-      }
-      {
-        props.state.auth.isLoggedIn ? (<div>
-          <LogoutButton>Logout</LogoutButton>
-        </div>) : undefined
+        props.state.auth.isLoggedIn
+          ? (<div>
+            <Link href='/mypage'>
+              <a>
+                <NavButton active={props.pathname === '/mypage'}>My page</NavButton>
+              </a>
+            </Link>
+          </div>)
+          : (<div>
+            <Link href='/login'>
+              <a>
+                <NavButton active={props.pathname === '/login'}>Login</NavButton>
+              </a>
+            </Link>
+          </div>)
       }
 
       <style jsx>{`
           .header {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
           }
           @media (min-width: 768px) {
             .header {

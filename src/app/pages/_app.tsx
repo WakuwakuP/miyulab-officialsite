@@ -24,6 +24,10 @@ class MyApp extends App<Props> {
       <Provider store={store}>
         <Head>
           <link rel='manifest' href='/manifest.json' />
+          <link rel='apple-touch-icon' href='/images/icons/icon-72x72.png' sizes='72x72' />
+          <link rel='apple-touch-icon' href='/images/icons/icon-114x114.png' sizes='114x114' />
+          <link rel='apple-touch-icon' href='/images/icons/icon-120x120.png' sizes='120x120' />
+          <link rel='apple-touch-icon' href='/images/icons/icon-144x144.png' sizes='144x144' />
         </Head>
         <Background />
         <Main pathname={router.pathname}>

@@ -18,10 +18,10 @@ const Links: NextPage<Props> = ({ pathname }) => (
     <ScrollX>
       <Cards>
         <Card title='Youtube' href='https://www.youtube.com/channel/UC8moT0Z8Bc19IslrZp2jQJg' src='/img/youtube.jpg'>
-          content
+          みゆ開発室
         </Card>
         <Card title='Twitter' href='https://twitter.com/waku_P'>
-          content
+          みゆ@バーチャルWebエンジニア @waku_P
         </Card>
       </Cards>
     </ScrollX>

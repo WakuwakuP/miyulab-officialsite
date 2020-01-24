@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 
 import Actions from '../../actions';
 import App from '../../components/App';
-import QuestionList from '../../components/organisms/QuestionList';
+import QuestionList from '../../components/organisms/questions/QuestionList';
 
 interface Props {
   pathname: string;
