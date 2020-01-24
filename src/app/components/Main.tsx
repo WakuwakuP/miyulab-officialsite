@@ -28,6 +28,8 @@ const App: NextPage<Props> = (props) => {
       .main {
         width: 100%;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
       }
       @media (min-width: 768px) {
         .main {
