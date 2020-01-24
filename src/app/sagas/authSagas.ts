@@ -56,6 +56,7 @@ function* refLogin() {
     };
     if (data.user && !data.error) {
       yield put(authActions.loginSuccess(loginSuccess));
+      return;
     }
   }
   yield put(authActions.loginFailure());
@@ -91,8 +92,7 @@ function* syncQuestions() {
       });
       yield put(authActions.getAdminQuestionsSuccess(questions));
     } catch (error) {
-      // tslint:disable-next-line: no-console
-      console.log(error);
+      yield put(authActions.getAdminQuestionsFailure());
     }
   }
 }

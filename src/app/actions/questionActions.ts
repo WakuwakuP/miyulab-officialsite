@@ -11,9 +11,9 @@ export interface Question {
 }
 
 const questionActions = {
-  questionGetList: actionCreator<void>('QUESTION_GET_LIST'),
-  questionGetListFailure: actionCreator<void>('QUESTION_GET_LIST_Failure'),
-  questionGetListSuccess: actionCreator<Question[]>('QUESTION_GET_LIST_SUCCESS'),
+  getQuestionList: actionCreator<void>('QUESTION_GET_LIST'),
+  getQuestionListFailure: actionCreator<void>('QUESTION_GET_LIST_Failure'),
+  getQuestionListSuccess: actionCreator<Question[]>('QUESTION_GET_LIST_SUCCESS'),
 };
 
 export default questionActions;

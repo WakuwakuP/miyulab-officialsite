@@ -15,12 +15,12 @@ declare enum FirestoreType {
 
 declare namespace PathOrRef {
   type Base<R> = string | R
-  type Collection = Base<firebase.firestore.CollectionReference>
-  type Database = Base<firebase.database.Reference>
+  type Collection = Base<firebase.firestore.CollectionReference> | firebase.firestore.Query
+  type Database = Base<firebase.database.Reference> | firebase.firestore.Query
   type Document = Base<firebase.firestore.DocumentReference>
   type Storage = Base<firebase.storage.Reference>
 
-  type Firestore = Database | Document | firebase.firestore.Query
+  type Firestore = Database | Document
 }
 
 declare namespace ChannelOutput {
