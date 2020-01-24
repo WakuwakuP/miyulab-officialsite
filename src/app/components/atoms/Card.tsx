@@ -1,5 +1,4 @@
 import { FC, HTMLAttributes } from 'react';
-import LazyLoad from 'react-lazyload';
 
 interface Props extends HTMLAttributes<HTMLElement> {
   title: string;
@@ -22,7 +21,7 @@ const Card: FC<Props> = (props) => (
         </div>
         {
           props.src !== undefined
-            ? <LazyLoad><img src={props.src} alt={props.alt} /></LazyLoad>
+            ? <img src={props.src} alt={props.alt} />
             : <div className='effect' />
         }
       </div>
@@ -60,7 +59,7 @@ const Card: FC<Props> = (props) => (
         background-color: rgba(100, 100, 100, 0.4);
         color: #ffffff;
         padding: 0.5rem 0.7rem;
-        z-index: 1;
+        z-index: 2;
         backdrop-filter: blur(5px);
       }
       .card-box > .title {
@@ -79,7 +78,7 @@ const Card: FC<Props> = (props) => (
       }
       .effect {
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         top: 0;
         left: 0;
         bottom: 0;
@@ -88,7 +87,7 @@ const Card: FC<Props> = (props) => (
       }
       img {
         position: absolute;
-        z-index: -2;
+        z-index: 1;
         top: 0;
         left: 0;
         bottom: 0;

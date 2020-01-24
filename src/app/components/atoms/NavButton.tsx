@@ -16,7 +16,7 @@ const NavButton: FC<Props> = (props) => (
         padding: 0;
         background-color: rgba(0, 0, 0, 0);
         color: #00BCD4;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         text-align: center;
         height: 3rem;
         width: 100%;
