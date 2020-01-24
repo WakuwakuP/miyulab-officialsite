@@ -2,6 +2,7 @@ import { PageTransition } from 'next-page-transitions';
 import withReduxSaga from 'next-redux-saga';
 import withRedux from 'next-redux-wrapper';
 import App from 'next/app';
+import Head from 'next/head';
 import React from 'react';
 import { Provider } from 'react-redux';
 
@@ -20,6 +21,9 @@ class MyApp extends App<Props> {
     const { Component, pageProps, router, store } = this.props;
     return (
       <Provider store={store}>
+        <Head>
+          <link rel='manifest' href='/manifest.json' />
+        </Head>
         <Background />
         <Main pathname={router.pathname}>
           <PageTransition timeout={300} classNames='page-transition'>

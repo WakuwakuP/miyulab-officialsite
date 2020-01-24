@@ -12,10 +12,10 @@ const initialState: QuestionState = {
 };
 
 export const questionReducer = reducerWithInitialState(initialState)
-  .case(questionActions.questionGetListSuccess, (state, questions) => {
+  .case(questionActions.getQuestionListSuccess, (state, questions) => {
     const errorMessage = undefined;
     return { ...state, errorMessage, questions };
   })
-  .case(questionActions.questionGetListFailure, (state) => {
-    return { ...state, errorMessage: 'ログインに失敗しました' };
+  .case(questionActions.getQuestionListFailure, (state) => {
+    return { ...state, errorMessage: '質問箱の取得に失敗しました' };
   });
