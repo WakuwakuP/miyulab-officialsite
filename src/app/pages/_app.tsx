@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import createStore from '../store';
 
 import Background from '../components/atoms/Background';
+import SWRegister from '../components/atoms/SWRegister';
 import Main from '../components/Main';
 
 interface Props {
@@ -46,6 +47,7 @@ class MyApp extends App<Props> {
           }
         `}</style>
         </Main>
+        <SWRegister />
       </Provider>
     );
   }
