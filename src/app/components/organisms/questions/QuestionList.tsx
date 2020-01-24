@@ -4,8 +4,9 @@ import { bindActionCreators } from 'redux';
 
 import Actions from '../../../actions';
 import { Question } from '../../../actions/questionActions';
-import LoginCheck from '../../atoms/LoginCheck';
+import QuestionCard from '../../atoms/questions/QuestionCard';
 import ScrollX from '../../atoms/ScrollX';
+import Cards from '../Cards';
 
 interface Props {
   actions: any;
@@ -14,21 +15,22 @@ interface Props {
 
 const QuestionList: NextPage<Props> = (props) => {
   return (
-    <LoginCheck>
-      <ScrollX>
+    <ScrollX>
+      <Cards>
         {
-          props.state.question.questions.map((question: Question) => {
+          props.state.question.questions.map((q: Question) => {
             return (
-              <div key={question.id}>
-                <div>question: {question.question}</div>
-                <div>answer: {question.answer}</div>
-                <div>created_at: {question.createdAt}</div>
-              </div>
+              <QuestionCard
+                key={q.id}
+                question={q.question}
+                answer={q.answer}
+                createdAt={q.createdAt}
+              />
             );
           })
         }
-      </ScrollX>
-    </LoginCheck>
+      </Cards>
+    </ScrollX>
   );
 };
 

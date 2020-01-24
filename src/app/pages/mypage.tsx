@@ -15,7 +15,6 @@ const Mypage: NextPage<Props> = ({ pathname }) => (
       <title>mypage - みゆ開発室</title>
     </Head>
     <AdminQuestionList />
-    <AdminLogout />
   </App>
 );
 

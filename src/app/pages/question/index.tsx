@@ -15,7 +15,7 @@ const QuestionIndex: NextPage<Props> = ({ pathname }) => {
   return (
     <App pathname={pathname}>
       <Head>
-        <title>Login - みゆ開発室</title>
+        <title>Question Box - みゆ開発室</title>
       </Head>
       <QuestionList />
     </App>
