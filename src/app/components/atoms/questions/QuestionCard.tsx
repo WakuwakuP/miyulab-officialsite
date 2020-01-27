@@ -21,6 +21,7 @@ const QuestionCard: FC<Props> = (props) => (
     </div>
     <style jsx>{`
       article {
+        box-sizing: border-box;
         display: block;
         position: relative;
         width: 100%;
