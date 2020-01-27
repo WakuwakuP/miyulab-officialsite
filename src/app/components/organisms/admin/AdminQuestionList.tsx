@@ -25,9 +25,11 @@ const AdminQuestionList: NextPage<Props> = (props) => {
               return (
                 <AdminQuestionCard
                   key={q.id}
+                  id={q.id}
                   question={q.question}
                   answer={q.answer}
                   createdAt={q.createdAt}
+                  public={q.public}
                 />
               );
             })

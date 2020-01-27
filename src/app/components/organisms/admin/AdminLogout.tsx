@@ -17,6 +17,11 @@ const AdminLogout: NextPage<Props> = (props) => (
         <LogoutButton>Logout</LogoutButton>
       </div>) : undefined
     }
+    <style jsx>{`
+      div {
+        padding-top: 3rem;
+      }
+    `}</style>
   </div>
 );
 

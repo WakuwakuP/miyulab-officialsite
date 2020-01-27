@@ -25,9 +25,8 @@ const QuestionCard: FC<Props> = (props) => (
         display: block;
         position: relative;
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.7rem 0.5rem;
       }
-
       .card-box {
         position: relative;
         border: solid 1px #00BCD4;
@@ -35,15 +34,17 @@ const QuestionCard: FC<Props> = (props) => (
         background-color: #00BCD4;
       }
       .question {
+        display: flex;
         font-family: 'Noto Sans JP';
         border-top-left-radius: 0.8rem;
         border-top-right-radius: 0.8rem;
         background-color: #ffffff;
         padding: 0.5rem;
         margin: 0.2rem;
+        white-space: pre-wrap;
       }
       .question:before {
-        display: inline-block;
+        display: block;
         width: 2rem;
         height: 2rem;
         content: 'Q';
@@ -53,16 +54,21 @@ const QuestionCard: FC<Props> = (props) => (
         font-weight: bold;
         text-align: center;
       }
+      .question > div {
+        display: block;
+      }
       .answer {
+        display: flex;
         font-family: 'Noto Sans JP';
         border-bottom-left-radius: 0.8rem;
         border-bottom-right-radius: 0.8rem;
         background-color: #ffffff;
         padding: 0.5rem;
         margin: 0.2rem;
+        white-space: pre-wrap;
       }
       .answer:before {
-        display: inline-block;
+        display: block;
         width: 2rem;
         height: 2rem;
         content: 'A';
@@ -72,7 +78,9 @@ const QuestionCard: FC<Props> = (props) => (
         font-weight: bold;
         text-align: center;
       }
-
+      .answer > div {
+        display: block;
+      }
       .created-at {
         position: absolute;
         border: solid 1px #00BCD4;
