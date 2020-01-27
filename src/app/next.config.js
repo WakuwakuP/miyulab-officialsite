@@ -1,18 +1,35 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack');
-module.exports = {
-  distDir: '../../dist/functions/next',
-  webpack: config => {
-    config.plugins = [
-      ...config.plugins,
+const withOffline = require('next-offline');
 
-      // Read the .env file
+module.exports = withOffline({
+  distDir: '../../dist/functions/next',
+  workboxOpts: {
+    modifyUrlPrefix: {
+      'app': '/public',
+    },
+    runtimeCaching: [
+      {
+        urlPattern: /^https?.*/,
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'offlineCache',
+          expiration: {
+            maxEntries: 200
+          }
+        }
+      }
+    ]
+  },
+
+  webpack: config => {
+    config.plugins.push(
       new Dotenv({
         path: path.join(__dirname, '.env'),
         systemvars: true
-      })
-    ]
+      }),
+    );
 
     return config
   }
-}
+})
