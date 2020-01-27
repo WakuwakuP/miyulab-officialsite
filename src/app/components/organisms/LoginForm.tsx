@@ -97,7 +97,8 @@ const LoginForm: NextPage<Props> = (props) => {
           margin: 1rem 0 0 9rem;
         }
 
-        .input-button:hover {
+        .input-button:hover,
+        .imput-button:focus {
           background-color: #00BCD4;
           color: white;
         }

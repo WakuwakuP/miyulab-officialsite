@@ -1,13 +1,13 @@
 import '@firebase/firestore';
 // tslint:disable-next-line: no-implicit-dependencies
-import { put, take, takeEvery } from '@redux-saga/core/effects';
+import { call, put, take, takeEvery } from '@redux-saga/core/effects';
+import firebase from 'firebase/app';
 
 import Actions from '../actions';
 import { Question } from '../actions/questionActions';
 import { db, reduxSagaFirebase } from '../firebase/firebase';
 
 function* syncQuestions() {
-
   const channel = reduxSagaFirebase.firestore
     .channel(db.collection('question').where('public', '==', true).orderBy('created_at', 'desc'), 'collection');
   while (true) {
@@ -33,8 +33,33 @@ function* syncQuestions() {
   }
 }
 
+function* createQuestion(action) {
+  const q = action.payload;
+  const createdAt = firebase.firestore.FieldValue.serverTimestamp();
+  const question = { question: q, created_at: createdAt, public: false, answer: '' };
+  try {
+    yield call(reduxSagaFirebase.firestore.addDocument, 'question', question);
+    yield put(Actions.createQuestionSuccess());
+  } catch (error) {
+    yield put(Actions.createQuestionFailure());
+  }
+}
+
+function* updateQuestion(action) {
+  const q = action.payload;
+  const question = { public: q.public, answer: q.answer };
+  try {
+    yield call(reduxSagaFirebase.firestore.updateDocument, `question/${q.id}`, question);
+    yield put(Actions.createQuestionSuccess());
+  } catch (error) {
+    yield put(Actions.createQuestionFailure());
+  }
+}
+
 function* questionSaga() {
   yield takeEvery(Actions.firstView, syncQuestions);
+  yield takeEvery(Actions.createQuestion, createQuestion);
+  yield takeEvery(Actions.updateQuestion, updateQuestion);
 }
 
 export default questionSaga;

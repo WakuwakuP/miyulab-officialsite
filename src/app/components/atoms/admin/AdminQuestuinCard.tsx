@@ -1,49 +1,61 @@
+import Link from 'next/link';
 import { FC, HTMLAttributes } from 'react';
 
 interface Props extends HTMLAttributes<HTMLElement> {
+  id: string;
   question: string;
   answer: string;
   createdAt?: string;
+  public: boolean;
 }
 
 const AdminQuestionCard: FC<Props> = (props) => (
   <article>
-    <div className='card-box'>
-      <div className='question'>
-        {props.question}
+    <Link href='/question/edit/[id]' as={`/question/edit/${props.id}`}>
+      <div className='card-box'>
+        <div className='question'>
+          <div>
+            {props.question}
+          </div>
+        </div>
+        <div className='answer'>
+          <div>
+            {props.answer}
+          </div>
+        </div>
+        <div className='created-at'>
+          {props.createdAt}
+        </div>
       </div>
-      <div className='answer'>
-        {props.answer}
-      </div>
-      <div className='created-at'>
-        {props.createdAt}
-      </div>
-    </div>
+    </Link>
+
     <style jsx>{`
       article {
         box-sizing: border-box;
         display: block;
         position: relative;
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.7rem 0.5rem;
       }
-
       .card-box {
+        display: block;
         position: relative;
         border: solid 1px #00BCD4;
         border-radius: 1rem;
         background-color: #00BCD4;
       }
       .question {
+        display: flex;
         font-family: 'Noto Sans JP';
         border-top-left-radius: 0.8rem;
         border-top-right-radius: 0.8rem;
         background-color: #ffffff;
         padding: 0.5rem;
         margin: 0.2rem;
+        white-space: pre-wrap;
       }
       .question:before {
-        display: inline-block;
+        display: block;
         width: 2rem;
         height: 2rem;
         content: 'Q';
@@ -53,16 +65,21 @@ const AdminQuestionCard: FC<Props> = (props) => (
         font-weight: bold;
         text-align: center;
       }
+      .question > div {
+        display: block;
+      }
       .answer {
+        display: flex;
         font-family: 'Noto Sans JP';
         border-bottom-left-radius: 0.8rem;
         border-bottom-right-radius: 0.8rem;
         background-color: #ffffff;
         padding: 0.5rem;
         margin: 0.2rem;
+        white-space: pre-wrap;
       }
       .answer:before {
-        display: inline-block;
+        display: block;
         width: 2rem;
         height: 2rem;
         content: 'A';
@@ -72,7 +89,9 @@ const AdminQuestionCard: FC<Props> = (props) => (
         font-weight: bold;
         text-align: center;
       }
-
+      .answer > div {
+        display: block;
+      }
       .created-at {
         position: absolute;
         border: solid 1px #00BCD4;
