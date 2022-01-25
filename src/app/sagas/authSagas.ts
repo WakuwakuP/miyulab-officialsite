@@ -1,4 +1,4 @@
-import '@firebase/firestore';
+import { query, where, orderBy } from 'firebase/firestore';
 // tslint:disable-next-line: no-implicit-dependencies
 import { call, put, take, takeEvery } from '@redux-saga/core/effects';
 import firebase from 'firebase/app';
@@ -73,7 +73,7 @@ function* logout() {
 
 function* syncQuestions() {
   const channel = reduxSagaFirebase.firestore
-    .channel(db.collection('question').orderBy('created_at', 'desc'), 'collection');
+    .channel(query(db.collection('question'), orderBy('created_at', 'desc')), 'collection');
   while (true) {
     try {
       const snapshot = yield take(channel);
