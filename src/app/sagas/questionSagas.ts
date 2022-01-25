@@ -17,6 +17,7 @@ function* syncQuestions() {
       snapshot.forEach((doc) => {
         const data = doc.data();
         const date: Date = data.created_at.toDate();
+        // tslint:disable-next-line:max-line-length
         const createdAt = `${date.getFullYear()}/${('0' + (date.getMonth() + 1)).slice(-2)}/${('0' + date.getDate()).slice(-2)} ${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}`;
         questions.push({
           answer: data.answer,

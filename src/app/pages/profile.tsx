@@ -60,6 +60,7 @@ const Profile: NextPage<Props> = ({ pathname }) => (
                     <tr>
                       <td className='key'>ハッシュタグ</td>
                       <td className='value'>
+                        // tslint:disable-next-line:max-line-length
                         <a href='https://twitter.com/search?q=%23%E3%81%BF%E3%82%86%E9%96%8B%E7%99%BA%E5%AE%A4' target='_blank'>
                           #みゆ開発室
                       </a>
