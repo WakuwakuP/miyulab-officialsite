@@ -4,7 +4,6 @@
     "predeploy": [
       "npm run lint-functions",
       "npm run lint-app",
-      "npm run typecheck-app",
       "npm run build-functions",
       "npm run build-app",
       "npm run copy-deps",
