@@ -13,6 +13,9 @@
     "jsx-boolean-value": false,
     "interface-name": [
       false
+    ],
+    "max-line-length": [
+      false
     ]
   },
   "plugins": [
