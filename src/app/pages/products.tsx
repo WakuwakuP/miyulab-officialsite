@@ -1,6 +1,5 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import LazyLoad from 'react-lazyload';
 
 import App from '../components/App';
 import Card from '../components/atoms/Card';
