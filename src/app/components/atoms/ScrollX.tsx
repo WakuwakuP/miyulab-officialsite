@@ -8,6 +8,9 @@ const ScrollX: FC<HTMLAttributes<HTMLElement>> = (props) => (
         overflow-x: auto;
         height: 100%;
       }
+      div::-webkit-scrollbar {
+        display:none;
+      }
     `}</style>
   </div>
 );

@@ -23,6 +23,13 @@ const Nav: NextPage<Props> = (props) => {
         </Link>
       </div>
       <div>
+        <Link href='/products'>
+          <a>
+            <NavButton active={props.pathname === '/products'}>Products</NavButton>
+          </a>
+        </Link>
+      </div>
+      <div>
         <Link href='/profile'>
           <a>
             <NavButton active={props.pathname === '/profile'}>Profile</NavButton>
