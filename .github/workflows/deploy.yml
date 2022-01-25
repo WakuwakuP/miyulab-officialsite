@@ -26,7 +26,7 @@ jobs:
           echo FIREBASE_PROJECTID=${{ secrets.FIREBASE_PROJECTID }} >> ./src/app/.env
           echo FIREBASE_STORAGEBUCKET=${{ secrets.FIREBASE_STORAGEBUCKET }} >> ./src/app/.env
       - name: GitHub Action for Firebase
-        uses: w9jds/firebase-action@v1.2.0
+        uses: w9jds/firebase-action@master
         with:
           args: deploy
         env:
