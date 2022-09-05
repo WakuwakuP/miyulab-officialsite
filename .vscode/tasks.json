@@ -1,0 +1,104 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "dc up",
+      "type": "shell",
+      "command": "docker-compose up -d",
+      "presentation": {
+        "revealProblems": "onProblem",
+        "group": "default",
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+      },
+      "group": {
+        "kind": "build",
+      },
+    },
+    {
+      "label": "dc restart",
+      "type": "shell",
+      "command": "docker-compose restart",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "dc logs",
+      "type": "shell",
+      "command": "docker-compose logs -f",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "dedicated",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+      },
+      "group": {
+        "kind": "build",
+      },
+      "promptOnClose": true,
+    },
+    {
+      "label": "dc app attach",
+      "type": "shell",
+      "command": "docker-compose exec app bash",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+      },
+      "group": {
+        "kind": "build",
+      }
+    },
+    {
+      "label": "dc down",
+      "type": "shell",
+      "command": "docker-compose down",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true,
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+  ]
+}
