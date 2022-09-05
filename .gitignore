@@ -1,10 +1,1 @@
-dist/
-node_modules/
-yarn-error.log
-
-# Firebase cache
-.firebase/
-.next/
-firebase-debug.log
-
 .env
