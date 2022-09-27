@@ -1,0 +1,40 @@
+.footer {
+  padding-bottom: 2rem;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.contact h3 {
+  text-align: center;
+}
+
+.contact ul {
+  padding: 0;
+  text-align: center;
+}
+
+.contact li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.contact a {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 2px solid var(--main-color);
+  border-radius: 100%;
+  position: relative;
+}
+
+.contact .icon {
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}

@@ -17,7 +17,7 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ conten
       {
         contents.map((content: Content) => (
           <section key={content.id}>
-            <Link href={`content/${content.id}`} passHref>
+            <Link href={`content/detail/${content.id}`} passHref>
               <h3>{content.title}</h3>
             </Link>
           </section>
