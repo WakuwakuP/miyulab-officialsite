@@ -11,7 +11,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "highlight.js": "^11.6.0",
     "microcms-js-sdk": "^2.2.1",
+    "microcms-richedit-processer": "^1.1.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",

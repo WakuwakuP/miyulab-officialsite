@@ -14,7 +14,7 @@ type Props = {
   totalCount: number
 }
 
-const ContentLatest = ({ contents, totalCount}: Props) => {
+const ContentLatestPage = ({ contents, totalCount }: Props) => {
   return (
     <>
       <div className={styles.newContnetList}>
@@ -29,14 +29,28 @@ const ContentLatest = ({ contents, totalCount}: Props) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticPaths: GetStaticPaths = async (context) => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  };
+};
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const page = Number(context.params?.page);
+  if (page === NaN) {
+    return {
+      notFound: true,
+    };
+  }
   const data = (await client.get({
     endpoint: 'contents',
     queries: {
       filters: 'contentsCategory[contains]article',
       orders: '-createdAt',
-      limit: PAGE_LIMIT
-    }
+      offset: (page - 1) * PAGE_LIMIT,
+      limit: PAGE_LIMIT,
+    },
   }))
   const contents = data.contents
   const totalCount = data.totalCount
@@ -47,7 +61,8 @@ export const getStaticProps: GetStaticProps = async () => {
       totalCount,
     },
     revalidate: 600,
+    notFound: contents.length === 0,
   }
 }
 
-export default ContentLatest
+export default ContentLatestPage

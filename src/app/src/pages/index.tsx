@@ -1,10 +1,10 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { client } from 'libs/client'
-import { Category } from 'types/Category';
-import { Content } from 'types/Content';
-import Link from 'next/link';
+import { Category } from 'types/Category'
+import { Content } from 'types/Content'
+import ContentCard from 'components/ContentCard'
+import styles from 'styles/pages/Home.module.css'
 
 type Props = {
   contents: Content[];
@@ -13,17 +13,15 @@ type Props = {
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ contents, categories }: Props) => {
   return (
-    <main>
-      {
-        contents.map((content: Content) => (
-          <section key={content.id}>
-            <Link href={`content/detail/${content.id}`} passHref>
-              <h3>{content.title}</h3>
-            </Link>
-          </section>
-        ))
-      }
-    </main>
+    <>
+      <div className={styles.newContnetList}>
+        {
+          contents.map((content: Content) => (
+            <ContentCard content={content} key={content.id} />
+          ))
+        }
+      </div>
+    </>
   )
 }
 
@@ -33,7 +31,7 @@ export const getStaticProps = async () => {
     queries: {
       filters: 'contentsCategory[contains]article',
       orders: '-createdAt',
-      limit: 20
+      limit: 2
     }
   })).contents;
   const category = await client.get({ endpoint: "categories" });
