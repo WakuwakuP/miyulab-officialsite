@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Content } from "types/Content"
-import styles from 'styles/Footer.module.css'
+import styles from 'styles/components/Footer.module.css'
 import { SiGithub, SiPleroma, SiTwitter } from "react-icons/si"
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer + ' container'}>
       <div className={styles.contact}>
         <h3>Contact</h3>
         <ul>
