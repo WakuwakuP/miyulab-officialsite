@@ -29,8 +29,8 @@ module.exports = {
 
     return inquirer.prompt(questions).then((answers) => {
       const { component_category, component_name } = answers
-      const path = `src/components/${component_category}${component_name ? `/${component_name}` : ``}`
-      const css_path = `src/styles/components/${component_category}`
+      const path = `components/${component_category}${component_name ? `/${component_name}` : ``}`
+      const css_path = `styles/components/${component_category}`
       const tag = args.tag ? args.tag : 'div'
       return { ...answers, path, css_path, tag }
     })
