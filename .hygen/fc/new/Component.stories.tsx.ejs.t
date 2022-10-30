@@ -1,5 +1,5 @@
 ---
-to: "<%= should_create_storybook ? `src/components/${path}/${component_name}.stories.tsx` : null %>"
+to: "<%= should_create_storybook ? `src/${path}/${component_name}.stories.tsx` : null %>"
 ---
 import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
