@@ -5,7 +5,8 @@ services:
     build: ./docker/app
     restart: always
     ports:
-      - "${IP}:${PORT}:${PORT}"
+      - "${IP}:${PORT}:${PORT}" # app
+      - "${IP}:6006:6006" # storybook
     volumes:
       - ./src/app:/app
       - next:/app/.next/

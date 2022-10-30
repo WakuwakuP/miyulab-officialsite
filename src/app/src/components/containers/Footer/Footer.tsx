@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Content } from "types/Content"
-import styles from 'styles/components/Footer.module.css'
-import { SiGithub, SiPleroma, SiTwitter } from "react-icons/si"
+
+import { SiGithub, SiPleroma, SiTwitter } from 'react-icons/si'
+
+import styles from 'styles/components/containers/Footer.module.css'
+import { Content } from 'types/Content'
 
 type Props = {
   content: Content
 }
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer className={styles.footer + ' container'}>
       <div className={styles.contact}>
@@ -31,7 +33,9 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <div className={styles.copyright}>© 2022 <Link href={'/'}>Miyulab (WakuwakuP)</Link></div>
+      <div className={styles.copyright}>
+        © 2022 <Link href={'/'}>Miyulab (WakuwakuP)</Link>
+      </div>
     </footer>
   )
 }

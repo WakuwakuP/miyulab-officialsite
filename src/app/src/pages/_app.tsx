@@ -1,10 +1,12 @@
-import '../styles/globals.css'
-import Head from 'next/head'
-import Image from 'next/future/image'
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
+import Image from 'next/future/image'
+import Head from 'next/head'
+
 import miyuImage from '../../public/img/miyu.png'
+
+import Footer from 'components/containers/Footer'
+import Header from 'components/containers/Header'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const url = process.env.BASE_URL
@@ -13,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className='surface-duo-left'>
         <Head>
           <title>Miyulab</title>
-          <link rel="canonical" href={url} />
+          <link rel='canonical' href={url} />
         </Head>
         <Header />
         <main className='container'>
