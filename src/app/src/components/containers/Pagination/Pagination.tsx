@@ -1,15 +1,13 @@
-import Router from 'next/router'
 import Link from 'next/link'
+
 import { PAGE_LIMIT } from 'libs/const'
 
-type Props = {
+type PaginationProps = {
   totalCount: number
 }
 
-export const Pagination = ({ totalCount }: Props) => {
-
-  const range = (start: number, end: number) =>
-    [...Array(end - start + 1)].map((_, i) => start + i)
+export const Pagination = ({ totalCount }: PaginationProps) => {
+  const range = (start: number, end: number) => [...Array(end - start + 1)].map((_, i) => start + i)
 
   return (
     <ul>
@@ -21,5 +19,5 @@ export const Pagination = ({ totalCount }: Props) => {
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}

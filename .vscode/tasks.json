@@ -16,11 +16,11 @@
         "panel": "dedicated",
         "showReuseMessage": false,
         "clear": true,
-        "close": true,
+        "close": true
       },
       "group": {
-        "kind": "build",
-      },
+        "kind": "build"
+      }
     },
     {
       "label": "dc restart",
@@ -35,7 +35,7 @@
         "panel": "shared",
         "showReuseMessage": false,
         "clear": true,
-        "close": true,
+        "close": true
       },
       "group": {
         "kind": "build",
@@ -55,12 +55,12 @@
         "panel": "dedicated",
         "showReuseMessage": false,
         "clear": true,
-        "close": true,
+        "close": true
       },
       "group": {
-        "kind": "build",
+        "kind": "build"
       },
-      "promptOnClose": true,
+      "promptOnClose": true
     },
     {
       "label": "dc app attach",
@@ -75,10 +75,10 @@
         "panel": "shared",
         "showReuseMessage": false,
         "clear": true,
-        "close": true,
+        "close": true
       },
       "group": {
-        "kind": "build",
+        "kind": "build"
       }
     },
     {
@@ -93,12 +93,69 @@
         "panel": "shared",
         "showReuseMessage": false,
         "clear": true,
-        "close": true,
+        "close": true
       },
       "group": {
         "kind": "build",
         "isDefault": true
       }
     },
+    {
+      "label": "dc storybook",
+      "type": "shell",
+      "command": "docker-compose exec app yarn run storybook",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true
+      },
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "label": "dc hygen:new",
+      "type": "shell",
+      "command": "docker-compose exec app yarn run hygen:new",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true
+      },
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "label": "dc hygen:sb",
+      "type": "shell",
+      "command": "docker-compose exec app yarn run hygen:sb",
+      "dependsOn": "dc up",
+      "presentation": {
+        "group": "default",
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true,
+        "close": true
+      },
+      "group": {
+        "kind": "build"
+      }
+    }
   ]
 }

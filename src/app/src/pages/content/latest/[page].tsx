@@ -1,11 +1,10 @@
-import {
-  GetStaticPaths,
-  GetStaticProps,
-} from 'next'
-import { client } from 'libs/client'
+import { GetStaticPaths, GetStaticProps } from 'next'
+
 import type { Content } from 'types/Content'
-import ContentCard from 'components/ContentCard'
-import { Pagination } from 'components/Pagination'
+
+import ContentCard from 'components/containers/ContentCard'
+import { Pagination } from 'components/containers/Pagination/Pagination'
+import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
 import styles from 'styles/pages/content/Latest.module.css'
 
@@ -18,11 +17,9 @@ const ContentLatestPage = ({ contents, totalCount }: Props) => {
   return (
     <>
       <div className={styles.newContnetList}>
-        {
-          contents.map((content: Content) => (
-            <ContentCard content={content} key={content.id} />
-          ))
-        }
+        {contents.map((content: Content) => (
+          <ContentCard content={content} key={content.id} />
+        ))}
       </div>
       <Pagination totalCount={totalCount} />
     </>
@@ -32,18 +29,18 @@ const ContentLatestPage = ({ contents, totalCount }: Props) => {
 export const getStaticPaths: GetStaticPaths = async (context) => {
   return {
     paths: [],
-    fallback: 'blocking'
-  };
-};
+    fallback: 'blocking',
+  }
+}
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const page = Number(context.params?.page);
-  if (page === NaN) {
+  const page = Number(context.params?.page)
+  if (Number.isNaN(page)) {
     return {
       notFound: true,
-    };
+    }
   }
-  const data = (await client.get({
+  const data = await client.get({
     endpoint: 'contents',
     queries: {
       filters: 'contentsCategory[contains]article',
@@ -51,7 +48,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       offset: (page - 1) * PAGE_LIMIT,
       limit: PAGE_LIMIT,
     },
-  }))
+  })
   const contents = data.contents
   const totalCount = data.totalCount
 

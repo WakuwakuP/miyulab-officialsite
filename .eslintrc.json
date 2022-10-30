@@ -11,7 +11,15 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "parent", "sibling", "type", "index", "object"],
+        "groups": [
+          "builtin",
+          "external",
+          "parent",
+          "sibling",
+          "type",
+          "index",
+          "object"
+        ],
         "pathGroups": [
           {
             "pattern": "{react,react-dom/**,react-router-domnext,next/**,}",
