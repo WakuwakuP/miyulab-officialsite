@@ -26,7 +26,3 @@ export default {
 const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />
 
 export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
-}

@@ -50,7 +50,7 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
               </li>
             )
           }
-          return
+          return <></>
         })}
         {totalPage - 4 >= currentPage && (
           <li>
@@ -71,5 +71,5 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
       </ul>
     )
   }
-  return
+  return <></>
 }
