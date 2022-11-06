@@ -1,0 +1,52 @@
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.pagination > li {
+  margin: 0 4px;
+}
+
+.pagination .btn {
+  display: block;
+  border: solid 1px var(--main-color);
+  border-radius: 50%;
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+}
+
+.pagination .btn:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+
+.pagination .current {
+  display: block;
+  border: solid 1px var(--active-border-color);
+  border-radius: 50%;
+  background-color: var(--active-bg-color);
+  color: var(--active-color);
+  text-align: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+}
+
+.pagination .dots {
+  width: 1rem;
+  height: 2.5rem;
+  position: relative;
+}
+
+.pagination .btn > span,
+.pagination .dots > span,
+.pagination .current > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
