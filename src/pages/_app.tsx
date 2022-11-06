@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Image from 'next/future/image'
 import Head from 'next/head'
 
+import { Analytics } from '@vercel/analytics/react'
 import { IconContext } from 'react-icons/lib'
 
 import miyuImage from '../../public/img/miyu.png'
@@ -31,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <div className='surface-duo-right'>
         <Image src={miyuImage} alt='avater' />
       </div>
+      <Analytics />
     </>
   )
 }
