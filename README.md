@@ -6,5 +6,5 @@
 git clone
 cd miyulab-officialsite
 cp .env.example .env
-docker-compose up -d
+yarn run dev
 ```
