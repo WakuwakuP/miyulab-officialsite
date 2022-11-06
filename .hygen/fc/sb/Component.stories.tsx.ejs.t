@@ -7,7 +7,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { <%= component_name %> } from './<%= component_name %>'
 
 export default {
-  title: '<%= path %>',
+  title: '<%= storybook_title_path %>',
   component: <%= component_name %>,
   argTypes: {
     // TODO

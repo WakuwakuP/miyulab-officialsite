@@ -8,12 +8,13 @@ import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
 import styles from 'styles/pages/content/Latest.module.css'
 
-type Props = {
+interface Props {
   contents: Content[]
-  totalCount: number
+  totalPage: number
+  page: number
 }
 
-const ContentLatestPage = ({ contents, totalCount }: Props) => {
+const ContentLatestPage = ({ contents, page, totalPage }: Props) => {
   return (
     <>
       <div className={styles.newContnetList}>
@@ -21,7 +22,7 @@ const ContentLatestPage = ({ contents, totalCount }: Props) => {
           <ContentCard content={content} key={content.id} />
         ))}
       </div>
-      <Pagination totalCount={totalCount} />
+      <Pagination totalPage={totalPage} page={page} />
     </>
   )
 }
@@ -51,11 +52,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
   })
   const contents = data.contents
   const totalCount = data.totalCount
+  const totalPage = Math.ceil(totalCount / PAGE_LIMIT)
 
   return {
     props: {
       contents,
-      totalCount,
+      totalPage,
+      page,
     },
     revalidate: 600,
     notFound: contents.length === 0,

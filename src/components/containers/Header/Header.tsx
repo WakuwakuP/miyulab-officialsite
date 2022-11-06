@@ -18,9 +18,9 @@ export const Header = () => {
           </h1>
         </div>
         <ul className={styles.menu}>
-          <li>
+          {/* <li>
             <Link href={'/about'}>About</Link>
-          </li>
+          </li> */}
           <li>
             <Link href={'/content/latest'}>Blog</Link>
           </li>

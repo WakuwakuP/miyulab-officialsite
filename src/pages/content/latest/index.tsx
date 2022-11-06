@@ -10,10 +10,10 @@ import styles from 'styles/pages/content/Latest.module.css'
 
 type Props = {
   contents: Content[]
-  totalCount: number
+  totalPage: number
 }
 
-const ContentLatest = ({ contents, totalCount }: Props) => {
+const ContentLatest = ({ contents, totalPage }: Props) => {
   return (
     <>
       <div className={styles.newContnetList}>
@@ -21,7 +21,7 @@ const ContentLatest = ({ contents, totalCount }: Props) => {
           <ContentCard content={content} key={content.id} />
         ))}
       </div>
-      <Pagination totalCount={totalCount} />
+      <Pagination totalPage={totalPage} />
     </>
   )
 }
@@ -37,11 +37,12 @@ export const getStaticProps: GetStaticProps = async () => {
   })
   const contents = data.contents
   const totalCount = data.totalCount
+  const totalPage = Math.ceil(totalCount / PAGE_LIMIT)
 
   return {
     props: {
       contents,
-      totalCount,
+      totalPage,
     },
     revalidate: 600,
   }
