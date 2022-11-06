@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-import { PAGE_LIMIT } from 'libs/const'
 import styles from 'styles/components/containers/Pagination.module.css'
 
 interface PaginationProps {
