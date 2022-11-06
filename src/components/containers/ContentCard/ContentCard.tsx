@@ -14,7 +14,7 @@ export type ContentCardProps = {
 export const ContentCard = ({ content }: ContentCardProps) => {
   console.log(content)
   return (
-    <Link href={`content/detail/${content.id}`} passHref>
+    <Link href={`/content/detail/${content.id}`} passHref>
       <section className={styles.card}>
         <div>
           <div className={styles.textarea}>
