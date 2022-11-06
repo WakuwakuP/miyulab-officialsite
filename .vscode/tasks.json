@@ -4,101 +4,92 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "dc up",
+      "label": "dev",
       "type": "shell",
-      "command": "docker-compose up -d",
+      "command": "yarn run dev",
       "presentation": {
-        "revealProblems": "onProblem",
-        "group": "default",
+        "group": "main",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false,
+        "close": false
+      },
+      "group": {
+        "kind": "none"
+      }
+    },
+    {
+      "label": "storybook",
+      "type": "shell",
+      "command": "yarn run storybook",
+      "presentation": {
+        "group": "main",
+        "echo": true,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": false,
+        "close": false
+      },
+      "group": {
+        "kind": "none"
+      }
+    },
+    {
+      "label": "hygen new",
+      "type": "shell",
+      "command": "yarn run hygen:new",
+      "presentation": {
+        "group": "hygen",
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false,
+        "close": true
+      },
+      "group": {
+        "kind": "none"
+      }
+    },
+    {
+      "label": "hygen sb",
+      "type": "shell",
+      "command": "yarn run hygen:sb",
+      "presentation": {
+        "group": "hygen",
+        "echo": false,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared",
+        "showReuseMessage": true,
+        "clear": false,
+        "close": true
+      },
+      "group": {
+        "kind": "none"
+      }
+    },
+    {
+      "label": "lint",
+      "type": "shell",
+      "command": "yarn run lint-staged",
+      "presentation": {
         "echo": true,
         "reveal": "always",
         "focus": false,
         "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
+        "showReuseMessage": true,
+        "clear": false
       },
       "group": {
-        "kind": "build",
-      },
-    },
-    {
-      "label": "dc restart",
-      "type": "shell",
-      "command": "docker-compose restart",
-      "dependsOn": "dc up",
-      "presentation": {
-        "group": "default",
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
+        "kind": "test"
       }
-    },
-    {
-      "label": "dc logs",
-      "type": "shell",
-      "command": "docker-compose logs -f",
-      "dependsOn": "dc up",
-      "presentation": {
-        "group": "default",
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "dedicated",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
-      },
-      "group": {
-        "kind": "build",
-      },
-      "promptOnClose": true,
-    },
-    {
-      "label": "dc app attach",
-      "type": "shell",
-      "command": "docker-compose exec app bash",
-      "dependsOn": "dc up",
-      "presentation": {
-        "group": "default",
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
-      },
-      "group": {
-        "kind": "build",
-      }
-    },
-    {
-      "label": "dc down",
-      "type": "shell",
-      "command": "docker-compose down",
-      "presentation": {
-        "group": "default",
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": true,
-        "close": true,
-      },
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
-    },
+    }
   ]
 }
