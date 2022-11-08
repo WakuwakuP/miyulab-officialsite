@@ -1,9 +1,8 @@
-import { MicroCMSImage } from 'microcms-js-sdk'
+import type { Category } from './Category'
+import type { ContentsCategory } from './ContentsCategory'
+import type { MicroCMSImage } from 'microcms-js-sdk'
 
-import { Category } from './Category'
-import { ContentsCategory } from './ContentsCategory'
-
-export type Content = {
+export interface Content {
   id: string
   title: string
   content: string

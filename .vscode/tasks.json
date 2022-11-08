@@ -90,6 +90,12 @@
       "group": {
         "kind": "test"
       }
+    },
+    {
+      "type": "npm",
+      "script": "lint-staged",
+      "problemMatcher": [],
+      "label": "npm: lint-staged"
     }
   ]
 }

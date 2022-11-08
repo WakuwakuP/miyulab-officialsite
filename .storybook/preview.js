@@ -1,3 +1,6 @@
+import FutureImage from 'next/future/image'
+import Image from 'next/image'
+
 import { IconContext } from 'react-icons'
 import '../src/styles/globals.css'
 
@@ -18,5 +21,12 @@ const withIcon = (StoryFn) => {
     </IconContext.Provider>
   )
 }
+
+const OriginalNextImage = Image.default
+
+Object.defineProperty(FutureImage, 'default', {
+  configurable: true,
+  value: (props) => <OriginalNextImage {...props} layout='fill' unoptimized />,
+})
 
 export const decorators = [withIcon]

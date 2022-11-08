@@ -1,12 +1,10 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 
 import type { Content } from 'types/Content'
 
-import ContentCard from 'components/containers/ContentCard'
-import { Pagination } from 'components/containers/Pagination/Pagination'
+import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
-import styles from 'styles/pages/content/Latest.module.css'
 
 interface Props {
   contents: Content[]
@@ -15,19 +13,10 @@ interface Props {
 }
 
 const ContentLatestPage = ({ contents, page, totalPage }: Props) => {
-  return (
-    <>
-      <div className={styles.newContnetList}>
-        {contents.map((content: Content) => (
-          <ContentCard content={content} key={content.id} />
-        ))}
-      </div>
-      <Pagination totalPage={totalPage} page={page} />
-    </>
-  )
+  return <ContentLatest contents={contents} page={page} totalPage={totalPage} />
 }
 
-export const getStaticPaths: GetStaticPaths = async (context) => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
     fallback: 'blocking',
