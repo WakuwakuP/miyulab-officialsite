@@ -1,26 +1,18 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 
-import ContentCard from 'components/containers/ContentCard'
+import type { Category } from 'types/Category'
+import type { Content } from 'types/Content'
+
+import { Home } from 'components/templates'
 import { client } from 'libs/client'
-import styles from 'styles/pages/Home.module.css'
-import { Category } from 'types/Category'
-import { Content } from 'types/Content'
 
 type Props = {
   contents: Content[]
   categories: Category[]
 }
 
-const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ contents, categories }: Props) => {
-  return (
-    <>
-      <div className={styles.newContnetList}>
-        {contents.map((content: Content) => (
-          <ContentCard content={content} key={content.id} />
-        ))}
-      </div>
-    </>
-  )
+const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props: Props) => {
+  return <Home {...props} />
 }
 
 export const getStaticProps = async () => {
@@ -45,4 +37,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default Home
+export default HomePage

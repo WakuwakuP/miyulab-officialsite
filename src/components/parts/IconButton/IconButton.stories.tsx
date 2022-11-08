@@ -1,7 +1,8 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { SiTwitter } from 'react-icons/si'
 
 import { IconButton } from './IconButton'
+
+import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
   title: 'parts/IconButton',
