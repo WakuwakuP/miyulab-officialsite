@@ -3,9 +3,10 @@ import Link from 'next/link'
 
 import thumbnailImage from '../../../../public/img/no_thumbnail.jpg'
 
+import type { Content } from 'types/Content'
+
 import MicroCMSImage from 'components/parts/MicroCMSImage'
 import styles from 'styles/components/containers/ContentCard.module.css'
-import { Content } from 'types/Content'
 
 export type ContentCardProps = {
   content: Content

@@ -2,9 +2,10 @@
 to: "<%= should_create_storybook ? `src/${path}/${component_name}.stories.tsx` : null %>"
 ---
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { <%= component_name %> } from './<%= component_name %>'
+
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
   title: '<%= storybook_title_path %>',

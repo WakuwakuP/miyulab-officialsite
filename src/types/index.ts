@@ -1,3 +1,3 @@
-import { Category } from './Category'
-import { Content } from './Content'
-import { ContentsCategory } from './ContentsCategory'
+export type { Category } from './Category'
+export type { Content } from './Content'
+export type { ContentsCategory } from './ContentsCategory'
