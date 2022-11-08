@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "jonwolfe.prettier-eslint-formatter",
+    "dbaeumer.vscode-eslint",
+    "orta.vscode-jest"
+  ]
+}
