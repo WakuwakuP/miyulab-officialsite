@@ -16,7 +16,8 @@
     "build-storybook": "build-storybook",
     "hygen:new": "yarn hygen fc new",
     "hygen:sb": "yarn hygen fc sb",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "dependencies": {
     "@vercel/analytics": "^0.1.3",
@@ -47,6 +48,7 @@
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/parser": "^5.41.0",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.11.4",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
     "eslint-config-prettier": "^8.5.0",
@@ -72,5 +74,7 @@
       "yarn lint:fix"
     ],
     "*.{ts,tsx,js,jsx,css,scss}": "format"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "miyulab-officialsite@0.1.0"
 }
