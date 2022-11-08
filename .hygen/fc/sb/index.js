@@ -8,7 +8,7 @@ module.exports = {
         type: 'select',
         name: 'component_category',
         message: 'どのディレクトリが対象ですか？',
-        choices: ['containers', 'parts'],
+        choices: ['containers', 'parts', 'templates'],
       },
       {
         type: 'input',
@@ -22,7 +22,7 @@ module.exports = {
       const storybook_title_path = `${component_category}/${component_name}`
       const path = `${component_category}${component_name ? `/${component_name}` : ``}`
       const css_path = `src/styles/components/${component_category}`
-      return { ...answers, path, css_path }
+      return { ...answers, path, css_path, storybook_title_path }
     })
   },
 }

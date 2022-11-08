@@ -1,13 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from 'styles/components/containers/Header.module.css'
-import { Content } from 'types/Content'
-
-type Props = {
-  content: Content
-}
-
 export const Header = () => {
   return (
     <header className='container'>

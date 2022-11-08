@@ -1,40 +1,24 @@
+import type { GetStaticPaths, GetStaticProps } from 'next'
+
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
-import { GetStaticPaths, GetStaticProps } from 'next'
 
-import type { Category } from 'types/Category'
 import type { Content } from 'types/Content'
 
+import { ContentDetail } from 'components/templates/ContentDetail/ContentDetail'
 import { client } from 'libs/client'
-import styles from 'styles/pages/content/Detail.module.css'
 
-import 'highlight.js/styles/github-dark.css'
-
-type Props = {
+interface ContentDetailPageProps {
   content: Content
-  toc: any
+  toc: unknown
 }
 
-const ContentDetailPage = ({ content, toc }: Props) => {
-  return (
-    <>
-      <h1>{content.title} </h1>
-      <p> {content.publishedAt} </p>
-      {content.category.map((category: Category) => (
-        <li key={category.id}>#{category.name}</li>
-      ))}
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{
-          __html: `${content.content}`,
-        }}
-      />
-    </>
-  )
+const ContentDetailPage = ({ content, toc }: ContentDetailPageProps) => {
+  return <ContentDetail content={content} toc={toc} />
 }
 
-export const getStaticPaths: GetStaticPaths = async (context) => {
+export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [],
     fallback: 'blocking',

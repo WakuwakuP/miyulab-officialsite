@@ -8,7 +8,7 @@ module.exports = {
         type: 'select',
         name: 'component_category',
         message: 'どのディレクトリが対象ですか？',
-        choices: ['containers', 'parts'],
+        choices: ['containers', 'parts', 'templates'],
       },
       {
         type: 'input',
