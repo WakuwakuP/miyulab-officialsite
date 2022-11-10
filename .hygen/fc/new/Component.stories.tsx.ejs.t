@@ -5,7 +5,7 @@ import React from 'react'
 
 import { <%= component_name %> } from './<%= component_name %>'
 
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
 export default {
   title: '<%= storybook_title_path %>',
