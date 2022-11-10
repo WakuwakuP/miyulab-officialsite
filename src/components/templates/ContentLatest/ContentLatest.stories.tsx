@@ -61,3 +61,9 @@ export const Default = Template.bind({})
 Default.args = {
   // TODO
 }
+
+export const Category = Template.bind({})
+
+Category.args = {
+  categoryId: 'test category',
+}
