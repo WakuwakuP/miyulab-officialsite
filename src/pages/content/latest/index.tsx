@@ -20,7 +20,7 @@ export const getStaticProps: GetStaticProps = async () => {
     endpoint: 'contents',
     queries: {
       filters: 'contentsCategory[contains]article',
-      orders: '-publishdAt',
+      orders: '-publishedAt',
       limit: PAGE_LIMIT,
     },
   })

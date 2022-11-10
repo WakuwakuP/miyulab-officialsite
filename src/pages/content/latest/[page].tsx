@@ -34,7 +34,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     endpoint: 'contents',
     queries: {
       filters: 'contentsCategory[contains]article',
-      orders: '-publishdAt',
+      orders: '-publishedAt',
       offset: (page - 1) * PAGE_LIMIT,
       limit: PAGE_LIMIT,
     },
