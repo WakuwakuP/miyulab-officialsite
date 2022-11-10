@@ -8,6 +8,8 @@
   --active-color: #464646;
   --active-bg-color: #ffccff;
   --active-border-color: #ffccff;
+  --link-text-color: #ff77ff;
+  --link-hover-text-color: #ff44ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,8 @@
     --primary-bg-color: #ffccff;
     --active-color: #464646;
     --active-bg-color: #ffccff;
+    --link-text-color: #ffccff;
+    --link-hover-text-color: #ff77ff;
   }
 }
 
