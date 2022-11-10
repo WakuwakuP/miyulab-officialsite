@@ -1,6 +1,7 @@
 :root {
   --main-color: #464646;
   --main-bg-color: #ffffff;
+  --main-bg-color-alpha: rgba(255,255,255,0.2);
   --hover-color: #ffffff;
   --hover-bg-color: #464646;
   --primary-color: #ffccff;
@@ -16,6 +17,7 @@
   :root {
     --main-color: #ffffff;
     --main-bg-color: #464646;
+    --main-bg-color-alpha: rgba(70,70,70,0.2);
     --hover-color: #464646;
     --hover-bg-color: #ffffff;
     --primary-color: #ffccff;
