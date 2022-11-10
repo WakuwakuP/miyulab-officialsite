@@ -2,3 +2,14 @@
   width:100%;
   height: auto;
 }
+
+.content a {
+  color: var(--link-text-color) !important;
+  transition: none;
+}
+
+.content a:hover {
+  color: var(--link-hover-text-color) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
