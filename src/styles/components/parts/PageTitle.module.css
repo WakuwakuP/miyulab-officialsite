@@ -1,14 +1,17 @@
-.categoryTitle {
+.title {
   position: relative;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  padding: 0 2.5rem;
+  padding: 0 1rem;
 }
 
-.categoryTitle::before {
+.title > div {
+  z-index: 1;
+}
+
+.title::after {
   position: absolute;
-  content: "Blog";
   display: block;
   width: min-content;
   font-size: 6rem;
@@ -16,13 +19,10 @@
   right: 18px;
   transform: rotate(-20deg);
   opacity: 0.1;
+  user-select: none;
+  z-index: 0;
 }
 
-.newContnetList {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.newContnetList>section {
-  width: clamp(50%, calc((640px - 100%) * 640), 100%);
+.blog::after {
+  content: "Blog";
 }

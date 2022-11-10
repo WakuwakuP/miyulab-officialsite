@@ -1,3 +1,6 @@
+.content {
+  padding: 0 0.5rem;
+}
 .content img {
   width:100%;
   height: auto;
@@ -5,6 +8,7 @@
 
 .content a {
   color: var(--link-text-color) !important;
+  overflow-wrap: break-word;
   transition: none;
 }
 
