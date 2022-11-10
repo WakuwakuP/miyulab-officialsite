@@ -3,8 +3,8 @@ import Link from 'next/link'
 import styles from 'styles/components/containers/Header.module.css'
 export const Header = () => {
   return (
-    <header className='container'>
-      <nav className={styles.header}>
+    <header className={styles.headerContainer}>
+      <nav className={`container ${styles.header}`}>
         <div>
           <h1 className={styles.title}>
             <Link href={'/'}>MiyuLab</Link>
