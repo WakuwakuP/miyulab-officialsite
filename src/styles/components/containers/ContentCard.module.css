@@ -16,6 +16,7 @@
   position: absolute;
   z-index: 1;
   backdrop-filter: blur(3px) brightness(0.8);
+  color: #ffffff;
 }
 
 .title {
