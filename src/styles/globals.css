@@ -42,6 +42,10 @@ body {
   background: var(--main-bg-color);
 }
 
+body {
+  overflow-y: overlay;
+}
+
 .surface-duo-right {
   display: none;
 }
