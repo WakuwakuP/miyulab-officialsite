@@ -12,6 +12,15 @@
   justify-content: space-between;
   align-items: center;
   height: 3.5rem;
+  text-shadow:  1px 1px 0px var(--main-bg-color),
+                -1px -1px 0px var(--main-bg-color),
+                -1px 1px 0px var(--main-bg-color),
+                1px -1px 0px var(--main-bg-color),
+                1px 1px 0px var(--main-bg-color),
+                0px -1px 0px var(--main-bg-color),
+                0px 1px 0px var(--main-bg-color),
+                1px 0px 0px var(--main-bg-color),
+                -1px 0px 0px var(--main-bg-color);
 }
 
 .title {
