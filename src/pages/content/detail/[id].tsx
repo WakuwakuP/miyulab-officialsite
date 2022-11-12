@@ -33,7 +33,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     contentId: idExceptArray,
   })
 
-  const $ = cheerio.load(content.content)
+  const body = content.content.reduce((acc: string, cur: { fieldId: string; html: string }) => acc + cur.html, '')
+
+  const $ = cheerio.load(body)
   $('pre code').each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text())
     $(elm).html(result.value)
@@ -54,14 +56,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       content: {
         ...content,
-        // content: $.html(),
-        content: await processer(content.content, {
+        content: await processer(body, {
           img: { lazy: false },
           iframe: { lazy: false },
           code: { enabled: true },
         }),
       },
-      toc: createTableOfContents(content.content),
+      toc: createTableOfContents(body),
     },
     revalidate: 600,
   }
