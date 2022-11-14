@@ -11,6 +11,8 @@
   --active-border-color: #ffccff;
   --link-text-color: #ff77ff;
   --link-hover-text-color: #ff44ff;
+  --table-border-color: #ff77ff;
+  --table-bg-color: rgba(255, 204, 255, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,8 @@
     --active-bg-color: #ffccff;
     --link-text-color: #ffccff;
     --link-hover-text-color: #ff77ff;
+    --table-border-color: #ffccff;
+    --table-bg-color: rgba(255, 204, 255, 0.3);
   }
 }
 
