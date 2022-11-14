@@ -17,3 +17,19 @@
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+
+.content table {
+  border: solid 1px var(--table-border-color);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.content table th {
+  background-color: var(--table-bg-color);
+}
+
+.content table th,
+.content table td {
+  padding: 0.2rem 0.5rem;
+  border: solid 1px var(--table-border-color);
+}
