@@ -1,3 +1,4 @@
+import { RouterContext } from 'next/dist/shared/lib/router-context'
 import FutureImage from 'next/future/image'
 import Image from 'next/image'
 
@@ -11,6 +12,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
 }
 

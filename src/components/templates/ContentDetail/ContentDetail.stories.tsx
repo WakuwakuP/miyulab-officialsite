@@ -56,6 +56,16 @@ const Template: ComponentStory<typeof ContentDetail> = (args) => <ContentDetail 
 
 export const Default = Template.bind({})
 
+Default.parameters = {
+  nextRouter: {
+    path: '/content/detail/[id]',
+    asPath: '/content/detail/hoge',
+    query: {
+      id: 'hoge',
+    },
+  },
+}
+
 Default.args = {
   // TODO
 }
