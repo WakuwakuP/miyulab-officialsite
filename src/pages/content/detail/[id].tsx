@@ -4,6 +4,7 @@ import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
 
+import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
 import type { Content } from 'types/Content'
 
 import { ContentDetail } from 'components/templates/ContentDetail/ContentDetail'
@@ -52,6 +53,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
       .attr('style', 'border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;')
   })
 
+  const tocOption: CreateTableOfContentsOptions = {
+    tags: 'h2, h3',
+  }
+
   return {
     props: {
       content: {
@@ -62,7 +67,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
           code: { enabled: true },
         }),
       },
-      toc: createTableOfContents(body),
+      toc: createTableOfContents(body, tocOption),
     },
     revalidate: 600,
   }
