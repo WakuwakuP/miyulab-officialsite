@@ -39,7 +39,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
         />
         <div className={styles.toc}>
           <Toc toc={toc} />
-          <AdSense />
+          <AdSense adSlot='3817713745' />
         </div>
       </div>
     </>

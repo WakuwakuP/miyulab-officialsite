@@ -6,7 +6,11 @@ declare global {
   var adsbygoogle: unknown[]
 }
 
-export const AdSense = () => {
+interface AdSenseProps {
+  adSlot: string
+}
+
+export const AdSense = ({ adSlot }: AdSenseProps) => {
   const { asPath } = useRouter()
 
   useEffect(() => {
@@ -25,7 +29,7 @@ export const AdSense = () => {
           className='adsbygoogle'
           style={{ display: 'block' }}
           data-ad-client={process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}
-          data-ad-slot='999999999'
+          data-ad-slot={adSlot}
           data-ad-format='auto'
           data-full-width-responsive='true'
         />
