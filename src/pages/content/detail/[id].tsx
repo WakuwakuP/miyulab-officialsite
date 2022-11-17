@@ -12,7 +12,11 @@ import { client } from 'libs/client'
 
 interface ContentDetailPageProps {
   content: Content
-  toc: unknown
+  toc: {
+    id: string
+    text: string
+    name: string
+  }[]
 }
 
 const ContentDetailPage = ({ content, toc }: ContentDetailPageProps) => {
