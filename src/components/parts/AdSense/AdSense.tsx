@@ -20,14 +20,16 @@ export const AdSense = () => {
 
   return (
     <div>
-      <ins
-        className='adsbygoogle'
-        style={{ display: 'block' }}
-        data-ad-client={process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}
-        data-ad-slot='999999999'
-        data-ad-format='auto'
-        data-full-width-responsive='true'
-      />
+      {process.env.GOOGLE_ADSENSE_CLIENT_TOKEN && (
+        <ins
+          className='adsbygoogle'
+          style={{ display: 'block' }}
+          data-ad-client={process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}
+          data-ad-slot='999999999'
+          data-ad-format='auto'
+          data-full-width-responsive='true'
+        />
+      )}
     </div>
   )
 }
