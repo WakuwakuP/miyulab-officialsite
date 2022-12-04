@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiGithub, SiPleroma, SiTwitter } from 'react-icons/si'
 
 import IconButton from 'components/parts/IconButton'
+
 import styles from 'styles/components/containers/Footer.module.css'
 
 export const Footer = () => {

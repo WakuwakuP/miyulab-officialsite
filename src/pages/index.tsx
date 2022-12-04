@@ -1,10 +1,10 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 
-import type { Category } from 'types/Category'
-import type { Content } from 'types/Content'
-
 import { Home } from 'components/templates'
 import { client } from 'libs/client'
+
+import type { Category } from 'types/Category'
+import type { Content } from 'types/Content'
 
 type Props = {
   contents: Content[]

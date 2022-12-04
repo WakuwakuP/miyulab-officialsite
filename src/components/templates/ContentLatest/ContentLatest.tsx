@@ -1,7 +1,8 @@
-import type { Content } from 'types'
-
 import { ContentCard, Pagination } from 'components/containers'
 import { PageTitle } from 'components/parts'
+
+import type { Content } from 'types'
+
 import styles from 'styles/components/templates/ContentLatest.module.css'
 
 interface ContentLatestProps {
