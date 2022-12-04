@@ -1,10 +1,10 @@
 import type { GetStaticProps } from 'next'
 
-import type { Content } from 'types/Content'
-
 import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
+
+import type { Content } from 'types/Content'
 
 type Props = {
   contents: Content[]

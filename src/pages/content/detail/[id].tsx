@@ -4,11 +4,11 @@ import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
 
-import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
-import type { Content } from 'types/Content'
-
 import { ContentDetail } from 'components/templates/ContentDetail/ContentDetail'
 import { client } from 'libs/client'
+
+import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
+import type { Content } from 'types/Content'
 
 interface ContentDetailPageProps {
   content: Content

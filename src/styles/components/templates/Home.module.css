@@ -1,3 +1,10 @@
+.homeContaner {
+  margin-top: -3.5rem;
+}
+.homeContaner>*:first-child {
+  padding-top: 3.5rem;
+}
+
 .newContnetList {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +12,18 @@
 
 .newContnetList>section {
   width: 100%;
+}
+
+.newContentListMore {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (horizontal-viewport-segments: 2) {
+  .duoNone {
+    display: none;
+  }
 }
 
 @media screen and (min-width:640px) {

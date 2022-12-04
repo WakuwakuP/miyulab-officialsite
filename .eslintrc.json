@@ -14,7 +14,7 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "parent", "sibling", "index", "object", "type"],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
         "pathGroups": [
           {
             "pattern": "{react,react-dom/**,react-router-dom,next,next/**,}",
@@ -22,14 +22,20 @@
             "position": "before"
           },
           {
-            "pattern": "{*.css,*.scss}",
+            "pattern": "{**/*.css,**/*.scss}",
             "group": "type",
-            "position": "before"
+            "position": "after"
+          },
+          {
+            "pattern": "@public/**",
+            "group": "type",
+            "position": "after"
           }
         ],
         "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": {
-          "order": "asc"
+          "order": "asc",
+          "caseInsensitive": true
         },
         "newlines-between": "always"
       }

@@ -1,10 +1,11 @@
 import Link from 'next/link'
 
+import { Toc } from 'components/containers'
+import { AdSense, PageTitle } from 'components/parts'
+
 import type { Category } from 'types/Category'
 import type { Content } from 'types/Content'
 
-import { Toc } from 'components/containers'
-import { AdSense, PageTitle } from 'components/parts'
 import styles from 'styles/components/templates/ContentDetail.module.css'
 import 'highlight.js/styles/github-dark.css'
 

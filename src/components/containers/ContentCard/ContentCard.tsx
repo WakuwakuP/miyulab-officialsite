@@ -1,12 +1,13 @@
 import Image from 'next/future/image'
 import Link from 'next/link'
 
-import thumbnailImage from '../../../../public/img/no_thumbnail.jpg'
+import MicroCMSImage from 'components/parts/MicroCMSImage'
 
 import type { Content } from 'types/Content'
 
-import MicroCMSImage from 'components/parts/MicroCMSImage'
 import styles from 'styles/components/containers/ContentCard.module.css'
+
+import thumbnailImage from '@public/img/no_thumbnail.jpg'
 
 export type ContentCardProps = {
   content: Content
