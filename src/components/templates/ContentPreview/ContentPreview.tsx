@@ -22,7 +22,7 @@ export interface ContentPreviewProps {
 export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   return (
     <>
-      <PageTitle bgText='blog'>{content.title}</PageTitle>
+      <PageTitle bgText='blog'>Preview - {content.title}</PageTitle>
       {content.publishedAt && <p>{content.publishedAt}</p>}
       <ul>
         {content.category.map((category: Category) => (

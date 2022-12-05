@@ -28,15 +28,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const draftKey = context.query?.draftKey as string | undefined
   const idExceptArray = id instanceof Array ? id[0] : id
 
-  if (!draftKey) {
-    return {
-      redirect: {
-        permanent: false,
-        destination: `/404`,
-      },
-      revalidate: 60,
-    }
-  }
   const content = await client.get({
     endpoint: 'contents',
     contentId: idExceptArray,
