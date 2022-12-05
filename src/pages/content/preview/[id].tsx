@@ -1,10 +1,10 @@
-import type { GetStaticPaths, GetStaticProps } from 'next'
+import type { GetServerSideProps } from 'next'
 
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
 
-import { ContentDetail } from 'components/templates'
+import { ContentPreview } from 'components/templates'
 import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
@@ -20,22 +20,27 @@ interface ContentDetailPageProps {
 }
 
 const ContentDetailPage = ({ content, toc }: ContentDetailPageProps) => {
-  return <ContentDetail content={content} toc={toc} />
+  return <ContentPreview content={content} toc={toc} />
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking',
-  }
-}
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context.params?.id
+  const draftKey = context.query?.draftKey as string | undefined
   const idExceptArray = id instanceof Array ? id[0] : id
+
+  if (!draftKey) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: `/404`,
+      },
+      revalidate: 60,
+    }
+  }
   const content = await client.get({
     endpoint: 'contents',
     contentId: idExceptArray,
+    queries: { draftKey: draftKey },
   })
 
   if (!content) {
@@ -83,7 +88,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       },
       toc: createTableOfContents(body, tocOption),
     },
-    revalidate: 600,
   }
 }
 

@@ -1,15 +1,15 @@
 import Link from 'next/link'
 
 import { Toc } from 'components/containers'
-import { AdSense, PageTitle } from 'components/parts'
+import { PageTitle } from 'components/parts'
 
 import type { Category } from 'types/Category'
 import type { Content } from 'types/Content'
 
-import styles from 'styles/components/templates/ContentDetail.module.css'
+import styles from 'styles/components/templates/ContentPreview.module.css'
 import 'highlight.js/styles/github-dark.css'
 
-export interface ContentDetailProps {
+export interface ContentPreviewProps {
   content: Content
   toc: {
     id: string
@@ -19,7 +19,7 @@ export interface ContentDetailProps {
 }
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
+export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   return (
     <>
       <PageTitle bgText='blog'>{content.title}</PageTitle>
@@ -42,7 +42,6 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
         />
         <div className={styles.toc}>
           <Toc toc={toc} />
-          <AdSense adSlot='3817713745' />
         </div>
       </div>
     </>

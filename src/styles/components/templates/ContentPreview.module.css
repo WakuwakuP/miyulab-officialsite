@@ -1,0 +1,50 @@
+.mainarea {
+  display: flex;
+  flex-wrap: wrap;
+  --toc-width: 300px;
+  --toc-wrap-width: 800;
+}
+
+
+
+.content {
+  padding: 0 0.5rem;
+  width: clamp(calc(100% - var(--toc-width)), calc((800px - 100%) * 800),100%)
+}
+
+.toc {
+  width: clamp(var(--toc-width), calc((800px - 100%) * 800),100%)
+}
+
+.content img {
+  width:100%;
+  height: auto;
+}
+
+.content a {
+  color: var(--link-text-color) !important;
+  overflow-wrap: break-word;
+  transition: none;
+}
+
+.content a:hover {
+  color: var(--link-hover-text-color) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.content table {
+  border: solid 1px var(--table-border-color);
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.content table th {
+  background-color: var(--table-bg-color);
+}
+
+.content table th,
+.content table td {
+  padding: 0.2rem 0.5rem;
+  border: solid 1px var(--table-border-color);
+}

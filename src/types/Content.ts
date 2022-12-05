@@ -11,6 +11,6 @@ export interface Content {
   contentsCategory: ContentsCategory[]
   createdAt: string
   updatedAt: string
-  publishedAt: string
+  publishedAt?: string
   revisedAt: string
 }
