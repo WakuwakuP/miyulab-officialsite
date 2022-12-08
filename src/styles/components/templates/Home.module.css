@@ -1,18 +1,33 @@
-.homeContanerWrapper {
-  position: relative;
+.homeContaner {
   margin-top: -3.5rem;
+}
+/* .homeContaner>*:first-child {
+  padding-top: 3.5rem;
+} */
+
+.topAreaWrapper {
+  position: relative;
   height: 100vh;
 }
 
-.homeContaner {
-  width: 100vw;
+.topArea {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: 100vw;
+  height: 100%;
 }
-.homeContaner>*:first-child {
+.topAreaBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.topAreaContent {
   padding-top: 3.5rem;
+  height: 100vh;
 }
 
 .newContnetList {

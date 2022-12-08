@@ -1,5 +1,5 @@
 import { ContentCard, SiteTop } from 'components/containers'
-import { TextButton } from 'components/parts'
+import { Particle, TextButton } from 'components/parts'
 
 import type { Category, Content } from 'types'
 
@@ -13,23 +13,30 @@ interface HomeProps {
 export const Home = ({ contents }: HomeProps) => {
   return (
     <>
-      <div className={styles.homeContanerWrapper}>
-        <div className={styles.homeContaner}>
-          <SiteTop className={`container ${styles.duoNone}`} />
-          <section>
-            <div>
-              <h3>New</h3>
+      <div className={styles.homeContaner}>
+        <div className={`${styles.topAreaWrapper} ${styles.duoNone}`}>
+          <div className={styles.topArea}>
+            <div className={styles.topAreaBackground}>
+              <Particle id='HomeParticle' />
             </div>
-            <div className={styles.newContnetList}>
-              {contents.map((content: Content) => (
-                <ContentCard content={content} key={content.id} />
-              ))}
+            <div className={styles.topAreaContent}>
+              <SiteTop className='container' />
             </div>
-            <div className={styles.newContentListMore}>
-              <TextButton href='/content/latest'>More</TextButton>
-            </div>
-          </section>
+          </div>
         </div>
+        <section>
+          <div>
+            <h3>New</h3>
+          </div>
+          <div className={styles.newContnetList}>
+            {contents.map((content: Content) => (
+              <ContentCard content={content} key={content.id} />
+            ))}
+          </div>
+          <div className={styles.newContentListMore}>
+            <TextButton href='/content/latest'>More</TextButton>
+          </div>
+        </section>
       </div>
     </>
   )
