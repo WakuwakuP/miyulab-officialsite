@@ -18,7 +18,7 @@ export const Particle = ({ id }: ParticleProps) => {
   }, [])
   return (
     <>
-      <div data-chromatic='ignore'>
+      <div className='chromatic-ignore' data-chromatic='ignore'>
         <Particles
           id={id}
           init={partioclesInit}

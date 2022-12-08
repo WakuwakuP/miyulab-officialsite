@@ -11,6 +11,11 @@ export default {
     id: 'particle',
   },
   argTypes: {},
+  parameters: {
+    chromatic: {
+      disableSnapshot: true,
+    },
+  },
 } as ComponentMeta<typeof Particle>
 
 const Template: ComponentStory<typeof Particle> = (args) => <Particle {...args} />
