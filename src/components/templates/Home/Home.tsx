@@ -13,21 +13,23 @@ interface HomeProps {
 export const Home = ({ contents }: HomeProps) => {
   return (
     <>
-      <div className={styles.homeContaner}>
-        <SiteTop className={styles.duoNone} />
-        <section>
-          <div>
-            <h3>New</h3>
-          </div>
-          <div className={styles.newContnetList}>
-            {contents.map((content: Content) => (
-              <ContentCard content={content} key={content.id} />
-            ))}
-          </div>
-          <div className={styles.newContentListMore}>
-            <TextButton href='/content/latest'>More</TextButton>
-          </div>
-        </section>
+      <div className={styles.homeContanerWrapper}>
+        <div className={styles.homeContaner}>
+          <SiteTop className={`container ${styles.duoNone}`} />
+          <section>
+            <div>
+              <h3>New</h3>
+            </div>
+            <div className={styles.newContnetList}>
+              {contents.map((content: Content) => (
+                <ContentCard content={content} key={content.id} />
+              ))}
+            </div>
+            <div className={styles.newContentListMore}>
+              <TextButton href='/content/latest'>More</TextButton>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   )
