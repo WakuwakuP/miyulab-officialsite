@@ -22,6 +22,7 @@ export const Particle = ({ id }: ParticleProps) => {
         id={id}
         init={partioclesInit}
         loaded={partioclesLoaded}
+        data-chromatic='ignore'
         options={{
           background: {
             color: {
