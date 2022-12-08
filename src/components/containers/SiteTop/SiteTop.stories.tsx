@@ -12,7 +12,11 @@ export default {
   },
 } as ComponentMeta<typeof SiteTop>
 
-const Template: ComponentStory<typeof SiteTop> = (args) => <SiteTop {...args} />
+const Template: ComponentStory<typeof SiteTop> = (args) => (
+  <div style={{ height: 100 + 'vh' }}>
+    <SiteTop {...args} />
+  </div>
+)
 
 export const Default = Template.bind({})
 

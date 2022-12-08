@@ -1,12 +1,12 @@
 .siteTop {
   position: relative;
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
 }
 
 .title {
   position: absolute;
-  top: 50%;
+  top: calc(50% - (3.5rem / 2));
   left: 50%;
   z-index: 2;
   transform: translate(-50%, -50%);

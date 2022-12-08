@@ -10,7 +10,7 @@ interface SiteTopProps {
 
 export const SiteTop = ({ className }: SiteTopProps) => {
   return (
-    <div className={`${className} ${styles.siteTop}`}>
+    <div className={`${className || ''} ${styles.siteTop}`}>
       <div className={styles.title}>
         <h1>Miyulab</h1>
       </div>

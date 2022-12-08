@@ -16,6 +16,9 @@ export const parameters = {
   nextRouter: {
     Provider: RouterContext.Provider,
   },
+  chromatic: {
+    viewports: [320, 1200],
+  },
 }
 
 const withIcon = (StoryFn) => {

@@ -29,7 +29,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "react-scroll": "^1.8.8"
+    "react-scroll": "^1.8.8",
+    "react-tsparticles": "^2.6.0",
+    "tsparticles": "^2.6.0",
+    "tsparticles-engine": "^2.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",

@@ -1,5 +1,5 @@
 import { ContentCard, SiteTop } from 'components/containers'
-import { TextButton } from 'components/parts'
+import { Particle, TextButton } from 'components/parts'
 
 import type { Category, Content } from 'types'
 
@@ -14,7 +14,16 @@ export const Home = ({ contents }: HomeProps) => {
   return (
     <>
       <div className={styles.homeContaner}>
-        <SiteTop className={styles.duoNone} />
+        <div className={`${styles.topAreaWrapper} ${styles.duoNone}`}>
+          <div className={styles.topArea}>
+            <div className={styles.topAreaBackground}>
+              <Particle id='HomeParticle' />
+            </div>
+            <div className={styles.topAreaContent}>
+              <SiteTop className='container' />
+            </div>
+          </div>
+        </div>
         <section>
           <div>
             <h3>New</h3>
