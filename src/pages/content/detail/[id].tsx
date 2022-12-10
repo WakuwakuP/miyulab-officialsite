@@ -3,11 +3,13 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
+import { NextSeo } from 'next-seo'
 
 import { ContentDetail } from 'components/templates'
 import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
+import type { NextSeoProps } from 'next-seo'
 import type { Content } from 'types/Content'
 
 interface ContentDetailPageProps {
@@ -17,10 +19,16 @@ interface ContentDetailPageProps {
     text: string
     name: string
   }[]
+  seo: NextSeoProps
 }
 
-const ContentDetailPage = ({ content, toc }: ContentDetailPageProps) => {
-  return <ContentDetail content={content} toc={toc} />
+const ContentDetailPage = ({ content, toc, seo }: ContentDetailPageProps) => {
+  return (
+    <>
+      <NextSeo {...seo} />
+      <ContentDetail content={content} toc={toc} />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -31,6 +39,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  const BASE_URL = process.env.BASE_URL
+  const SITE_TITLE = process.env.SITE_TITLE
   const id = context.params?.id
   const idExceptArray = id instanceof Array ? id[0] : id
   const content = await client.get({
@@ -82,6 +92,22 @@ export const getStaticProps: GetStaticProps = async (context) => {
         }),
       },
       toc: createTableOfContents(body, tocOption),
+      seo: {
+        title: content.title,
+        openGraph: {
+          title: content.title,
+          titleTemplate: `${SITE_TITLE} | %s`,
+          url: `https://${BASE_URL}/content/detail/${content.id}`,
+          type: 'article',
+          images: [
+            {
+              url: content.thumbnail?.url
+                ? `${content.thumbnail.url}?fit=crop&w=1200&h=630`
+                : `https://${BASE_URL}/img/ogp.png`,
+            },
+          ],
+        },
+      },
     },
     revalidate: 600,
   }

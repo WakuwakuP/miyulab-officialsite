@@ -1,5 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 
+import { NextSeo } from 'next-seo'
+
 import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
@@ -13,7 +15,12 @@ type Props = {
 }
 
 const ContentLatestPage = ({ categoryId, contents, totalPage }: Props) => {
-  return <ContentLatest categoryId={categoryId} contents={contents} totalPage={totalPage} />
+  return (
+    <>
+      <NextSeo title={categoryId} />
+      <ContentLatest categoryId={categoryId} contents={contents} totalPage={totalPage} />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
