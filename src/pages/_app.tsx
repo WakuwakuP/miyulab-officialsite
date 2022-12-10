@@ -3,9 +3,11 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { Analytics } from '@vercel/analytics/react'
+import { DefaultSeo } from 'next-seo'
 import { IconContext } from 'react-icons/lib'
 
 import { Footer, Header, SiteTop } from 'components/containers'
+import SEO from 'libs/next-seo.config'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const url = process.env.BASE_URL
@@ -13,9 +15,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <div className='surface-duo-left'>
         <Head>
-          <title>Miyulab</title>
           <link rel='canonical' href={url} />
         </Head>
+        <DefaultSeo {...SEO} />
 
         <IconContext.Provider value={{ className: 'icon' }}>
           <Header />

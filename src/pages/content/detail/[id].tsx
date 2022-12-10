@@ -3,12 +3,14 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
+import { NextSeo } from 'next-seo'
 
 import { ContentDetail } from 'components/templates'
 import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
 import type { Content } from 'types/Content'
+const { BASE_URL } = process.env
 
 interface ContentDetailPageProps {
   content: Content
@@ -20,7 +22,25 @@ interface ContentDetailPageProps {
 }
 
 const ContentDetailPage = ({ content, toc }: ContentDetailPageProps) => {
-  return <ContentDetail content={content} toc={toc} />
+  return (
+    <>
+      <NextSeo
+        title={`${content.title} | Miyulab`}
+        openGraph={{
+          title: `${content.title} | Miyulab`,
+          url: `https://${BASE_URL}/content/detail/${content.id}`,
+          images: [
+            {
+              url: content.thumbnail?.url
+                ? `${content.thumbnail.url}?fit=crop&w=1200&h=630`
+                : `https://${BASE_URL}/img/ogp.png`,
+            },
+          ],
+        }}
+      />
+      <ContentDetail content={content} toc={toc} />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
