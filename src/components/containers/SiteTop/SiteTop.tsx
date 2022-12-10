@@ -2,7 +2,7 @@ import Image from 'next/future/image'
 
 import styles from 'styles/components/containers/SiteTop.module.css'
 
-import BgImage from '@public/img/miyu.webp'
+import BgImage from '@public/img/miyu.png'
 
 interface SiteTopProps {
   className?: string
