@@ -1,5 +1,7 @@
 import type { GetStaticProps } from 'next'
 
+import { NextSeo } from 'next-seo'
+
 import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
@@ -12,7 +14,12 @@ type Props = {
 }
 
 const ContentLatestPage = ({ contents, totalPage }: Props) => {
-  return <ContentLatest contents={contents} totalPage={totalPage} />
+  return (
+    <>
+      <NextSeo title='Latest' />
+      <ContentLatest contents={contents} totalPage={totalPage} />
+    </>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {

@@ -93,9 +93,10 @@ export const getStaticProps: GetStaticProps = async (context) => {
       },
       toc: createTableOfContents(body, tocOption),
       seo: {
-        title: `${content.title} | ${SITE_TITLE}`,
+        title: content.title,
         openGraph: {
-          title: `${content.title} | Miyulab`,
+          title: content.title,
+          titleTemplate: `${SITE_TITLE} | %s`,
           url: `https://${BASE_URL}/content/detail/${content.id}`,
           type: 'article',
           images: [

@@ -22,7 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
         <DefaultSeo
-          defaultTitle={SITE_TITLE}
+          title='Home'
+          titleTemplate={`${SITE_NAME} | %s`}
           description={SITE_DESCRIPTION}
           canonical={`https://${BASE_URL}`}
           openGraph={{
