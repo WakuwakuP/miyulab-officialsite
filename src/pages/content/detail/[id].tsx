@@ -95,8 +95,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       seo: {
         title: content.title,
         openGraph: {
-          title: content.title,
-          titleTemplate: `${SITE_TITLE} | %s`,
+          title: `${content.title} | ${SITE_TITLE}`,
           url: `https://${BASE_URL}/content/detail/${content.id}`,
           type: 'article',
           images: [
