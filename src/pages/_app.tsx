@@ -7,6 +7,7 @@ import { DefaultSeo } from 'next-seo'
 import { IconContext } from 'react-icons/lib'
 
 import { Footer, Header, SiteTop } from 'components/containers'
+import { GoogleAnalytics, usePageView } from 'libs/gtag'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const BASE_URL = process.env.BASE_URL
@@ -15,15 +16,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   const SITE_NAME = process.env.SITE_NAME
   const TWITTER_HANDLE = process.env.TWITTER_HANDLE
   const TWITTER_SITE = process.env.TWITTER_SITE
+  usePageView()
   return (
     <>
       <div className='surface-duo-left'>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <GoogleAnalytics />
         </Head>
         <DefaultSeo
           title='Home'
-          titleTemplate={`${SITE_NAME} | %s`}
+          titleTemplate={`$s | ${SITE_NAME}`}
           description={SITE_DESCRIPTION}
           canonical={`https://${BASE_URL}`}
           openGraph={{
@@ -44,7 +47,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             cardType: 'summary_large_image',
           }}
         />
-
         <IconContext.Provider value={{ className: 'icon' }}>
           <Header />
           <main className='container'>

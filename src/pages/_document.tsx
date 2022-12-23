@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
   return (
@@ -9,7 +10,7 @@ export default function Document() {
           rel='stylesheet'
         ></link>
         {process.env.GOOGLE_ADSENSE_CLIENT_TOKEN && (
-          <script
+          <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}`}
             crossOrigin='anonymous'
