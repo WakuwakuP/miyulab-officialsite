@@ -32,10 +32,12 @@ export const usePageView = () => {
   const router = useRouter()
   useEffect(() => {
     if (!existsGaId) {
+      console.log('GA_ID is not exists.')
       return
     }
 
     if (!('gtag' in window)) {
+      console.log('gtag is not defined')
       return
     }
 
@@ -55,12 +57,7 @@ export const GoogleAnalytics = () => (
   <>
     {existsGaId && (
       <>
-        <Script
-          id='gtag'
-          defer
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-          strategy='afterInteractive'
-        />
+        <Script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy='afterInteractive' />
         <Script
           id='gtag-init'
           defer
