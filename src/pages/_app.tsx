@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Head>
         <DefaultSeo
           title='Home'
-          titleTemplate={`$s | ${SITE_NAME}`}
+          titleTemplate={`%s | ${SITE_NAME}`}
           description={SITE_DESCRIPTION}
           canonical={`https://${BASE_URL}`}
           openGraph={{
