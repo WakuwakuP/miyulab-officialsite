@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import Script from 'next/script'
 import { useEffect } from 'react'
 
 export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''
@@ -57,9 +56,8 @@ export const GoogleAnalytics = () => (
   <>
     {existsGaId && (
       <>
-        <Script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy='afterInteractive' />
-        <Script
-          id='gtag-init'
+        <script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+        <script
           defer
           dangerouslySetInnerHTML={{
             __html: `
@@ -69,7 +67,6 @@ export const GoogleAnalytics = () => (
               gtag('config', '${GA_ID}');
             `,
           }}
-          strategy='afterInteractive'
         />
       </>
     )}
