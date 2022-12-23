@@ -1,11 +1,6 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
-declare global {
-  // eslint-disable-next-line no-var
-  var adsbygoogle: unknown[]
-}
-
 interface AdSenseProps {
   adSlot: string
 }
@@ -15,8 +10,7 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
 
   useEffect(() => {
     try {
-      // eslint-disable-next-line no-undef
-      ;(adsbygoogle = window.adsbygoogle || []).push({})
+      ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (error) {
       console.error(error)
     }
