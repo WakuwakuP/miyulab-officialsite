@@ -1,3 +1,5 @@
 export type { Category } from './Category'
 export type { Content } from './Content'
 export type { ContentsCategory } from './ContentsCategory'
+export type { ContentBody } from './ContentBody'
+export type { ContentModify } from './ContentModify'

@@ -3,14 +3,13 @@ import Link from 'next/link'
 import { Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
 
-import type { Category } from 'types/Category'
-import type { Content } from 'types/Content'
+import type { Category, ContentModify } from 'types'
 
 import styles from 'styles/components/templates/ContentDetail.module.css'
 import 'highlight.js/styles/github-dark.css'
 
 export interface ContentDetailProps {
-  content: Content
+  content: ContentModify
   toc: {
     id: string
     text: string

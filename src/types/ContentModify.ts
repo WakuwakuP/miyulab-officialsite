@@ -1,12 +1,11 @@
 import type { Category } from './Category'
-import type { ContentBody } from './ContentBody'
 import type { ContentsCategory } from './ContentsCategory'
 import type { MicroCMSImage } from 'microcms-js-sdk'
 
-export interface Content {
+export interface ContentModify {
   id: string
   title: string
-  content: ContentBody[]
+  content: string
   thumbnail?: MicroCMSImage
   category: Category[]
   contentsCategory: ContentsCategory[]
