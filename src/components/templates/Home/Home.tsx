@@ -1,12 +1,12 @@
 import { ContentCard, SiteTop } from 'components/containers'
 import { Particle, TextButton } from 'components/parts'
 
-import type { Category, Content } from 'types'
+import type { Category, ContentModify } from 'types'
 
 import styles from 'styles/components/templates/Home.module.css'
 
 interface HomeProps {
-  contents: Content[]
+  contents: ContentModify[]
   categories?: Category[]
 }
 
@@ -29,7 +29,7 @@ export const Home = ({ contents }: HomeProps) => {
             <h3>New</h3>
           </div>
           <div className={styles.newContnetList}>
-            {contents.map((content: Content) => (
+            {contents.map((content: ContentModify) => (
               <ContentCard content={content} key={content.id} />
             ))}
           </div>

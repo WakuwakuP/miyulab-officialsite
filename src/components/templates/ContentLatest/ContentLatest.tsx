@@ -1,13 +1,13 @@
 import { ContentCard, Pagination } from 'components/containers'
 import { PageTitle } from 'components/parts'
 
-import type { Content } from 'types'
+import type { ContentModify } from 'types'
 
 import styles from 'styles/components/templates/ContentLatest.module.css'
 
 interface ContentLatestProps {
   categoryId?: string
-  contents: Content[]
+  contents: ContentModify[]
   totalPage: number
   page?: number
 }
@@ -18,7 +18,7 @@ export const ContentLatest = ({ categoryId, contents, totalPage, page }: Content
       <PageTitle bgText='blog'>{categoryId || 'Latest'}</PageTitle>
       <div>
         <div className={styles.newContnetList}>
-          {contents.map((content: Content) => (
+          {contents.map((content: ContentModify) => (
             <ContentCard content={content} key={content.id} />
           ))}
         </div>

@@ -3,14 +3,13 @@ import Link from 'next/link'
 import { Toc } from 'components/containers'
 import { PageTitle } from 'components/parts'
 
-import type { Category } from 'types/Category'
-import type { Content } from 'types/Content'
+import type { Category, ContentModify } from 'types'
 
 import styles from 'styles/components/templates/ContentPreview.module.css'
 import 'highlight.js/styles/github-dark.css'
 
 export interface ContentPreviewProps {
-  content: Content
+  content: ContentModify
   toc: {
     id: string
     text: string
