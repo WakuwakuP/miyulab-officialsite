@@ -28,7 +28,7 @@ async function generateFeedXml() {
       title: content.title,
       description: content.content.reduce((acc: string, cur) => acc + (cur.html || ''), ''),
       date: content.publishedAt ? new Date(content.publishedAt) : '',
-      url: ``,
+      url: `http://${process.env.BASE_URL}/contents/detail/${content.id}}`,
     })
   })
 
