@@ -8,10 +8,10 @@ import { ContentPreview } from 'components/templates'
 import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
-import type { Content } from 'types/Content'
+import type { ContentModify } from 'types'
 
 interface ContentDetailPageProps {
-  content: Content
+  content: ContentModify
   toc: {
     id: string
     text: string

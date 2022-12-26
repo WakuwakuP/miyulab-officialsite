@@ -6,11 +6,11 @@ import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
 
-import type { Content } from 'types/Content'
+import type { ContentModify } from 'types'
 
 type Props = {
   categoryId: string
-  contents: Content[]
+  contents: ContentModify[]
   totalPage: number
 }
 
