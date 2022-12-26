@@ -6,7 +6,7 @@ import type { MicroCMSImage } from 'microcms-js-sdk'
 export interface Content {
   id: string
   title: string
-  content: ContentBody[]
+  content: string | ContentBody[]
   thumbnail?: MicroCMSImage
   category: Category[]
   contentsCategory: ContentsCategory[]
