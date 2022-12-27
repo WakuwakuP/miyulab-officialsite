@@ -13,6 +13,7 @@
   --link-hover-text-color: #ff44ff;
   --table-border-color: #ff77ff;
   --table-bg-color: rgba(255, 204, 255, 0.5);
+  --content-card-textarea-color: #ffffff
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,6 +31,7 @@
     --link-hover-text-color: #ff77ff;
     --table-border-color: #ffccff;
     --table-bg-color: rgba(255, 204, 255, 0.3);
+    --content-card-textarea-color: #ffffff
   }
 }
 
