@@ -39,9 +39,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
             __html: `${content.content}`,
           }}
         />
-        <div className={styles.toc}>
-          <Toc toc={toc} />
-        </div>
+        <div className={styles.toc}>{toc && toc.length > 0 && <Toc toc={toc} />}</div>
       </div>
     </>
   )
