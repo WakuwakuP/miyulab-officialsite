@@ -20,14 +20,13 @@ export interface ContentDetailProps {
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
-
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (window.twttr) {
-      window.twttr.widgets.load(ref.current);
+      window.twttr.widgets.load(ref.current)
     }
-  });
+  })
 
   return (
     <>

@@ -16,7 +16,7 @@ export default function Document() {
             crossOrigin='anonymous'
           />
         )}
-        <Script async src='https://platform.twitter.com/widgets.js' strategy="lazyOnload" />
+        <Script async src='https://platform.twitter.com/widgets.js' strategy='lazyOnload' />
       </Head>
       <body>
         <Main />
