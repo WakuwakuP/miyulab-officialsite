@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 import { Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
@@ -19,6 +20,15 @@ export interface ContentDetailProps {
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
+
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (window.twttr) {
+      window.twttr.widgets.load(ref.current);
+    }
+  });
+
   return (
     <>
       <PageTitle bgText='blog'>{content.title}</PageTitle>
@@ -38,6 +48,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
           dangerouslySetInnerHTML={{
             __html: `${content.content}`,
           }}
+          ref={ref}
         />
         <div className={styles.toc}>
           {toc && toc.length > 0 && <Toc toc={toc} />}
