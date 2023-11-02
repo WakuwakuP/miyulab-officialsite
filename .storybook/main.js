@@ -9,7 +9,7 @@ module.exports = {
 
   framework: {
     name: '@storybook/nextjs',
-    options: {}
+    options: {},
   },
 
   features: {
@@ -24,6 +24,6 @@ module.exports = {
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 }
