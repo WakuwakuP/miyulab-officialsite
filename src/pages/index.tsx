@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
       contents,
       categories: category.contents,
     },
-    revalidate: 600,
+    revalidate: 60,
   }
 }
 

@@ -18,9 +18,9 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
         {2 <= currentPage && (
           <li>
             <Link href={`/content/latest/1`} passHref>
-              <a className={styles.btn}>
+              <div className={styles.btn}>
                 <span>1</span>
-              </a>
+              </div>
             </Link>
           </li>
         )}
@@ -41,9 +41,9 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
                   </div>
                 ) : (
                   <Link href={`/content/latest/${number}`} passHref>
-                    <a className={styles.btn}>
+                    <div className={styles.btn}>
                       <span>{number}</span>
-                    </a>
+                    </div>
                   </Link>
                 )}
               </li>
@@ -61,9 +61,9 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
         {totalPage - 3 >= currentPage && (
           <li>
             <Link href={`/content/latest/${totalPage}`} passHref>
-              <a className={styles.btn}>
+              <div className={styles.btn}>
                 <span>{totalPage}</span>
-              </a>
+              </div>
             </Link>
           </li>
         )}

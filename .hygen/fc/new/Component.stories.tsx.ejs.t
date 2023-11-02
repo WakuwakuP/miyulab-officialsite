@@ -7,13 +7,15 @@ import { <%= component_name %> } from './<%= component_name %>'
 
 import type { ComponentStory, ComponentMeta } from '@storybook/react'
 
-export default {
+const meta: Meta<typeof <%= component_name %>> {
   title: '<%= storybook_title_path %>',
   component: <%= component_name %>,
   argTypes: {
     // TODO
   },
-} as ComponentMeta<typeof <%= component_name %>>
+}
+
+export default meta
 
 const Template: ComponentStory<typeof <%= component_name %>> = (args) => <<%= component_name %> {...args} />
 

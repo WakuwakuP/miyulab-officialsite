@@ -6,11 +6,7 @@ const nextConfig = {
   images: {
     domains: ['images.microcms-assets.io'],
   },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-  },
+  experimental: {},
   swcMinify: true,
   env: {
     BASE_URL: process.env.BASE_URL,
