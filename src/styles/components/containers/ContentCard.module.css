@@ -1,5 +1,5 @@
 .card {
-  width:100%;
+  width: clamp(50%,calc((640px - 100%) * 640),100%);
   height: auto;
   margin-bottom: 6px;
 }

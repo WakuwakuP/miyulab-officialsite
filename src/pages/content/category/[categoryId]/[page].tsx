@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       contents,
       totalPage,
     },
-    revalidate: 600,
+    revalidate: 60,
   }
 }
 

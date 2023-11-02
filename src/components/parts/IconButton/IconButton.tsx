@@ -11,7 +11,7 @@ export const IconButton = (props: IconButtonProps) => {
   return (
     <li className={styles.circle}>
       <a className={styles.btn} href={props.href}>
-        {props.children}
+        <span className={styles.icon}>{props.children}</span>
       </a>
     </li>
   )

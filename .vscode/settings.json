@@ -2,5 +2,6 @@
   "editor.defaultFormatter": "jonwolfe.prettier-eslint-formatter",
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-  }
+  },
+  "cSpell.words": ["processer", "richedit"]
 }

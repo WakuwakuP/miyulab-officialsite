@@ -1,5 +1,5 @@
-import { RouterContext } from 'next/dist/shared/lib/router-context'
-import FutureImage from 'next/future/image'
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime'
+import FutureImage from 'next/image'
 import Image from 'next/image'
 
 import { IconContext } from 'react-icons'

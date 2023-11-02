@@ -12,7 +12,7 @@ export const TextButton = ({ href, children }: TextButtonProps) => {
   return (
     <>
       <Link href={href}>
-        <a className={styles.outlinebtn}>{children}</a>
+        <div className={styles.outlinebtn}>{children}</div>
       </Link>
     </>
   )

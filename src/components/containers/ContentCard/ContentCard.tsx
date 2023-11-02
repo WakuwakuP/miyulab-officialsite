@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import MicroCMSImage from 'components/parts/MicroCMSImage'
@@ -16,30 +16,28 @@ export type ContentCardProps = {
 export const ContentCard = ({ content }: ContentCardProps) => {
   console.log(content)
   return (
-    <Link href={`/content/detail/${content.id}`} passHref>
-      <section className={styles.card}>
-        <div>
-          <div className={styles.textarea}>
-            <h3 className={styles.title}>{content.title}</h3>
-            <div className={styles.categories}>
-              {content.category.map((category) => (
-                <span key={category.id}>{category.name}</span>
-              ))}
-            </div>
+    <Link href={`/content/detail/${content.id}`} className={styles.card}>
+      <div>
+        <div className={styles.textarea}>
+          <h3 className={styles.title}>{content.title}</h3>
+          <div className={styles.categories}>
+            {content.category.map((category) => (
+              <span key={category.id}>{category.name}</span>
+            ))}
           </div>
-          {undefined !== content.thumbnail ? (
-            <MicroCMSImage
-              className={styles.thumbnail}
-              src={content.thumbnail.url}
-              width={content.thumbnail.width}
-              height={content.thumbnail.height}
-              alt='thumbnail'
-            />
-          ) : (
-            <Image className={styles.thumbnail} src={thumbnailImage} alt='thumbnail' />
-          )}
         </div>
-      </section>
+        {undefined !== content.thumbnail ? (
+          <MicroCMSImage
+            className={styles.thumbnail}
+            src={content.thumbnail.url}
+            width={content.thumbnail.width}
+            height={content.thumbnail.height}
+            alt='thumbnail'
+          />
+        ) : (
+          <Image className={styles.thumbnail} src={thumbnailImage} alt='thumbnail' />
+        )}
+      </div>
     </Link>
   )
 }
