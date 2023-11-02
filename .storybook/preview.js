@@ -1,4 +1,4 @@
-import { RouterContext } from 'next/dist/shared/lib/router-context'
+import { RouterContext } from 'next/dist/shared/lib/router-context.shared-runtime'
 import FutureImage from 'next/image'
 import Image from 'next/image'
 

@@ -34,6 +34,7 @@
     "react-scroll": "^1.8.8",
     "react-tsparticles": "^2.6.0",
     "rss": "^1.2.2",
+    "storybook": "^7.5.2",
     "tsparticles": "^2.6.0",
     "tsparticles-engine": "^2.6.0",
     "vercel": "^28.8.0"
