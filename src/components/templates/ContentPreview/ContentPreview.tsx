@@ -26,9 +26,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
       <ul>
         {content.category.map((category: Category) => (
           <li key={category.id}>
-            <Link href={`/content/category/${category.id}`} passHref>
-              <a>#{category.name}</a>
-            </Link>
+            <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
           </li>
         ))}
       </ul>

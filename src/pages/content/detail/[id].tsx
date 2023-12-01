@@ -43,17 +43,17 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const SITE_TITLE = process.env.SITE_TITLE
   const id = context.params?.id
   const idExceptArray = id instanceof Array ? id[0] : id
-  const content = await client.get({
-    endpoint: 'contents',
-    contentId: idExceptArray,
-  })
+
+  const content = await client
+    .get({
+      endpoint: 'contents',
+      contentId: idExceptArray,
+    })
+    .catch(() => undefined)
 
   if (!content) {
     return {
-      redirect: {
-        permanent: false,
-        destination: `/404`,
-      },
+      notFound: true,
       revalidate: 60,
     }
   }
