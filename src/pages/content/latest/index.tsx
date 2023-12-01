@@ -23,14 +23,23 @@ const ContentLatestPage = ({ contents, totalPage }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await client.get({
-    endpoint: 'contents',
-    queries: {
-      filters: 'contentsCategory[contains]article',
-      orders: '-publishedAt',
-      limit: PAGE_LIMIT,
-    },
-  })
+  const data = await client
+    .get({
+      endpoint: 'contents',
+      queries: {
+        filters: 'contentsCategory[contains]article',
+        orders: '-publishedAt',
+        limit: PAGE_LIMIT,
+      },
+    })
+    .catch(() => undefined)
+
+  if (!data) {
+    return {
+      notFound: true,
+      revalidate: 60,
+    }
+  }
   const contents = data.contents
   const totalCount = data.totalCount
   const totalPage = Math.ceil(totalCount / PAGE_LIMIT)

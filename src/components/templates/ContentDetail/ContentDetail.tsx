@@ -35,9 +35,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
       <ul>
         {content.category.map((category: Category) => (
           <li key={category.id}>
-            <Link href={`/content/category/${category.id}`} passHref>
-              <a>#{category.name}</a>
-            </Link>
+            <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
           </li>
         ))}
       </ul>
@@ -51,7 +49,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
         />
         <div className={styles.toc}>
           {toc && toc.length > 0 && <Toc toc={toc} />}
-          <AdSense adSlot='3817713745' />
+          {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
         </div>
       </div>
     </>
