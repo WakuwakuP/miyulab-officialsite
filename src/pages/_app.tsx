@@ -1,13 +1,17 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import { useRef } from 'react'
 
 import { Analytics } from '@vercel/analytics/react'
 import { DefaultSeo } from 'next-seo'
 import { IconContext } from 'react-icons/lib'
 
 import { Footer, Header, SiteTop } from 'components/containers'
+import { useMutationObserver } from 'hooks/useMutationObserver'
 import { GoogleAnalytics, usePageView } from 'libs/gtag'
+
+import type { MutationCallback } from 'hooks/useMutationObserver'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const BASE_URL = process.env.BASE_URL
@@ -16,10 +20,27 @@ function MyApp({ Component, pageProps }: AppProps) {
   const SITE_NAME = process.env.SITE_NAME
   const TWITTER_HANDLE = process.env.TWITTER_HANDLE
   const TWITTER_SITE = process.env.TWITTER_SITE
+
+  const elemSurfaceDuoLeft = useRef<HTMLDivElement>(null)
+  const elemContainer = useRef<HTMLDivElement>(null)
+
+  const handleUnsetStyling: MutationCallback = (mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.target instanceof HTMLElement) {
+        mutation.target.setAttribute('style', '')
+      }
+    })
+  }
+
+  useMutationObserver([elemSurfaceDuoLeft, elemContainer], handleUnsetStyling, {
+    attributes: true,
+    attributeFilter: ['style'],
+  })
+
   usePageView()
   return (
     <>
-      <div className='surface-duo-left'>
+      <div className='surface-duo-left' ref={elemSurfaceDuoLeft}>
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <GoogleAnalytics />
@@ -49,7 +70,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <IconContext.Provider value={{ className: 'icon' }}>
           <Header />
-          <main className='container'>
+          <main className='container' ref={elemContainer}>
             <Component {...pageProps} />
           </main>
           <Footer />

@@ -2,8 +2,10 @@ import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
 import { Toc } from 'components/containers'
-import { AdSense, PageTitle } from 'components/parts'
+import { PageTitle } from 'components/parts'
+import { useMutationObserver } from 'hooks/useMutationObserver'
 
+import type { MutationCallback } from 'hooks/useMutationObserver'
 import type { Category, ContentModify } from 'types'
 
 import styles from 'styles/components/templates/ContentDetail.module.css'
@@ -21,6 +23,21 @@ export interface ContentDetailProps {
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
   const ref = useRef<HTMLDivElement>(null)
+  const elemMainarea = useRef<HTMLDivElement>(null)
+  const elemToc = useRef<HTMLDivElement>(null)
+
+  const handleUnsetStyling: MutationCallback = (mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.target instanceof HTMLElement) {
+        mutation.target.setAttribute('style', '')
+      }
+    })
+  }
+
+  useMutationObserver([elemMainarea, elemToc], handleUnsetStyling, {
+    attributes: true,
+    attributeFilter: ['style'],
+  })
 
   useEffect(() => {
     if (window.twttr) {
@@ -39,7 +56,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
           </li>
         ))}
       </ul>
-      <div className={styles.mainarea}>
+      <div className={styles.mainarea} ref={elemMainarea}>
         <div
           className={styles.content}
           dangerouslySetInnerHTML={{
@@ -47,9 +64,8 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
           }}
           ref={ref}
         />
-        <div className={styles.toc}>
+        <div className={styles.toc} ref={elemToc}>
           {toc && toc.length > 0 && <Toc toc={toc} />}
-          {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
         </div>
       </div>
     </>
