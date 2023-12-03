@@ -15,9 +15,10 @@ interface TocProps {
     text: string
     name: string
   }[]
+  noAdSense?: boolean
 }
 
-export const Toc = ({ toc }: TocProps) => {
+export const Toc = ({ toc, noAdSense = false }: TocProps) => {
   const elemTocWrapper = useRef<HTMLDivElement>(null)
   const elemTocArea = useRef<HTMLDivElement>(null)
 
@@ -51,7 +52,7 @@ export const Toc = ({ toc }: TocProps) => {
             </ul>
           </div>
         </div>
-        {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
+        {!noAdSense && process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
       </div>
     </div>
   )

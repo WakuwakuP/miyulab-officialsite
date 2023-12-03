@@ -58,7 +58,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
           }}
         />
         <div className={styles.toc} ref={elemToc}>
-          {toc && toc.length > 0 && <Toc toc={toc} />}
+          {toc && toc.length > 0 && <Toc toc={toc} noAdSense />}
         </div>
       </div>
     </>
