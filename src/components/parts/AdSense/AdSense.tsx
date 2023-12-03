@@ -18,11 +18,11 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
 
   return (
     <div>
-      {process.env.GOOGLE_ADSENSE_CLIENT_TOKEN && (
+      {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
         <ins
           className='adsbygoogle'
           style={{ display: 'block' }}
-          data-ad-client={process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}
+          data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}
           data-ad-slot={adSlot}
           data-ad-format='auto'
           data-full-width-responsive='true'
