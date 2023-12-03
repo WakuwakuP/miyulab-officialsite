@@ -51,7 +51,7 @@ export const Toc = ({ toc }: TocProps) => {
             </ul>
           </div>
         </div>
-        {process.env.NODE_ENV == 'development' && <AdSense adSlot='3817713745' />}
+        {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
       </div>
     </div>
   )
