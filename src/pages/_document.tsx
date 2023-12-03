@@ -12,7 +12,7 @@ export default function Document() {
         {process.env.GOOGLE_ADSENSE_CLIENT_TOKEN && (
           <Script
             async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.GOOGLE_ADSENSE_CLIENT_TOKEN}`}
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}`}
             crossOrigin='anonymous'
           />
         )}
