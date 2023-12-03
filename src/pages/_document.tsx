@@ -9,7 +9,7 @@ export default function Document() {
           href='https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;500;700;800;900&display=swap'
           rel='stylesheet'
         ></link>
-        {process.env.GOOGLE_ADSENSE_CLIENT_TOKEN && (
+        {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
           <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}`}
