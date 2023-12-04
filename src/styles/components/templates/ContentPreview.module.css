@@ -16,6 +16,17 @@
   width: clamp(var(--toc-width), calc((800px - 100%) * 800),100%)
 }
 
+.tocWrapper {
+  height: 100% !important;
+}
+
+.tocArea {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
+}
+
+
 .content img {
   width:100%;
   height: auto;

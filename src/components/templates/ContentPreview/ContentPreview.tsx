@@ -25,6 +25,8 @@ export interface ContentPreviewProps {
 export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)
+  const elemTocWrapper = useRef<HTMLDivElement>(null)
+  const elemTocArea = useRef<HTMLDivElement>(null)
 
   const handleUnsetStyling: MutationCallback = (mutations) => {
     mutations.forEach((mutation) => {
@@ -34,7 +36,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
     })
   }
 
-  useMutationObserver([elemMainarea, elemToc], handleUnsetStyling, {
+  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea], handleUnsetStyling, {
     attributes: true,
     attributeFilter: ['style'],
   })
@@ -58,7 +60,11 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
           }}
         />
         <div className={styles.toc} ref={elemToc}>
-          {toc && toc.length > 0 && <Toc toc={toc} noAdSense />}
+          <div className={styles.tocWrapper} ref={elemTocWrapper}>
+            <div className={styles.tocArea} ref={elemTocArea}>
+              <Toc toc={toc} />
+            </div>
+          </div>
         </div>
       </div>
     </>
