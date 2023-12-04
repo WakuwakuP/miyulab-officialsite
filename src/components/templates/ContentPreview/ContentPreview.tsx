@@ -62,7 +62,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
         <div className={styles.toc} ref={elemToc}>
           <div className={styles.tocWrapper} ref={elemTocWrapper}>
             <div className={styles.tocArea} ref={elemTocArea}>
-              <Toc toc={toc} />
+              {toc && toc.length > 0 && <Toc toc={toc} />}
             </div>
           </div>
         </div>
