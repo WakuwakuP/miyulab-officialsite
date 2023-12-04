@@ -9,6 +9,12 @@
 
 .tocContent {
   margin-bottom: 2rem;
+  height: calc(100vh - 500px);
+}
+
+.tocContent > div {
+  overflow-y: auto;
+  height: calc(100vh - 546px)
 }
 
 .tocContent h3 {

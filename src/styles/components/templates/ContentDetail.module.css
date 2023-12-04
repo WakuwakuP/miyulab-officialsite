@@ -9,11 +9,21 @@
 
 .content {
   padding: 0 0.5rem;
-  width: clamp(calc(100% - var(--toc-width)), calc((800px - 100%) * 800),100%)
+  width: clamp(calc(100% - var(--toc-width)), calc((800px - 100%) * 800),100%);
 }
 
 .toc {
-  width: clamp(var(--toc-width), calc((800px - 100%) * 800),100%)
+  width: clamp(var(--toc-width), calc((800px - 100%) * 800),100%);
+}
+
+.tocWrapper {
+  height: 100% !important;
+}
+
+.tocArea {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
 }
 
 .content img {
@@ -48,3 +58,4 @@
   padding: 0.2rem 0.5rem;
   border: solid 1px var(--table-border-color);
 }
+
