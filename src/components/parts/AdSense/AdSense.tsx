@@ -41,7 +41,7 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
       {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
         <ins
           className='adsbygoogle'
-          style={{ display: 'inline-block', width:'300px', height:'400px' }}
+          style={{ display: 'inline-block', width: '300px', height: '400px' }}
           data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}
           data-ad-slot={adSlot}
           data-ad-format='auto'
