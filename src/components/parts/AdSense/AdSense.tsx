@@ -5,8 +5,6 @@ import { useMutationObserver } from 'hooks/useMutationObserver'
 
 import type { MutationCallback } from 'hooks/useMutationObserver'
 
-import styles from 'styles/components/parts/AdSense.module.css'
-
 interface AdSenseProps {
   adSlot: string
 }
@@ -37,11 +35,11 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
   }, [asPath])
 
   return (
-    <div className={styles.adSenseArea} ref={elemAdSenseArea}>
+    <div ref={elemAdSenseArea}>
       {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
         <ins
           className='adsbygoogle'
-          style={{ display: 'inline-block', width: '300px', height: '400px' }}
+          style={{ display: 'block' }}
           data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}
           data-ad-slot={adSlot}
           data-ad-format='auto'
