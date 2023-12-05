@@ -4,6 +4,7 @@ import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
 import { NextSeo } from 'next-seo'
+import { ImgixFormat } from 'ts-imgix'
 
 import { ContentDetail } from 'components/templates'
 import { client } from 'libs/client'
@@ -86,7 +87,14 @@ export const getStaticProps: GetStaticProps = async (context) => {
       content: {
         ...content,
         content: await processer(body, {
-          img: { lazy: false },
+          img: {
+            lazy: false,
+            parameters: {
+              fm: ImgixFormat.webp,
+              q: 75,
+            },
+            deviceSizes: [640, 800],
+          },
           iframe: { lazy: false },
           code: { enabled: true },
         }),
