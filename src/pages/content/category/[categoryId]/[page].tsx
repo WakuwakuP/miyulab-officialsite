@@ -33,11 +33,18 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const categoryId = context.params?.categoryId
+  const page = Number(context.params?.page)
+  if (Number.isNaN(page)) {
+    return {
+      notFound: true,
+    }
+  }
   const data = await client.get({
     endpoint: 'contents',
     queries: {
       filters: `category[contains]${categoryId},contentsCategory[contains]article`,
       orders: '-publishedAt',
+      offset: (page - 1) * PAGE_LIMIT,
       limit: PAGE_LIMIT,
     },
   })
@@ -50,6 +57,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       categoryId,
       contents,
       totalPage,
+      page,
     },
     revalidate: 60,
   }

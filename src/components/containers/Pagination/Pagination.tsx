@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from 'styles/components/containers/Pagination.module.css'
 
@@ -8,16 +9,18 @@ interface PaginationProps {
 }
 
 export const Pagination = ({ totalPage, page }: PaginationProps) => {
+  const router = useRouter()
   const clamp = (min: number, value: number, max: number) => Math.min(max, Math.max(min, value))
   const currentPage = page === undefined ? 0 : clamp(0, page - 1, totalPage - 1)
   const range = (start: number, end: number) => [...Array(end - start + 1)].map((_, i) => start + i)
+  const path = page === undefined ? router.asPath : router.asPath.replace(/\/\d+$/, '')
 
   if (1 < totalPage) {
     return (
       <ul className={styles.pagination}>
         {2 <= currentPage && (
           <li>
-            <Link href={`/content/latest/1`} passHref>
+            <Link href={`${path}/1`} passHref>
               <div className={styles.btn}>
                 <span>1</span>
               </div>
@@ -40,7 +43,7 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
                     <span>{number}</span>
                   </div>
                 ) : (
-                  <Link href={`/content/latest/${number}`} passHref>
+                  <Link href={`${path}/${number}`} passHref>
                     <div className={styles.btn}>
                       <span>{number}</span>
                     </div>
@@ -60,7 +63,7 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
         )}
         {totalPage - 3 >= currentPage && (
           <li>
-            <Link href={`/content/latest/${totalPage}`} passHref>
+            <Link href={`${path}//${totalPage}`} passHref>
               <div className={styles.btn}>
                 <span>{totalPage}</span>
               </div>
