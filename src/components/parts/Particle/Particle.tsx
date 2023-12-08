@@ -10,10 +10,10 @@ export interface ParticleProps {
 }
 
 export const Particle = ({ id }: ParticleProps) => {
-  const partioclesInit = useCallback(async (engine: Engine) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine)
   }, [])
-  const partioclesLoaded = useCallback(async (container: Container | undefined) => {
+  const particlesLoaded = useCallback(async (container: Container | undefined) => {
     await console.log(container)
   }, [])
   return (
@@ -21,8 +21,8 @@ export const Particle = ({ id }: ParticleProps) => {
       <div className='chromatic-ignore' data-chromatic='ignore'>
         <Particles
           id={id}
-          init={partioclesInit}
-          loaded={partioclesLoaded}
+          init={particlesInit}
+          loaded={particlesLoaded}
           options={{
             background: {
               color: {
