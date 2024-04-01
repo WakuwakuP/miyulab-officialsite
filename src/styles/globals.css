@@ -103,7 +103,7 @@ a.btn:hover {
   }
 }
 @media (horizontal-viewport-segments: 2) {
-  body > div {
+  body {
     height: 100vh;
     display: flex;
   }
@@ -112,6 +112,11 @@ a.btn:hover {
     margin-inline-end: calc(env(viewport-segment-left 1 0) - env(viewport-segment-right 0 0));
     overflow-y: scroll;
   }
+
+  .surface-duo-left main {
+    margin-top: 4rem;
+  }
+
   .surface-duo-right {
     position: relative;
     display: block;

@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation'
+
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
@@ -21,11 +23,8 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
     })
     .catch(() => undefined)
 
-  if (!content) {
-    return {
-      notFound: true,
-      revalidate: 60,
-    }
+  if (content === undefined) {
+    return {}
   }
 
   return {
@@ -54,10 +53,7 @@ export default async function ContentDetailPage({ params: { id } }: { params: { 
     .catch(() => undefined)
 
   if (!content) {
-    return {
-      notFound: true,
-      revalidate: 60,
-    }
+    notFound()
   }
 
   const body = content.content.reduce((acc: string, cur: { fieldId: string; html: string }) => acc + cur.html, '')

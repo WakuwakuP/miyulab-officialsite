@@ -3,8 +3,9 @@ import type { Metadata } from 'next'
 import { M_PLUS_1p } from 'next/font/google'
 import type { ReactNode } from 'react'
 
-import { Footer, Header, SiteTop } from 'components/containers'
+import { Footer, Header } from 'components/containers'
 import { GoogleAnalytics } from 'libs/gtag'
+import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
 
 const BASE_URL = process.env.BASE_URL
 const SITE_TITLE = process.env.SITE_TITLE
@@ -20,7 +21,7 @@ const globalFont = M_PLUS_1p({
 })
 
 export const metadata: Metadata = {
-  title: { default: 'Home', template: `%s | ${SITE_NAME}` },
+  title: { default: `Home | ${SITE_NAME}`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
   openGraph: {
     type: 'website',
@@ -35,6 +36,7 @@ export const metadata: Metadata = {
     site: TWITTER_SITE,
     card: 'summary_large_image',
   },
+  viewport: 'width=device-width, initial-scale=1.0',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -52,14 +54,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <GoogleAnalytics />
       </head>
       <body className={globalFont.className}>
-        <div className='surface-duo-left'>
-          <Header />
-          <main className='container'>{children}</main>
-          <Footer />
-        </div>
-        <div className='surface-duo-right'>
-          <SiteTop />
-        </div>
+        <SurfaceDuoProvider header={<Header />} footer={<Footer />}>
+          {children}
+        </SurfaceDuoProvider>
       </body>
     </html>
   )

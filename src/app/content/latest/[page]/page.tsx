@@ -31,5 +31,5 @@ export default async function ContentLatestPage({ params: { page } }: { params: 
   const totalCount = data.totalCount
   const totalPage = Math.ceil(totalCount / PAGE_LIMIT)
 
-  return <ContentLatest contents={contents} totalPage={totalPage} />
+  return <ContentLatest contents={contents} page={Number(page)} totalPage={totalPage} />
 }

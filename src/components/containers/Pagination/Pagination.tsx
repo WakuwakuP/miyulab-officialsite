@@ -19,58 +19,64 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
     return (
       <div>
         <ul className={styles.pagination}>
-          {2 <= currentPage && (
-            <li>
-              <Link href={`${path}/1`} passHref>
-                <div className={styles.btn}>
-                  <span>1</span>
+          <>
+            {2 <= currentPage && (
+              <li>
+                <Link href={`${path}/1`}>
+                  <div className={styles.btn}>
+                    <span>1</span>
+                  </div>
+                </Link>
+              </li>
+            )}
+            {3 <= currentPage && (
+              <li>
+                <div className={styles.dots}>
+                  <span>…</span>
                 </div>
-              </Link>
-            </li>
-          )}
-          {3 <= currentPage && (
-            <li>
-              <div className={styles.dots}>
-                <span>…</span>
-              </div>
-            </li>
-          )}
-          {range(1, Math.ceil(totalPage)).map((number, index) => {
-            if (currentPage - 1 <= index && index <= currentPage + 1) {
-              return (
-                <li key={index}>
-                  {index === currentPage ? (
-                    <div className={styles.current}>
-                      <span>{number}</span>
-                    </div>
-                  ) : (
-                    <Link href={`${path}/${number}`} passHref>
-                      <div className={styles.btn}>
+              </li>
+            )}
+          </>
+          <>
+            {range(1, Math.ceil(totalPage)).map((number, index) => {
+              if (currentPage - 1 <= index && index <= currentPage + 1) {
+                return (
+                  <li key={index}>
+                    {index === currentPage ? (
+                      <div className={styles.current}>
                         <span>{number}</span>
                       </div>
-                    </Link>
-                  )}
-                </li>
-              )
-            }
-            return <></>
-          })}
-          {totalPage - 4 >= currentPage && (
-            <li>
-              <div className={styles.dots}>
-                <span>…</span>
-              </div>
-            </li>
-          )}
-          {totalPage - 3 >= currentPage && (
-            <li>
-              <Link href={`${path}//${totalPage}`} passHref>
-                <div className={styles.btn}>
-                  <span>{totalPage}</span>
+                    ) : (
+                      <Link href={`${path}/${number}`}>
+                        <div className={styles.btn}>
+                          <span>{number}</span>
+                        </div>
+                      </Link>
+                    )}
+                  </li>
+                )
+              }
+              return <></>
+            })}
+          </>
+          <>
+            {totalPage - 4 >= currentPage && (
+              <li>
+                <div className={styles.dots}>
+                  <span>…</span>
                 </div>
-              </Link>
-            </li>
-          )}
+              </li>
+            )}
+            {totalPage - 3 >= currentPage && (
+              <li>
+                <Link href={`${path}//${totalPage}`}>
+                  <div className={styles.btn}>
+                    <span>{totalPage}</span>
+                  </div>
+                </Link>
+              </li>
+            )}
+          </>
         </ul>
       </div>
     )
