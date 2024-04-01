@@ -17,7 +17,7 @@ export const ContentLatest = ({ categoryId, contents, totalPage, page }: Content
     <>
       <PageTitle bgText='blog'>{categoryId || 'Latest'}</PageTitle>
       <div>
-        <div className={styles.newContnetList}>
+        <div className={styles.newContents}>
           {contents.map((content: ContentModify) => (
             <ContentCard content={content} key={content.id} />
           ))}

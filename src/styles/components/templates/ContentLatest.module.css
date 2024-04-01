@@ -8,7 +8,7 @@
 
 .categoryTitle::before {
   position: absolute;
-  content: "Blog";
+  content: 'Blog';
   display: block;
   width: min-content;
   font-size: 6rem;
@@ -18,11 +18,11 @@
   opacity: 0.1;
 }
 
-.newContnetList {
+.newContents {
   display: flex;
   flex-wrap: wrap;
 }
 
-.newContnetList>section {
+.newContents > section {
   width: clamp(50%, calc((640px - 100%) * 640), 100%);
 }

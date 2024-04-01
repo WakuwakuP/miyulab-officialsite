@@ -1,3 +1,5 @@
+'use client'
+
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
@@ -7,7 +9,7 @@ export const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ''
 export const existsGaId = GA_ID !== ''
 
 // PVを測定する
-export const pageview = (path: string) => {
+export const pageView = (path: string) => {
   window.gtag('config', GA_ID, {
     page_path: path,
   })
@@ -41,7 +43,7 @@ export const usePageView = () => {
     }
 
     const handleRouteChange = (path: string) => {
-      pageview(path)
+      pageView(path)
     }
 
     router.events.on('routeChangeComplete', handleRouteChange)

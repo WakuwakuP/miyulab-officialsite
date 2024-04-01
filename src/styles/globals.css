@@ -1,7 +1,7 @@
 :root {
   --main-color: #464646;
   --main-bg-color: #ffffff;
-  --main-bg-color-alpha: rgba(255,255,255,0.2);
+  --main-bg-color-alpha: rgba(255, 255, 255, 0.2);
   --hover-color: #ffffff;
   --hover-bg-color: #464646;
   --primary-color: #ffccff;
@@ -13,14 +13,14 @@
   --link-hover-text-color: #ff44ff;
   --table-border-color: #ff77ff;
   --table-bg-color: rgba(255, 204, 255, 0.5);
-  --content-card-textarea-color: #ffffff
+  --content-card-textarea-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --main-color: #ffffff;
     --main-bg-color: #464646;
-    --main-bg-color-alpha: rgba(70,70,70,0.2);
+    --main-bg-color-alpha: rgba(70, 70, 70, 0.2);
     --hover-color: #464646;
     --hover-bg-color: #ffffff;
     --primary-color: #ffccff;
@@ -31,7 +31,7 @@
     --link-hover-text-color: #ff77ff;
     --table-border-color: #ffccff;
     --table-bg-color: rgba(255, 204, 255, 0.3);
-    --content-card-textarea-color: #ffffff
+    --content-card-textarea-color: #ffffff;
   }
 }
 

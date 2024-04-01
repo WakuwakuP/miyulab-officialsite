@@ -14,7 +14,6 @@ export type ContentCardProps = {
 }
 
 export const ContentCard = ({ content }: ContentCardProps) => {
-  console.log(content)
   return (
     <Link href={`/content/detail/${content.id}`} className={styles.card}>
       <div>

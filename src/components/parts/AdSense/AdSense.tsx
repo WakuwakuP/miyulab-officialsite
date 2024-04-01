@@ -1,4 +1,5 @@
-import { useRouter } from 'next/router'
+'use client'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
 import { useMutationObserver } from 'hooks/useMutationObserver'
@@ -10,7 +11,7 @@ interface AdSenseProps {
 }
 
 export const AdSense = ({ adSlot }: AdSenseProps) => {
-  const { asPath } = useRouter()
+  const asPath = usePathname()
   const elemAdSenseArea = useRef<HTMLDivElement>(null)
 
   const handleUnsetStyling: MutationCallback = (mutations) => {

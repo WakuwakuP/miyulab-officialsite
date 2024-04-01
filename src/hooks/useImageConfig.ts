@@ -1,3 +1,5 @@
+'use client'
+
 import { ImageConfigContext } from 'next/dist/shared/lib/image-config-context.shared-runtime'
 import { useContext } from 'react'
 

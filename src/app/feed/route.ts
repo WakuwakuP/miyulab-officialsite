@@ -1,5 +1,3 @@
-import type { GetServerSidePropsContext } from 'next'
-
 import RSS from 'rss'
 
 import { client } from 'libs/client'
@@ -35,18 +33,14 @@ async function generateFeedXml() {
   return feed.xml()
 }
 
-export const getServerSideProps = async ({ res }: GetServerSidePropsContext) => {
+export async function GET() {
   const xml = await generateFeedXml()
 
-  res.statusCode = 200
-  res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate')
-  res.setHeader('Content-Type', 'text/xml')
-  res.end(xml)
-
-  return {
-    props: {},
-  }
+  return new Response(xml, {
+    status: 200,
+    headers: {
+      'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+      'Content-Type': 'text/xml',
+    },
+  })
 }
-
-const Page = () => null
-export default Page

@@ -1,54 +1,55 @@
-import type { GetStaticPaths, GetStaticProps } from 'next'
-
 import * as cheerio from 'cheerio'
 import hljs from 'highlight.js'
 import { createTableOfContents, processer } from 'microcms-richedit-processer'
-import { NextSeo } from 'next-seo'
 import { ImgixFormat } from 'ts-imgix'
 
 import { ContentDetail } from 'components/templates'
 import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
-import type { NextSeoProps } from 'next-seo'
-import type { ContentModify } from 'types'
 
-interface ContentDetailPageProps {
-  content: ContentModify
-  toc: {
-    id: string
-    text: string
-    name: string
-  }[]
-  seo: NextSeoProps
-}
+export const revalidate = 600
 
-const ContentDetailPage = ({ content, toc, seo }: ContentDetailPageProps) => {
-  return (
-    <>
-      <NextSeo {...seo} />
-      <ContentDetail content={content} toc={toc} />
-    </>
-  )
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [],
-    fallback: 'blocking',
-  }
-}
-
-export const getStaticProps: GetStaticProps = async (context) => {
+export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
   const BASE_URL = process.env.BASE_URL
   const SITE_TITLE = process.env.SITE_TITLE
-  const id = context.params?.id
-  const idExceptArray = id instanceof Array ? id[0] : id
 
   const content = await client
     .get({
       endpoint: 'contents',
-      contentId: idExceptArray,
+      contentId: id,
+    })
+    .catch(() => undefined)
+
+  if (!content) {
+    return {
+      notFound: true,
+      revalidate: 60,
+    }
+  }
+
+  return {
+    title: content.title,
+    openGraph: {
+      title: `${content.title} | ${SITE_TITLE}`,
+      url: `https://${BASE_URL}/content/detail/${content.id}`,
+      type: 'article',
+      images: [
+        {
+          url: content.thumbnail?.url
+            ? `${content.thumbnail.url}?fit=crop&w=1200&h=630`
+            : `https://${BASE_URL}/img/ogp.png`,
+        },
+      ],
+    },
+  }
+}
+
+export default async function ContentDetailPage({ params: { id } }: { params: { id: string } }) {
+  const content = await client
+    .get({
+      endpoint: 'contents',
+      contentId: id,
     })
     .catch(() => undefined)
 
@@ -82,9 +83,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     tags: 'h2, h3',
   }
 
-  return {
-    props: {
-      content: {
+  return (
+    <ContentDetail
+      content={{
         ...content,
         content: await processer(body, {
           img: {
@@ -98,26 +99,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
           iframe: { lazy: false },
           code: { enabled: true },
         }),
-      },
-      toc: createTableOfContents(body, tocOption),
-      seo: {
-        title: content.title,
-        openGraph: {
-          title: `${content.title} | ${SITE_TITLE}`,
-          url: `https://${BASE_URL}/content/detail/${content.id}`,
-          type: 'article',
-          images: [
-            {
-              url: content.thumbnail?.url
-                ? `${content.thumbnail.url}?fit=crop&w=1200&h=630`
-                : `https://${BASE_URL}/img/ogp.png`,
-            },
-          ],
-        },
-      },
-    },
-    revalidate: 60,
-  }
+      }}
+      toc={createTableOfContents(body, tocOption)}
+    />
+  )
 }
-
-export default ContentDetailPage

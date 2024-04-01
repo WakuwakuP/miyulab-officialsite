@@ -10,10 +10,12 @@ interface HomeProps {
   categories?: Category[]
 }
 
+export const revalidate = 600
+
 export const Home = ({ contents }: HomeProps) => {
   return (
     <>
-      <div className={styles.homeContaner}>
+      <div className={styles.homeContainer}>
         <div className={`${styles.topAreaWrapper} ${styles.duoNone}`}>
           <div className={styles.topArea}>
             <div className={styles.topAreaBackground}>
@@ -28,12 +30,12 @@ export const Home = ({ contents }: HomeProps) => {
           <div>
             <h3>New</h3>
           </div>
-          <div className={styles.newContnetList}>
+          <div className={styles.newContents}>
             {contents.map((content: ContentModify) => (
               <ContentCard content={content} key={content.id} />
             ))}
           </div>
-          <div className={styles.newContentListMore}>
+          <div className={styles.newContentsMore}>
             <TextButton href='/content/latest'>More</TextButton>
           </div>
         </section>

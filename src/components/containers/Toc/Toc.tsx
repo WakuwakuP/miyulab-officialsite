@@ -1,3 +1,5 @@
+'use client'
+
 import { Link as Scroll } from 'react-scroll'
 
 import styles from 'styles/components/containers/Toc.module.css'
