@@ -12,13 +12,13 @@ export const Footer = () => {
       <div className={styles.contact}>
         <h3>Contact</h3>
         <ul>
-          <IconButton href='https://twitter.com/waku_P'>
+          <IconButton href='https://twitter.com/waku_P' rel='me'>
             <SiTwitter size={'2rem'} />
           </IconButton>
-          <IconButton href='https://pleroma.wakuwakup.net/wakuwakup'>
+          <IconButton href='https://pl.waku.dev/wakuwakup' rel='me'>
             <SiPleroma size={'2rem'} />
           </IconButton>
-          <IconButton href='https://github.com/WakuwakuP'>
+          <IconButton href='https://github.com/WakuwakuP' rel='me'>
             <SiGithub size={'2rem'} />
           </IconButton>
         </ul>
