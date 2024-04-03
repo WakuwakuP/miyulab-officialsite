@@ -1,11 +1,9 @@
-.homeContainer {
+/* .homeContainer {
   margin-top: -3.5rem;
-}
-/* .homeContainer>*:first-child {
-  padding-top: 3.5rem;
 } */
 
 .topAreaWrapper {
+  margin-top: -3.5rem;
   position: relative;
   height: 100vh;
 }

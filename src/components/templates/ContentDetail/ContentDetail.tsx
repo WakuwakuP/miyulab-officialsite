@@ -73,7 +73,7 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
           <div className={styles.tocWrapper} ref={elemTocWrapper}>
             <div className={styles.tocArea} ref={elemTocArea}>
               {toc && toc.length > 0 && <Toc toc={toc} />}
-              {process.env.NODE_ENV == 'development' && <AdSense adSlot='3817713745' />}
+              {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
             </div>
           </div>
         </div>

@@ -113,10 +113,6 @@ a.btn:hover {
     overflow-y: scroll;
   }
 
-  .surface-duo-left main {
-    margin-top: 4rem;
-  }
-
   .surface-duo-right {
     position: relative;
     display: block;

@@ -4,6 +4,8 @@ import { client } from 'libs/client'
 
 import type { Content } from 'types'
 
+export const revalidate = 300
+
 async function generateFeedXml() {
   const feed = new RSS({
     title: 'Miyulab Blog',
