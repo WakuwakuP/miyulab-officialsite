@@ -1,11 +1,8 @@
-import React from 'react'
-
 import { Home } from './Home'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'templates/Home',
+const meta: Meta<typeof Home> = {
   component: Home,
   args: {
     contents: [
@@ -18,8 +15,16 @@ export default {
           {
             id: 'aaa',
             name: 'test category',
+            createdAt: '',
+            updatedAt: '',
+            publishedAt: '',
+            revisedAt: '',
           },
         ],
+        contentsCategory: [],
+        createdAt: '',
+        updatedAt: '',
+        revisedAt: '',
       },
       {
         id: 'test2',
@@ -30,20 +35,23 @@ export default {
           {
             id: 'aaa2',
             name: 'test category',
+            createdAt: '',
+            updatedAt: '',
+            publishedAt: '',
+            revisedAt: '',
           },
         ],
+        contentsCategory: [],
+        createdAt: '',
+        updatedAt: '',
+        revisedAt: '',
       },
     ],
   },
-  argTypes: {
-    // TODO
-  },
-} as ComponentMeta<typeof Home>
-
-const Template: ComponentStory<typeof Home> = (args) => <Home {...args} />
-
-export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
 }
+
+export default meta
+
+type story = StoryObj<typeof Home>
+
+export const Default: story = {}

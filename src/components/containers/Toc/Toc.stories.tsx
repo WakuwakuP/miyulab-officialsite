@@ -1,11 +1,8 @@
-import React from 'react'
-
 import { Toc } from './Toc'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'containers/Toc',
+const meta: Meta<typeof Toc> = {
   component: Toc,
   args: {
     toc: [
@@ -31,15 +28,10 @@ export default {
       },
     ],
   },
-  argTypes: {
-    // TODO
-  },
-} as ComponentMeta<typeof Toc>
-
-const Template: ComponentStory<typeof Toc> = (args) => <Toc {...args} />
-
-export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
 }
+
+export default meta
+
+type story = StoryObj<typeof Toc>
+
+export const Default: story = {}

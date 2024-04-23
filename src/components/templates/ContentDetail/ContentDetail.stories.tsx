@@ -1,16 +1,13 @@
-import React from 'react'
-
 import { ContentDetail } from './ContentDetail'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const htmlCodeBlock =
   '<h2>CodeBlock Test</h2><pre><code class="hljs"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getStaticPaths: GetStaticPaths = <span class="hljs-keyword">async</span> (context) =&gt; {\n&nbsp; <span class="hljs-keyword">return</span> {\n&nbsp; &nbsp; paths: [],\n&nbsp; &nbsp; fallback: <span class="hljs-string">\'blocking\'</span>\n&nbsp; }\n};</code></pre><p><br></p>'
 const htmlTable =
   '<h2>Table Test</h2><table><thead><tr><th>aaa</th><th>bbb</th></tr></thead><tbody><tr><td>ccc</td><td>ddd</td></tr></tbody></table>'
 
-export default {
-  title: 'templates/ContentDetail',
+const meta: Meta<typeof ContentDetail> = {
   component: ContentDetail,
   args: {
     content: {
@@ -47,25 +44,20 @@ export default {
       },
     ],
   },
-  argTypes: {
-    // TODO
-  },
-} as ComponentMeta<typeof ContentDetail>
-
-const Template: ComponentStory<typeof ContentDetail> = (args) => <ContentDetail {...args} />
-
-export const Default = Template.bind({})
-
-Default.parameters = {
-  nextRouter: {
-    path: '/content/detail/[id]',
-    asPath: '/content/detail/hoge',
-    query: {
-      id: 'hoge',
-    },
-  },
 }
 
-Default.args = {
-  // TODO
+export default meta
+
+type story = StoryObj<typeof ContentDetail>
+
+export const Default: story = {
+  parameters: {
+    nextRouter: {
+      path: '/content/detail/[id]',
+      asPath: '/content/detail/kw0j37a1lcd',
+      query: {
+        id: 'kw0j37a1lcd',
+      },
+    },
+  },
 }

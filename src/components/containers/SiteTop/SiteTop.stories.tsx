@@ -1,25 +1,13 @@
-import React from 'react'
-
 import { SiteTop } from './SiteTop'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'containers/SiteTop',
+const meta: Meta<typeof SiteTop> = {
   component: SiteTop,
-  argTypes: {
-    // TODO
-  },
-} as ComponentMeta<typeof SiteTop>
-
-const Template: ComponentStory<typeof SiteTop> = (args) => (
-  <div style={{ height: 100 + 'vh' }}>
-    <SiteTop {...args} />
-  </div>
-)
-
-export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
 }
+
+export default meta
+
+type story = StoryObj<typeof SiteTop>
+
+export const Default: story = {}

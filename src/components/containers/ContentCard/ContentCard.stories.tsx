@@ -1,9 +1,8 @@
 import { ContentCard } from './ContentCard'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'containers/ContentCard',
+export const meta: Meta<typeof ContentCard> = {
   component: ContentCard,
   args: {
     content: {
@@ -15,19 +14,22 @@ export default {
         {
           id: 'aaa',
           name: 'test category',
+          createdAt: '',
+          updatedAt: '',
+          publishedAt: '',
+          revisedAt: '',
         },
       ],
+      contentsCategory: [],
+      createdAt: '',
+      updatedAt: '',
+      revisedAt: '',
     },
   },
-  argTypes: {
-    // TODO
-  },
-} as ComponentMeta<typeof ContentCard>
-
-const Template: ComponentStory<typeof ContentCard> = (args) => <ContentCard {...args} />
-
-export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
 }
+
+export default meta
+
+type story = StoryObj<typeof ContentCard>
+
+export const Default: story = {}
