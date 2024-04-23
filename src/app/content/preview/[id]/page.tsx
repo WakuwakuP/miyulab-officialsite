@@ -10,7 +10,9 @@ import { client } from 'libs/client'
 
 import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
 
-export const revalidate = 600
+export const revalidate = 0
+
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
   const BASE_URL = process.env.BASE_URL
@@ -24,10 +26,7 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
     .catch(() => undefined)
 
   if (!content) {
-    return {
-      notFound: true,
-      revalidate: 60,
-    }
+    return {}
   }
 
   return {
