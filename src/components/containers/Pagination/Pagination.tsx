@@ -41,7 +41,7 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
             {range(1, Math.ceil(totalPage)).map((number, index) => {
               if (currentPage - 1 <= index && index <= currentPage + 1) {
                 return (
-                  <li key={index}>
+                  <li key={number}>
                     {index === currentPage ? (
                       <div className={styles.current}>
                         <span>{number}</span>
@@ -56,7 +56,7 @@ export const Pagination = ({ totalPage, page }: PaginationProps) => {
                   </li>
                 )
               }
-              return <></>
+              return null
             })}
           </>
           <>
