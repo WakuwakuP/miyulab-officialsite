@@ -1,6 +1,6 @@
 'use client'
 
-import type { RefObject, useEffect } from 'react'
+import { type RefObject, useEffect } from 'react'
 
 export interface MutationCallback {
   (mutations: MutationRecord[], observer: MutationObserver): void
