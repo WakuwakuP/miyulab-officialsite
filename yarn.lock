@@ -12461,6 +12461,7 @@ __metadata:
     "@storybook/addon-essentials": "npm:^8.0.9"
     "@storybook/addon-interactions": "npm:^8.0.9"
     "@storybook/addon-links": "npm:^8.0.9"
+    "@storybook/blocks": "npm:8.0.9"
     "@storybook/nextjs": "npm:^8.0.9"
     "@storybook/react": "npm:^8.0.9"
     "@storybook/test": "npm:8.0.9"

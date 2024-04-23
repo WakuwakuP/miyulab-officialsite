@@ -4,15 +4,15 @@ import { IconButton } from './IconButton'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof IconButton> = {
+const meta = {
   component: IconButton,
-}
+} satisfies Meta<typeof IconButton>
 
 export default meta
 
-type story = StoryObj<typeof IconButton>
+type Story = StoryObj<typeof IconButton>
 
-export const Template1: story = {
+export const Template1: Story = {
   render: (args) => {
     return (
       <ul>
@@ -24,7 +24,7 @@ export const Template1: story = {
   },
 }
 
-export const Template2: story = {
+export const Template2: Story = {
   render: (args) => {
     return (
       <ul>

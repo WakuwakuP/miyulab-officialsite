@@ -1,13 +1,13 @@
 import { ContentPreview } from './ContentPreview'
 
-import type { StoryObj, Meta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const htmlCodeBlock =
   '<h2>CodeBlock Test</h2><pre><code class="hljs"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getStaticPaths: GetStaticPaths = <span class="hljs-keyword">async</span> (context) =&gt; {\n&nbsp; <span class="hljs-keyword">return</span> {\n&nbsp; &nbsp; paths: [],\n&nbsp; &nbsp; fallback: <span class="hljs-string">\'blocking\'</span>\n&nbsp; }\n};</code></pre><p><br></p>'
 const htmlTable =
   '<h2>Table Test</h2><table><thead><tr><th>aaa</th><th>bbb</th></tr></thead><tbody><tr><td>ccc</td><td>ddd</td></tr></tbody></table>'
 
-const meta: Meta<typeof ContentPreview> = {
+const meta = {
   component: ContentPreview,
   args: {
     content: {
@@ -43,13 +43,13 @@ const meta: Meta<typeof ContentPreview> = {
       },
     ],
   },
-}
+} satisfies Meta<typeof ContentPreview>
 
 export default meta
 
-type story = StoryObj<typeof ContentPreview>
+type Story = StoryObj<typeof ContentPreview>
 
-export const Default: story = {
+export const Default: Story = {
   parameters: {
     nextRouter: {
       path: '/content/preview/[id]',

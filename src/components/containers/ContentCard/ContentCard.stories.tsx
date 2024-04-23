@@ -2,7 +2,7 @@ import { ContentCard } from './ContentCard'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-export const meta: Meta<typeof ContentCard> = {
+const meta = {
   component: ContentCard,
   args: {
     content: {
@@ -26,10 +26,10 @@ export const meta: Meta<typeof ContentCard> = {
       revisedAt: '',
     },
   },
-}
+} satisfies Meta<typeof ContentCard>
 
 export default meta
 
-type story = StoryObj<typeof ContentCard>
+type Story = StoryObj<typeof ContentCard>
 
-export const Default: story = {}
+export const Default: Story = {}

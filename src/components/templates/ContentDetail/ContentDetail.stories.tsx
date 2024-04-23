@@ -7,7 +7,7 @@ const htmlCodeBlock =
 const htmlTable =
   '<h2>Table Test</h2><table><thead><tr><th>aaa</th><th>bbb</th></tr></thead><tbody><tr><td>ccc</td><td>ddd</td></tr></tbody></table>'
 
-const meta: Meta<typeof ContentDetail> = {
+const meta = {
   component: ContentDetail,
   args: {
     content: {
@@ -44,13 +44,13 @@ const meta: Meta<typeof ContentDetail> = {
       },
     ],
   },
-}
+} satisfies Meta<typeof ContentDetail>
 
 export default meta
 
-type story = StoryObj<typeof ContentDetail>
+type Story = StoryObj<typeof ContentDetail>
 
-export const Default: story = {
+export const Default: Story = {
   parameters: {
     nextRouter: {
       path: '/content/detail/[id]',

@@ -2,7 +2,7 @@ import { Particle } from './Particle'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof Particle> = {
+const meta = {
   component: Particle,
   args: {
     id: 'particle',
@@ -12,10 +12,10 @@ const meta: Meta<typeof Particle> = {
       disableSnapshot: true,
     },
   },
-}
+} satisfies Meta<typeof Particle>
 
 export default meta
 
-type story = StoryObj<typeof Particle>
+type Story = StoryObj<typeof Particle>
 
-export const Default: story = {}
+export const Default: Story = {}

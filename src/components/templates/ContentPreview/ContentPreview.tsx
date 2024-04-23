@@ -3,9 +3,8 @@ import { useRef } from 'react'
 
 import { Toc } from 'components/containers'
 import { PageTitle } from 'components/parts'
-import { useMutationObserver } from 'hooks/useMutationObserver'
+import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
-import type { MutationCallback } from 'hooks/useMutationObserver'
 import type { Category, ContentModify } from 'types'
 
 import styles from 'styles/components/templates/ContentPreview.module.css'

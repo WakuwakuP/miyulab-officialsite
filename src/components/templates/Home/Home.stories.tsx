@@ -2,7 +2,7 @@ import { Home } from './Home'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof Home> = {
+const meta = {
   component: Home,
   args: {
     contents: [
@@ -48,10 +48,10 @@ const meta: Meta<typeof Home> = {
       },
     ],
   },
-}
+} satisfies Meta<typeof Home>
 
 export default meta
 
-type story = StoryObj<typeof Home>
+type Story = StoryObj<typeof Home>
 
-export const Default: story = {}
+export const Default: Story = {}

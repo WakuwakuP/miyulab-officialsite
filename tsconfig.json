@@ -24,6 +24,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/hooks/useImageConfig.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/hooks/useImageConfig.ts",
+    "src/components/containers/ContentCard/ContentCard.stories.tsx"
+  ],
   "exclude": ["node_modules"]
 }

@@ -2,7 +2,7 @@ import { Toc } from './Toc'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof Toc> = {
+const meta = {
   component: Toc,
   args: {
     toc: [
@@ -28,10 +28,10 @@ const meta: Meta<typeof Toc> = {
       },
     ],
   },
-}
+} satisfies Meta<typeof Toc>
 
 export default meta
 
-type story = StoryObj<typeof Toc>
+type Story = StoryObj<typeof Toc>
 
-export const Default: story = {}
+export const Default: Story = {}

@@ -2,7 +2,7 @@ import { ContentLatest } from './ContentLatest'
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-const meta: Meta<typeof ContentLatest> = {
+const meta = {
   component: ContentLatest,
   args: {
     contents: [
@@ -70,7 +70,7 @@ const meta: Meta<typeof ContentLatest> = {
     page: 1,
     totalPage: 10,
   },
-}
+} satisfies Meta<typeof ContentLatest>
 
 export default meta
 
