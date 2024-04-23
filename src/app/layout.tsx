@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     site: TWITTER_SITE,
     card: 'summary_large_image',
   },
-  viewport: 'width=device-width, initial-scale=1.0',
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
