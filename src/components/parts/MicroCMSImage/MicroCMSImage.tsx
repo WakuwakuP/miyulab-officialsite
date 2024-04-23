@@ -1,5 +1,4 @@
-import type { ImageProps } from 'next/image'
-import Image from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 
 type MicroCMSImageProps = Omit<ImageProps, 'src' | 'width' | 'height'> & {
   src: string

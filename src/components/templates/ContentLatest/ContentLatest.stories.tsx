@@ -1,11 +1,8 @@
-import React from 'react'
-
 import { ContentLatest } from './ContentLatest'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'templates/ContentLatest',
+const meta = {
   component: ContentLatest,
   args: {
     contents: [
@@ -18,8 +15,16 @@ export default {
           {
             id: 'aaa',
             name: 'test category',
+            createdAt: '',
+            updatedAt: '',
+            publishedAt: '',
+            revisedAt: '',
           },
         ],
+        contentsCategory: [],
+        createdAt: '',
+        updatedAt: '',
+        revisedAt: '',
       },
       {
         id: 'test2',
@@ -30,40 +35,51 @@ export default {
           {
             id: 'aaa2',
             name: 'test category',
+            createdAt: '',
+            updatedAt: '',
+            publishedAt: '',
+            revisedAt: '',
           },
         ],
+        contentsCategory: [],
+        createdAt: '',
+        updatedAt: '',
+        revisedAt: '',
       },
       {
-        id: 'test2',
-        title: 'test2 title',
-        content: 'test2',
+        id: 'test3',
+        title: 'test3 title',
+        content: 'test3',
         thumbnail: undefined,
         category: [
           {
             id: 'aaa2',
             name: 'test category',
+            createdAt: '',
+            updatedAt: '',
+            publishedAt: '',
+            revisedAt: '',
           },
         ],
+        contentsCategory: [],
+        createdAt: '',
+        updatedAt: '',
+        revisedAt: '',
       },
     ],
     page: 1,
     totalPage: 10,
   },
-  argTypes: {
-    // TODO
+} satisfies Meta<typeof ContentLatest>
+
+export default meta
+
+type Story = StoryObj<typeof ContentLatest>
+
+export const Default: Story = {}
+
+export const Category: Story = {
+  args: {
+    categoryId: 'test category',
   },
-} as ComponentMeta<typeof ContentLatest>
-
-const Template: ComponentStory<typeof ContentLatest> = (args) => <ContentLatest {...args} />
-
-export const Default = Template.bind({})
-
-Default.args = {
-  // TODO
-}
-
-export const Category = Template.bind({})
-
-Category.args = {
-  categoryId: 'test category',
 }

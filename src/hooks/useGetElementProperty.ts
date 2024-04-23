@@ -1,5 +1,4 @@
-import type { RefObject } from 'react'
-import { useCallback } from 'react'
+import { type RefObject, useCallback } from 'react'
 
 type DOMRectProperty = keyof Omit<DOMRect, 'toJSON'>
 

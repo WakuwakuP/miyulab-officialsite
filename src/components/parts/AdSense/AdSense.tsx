@@ -2,9 +2,7 @@
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
-import { useMutationObserver } from 'hooks/useMutationObserver'
-
-import type { MutationCallback } from 'hooks/useMutationObserver'
+import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
 interface AdSenseProps {
   adSlot: string

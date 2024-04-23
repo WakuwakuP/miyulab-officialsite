@@ -7,10 +7,17 @@ import { Footer, Header } from 'components/containers'
 import { GoogleAnalytics } from 'libs/gtag'
 import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
 
+if (!process.env.BASE_URL) {
+  throw new Error('Please define BASE_URL in your environment')
+}
+if (!process.env.SITE_TITLE) {
+  throw new Error('Please define SITE_TITLE in your environment')
+}
+
 const BASE_URL = process.env.BASE_URL
 const SITE_TITLE = process.env.SITE_TITLE
 const SITE_DESCRIPTION = process.env.SITE_DESCRIPTION
-const SITE_NAME = process.env.SITE_NAME
+const SITE_NAME = process.env.SITE_NAME ?? SITE_TITLE
 const TWITTER_HANDLE = process.env.TWITTER_HANDLE
 const TWITTER_SITE = process.env.TWITTER_SITE
 

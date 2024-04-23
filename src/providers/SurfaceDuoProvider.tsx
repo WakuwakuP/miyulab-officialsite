@@ -1,11 +1,9 @@
 'use client'
 
-import { useRef, type ReactNode } from 'react'
+import { type ReactNode, useRef } from 'react'
 
 import { SiteTop } from 'components/containers'
-import { useMutationObserver } from 'hooks/useMutationObserver'
-
-import type { MutationCallback } from 'hooks/useMutationObserver'
+import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
 export default function SurfaceDuoProvider({
   children,

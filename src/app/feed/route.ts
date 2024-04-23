@@ -6,12 +6,18 @@ import type { Content } from 'types'
 
 export const revalidate = 300
 
+if (!process.env.BASE_URL) {
+  throw new Error('BASE_URL is not set')
+}
+
+const BASE_URL = process.env.BASE_URL
+
 async function generateFeedXml() {
   const feed = new RSS({
     title: 'Miyulab Blog',
     description: 'Miyulab Official website Blog feed',
-    site_url: `https://${process.env.BASE_URL}`,
-    feed_url: `https://${process.env.BASE_URL}/feed`,
+    site_url: `https://${BASE_URL}`,
+    feed_url: `https://${BASE_URL}/feed`,
     language: 'ja',
   })
 
@@ -28,7 +34,7 @@ async function generateFeedXml() {
       title: content.title,
       description: content.content.reduce((acc: string, cur) => acc + (cur.html || ''), ''),
       date: content.publishedAt ? new Date(content.publishedAt) : '',
-      url: `http://${process.env.BASE_URL}/content/detail/${content.id}`,
+      url: `http://${BASE_URL}/content/detail/${content.id}`,
     })
   })
 

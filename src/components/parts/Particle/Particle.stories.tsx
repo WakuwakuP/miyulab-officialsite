@@ -1,27 +1,21 @@
-import React from 'react'
-
 import { Particle } from './Particle'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'parts/Particle',
+const meta = {
   component: Particle,
   args: {
     id: 'particle',
   },
-  argTypes: {},
   parameters: {
     chromatic: {
       disableSnapshot: true,
     },
   },
-} as ComponentMeta<typeof Particle>
+} satisfies Meta<typeof Particle>
 
-const Template: ComponentStory<typeof Particle> = (args) => <Particle {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Particle>
 
-Default.args = {
-  // TODO
-}
+export const Default: Story = {}

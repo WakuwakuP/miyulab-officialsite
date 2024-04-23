@@ -2,39 +2,39 @@ import { SiTwitter } from 'react-icons/si'
 
 import { IconButton } from './IconButton'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'parts/IconButton',
+const meta = {
   component: IconButton,
-  argTypes: {
-    // TODO
+} satisfies Meta<typeof IconButton>
+
+export default meta
+
+type Story = StoryObj<typeof IconButton>
+
+export const Template1: Story = {
+  render: (args) => {
+    return (
+      <ul>
+        <IconButton {...args}>
+          <SiTwitter size={'2rem'} />
+        </IconButton>
+      </ul>
+    )
   },
-} as ComponentMeta<typeof IconButton>
-
-const Template1: ComponentStory<typeof IconButton> = (args) => {
-  return (
-    <ul>
-      <IconButton {...args}>
-        <SiTwitter size={'2rem'} />
-      </IconButton>
-    </ul>
-  )
 }
 
-export const Default = Template1.bind({})
-
-const Template2: ComponentStory<typeof IconButton> = (args) => {
-  return (
-    <ul>
-      <IconButton {...args}>
-        <SiTwitter size={'2rem'} />
-      </IconButton>
-      <IconButton {...args}>
-        <SiTwitter size={'2rem'} />
-      </IconButton>
-    </ul>
-  )
+export const Template2: Story = {
+  render: (args) => {
+    return (
+      <ul>
+        <IconButton {...args}>
+          <SiTwitter size={'2rem'} />
+        </IconButton>
+        <IconButton {...args}>
+          <SiTwitter size={'2rem'} />
+        </IconButton>
+      </ul>
+    )
+  },
 }
-
-export const List = Template2.bind({})

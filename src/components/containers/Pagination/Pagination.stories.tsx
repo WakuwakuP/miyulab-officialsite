@@ -1,28 +1,17 @@
 import { Pagination } from './Pagination'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 
-export default {
-  title: 'containers/Pagination',
+const meta = {
   component: Pagination,
   args: {
     totalPage: 20,
     page: 5,
   },
-  argTypes: {
-    totalPage: {
-      type: Number,
-      description: '最大ページ数',
-      control: 'number',
-    },
-    page: {
-      type: Number,
-      description: '現在のページ数',
-      control: 'number',
-    },
-  },
-} as ComponentMeta<typeof Pagination>
+} satisfies Meta<typeof Pagination>
 
-const Template: ComponentStory<typeof Pagination> = (args) => <Pagination {...args} />
+export default meta
 
-export const Default = Template.bind({})
+type Story = StoryObj<typeof Pagination>
+
+export const Default: Story = {}

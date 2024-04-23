@@ -33,11 +33,13 @@ export const usePageView = () => {
   const router = useRouter()
   useEffect(() => {
     if (!existsGaId) {
+      // eslint-disable-next-line no-console
       console.log('GA_ID is not exists.')
       return
     }
 
     if (!('gtag' in window)) {
+      // eslint-disable-next-line no-console
       console.log('gtag is not defined')
       return
     }

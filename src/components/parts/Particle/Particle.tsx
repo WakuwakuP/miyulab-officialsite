@@ -16,7 +16,8 @@ export const Particle = ({ id }: ParticleProps) => {
     await loadFull(engine)
   }, [])
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log(container)
+    // eslint-disable-next-line no-console
+    console.log(container)
   }, [])
   return (
     <>
@@ -82,7 +83,7 @@ export const Particle = ({ id }: ParticleProps) => {
                   color: '#000',
                   width: 0,
                 },
-                type: `circle`,
+                type: 'circle',
               },
               size: {
                 animation: {

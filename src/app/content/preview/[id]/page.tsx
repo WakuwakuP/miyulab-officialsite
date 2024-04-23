@@ -14,10 +14,14 @@ export const revalidate = 0
 
 export const dynamic = 'force-dynamic'
 
-export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
-  const BASE_URL = process.env.BASE_URL
-  const SITE_TITLE = process.env.SITE_TITLE
+if (!process.env.BASE_URL || !process.env.SITE_TITLE) {
+  throw new Error('BASE_URL or SITE_TITLE is not set')
+}
 
+const BASE_URL = process.env.BASE_URL
+const SITE_TITLE = process.env.SITE_TITLE
+
+export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
   const content = await client
     .get({
       endpoint: 'contents',
