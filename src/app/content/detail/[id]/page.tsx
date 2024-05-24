@@ -23,7 +23,7 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
     })
     .catch(() => undefined)
 
-  if (content === undefined) {
+  if (content == null) {
     return {}
   }
 
@@ -52,7 +52,7 @@ export default async function ContentDetailPage({ params: { id } }: { params: { 
     })
     .catch(() => undefined)
 
-  if (!content) {
+  if (content == null) {
     notFound()
   }
 
