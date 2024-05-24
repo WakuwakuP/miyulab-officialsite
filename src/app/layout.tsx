@@ -27,6 +27,8 @@ const globalFont = M_PLUS_1p({
   display: 'swap',
 })
 
+export const revalidate = 600
+
 export const metadata: Metadata = {
   title: { default: `Home | ${SITE_NAME}`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,

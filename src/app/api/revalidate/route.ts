@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 import { revalidatePath } from 'next/cache'
 
+export const revalidate = 0
+
 export async function POST(request: Request) {
   if (request.body === null) return new Response(null, { status: 400 })
 
