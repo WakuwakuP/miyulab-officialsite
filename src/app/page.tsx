@@ -1,6 +1,8 @@
 import { Home } from 'components/templates'
 import { client } from 'libs/client'
 
+export const revalidate = 600
+
 export default async function HomePage() {
   const contents = (
     await client.get({
