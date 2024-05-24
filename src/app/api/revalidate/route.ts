@@ -17,10 +17,10 @@ export async function POST(request: Request) {
 
   revalidatePath('/')
   revalidatePath('/feed')
-  revalidatePath('/content/latest/')
-  revalidatePath('/content/latest/[page]')
-  revalidatePath('/content/category/[categoryId]/')
-  revalidatePath('/content/category/[categoryId]/[page]')
+  revalidatePath('/content/latest/page', 'page')
+  revalidatePath('/content/latest/[page]/page', 'page')
+  revalidatePath('/content/category/[categoryId]/page', 'page')
+  revalidatePath('/content/category/[categoryId]/[page]/page', 'page')
 
   console.log('revalidate: /')
   console.log('revalidate: /feed')
