@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache'
 import { notFound } from 'next/navigation'
 
 import * as cheerio from 'cheerio'
@@ -12,16 +13,31 @@ import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/l
 
 export const revalidate = 600
 
-export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
-  const BASE_URL = process.env.BASE_URL
-  const SITE_TITLE = process.env.SITE_TITLE
-
-  const content = await client
+const getContentDetail = async (id: string) => {
+  return await client
     .get({
       endpoint: 'contents',
       contentId: id,
     })
     .catch(() => undefined)
+}
+
+const cachedGetContentDetail = (id: string) =>
+  unstable_cache(
+    async () => {
+      return await getContentDetail(id)
+    },
+    [`content-detail-${id}`],
+    {
+      tags: [`content-detail-${id}`],
+    },
+  )
+
+export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
+  const BASE_URL = process.env.BASE_URL
+  const SITE_TITLE = process.env.SITE_TITLE
+
+  const content = await getContentDetail(id)
 
   if (content == null) {
     return {}
@@ -45,12 +61,9 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
 }
 
 export default async function ContentDetailPage({ params: { id } }: { params: { id: string } }) {
-  const content = await client
-    .get({
-      endpoint: 'contents',
-      contentId: id,
-    })
-    .catch(() => undefined)
+  const getContentDetail = cachedGetContentDetail(id)
+
+  const content = await getContentDetail()
 
   if (content == null) {
     notFound()

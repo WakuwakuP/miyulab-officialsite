@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { unstable_cache } from 'next/cache'
 import { notFound } from 'next/navigation'
 
 import { ContentLatest } from 'components/templates'
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
   title: 'Latest',
 }
 
-export default async function ContentLatestPage() {
-  const data = await client
+const getContentLatest = async () => {
+  return await client
     .get({
       endpoint: 'contents',
       queries: {
@@ -22,8 +23,25 @@ export default async function ContentLatestPage() {
       },
     })
     .catch(() => undefined)
+}
 
-  if (!data || data.contents.length === 0) {
+const cachedGetContentLatest = () =>
+  unstable_cache(
+    async () => {
+      return await getContentLatest()
+    },
+    ['contents-latest-page-1'],
+    {
+      tags: ['contents-latest'],
+    },
+  )
+
+export default async function ContentLatestPage() {
+  const getContentLatest = cachedGetContentLatest()
+
+  const data = await getContentLatest()
+
+  if (!data || !data.contents || data.contents.length === 0) {
     notFound()
   }
 

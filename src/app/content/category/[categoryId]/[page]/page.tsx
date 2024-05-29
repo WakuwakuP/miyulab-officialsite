@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache'
 import { notFound } from 'next/navigation'
 
 import { ContentLatest } from 'components/templates'
@@ -12,12 +13,8 @@ export async function generateMetadata({ params: { categoryId } }: { params: { c
   }
 }
 
-export default async function ContentsCategory({
-  params: { categoryId, page },
-}: {
-  params: { categoryId: string; page: string }
-}) {
-  const data = await client.get({
+const getContentsCategory = async (categoryId: string, page: string) => {
+  return await client.get({
     endpoint: 'contents',
     queries: {
       filters: `category[contains]${categoryId},contentsCategory[contains]article`,
@@ -26,6 +23,26 @@ export default async function ContentsCategory({
       limit: PAGE_LIMIT,
     },
   })
+}
+
+const getCacheContentsCategory = (categoryId: string, page: string) =>
+  unstable_cache(
+    async () => {
+      return await getContentsCategory(categoryId, page)
+    },
+    [`contents-category-${categoryId}-page-${page}`],
+    {
+      tags: ['contents-category'],
+    },
+  )
+
+export default async function ContentsCategory({
+  params: { categoryId, page },
+}: {
+  params: { categoryId: string; page: string }
+}) {
+  const getContentsCategory = getCacheContentsCategory(categoryId, page)
+  const data = await getContentsCategory()
 
   if (!data || data.contents.length === 0) {
     notFound()
