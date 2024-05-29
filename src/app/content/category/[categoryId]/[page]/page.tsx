@@ -30,7 +30,7 @@ const getCacheContentsCategory = (categoryId: string, page: string) =>
     async () => {
       return await getContentsCategory(categoryId, page)
     },
-    [`contents-category-${categoryId}-page-${page}`],
+    ['contents-category'],
     {
       tags: ['contents-category'],
     },

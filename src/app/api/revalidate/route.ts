@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidateTag } from 'next/cache'
 
 export const revalidate = 0
 
@@ -9,9 +9,6 @@ export async function POST(request: Request) {
   const data = await request.json()
 
   if (data.id === undefined) return new Response(null, { status: 400 })
-
-  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  revalidatePath(`/content/detail/${data.id}`, 'page')
 
   revalidateTag('home')
   console.log('revalidate: /')
