@@ -27,7 +27,7 @@ const cachedGetContentDetail = (id: string) =>
     async () => {
       return await getContentDetail(id)
     },
-    [`content-detail-${id}`],
+    ['content-detail'],
     {
       tags: [`content-detail-${id}`],
     },
