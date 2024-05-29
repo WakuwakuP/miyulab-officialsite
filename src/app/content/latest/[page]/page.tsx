@@ -30,7 +30,7 @@ const cachedGetContentLatest = (page: string) =>
     async () => {
       return await getContentLatest(page)
     },
-    ['contents-latest'],
+    [`contents-latest-page-${page}`],
     {
       tags: ['contents-latest'],
     },

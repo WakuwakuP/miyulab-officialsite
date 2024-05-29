@@ -29,7 +29,7 @@ const cachedGetContentsCategory = (categoryId: string) =>
     async () => {
       return await getContentsCategory(categoryId)
     },
-    ['contents-category'],
+    [`contents-category-${categoryId}-page-1`],
     {
       tags: ['contents-category'],
     },
