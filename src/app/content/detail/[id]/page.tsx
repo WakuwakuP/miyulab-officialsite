@@ -37,7 +37,9 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
   const BASE_URL = process.env.BASE_URL
   const SITE_TITLE = process.env.SITE_TITLE
 
-  const content = await getContentDetail(id)
+  const getContentDetail = cachedGetContentDetail(id)
+
+  const content = await getContentDetail()
 
   if (content == null) {
     return {}
