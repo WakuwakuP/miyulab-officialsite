@@ -1,3 +1,4 @@
+import { unstable_cache } from 'next/cache'
 import { notFound } from 'next/navigation'
 
 import { ContentLatest } from 'components/templates'
@@ -10,8 +11,8 @@ export const metadata = {
   title: 'Latest',
 }
 
-export default async function ContentLatestPage({ params: { page } }: { params: { page: string } }) {
-  const data = await client
+const getContentLatest = async (page: string) => {
+  return await client
     .get({
       endpoint: 'contents',
       queries: {
@@ -22,8 +23,24 @@ export default async function ContentLatestPage({ params: { page } }: { params: 
       },
     })
     .catch(() => undefined)
+}
 
-  if (!data || data.contents.length === 0) {
+const cachedGetContentLatest = (page: string) =>
+  unstable_cache(
+    async () => {
+      return await getContentLatest(page)
+    },
+    [`contents-latest-page-${page}`],
+    {
+      tags: ['contents-latest'],
+    },
+  )
+
+export default async function ContentLatestPage({ params: { page } }: { params: { page: string } }) {
+  const getContentLatest = cachedGetContentLatest(page)
+  const data = await getContentLatest()
+
+  if (!data || !data.contents || data.contents.length === 0) {
     notFound()
   }
 

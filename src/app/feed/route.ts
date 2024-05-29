@@ -1,16 +1,20 @@
+import { unstable_cache } from 'next/cache'
+
 import RSS from 'rss'
 
 import { client } from 'libs/client'
 
 import type { Content } from 'types'
 
-export const revalidate = 300
+export const revalidate = 0
 
 if (!process.env.BASE_URL) {
   throw new Error('BASE_URL is not set')
 }
 
 const BASE_URL = process.env.BASE_URL
+
+const getCache = unstable_cache(generateFeedXml, ['contents', 'contentsCategory', 'article'], { tags: ['feed'] })
 
 async function generateFeedXml() {
   const feed = new RSS({
@@ -42,12 +46,12 @@ async function generateFeedXml() {
 }
 
 export async function GET() {
-  const xml = await generateFeedXml()
+  const xml = await getCache()
 
   return new Response(xml, {
     status: 200,
     headers: {
-      'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+      'Cache-Control': 's-maxage=600, stale-while-revalidate',
       'Content-Type': 'text/xml',
     },
   })
