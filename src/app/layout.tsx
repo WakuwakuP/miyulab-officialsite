@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { M_PLUS_1p } from 'next/font/google'
 import type { ReactNode } from 'react'
 
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 import { Footer, Header } from 'components/containers'
 import { GoogleAnalytics } from 'libs/gtag'
 import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
@@ -64,6 +66,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={globalFont.className}>
         <SurfaceDuoProvider header={<Header />} footer={<Footer />}>
           {children}
+          <SpeedInsights />
         </SurfaceDuoProvider>
       </body>
     </html>
