@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { SiGithub, SiPleroma, SiTwitter } from 'react-icons/si'
+import { SiGithub, SiPleroma, SiX } from 'react-icons/si'
 
 import IconButton from 'components/parts/IconButton'
 
@@ -13,7 +13,7 @@ export const Footer = () => {
         <h3>Contact</h3>
         <ul>
           <IconButton href='https://twitter.com/waku_P' rel='me'>
-            <SiTwitter size={'2rem'} />
+            <SiX size={'2rem'} />
           </IconButton>
           <IconButton href='https://pl.waku.dev/users/miyu' rel='me'>
             <SiPleroma size={'2rem'} />
