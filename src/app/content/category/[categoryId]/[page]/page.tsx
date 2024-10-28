@@ -7,7 +7,10 @@ import { PAGE_LIMIT } from 'libs/const'
 
 export const revalidate = 600
 
-export async function generateMetadata({ params: { categoryId } }: { params: { categoryId: string } }) {
+type Params = Promise<{ categoryId: string; page: string }>
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const { categoryId } = await params
   return {
     title: categoryId,
   }
@@ -36,11 +39,8 @@ const getCacheContentsCategory = (categoryId: string, page: string) =>
     },
   )
 
-export default async function ContentsCategory({
-  params: { categoryId, page },
-}: {
-  params: { categoryId: string; page: string }
-}) {
+export default async function ContentsCategory({ params }: { params: Params }) {
+  const { categoryId, page } = await params
   const getContentsCategory = getCacheContentsCategory(categoryId, page)
   const data = await getContentsCategory()
 

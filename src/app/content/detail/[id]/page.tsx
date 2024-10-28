@@ -13,6 +13,8 @@ import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/l
 
 export const revalidate = 600
 
+type Params = Promise<{ id: string }>
+
 const getContentDetail = async (id: string) => {
   return await client
     .get({
@@ -33,7 +35,8 @@ const cachedGetContentDetail = (id: string) =>
     },
   )
 
-export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
+export async function generateMetadata({ params }: { params: Params }) {
+  const { id } = await params
   const BASE_URL = process.env.BASE_URL
   const SITE_TITLE = process.env.SITE_TITLE
 
@@ -62,7 +65,8 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
   }
 }
 
-export default async function ContentDetailPage({ params: { id } }: { params: { id: string } }) {
+export default async function ContentDetailPage({ params }: { params: Params }) {
+  const { id } = await params
   const getContentDetail = cachedGetContentDetail(id)
 
   const content = await getContentDetail()

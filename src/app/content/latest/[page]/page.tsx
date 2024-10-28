@@ -11,6 +11,8 @@ export const metadata = {
   title: 'Latest',
 }
 
+type Params = Promise<{ page: string }>
+
 const getContentLatest = async (page: string) => {
   return await client
     .get({
@@ -36,7 +38,8 @@ const cachedGetContentLatest = (page: string) =>
     },
   )
 
-export default async function ContentLatestPage({ params: { page } }: { params: { page: string } }) {
+export default async function ContentLatestPage({ params }: { params: Params }) {
+  const { page } = await params
   const getContentLatest = cachedGetContentLatest(page)
   const data = await getContentLatest()
 

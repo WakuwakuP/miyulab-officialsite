@@ -12,7 +12,6 @@ const nextConfig = {
     ],
   },
   experimental: {},
-  swcMinify: true,
   env: {
     BASE_URL: process.env.BASE_URL,
     SITE_TITLE: process.env.SITE_TITLE,
