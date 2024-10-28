@@ -33,10 +33,12 @@ export const useMutationObserver = (
       mutationObserver.disconnect()
       callback(mutations, mutationObserver)
       for (const elem of elements) {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         elem.current && mutationObserver.observe(elem.current, config)
       }
     })
     for (const elem of elements) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       elem.current && mutationObserver.observe(elem.current, config)
     }
     return () => mutationObserver.disconnect()

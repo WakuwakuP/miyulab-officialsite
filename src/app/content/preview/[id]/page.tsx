@@ -21,7 +21,11 @@ if (!process.env.BASE_URL || !process.env.SITE_TITLE) {
 const BASE_URL = process.env.BASE_URL
 const SITE_TITLE = process.env.SITE_TITLE
 
-export async function generateMetadata({ params: { id } }: { params: { id: string } }) {
+type Params = Promise<{ id: string }>
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
+
+export async function generateMetadata({ params }: { params: Params }) {
+  const { id } = await params
   const content = await client
     .get({
       endpoint: 'contents',
@@ -51,15 +55,17 @@ export async function generateMetadata({ params: { id } }: { params: { id: strin
 }
 
 export default async function ContentDetailPage({
-  params: { id },
+  params,
   searchParams,
 }: {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+  params: Params
+  searchParams: SearchParams
 }) {
-  const draftKey = typeof searchParams.draftKey === 'string' ? searchParams.draftKey : undefined
+  const { id } = await params
+  const { draftKey } = await searchParams
+  const key = typeof draftKey === 'string' ? draftKey : undefined
 
-  if (!draftKey || !id) {
+  if (!key || !id) {
     notFound()
   }
 
@@ -67,7 +73,7 @@ export default async function ContentDetailPage({
     .get({
       endpoint: 'contents',
       contentId: id,
-      queries: { draftKey },
+      queries: { draftKey: key },
     })
     .catch(() => undefined)
 
