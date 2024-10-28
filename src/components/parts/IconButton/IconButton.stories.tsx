@@ -1,4 +1,4 @@
-import { SiTwitter } from 'react-icons/si'
+import { SiX } from 'react-icons/si'
 
 import { IconButton } from './IconButton'
 
@@ -17,7 +17,7 @@ export const Template1: Story = {
     return (
       <ul>
         <IconButton {...args}>
-          <SiTwitter size={'2rem'} />
+          <SiX size={'2rem'} />
         </IconButton>
       </ul>
     )
@@ -29,10 +29,10 @@ export const Template2: Story = {
     return (
       <ul>
         <IconButton {...args}>
-          <SiTwitter size={'2rem'} />
+          <SiX size={'2rem'} />
         </IconButton>
         <IconButton {...args}>
-          <SiTwitter size={'2rem'} />
+          <SiX size={'2rem'} />
         </IconButton>
       </ul>
     )
