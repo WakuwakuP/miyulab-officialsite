@@ -57,6 +57,28 @@ const cachedGetContentDetail = (id: string) =>
     },
   )
 
+const cachedGetNextArticle = (publishedAt: string) =>
+  unstable_cache(
+    async () => {
+      return await getNextArticle(publishedAt)
+    },
+    ['next-article', publishedAt],
+    {
+      tags: ['next-article'],
+    },
+  )
+
+const cachedGetPreviousArticle = (publishedAt: string) =>
+  unstable_cache(
+    async () => {
+      return await getPreviousArticle(publishedAt)
+    },
+    ['previous-article', publishedAt],
+    {
+      tags: ['previous-article'],
+    },
+  )
+
 export default async function ContentDetailPage({ params }: { params: { id: string } }) {
   const getContentDetail = cachedGetContentDetail(params.id)
 
@@ -67,8 +89,8 @@ export default async function ContentDetailPage({ params }: { params: { id: stri
   }
 
   const content = data
-  const nextArticle = await getNextArticle(content.publishedAt)
-  const previousArticle = await getPreviousArticle(content.publishedAt)
+  const nextArticle = cachedGetNextArticle(content.publishedAt)
+  const previousArticle = cachedGetPreviousArticle(content.publishedAt)
 
   return (
     <ContentDetail
