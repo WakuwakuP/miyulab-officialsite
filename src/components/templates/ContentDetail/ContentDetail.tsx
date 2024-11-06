@@ -20,10 +20,11 @@ export interface ContentDetailProps {
     text: string
     name: string
   }[]
+  nextArticle?: ContentModify | null
+  previousArticle?: ContentModify | null
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
+export const ContentDetail = ({ content, toc, nextArticle, previousArticle }: ContentDetailProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)
@@ -76,6 +77,18 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.navigationLinks}>
+        {previousArticle && (
+          <Link href={`/content/detail/${previousArticle.id}`}>
+            <a className={styles.previousArticleLink}>Previous: {previousArticle.title}</a>
+          </Link>
+        )}
+        {nextArticle && (
+          <Link href={`/content/detail/${nextArticle.id}`}>
+            <a className={styles.nextArticleLink}>Next: {nextArticle.title}</a>
+          </Link>
+        )}
       </div>
     </>
   )
