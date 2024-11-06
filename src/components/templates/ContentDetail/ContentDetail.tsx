@@ -80,13 +80,13 @@ export const ContentDetail = ({ content, toc, nextArticle, previousArticle }: Co
       </div>
       <div className={styles.navigationLinks}>
         {previousArticle && (
-          <Link href={`/content/detail/${previousArticle.id}`}>
-            <a className={styles.previousArticleLink}>Previous: {previousArticle.title}</a>
+          <Link href={`/content/detail/${previousArticle.id}`} className={styles.previousArticleLink}>
+            Previous: {previousArticle.title}
           </Link>
         )}
         {nextArticle && (
-          <Link href={`/content/detail/${nextArticle.id}`}>
-            <a className={styles.nextArticleLink}>Next: {nextArticle.title}</a>
+          <Link href={`/content/detail/${nextArticle.id}`} className={styles.nextArticleLink}>
+            Next: {nextArticle.title}
           </Link>
         )}
       </div>
