@@ -20,10 +20,12 @@ export interface ContentDetailProps {
     text: string
     name: string
   }[]
+  nextContent?: ContentModify | null
+  previousContent?: ContentModify | null
 }
 
 // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
+export const ContentDetail = ({ content, toc, nextContent, previousContent }: ContentDetailProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)
@@ -61,13 +63,33 @@ export const ContentDetail = ({ content, toc }: ContentDetailProps) => {
         ))}
       </ul>
       <div className={styles.mainarea} ref={elemMainarea}>
-        <div
-          className={styles.content}
-          dangerouslySetInnerHTML={{
-            __html: `${content.content}`,
-          }}
-          ref={ref}
-        />
+        <div className={styles.content}>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${content.content}`,
+            }}
+            ref={ref}
+          />
+          <div className={styles.contentsLink}>
+            {previousContent ? (
+              <Link href={`/content/detail/${previousContent.id}`} style={{ width: '50%' }}>
+                <div>Previous</div>
+                <div>{previousContent.title}</div>
+              </Link>
+            ) : (
+              <div style={{ width: '50%' }} />
+            )}
+            {nextContent ? (
+              <Link href={`/content/detail/${nextContent.id}`} style={{ width: '50%' }}>
+                <div>Next</div>
+                <div>{nextContent.title}</div>
+              </Link>
+            ) : (
+              <div style={{ width: '50%' }} />
+            )}
+          </div>
+        </div>
+
         <div className={styles.toc} ref={elemToc}>
           <div className={styles.tocWrapper} ref={elemTocWrapper}>
             <div className={styles.tocArea} ref={elemTocArea}>

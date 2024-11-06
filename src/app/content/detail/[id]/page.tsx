@@ -29,7 +29,55 @@ const cachedGetContentDetail = (id: string) =>
     async () => {
       return await getContentDetail(id)
     },
-    [`content-detail-${id}`],
+    ['content-detail', id],
+    {
+      tags: [`content-detail-${id}`],
+    },
+  )
+
+const getNextContent = async (publishedAt: string) => {
+  return await client
+    .get({
+      endpoint: 'contents',
+      queries: {
+        filters: `publishedAt[less_than]${publishedAt}`,
+        orders: '-publishedAt',
+        limit: 1,
+      },
+    })
+    .catch(() => undefined)
+}
+
+const cachedGetNextContent = (publishedAt: string, id: string) =>
+  unstable_cache(
+    async () => {
+      return await getNextContent(publishedAt)
+    },
+    ['content-detail-next', id],
+    {
+      tags: [`content-detail-${id}`],
+    },
+  )
+
+const getPrevContent = async (publishedAt: string) => {
+  return await client
+    .get({
+      endpoint: 'contents',
+      queries: {
+        filters: `publishedAt[greater_than]${publishedAt}`,
+        orders: 'publishedAt',
+        limit: 1,
+      },
+    })
+    .catch(() => undefined)
+}
+
+const cachedGetPreviousContent = (publishedAt: string, id: string) =>
+  unstable_cache(
+    async () => {
+      return await getPrevContent(publishedAt)
+    },
+    ['content-detail-prev', id],
     {
       tags: [`content-detail-${id}`],
     },
@@ -75,6 +123,11 @@ export default async function ContentDetailPage({ params }: { params: Params }) 
     notFound()
   }
 
+  const getNextContent = cachedGetNextContent(content.publishedAt, id)
+  const getPreviousContent = cachedGetPreviousContent(content.publishedAt, id)
+  const nextContent = (await getNextContent()).contents[0] ?? null
+  const previousContent = (await getPreviousContent()).contents[0] ?? null
+
   const body = content.content.reduce((acc: string, cur: { fieldId: string; html: string }) => acc + cur.html, '')
 
   const $ = cheerio.load(body)
@@ -116,6 +169,8 @@ export default async function ContentDetailPage({ params }: { params: Params }) 
         }),
       }}
       toc={createTableOfContents(body, tocOption)}
+      nextContent={nextContent ?? null}
+      previousContent={previousContent ?? null}
     />
   )
 }
