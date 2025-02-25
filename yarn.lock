@@ -4409,9 +4409,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:^6.6.2":
-  version: 6.6.2
-  resolution: "@testing-library/jest-dom@npm:6.6.2"
+"@testing-library/jest-dom@npm:^6.6.3":
+  version: 6.6.3
+  resolution: "@testing-library/jest-dom@npm:6.6.3"
   dependencies:
     "@adobe/css-tools": "npm:^4.4.0"
     aria-query: "npm:^5.0.0"
@@ -4420,7 +4420,7 @@ __metadata:
     dom-accessibility-api: "npm:^0.6.3"
     lodash: "npm:^4.17.21"
     redent: "npm:^3.0.0"
-  checksum: 1c51390f97063ce8b06a7267534aac0d6ac9b1f27042a0ae43ca52d886b32c9d2b0ff85e62e7cfeb7e1f089ef03c4d75fda4f2b7b1f08afb4bdb09a5d56566d9
+  checksum: 5566b6c0b7b0709bc244aec3aa3dc9e5f4663e8fb2b99d8cd456fc07279e59db6076cbf798f9d3099a98fca7ef4cd50e4e1f4c4dec5a60a8fad8d24a638a5bf6
   languageName: node
   linkType: hard
 
@@ -10783,12 +10783,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^9.1.6":
-  version: 9.1.6
-  resolution: "husky@npm:9.1.6"
+"husky@npm:^9.1.7":
+  version: 9.1.7
+  resolution: "husky@npm:9.1.7"
   bin:
     husky: bin.js
-  checksum: 705673db4a247c1febd9c5df5f6a3519106cf0335845027bb50a15fba9b1f542cb2610932ede96fd08008f6d9f49db0f15560509861808b0031cdc0e7c798bac
+  checksum: 35bb110a71086c48906aa7cd3ed4913fb913823715359d65e32e0b964cb1e255593b0ae8014a5005c66a68e6fa66c38dcfa8056dbbdfb8b0187c0ffe7ee3a58f
   languageName: node
   linkType: hard
 
@@ -13116,7 +13116,7 @@ __metadata:
     "@storybook/nextjs": "npm:^8.3.6"
     "@storybook/react": "npm:^8.3.6"
     "@storybook/test": "npm:^8.3.6"
-    "@testing-library/jest-dom": "npm:^6.6.2"
+    "@testing-library/jest-dom": "npm:^6.6.3"
     "@testing-library/react": "npm:^16.0.1"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/node": "npm:^20.17.1"
@@ -13139,7 +13139,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.10.1"
     eslint-plugin-unused-imports: "npm:^4.1.4"
     highlight.js: "npm:^11.10.0"
-    husky: "npm:^9.1.6"
+    husky: "npm:^9.1.7"
     hygen: "npm:^6.2.11"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
@@ -13152,7 +13152,7 @@ __metadata:
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-icons: "npm:^5.5.0"
-    react-scroll: "npm:^1.9.0"
+    react-scroll: "npm:^1.9.3"
     react-tsparticles: "npm:^2.12.2"
     rss: "npm:^1.2.2"
     sass: "npm:^1.80.4"
@@ -14785,16 +14785,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-scroll@npm:^1.9.0":
-  version: 1.9.0
-  resolution: "react-scroll@npm:1.9.0"
+"react-scroll@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "react-scroll@npm:1.9.3"
   dependencies:
     lodash.throttle: "npm:^4.1.1"
     prop-types: "npm:^15.7.2"
   peerDependencies:
-    react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: bcaa045740351ba1373d2e3f236b1ff0d383e4e5efd43d87644c165a3c1c4988bd0361515c487688daf39c122b035c8a014fcd9184f51deb4a0d2c232ac5fb61
+    react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 01bb18381ede7d8fd2e7bda0276f96c204aa0212afd320eb797652eff976ed4e5da3b68f86f938df63311f376ace6dcb3b5c68135462d52ba3b0b2d83de918df
   languageName: node
   linkType: hard
 
