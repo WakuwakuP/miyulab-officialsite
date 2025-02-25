@@ -42,7 +42,7 @@
     "vercel": "^37.12.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.26.9",
     "@chromatic-com/storybook": "^3.1.0",
     "@storybook/addon-actions": "^8.3.6",
     "@storybook/addon-essentials": "^8.3.6",
