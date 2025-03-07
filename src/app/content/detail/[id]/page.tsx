@@ -98,6 +98,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
   return {
     title: content.title,
+    description: content?.description ?? undefined,
     openGraph: {
       title: `${content.title} | ${SITE_TITLE}`,
       url: `https://${BASE_URL}/content/detail/${content.id}`,
