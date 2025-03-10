@@ -60,7 +60,7 @@
     "@types/react-scroll": "^1.8.10",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
-    "babel-loader": "^9.2.1",
+    "babel-loader": "^10.0.0",
     "chromatic": "^11.27.0",
     "eslint": "^9.22.0",
     "eslint-config-next": "^15.2.1",
