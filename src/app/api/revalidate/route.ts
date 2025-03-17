@@ -25,5 +25,8 @@ export async function POST(request: Request) {
   revalidateTag(`content-detail-${data.id}`)
   console.log(`revalidate: /content/detail/${data.id}`)
 
+  revalidateTag('categories')
+  console.log('revalidate: categories')
+
   return new Response(null, { status: 200 })
 }
