@@ -6,6 +6,7 @@ import type { ReactNode } from 'react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { Footer, Header } from 'components/containers'
+import { CategoriesDropdown } from 'components/containers/CategoriesDropdown/CategoriesDropdown'
 import { GoogleAnalytics } from 'libs/gtag'
 import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
 
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <GoogleAnalytics />
       </head>
       <body className={globalFont.className}>
-        <SurfaceDuoProvider header={<Header />} footer={<Footer />}>
+        <SurfaceDuoProvider header={<Header categoriesDropdown={<CategoriesDropdown />} />} footer={<Footer />}>
           {children}
           <SpeedInsights />
         </SurfaceDuoProvider>
