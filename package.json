@@ -79,7 +79,7 @@
     "storybook-dark-mode": "^4.0.2",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "5.8.2",
-    "vite": "^6.2.3"
+    "vite": "^6.2.4"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
