@@ -57,6 +57,53 @@
   border: solid 1px var(--table-border-color);
 }
 
+.categorySection {
+  margin: 1rem 0;
+}
+
+.currentCategories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.currentCategories ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.currentCategories li a {
+  display: block;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.categoryToggleButton {
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+  color: var(--main-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.categoryToggleButton:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--hover-color);
+}
+
+.categorySelectorWrapper {
+  margin-top: 1rem;
+  border-top: 1px solid var(--main-color);
+  padding-top: 1rem;
+}
+
 .contentsLink {
   display: flex;
   gap: 20px;

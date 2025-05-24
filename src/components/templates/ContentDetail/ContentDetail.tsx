@@ -1,9 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import { Toc } from 'components/containers'
+import { CategorySelectorContainer, Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
 import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
@@ -51,17 +51,35 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
     }
   })
 
+  const [showCategorySelector, setShowCategorySelector] = useState(false)
+  const contentCategoryIds = content.category.map((category: Category) => category.id)
+
   return (
     <>
       <PageTitle bgText='blog'>{content.title}</PageTitle>
       {content.publishedAt && <p>{content.publishedAt}</p>}
-      <ul>
-        {content.category.map((category: Category) => (
-          <li key={category.id}>
-            <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <div className={styles.categorySection}>
+        <div className={styles.currentCategories}>
+          <ul>
+            {content.category.map((category: Category) => (
+              <li key={category.id}>
+                <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
+              </li>
+            ))}
+          </ul>
+          <button 
+            className={styles.categoryToggleButton}
+            onClick={() => setShowCategorySelector(!showCategorySelector)}
+          >
+            {showCategorySelector ? 'カテゴリ選択を閉じる' : 'カテゴリを選択する'}
+          </button>
+        </div>
+        {showCategorySelector && (
+          <div className={styles.categorySelectorWrapper}>
+            <CategorySelectorContainer initialSelected={contentCategoryIds} />
+          </div>
+        )}
+      </div>
       <div className={styles.mainarea} ref={elemMainarea}>
         <div className={styles.content}>
           <div
