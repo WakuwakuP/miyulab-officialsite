@@ -11,16 +11,24 @@ type Params = Promise<{ categoryId: string; page: string }>
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { categoryId } = await params
+  // If multiple categories are selected (comma-separated), show "Multiple Categories"
+  const title = categoryId.includes(',') ? '複数のカテゴリ' : categoryId
   return {
-    title: categoryId,
+    title: title,
   }
 }
 
 const getContentsCategory = async (categoryId: string, page: string) => {
+  // Split categoryId by commas to support multiple categories
+  const categoryIds = categoryId.split(',')
+  
+  // Create filter conditions for each category ID
+  const categoryFilters = categoryIds.map((id) => `category[contains]${id}`).join('[or]')
+  
   return await client.get({
     endpoint: 'contents',
     queries: {
-      filters: `category[contains]${categoryId},contentsCategory[contains]article`,
+      filters: `(${categoryFilters})[and]contentsCategory[contains]article`,
       orders: '-publishedAt',
       offset: (Number(page) - 1) * PAGE_LIMIT,
       limit: PAGE_LIMIT,
