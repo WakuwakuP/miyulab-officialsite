@@ -20,7 +20,6 @@ export interface ContentPreviewProps {
   }[]
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)

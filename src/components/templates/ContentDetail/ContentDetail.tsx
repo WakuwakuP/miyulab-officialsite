@@ -24,7 +24,6 @@ export interface ContentDetailProps {
   previousContent?: ContentModify | null
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentDetail = ({ content, toc, nextContent, previousContent }: ContentDetailProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const elemMainarea = useRef<HTMLDivElement>(null)
