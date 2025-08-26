@@ -1,6 +1,6 @@
 'use client'
 import { usePathname } from 'next/navigation'
-import { useEffect, useRef } from 'react'
+import { type RefObject, useEffect, useRef } from 'react'
 
 import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
@@ -20,7 +20,7 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
     })
   }
 
-  useMutationObserver([elemAdSenseArea], handleUnsetStyling, {
+  useMutationObserver([elemAdSenseArea as RefObject<Element>], handleUnsetStyling, {
     attributes: true,
     attributeFilter: ['style'],
   })

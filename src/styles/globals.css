@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;500;700;800;900&display=swap');
+
 :root {
   --main-color: #464646;
   --main-bg-color: #ffffff;
@@ -51,6 +53,10 @@ body {
 body {
   overflow-x: clip;
   overflow-y: auto;
+}
+
+.font-mplus {
+  font-family: 'M PLUS 1p', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }
 
 .surface-duo-right {

@@ -1,6 +1,6 @@
 'use client'
 
-import { type ReactNode, useRef } from 'react'
+import { type ReactNode, type RefObject, useRef } from 'react'
 
 import { SiteTop } from 'components/containers'
 import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
@@ -25,7 +25,7 @@ export default function SurfaceDuoProvider({
     })
   }
 
-  useMutationObserver([elemSurfaceDuoLeft, elemContainer], handleUnsetStyling, {
+  useMutationObserver([elemSurfaceDuoLeft, elemContainer].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
     attributes: true,
     attributeFilter: ['style'],
   })

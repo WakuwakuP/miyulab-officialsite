@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { type RefObject, useEffect, useRef } from 'react'
 
 import { Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
@@ -39,7 +39,7 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
     })
   }
 
-  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea], handleUnsetStyling, {
+  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
     attributes: true,
     attributeFilter: ['style'],
   })
