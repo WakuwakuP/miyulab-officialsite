@@ -16,7 +16,7 @@
   ],
   "parserOptions": {
     "project": "./tsconfig.json",
-    "tsconfigRootDir": ".",
+    "tsconfigRootDir": "/home/runner/work/miyulab-officialsite/miyulab-officialsite",
     "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
