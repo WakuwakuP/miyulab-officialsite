@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useRef } from 'react'
+import { type RefObject, useRef } from 'react'
 
 import { Toc } from 'components/containers'
 import { PageTitle } from 'components/parts'
@@ -20,7 +20,6 @@ export interface ContentPreviewProps {
   }[]
 }
 
-// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
 export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)
@@ -35,7 +34,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
     })
   }
 
-  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea], handleUnsetStyling, {
+  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
     attributes: true,
     attributeFilter: ['style'],
   })

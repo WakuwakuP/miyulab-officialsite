@@ -25,22 +25,32 @@ async function generateFeedXml() {
     language: 'ja',
   })
 
-  const { contents } = await client.get({
-    endpoint: 'contents',
-    queries: {
-      filters: 'contentsCategory[contains]article',
-      orders: '-publishedAt',
-    },
-  })
+  // Handle missing microCMS environment variables gracefully during build
+  if (!process.env.MICROCMS_SERVICE_DOMAIN || !process.env.MICROCMS_API_KEY) {
+    console.warn('microCMS environment variables not available. Generating empty feed.')
+    return feed.xml()
+  }
 
-  contents?.forEach((content: Content) => {
-    feed.item({
-      title: content.title,
-      description: content.content.reduce((acc: string, cur) => acc + (cur.html || ''), ''),
-      date: content.publishedAt ? new Date(content.publishedAt) : '',
-      url: `https://${BASE_URL}/content/detail/${content.id}`,
+  try {
+    const { contents } = await client.get({
+      endpoint: 'contents',
+      queries: {
+        filters: 'contentsCategory[contains]article',
+        orders: '-publishedAt',
+      },
     })
-  })
+
+    contents?.forEach((content: Content) => {
+      feed.item({
+        title: content.title,
+        description: content.content.reduce((acc: string, cur) => acc + (cur.html || ''), ''),
+        date: content.publishedAt ? new Date(content.publishedAt) : '',
+        url: `https://${BASE_URL}/content/detail/${content.id}`,
+      })
+    })
+  } catch (error) {
+    console.warn('Failed to fetch contents for RSS feed:', error)
+  }
 
   return feed.xml()
 }

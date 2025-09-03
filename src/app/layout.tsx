@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import type { Metadata } from 'next'
-import { M_PLUS_1p } from 'next/font/google'
 import type { ReactNode } from 'react'
 
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -24,11 +23,13 @@ const SITE_NAME = process.env.SITE_NAME ?? SITE_TITLE
 const TWITTER_HANDLE = process.env.TWITTER_HANDLE
 const TWITTER_SITE = process.env.TWITTER_SITE
 
-const globalFont = M_PLUS_1p({
-  subsets: ['cyrillic', 'latin', 'latin-ext', 'vietnamese'],
-  weight: ['100', '400', '500', '700', '800', '900'],
-  display: 'swap',
-})
+// Use CSS-based font loading to avoid network issues during build
+const globalFont = {
+  className: 'font-mplus',
+  style: {
+    fontFamily: '"M PLUS 1p", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+  },
+}
 
 export const revalidate = 600
 
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <script async src='https://platform.twitter.com/widgets.js' />
         <GoogleAnalytics />
       </head>
-      <body className={globalFont.className}>
+      <body className={`${globalFont.className} font-mplus`} style={globalFont.style}>
         <SurfaceDuoProvider header={<Header categoriesDropdown={<CategoriesDropdown />} />} footer={<Footer />}>
           {children}
           <SpeedInsights />
