@@ -8,11 +8,8 @@ import type { Content } from 'types'
 
 export const revalidate = 0
 
-if (!process.env.BASE_URL) {
-  throw new Error('BASE_URL is not set')
-}
-
-const BASE_URL = process.env.BASE_URL
+// Handle missing BASE_URL gracefully during build
+const BASE_URL = process.env.BASE_URL || 'localhost:3000'
 
 const getCache = unstable_cache(generateFeedXml, ['contents', 'contentsCategory', 'article'], { tags: ['feed'] })
 

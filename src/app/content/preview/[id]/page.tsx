@@ -14,12 +14,9 @@ export const revalidate = 0
 
 export const dynamic = 'force-dynamic'
 
-if (!process.env.BASE_URL || !process.env.SITE_TITLE) {
-  throw new Error('BASE_URL or SITE_TITLE is not set')
-}
-
-const BASE_URL = process.env.BASE_URL
-const SITE_TITLE = process.env.SITE_TITLE
+// Handle missing environment variables gracefully during build
+const BASE_URL = process.env.BASE_URL || 'localhost:3000'
+const SITE_TITLE = process.env.SITE_TITLE || 'Miyulab Official Site'
 
 type Params = Promise<{ id: string }>
 type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>
