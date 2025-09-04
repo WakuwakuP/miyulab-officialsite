@@ -27,7 +27,8 @@ const TWITTER_SITE = process.env.TWITTER_SITE
 const globalFont = {
   className: 'font-mplus',
   style: {
-    fontFamily: '"M PLUS 1p", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    fontFamily:
+      '"M PLUS 1p", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
 }
 

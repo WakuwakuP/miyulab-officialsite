@@ -39,10 +39,14 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
     })
   }
 
-  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
-    attributes: true,
-    attributeFilter: ['style'],
-  })
+  useMutationObserver(
+    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
+    handleUnsetStyling,
+    {
+      attributes: true,
+      attributeFilter: ['style'],
+    },
+  )
 
   useEffect(() => {
     if (window.twttr) {

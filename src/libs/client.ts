@@ -18,7 +18,9 @@ const mockClient = {
   },
 }
 
-export const client = shouldUseMockClient ? mockClient : createClient({
-  serviceDomain: MICROCMS_SERVICE_DOMAIN,
-  apiKey: MICROCMS_API_KEY,
-})
+export const client = shouldUseMockClient
+  ? mockClient
+  : createClient({
+      serviceDomain: MICROCMS_SERVICE_DOMAIN,
+      apiKey: MICROCMS_API_KEY,
+    })
