@@ -1,31 +1,31 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 
-import { Particles } from 'react-tsparticles'
-import { loadFull } from 'tsparticles'
+import { loadAll } from '@tsparticles/all'
+import { Particles, initParticlesEngine } from '@tsparticles/react'
 
-import type { Container, Engine } from 'tsparticles-engine'
+import type { Engine } from '@tsparticles/engine'
 
 export interface ParticleProps {
   id?: string
 }
 
 export const Particle = ({ id }: ParticleProps) => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine)
+  const init = useCallback(async () => {
+    await initParticlesEngine(async (engine: Engine) => {
+      await loadAll(engine)
+    })
   }, [])
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    // eslint-disable-next-line no-console
-    console.log(container)
-  }, [])
+
+  useMemo(() => {
+    init()
+  }, [init])
   return (
     <>
       <div className='chromatic-ignore' data-chromatic='ignore'>
         <Particles
           id={id}
-          init={particlesInit}
-          loaded={particlesLoaded}
           options={{
             background: {
               color: {
@@ -37,7 +37,7 @@ export const Particle = ({ id }: ParticleProps) => {
               color: {
                 value: ['#ff77ff', '#77ffff', '#ffff77'],
               },
-              line_linked: {
+              links: {
                 color: '#ffffff',
                 distance: 200,
                 enable: false,
@@ -47,13 +47,12 @@ export const Particle = ({ id }: ParticleProps) => {
               move: {
                 attract: {
                   enable: false,
-                  rotateX: 600,
-                  rotateY: 1200,
                 },
-                bounce: false,
                 direction: 'none',
                 enable: true,
-                out_mode: 'out',
+                outModes: {
+                  default: 'out',
+                },
                 random: false,
                 speed: 3,
                 straight: false,
@@ -61,42 +60,30 @@ export const Particle = ({ id }: ParticleProps) => {
               number: {
                 density: {
                   enable: true,
-                  value_area: 800,
                 },
                 value: 30,
               },
               opacity: {
-                anim: {
+                animation: {
                   enable: true,
-                  opacity_min: 0.3,
                   speed: 0.1,
                   sync: false,
                 },
-                random: true,
                 value: 0.3,
               },
               shape: {
-                polygon: {
-                  nb_sides: 6,
-                },
-                stroke: {
-                  color: '#000',
-                  width: 0,
-                },
                 type: 'circle',
               },
               size: {
                 animation: {
                   enable: true,
-                  size_min: 70,
                   speed: 10,
                   sync: false,
                 },
-                random: true,
                 value: 150,
               },
             },
-            retina_detect: true,
+            detectRetina: true,
           }}
         />
       </div>

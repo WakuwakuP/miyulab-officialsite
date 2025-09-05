@@ -25,10 +25,14 @@ export default function SurfaceDuoProvider({
     })
   }
 
-  useMutationObserver([elemSurfaceDuoLeft, elemContainer].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
-    attributes: true,
-    attributeFilter: ['style'],
-  })
+  useMutationObserver(
+    [elemSurfaceDuoLeft, elemContainer].map((ref) => ref as RefObject<Element>),
+    handleUnsetStyling,
+    {
+      attributes: true,
+      attributeFilter: ['style'],
+    },
+  )
 
   return (
     <>

@@ -9,15 +9,9 @@ import { CategoriesDropdown } from 'components/containers/CategoriesDropdown/Cat
 import { GoogleAnalytics } from 'libs/gtag'
 import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
 
-if (!process.env.BASE_URL) {
-  throw new Error('Please define BASE_URL in your environment')
-}
-if (!process.env.SITE_TITLE) {
-  throw new Error('Please define SITE_TITLE in your environment')
-}
-
-const BASE_URL = process.env.BASE_URL
-const SITE_TITLE = process.env.SITE_TITLE
+// Handle missing environment variables gracefully during build
+const BASE_URL = process.env.BASE_URL || 'localhost:3000'
+const SITE_TITLE = process.env.SITE_TITLE || 'Miyulab Official Site'
 const SITE_DESCRIPTION = process.env.SITE_DESCRIPTION
 const SITE_NAME = process.env.SITE_NAME ?? SITE_TITLE
 const TWITTER_HANDLE = process.env.TWITTER_HANDLE
@@ -27,7 +21,8 @@ const TWITTER_SITE = process.env.TWITTER_SITE
 const globalFont = {
   className: 'font-mplus',
   style: {
-    fontFamily: '"M PLUS 1p", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
+    fontFamily:
+      '"M PLUS 1p", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif',
   },
 }
 

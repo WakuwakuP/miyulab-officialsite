@@ -34,10 +34,14 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
     })
   }
 
-  useMutationObserver([elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(ref => ref as RefObject<Element>), handleUnsetStyling, {
-    attributes: true,
-    attributeFilter: ['style'],
-  })
+  useMutationObserver(
+    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
+    handleUnsetStyling,
+    {
+      attributes: true,
+      attributeFilter: ['style'],
+    },
+  )
 
   return (
     <>
