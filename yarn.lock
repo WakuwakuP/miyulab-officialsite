@@ -6524,14 +6524,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:0.0.13":
-  version: 0.0.13
-  resolution: "@vercel/express@npm:0.0.13"
+"@vercel/express@npm:0.0.14":
+  version: 0.0.14
+  resolution: "@vercel/express@npm:0.0.14"
   dependencies:
-    "@vercel/node": "npm:5.3.20"
+    "@vercel/node": "npm:5.3.21"
     "@vercel/static-config": "npm:3.1.2"
     ts-morph: "npm:12.0.0"
-  checksum: 2a1388b868b527de992e24c83c4159fb13cf5dcdba45f1f8ccf8a4a517cc09f2e5ef2c344e2890b1e0a5e30da4ebce5991e3bdc32af4e7fa644ea8ad6b57dd9f
+  checksum: 22c290cfa2037866aec16024c057637327c3a82156b41b4e5f1476f125dcd4b5a182c19bccc5f50867737b01943bc91357eae5b19b94fa73a48712803a1b07ea
   languageName: node
   linkType: hard
 
@@ -6590,14 +6590,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/hono@npm:0.0.21":
-  version: 0.0.21
-  resolution: "@vercel/hono@npm:0.0.21"
+"@vercel/hono@npm:0.0.22":
+  version: 0.0.22
+  resolution: "@vercel/hono@npm:0.0.22"
   dependencies:
-    "@vercel/node": "npm:5.3.20"
+    "@vercel/node": "npm:5.3.21"
     "@vercel/static-config": "npm:3.1.2"
     ts-morph: "npm:12.0.0"
-  checksum: 1e852da099f29f7515e26dbfb7370eeb20a0c901c913b6defadef3cf5f5f03a9603e94d948498b045387b7ad5925124cd05fe1dbdefa45b50d321b0543cc574a
+  checksum: 56e15b896dbc5242d9a834f902773233f7439e6592eb0ef244b9f93f548fdfc81de7b94f10e24fbe9555e224cf03d022043f742f9c9e06a6add4c9da41ad0008
   languageName: node
   linkType: hard
 
@@ -6642,9 +6642,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:5.3.20":
-  version: 5.3.20
-  resolution: "@vercel/node@npm:5.3.20"
+"@vercel/node@npm:5.3.21":
+  version: 5.3.21
+  resolution: "@vercel/node@npm:5.3.21"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.3.0"
     "@edge-runtime/primitives": "npm:4.1.0"
@@ -6660,6 +6660,7 @@ __metadata:
     es-module-lexer: "npm:1.4.1"
     esbuild: "npm:0.14.47"
     etag: "npm:1.8.1"
+    mime-types: "npm:2.1.35"
     node-fetch: "npm:2.6.9"
     path-to-regexp: "npm:6.1.0"
     path-to-regexp-updated: "npm:path-to-regexp@6.3.0"
@@ -6667,7 +6668,7 @@ __metadata:
     ts-node: "npm:10.9.1"
     typescript: "npm:4.9.5"
     undici: "npm:5.28.4"
-  checksum: c5cc83547ac2de72c886cff41284a6eb0764f21afe742ae4ce8156b2ea1fae8f20acca7202ab1008a07a10751c2b411045c559ed07ccc110533457ca1c090a0d
+  checksum: d2865da2972fed972186bb6d7fc9dfe487b6de9d74b220ea1f3fd689f7ad501cbcfd681bed3d53d8d761a7f73371f0d1ec6443654ceb66b01aaf6b53d6533cd0
   languageName: node
   linkType: hard
 
@@ -14070,7 +14071,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime-types@npm:^2.1.27, mime-types@npm:^2.1.31":
+"mime-types@npm:2.1.35, mime-types@npm:^2.1.27, mime-types@npm:^2.1.31":
   version: 2.1.35
   resolution: "mime-types@npm:2.1.35"
   dependencies:
@@ -14319,7 +14320,7 @@ __metadata:
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
     typescript: "npm:^5.9.2"
-    vercel: "npm:^47.0.4"
+    vercel: "npm:^47.0.5"
     vite: "npm:^7.1.4"
   languageName: unknown
   linkType: soft
@@ -18666,20 +18667,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^47.0.4":
-  version: 47.0.4
-  resolution: "vercel@npm:47.0.4"
+"vercel@npm:^47.0.5":
+  version: 47.0.5
+  resolution: "vercel@npm:47.0.5"
   dependencies:
     "@vercel/blob": "npm:1.0.2"
     "@vercel/build-utils": "npm:12.1.0"
     "@vercel/detect-agent": "npm:0.2.0"
-    "@vercel/express": "npm:0.0.13"
+    "@vercel/express": "npm:0.0.14"
     "@vercel/fun": "npm:1.1.6"
     "@vercel/go": "npm:3.2.3"
-    "@vercel/hono": "npm:0.0.21"
+    "@vercel/hono": "npm:0.0.22"
     "@vercel/hydrogen": "npm:1.2.4"
     "@vercel/next": "npm:4.12.4"
-    "@vercel/node": "npm:5.3.20"
+    "@vercel/node": "npm:5.3.21"
     "@vercel/python": "npm:5.0.0"
     "@vercel/redwood": "npm:2.3.6"
     "@vercel/remix-builder": "npm:5.4.12"
@@ -18690,7 +18691,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 26619dae96e53f1cb81493c4d6e4cd3008074195865f96120251a4dccd954c36575fc5b348520e3e2f92eb2c1e782f74d9eef24444a17afba62a4698a139eb6a
+  checksum: e13f1b3f07d20591f81cae60a8b1ccab36886a19ad419f003fc38c21d353941bc8ab96432e2506a5b83c6ad7ce6a6fe88afa5c67a3b742779ac758f129460c19
   languageName: node
   linkType: hard
 
