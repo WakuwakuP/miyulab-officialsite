@@ -4470,15 +4470,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/csf@npm:^0.1.11":
-  version: 0.1.13
-  resolution: "@storybook/csf@npm:0.1.13"
-  dependencies:
-    type-fest: "npm:^2.19.0"
-  checksum: 7c57b531ac95ca45239f498d419483d675e58cd8d549e0bac623519cc1ef4f3c9c6b75ec3873aa51cc2872728012db5dd5e1f2c2d8085014241eb4b896480996
-  languageName: node
-  linkType: hard
-
 "@storybook/csf@npm:^0.1.4":
   version: 0.1.4
   resolution: "@storybook/csf@npm:0.1.4"
@@ -10900,16 +10891,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^0.12.0":
-  version: 0.12.0
-  resolution: "eslint-plugin-storybook@npm:0.12.0"
+"eslint-plugin-storybook@npm:^9.1.10":
+  version: 9.1.10
+  resolution: "eslint-plugin-storybook@npm:9.1.10"
   dependencies:
-    "@storybook/csf": "npm:^0.1.11"
     "@typescript-eslint/utils": "npm:^8.8.1"
-    ts-dedent: "npm:^2.2.0"
   peerDependencies:
     eslint: ">=8"
-  checksum: ce491ca9d817d231584c5016597158ae889780e428eccc93686d13e396ffdfd500318e5f997531c100cc3a7feff89fa2656ee125a116cf2d4d7e2baefbb0ade6
+    storybook: ^9.1.10
+  checksum: 4a1a9db221a417c26cdbc5e8a97e22fb5f443e0d1b96c19becbcef1536d05e05cf3f3ed5d400ca2398c7dd5bf27a81326c8825711f97e843eab6830b905d28d4
   languageName: node
   linkType: hard
 
@@ -14558,7 +14548,7 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.8"
     eslint-import-resolver-typescript: "npm:^4.4.4"
     eslint-plugin-import: "npm:^2.32.0"
-    eslint-plugin-storybook: "npm:^0.12.0"
+    eslint-plugin-storybook: "npm:^9.1.10"
     eslint-plugin-unused-imports: "npm:^4.2.0"
     highlight.js: "npm:^11.11.1"
     husky: "npm:^9.1.7"
