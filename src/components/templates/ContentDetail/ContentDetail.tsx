@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { type RefObject, useEffect, useRef } from 'react'
+import { type RefObject, useEffect, useMemo, useRef } from 'react'
 
 import { Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
@@ -39,14 +39,18 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
     })
   }
 
-  useMutationObserver(
-    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
-    handleUnsetStyling,
-    {
-      attributes: true,
-      attributeFilter: ['style'],
-    },
+  /* eslint-disable react-hooks/refs */
+  // Passing ref objects (not accessing .current) to a hook that uses them in useEffect
+  const refArray = useMemo(
+    () => [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
+    [elemMainarea, elemToc, elemTocWrapper, elemTocArea],
   )
+  /* eslint-enable react-hooks/refs */
+
+  useMutationObserver(refArray, handleUnsetStyling, {
+    attributes: true,
+    attributeFilter: ['style'],
+  })
 
   useEffect(() => {
     if (window.twttr) {

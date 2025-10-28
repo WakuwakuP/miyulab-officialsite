@@ -10,22 +10,22 @@ export async function POST(request: Request) {
 
   if (data.id === undefined) return new Response(null, { status: 400 })
 
-  revalidateTag('home')
+  revalidateTag('home', 'default')
   console.log('revalidate: /')
 
-  revalidateTag('feed')
+  revalidateTag('feed', 'default')
   console.log('revalidate: /feed')
 
-  revalidateTag('contents-latest')
+  revalidateTag('contents-latest', 'default')
   console.log('revalidate: /content/latest/*')
 
-  revalidateTag('contents-category')
+  revalidateTag('contents-category', 'default')
   console.log('revalidate: /content/category/*')
 
-  revalidateTag(`content-detail-${data.id}`)
+  revalidateTag(`content-detail-${data.id}`, 'default')
   console.log(`revalidate: /content/detail/${data.id}`)
 
-  revalidateTag('categories')
+  revalidateTag('categories', 'default')
   console.log('revalidate: categories')
 
   return new Response(null, { status: 200 })
