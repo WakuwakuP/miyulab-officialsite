@@ -1,13 +1,12 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { TextButton } from './TextButton'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: TextButton,
   args: {
-    href: '/',
     children: 'text button',
+    href: '/',
   },
+  component: TextButton,
 } satisfies Meta<typeof TextButton>
 
 export default meta

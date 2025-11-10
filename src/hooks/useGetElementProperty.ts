@@ -7,7 +7,9 @@ type DOMRectProperty = keyof Omit<DOMRect, 'toJSON'>
  * @param elementRef
  * @returns number
  */
-export const useGetElementProperty = <T extends HTMLElement>(elementRef: RefObject<T>) => {
+export const useGetElementProperty = <T extends HTMLElement>(
+  elementRef: RefObject<T>,
+) => {
   const getElementProperty = useCallback(
     (targetProperty: DOMRectProperty): number => {
       const clientRect = elementRef.current?.getBoundingClientRect()

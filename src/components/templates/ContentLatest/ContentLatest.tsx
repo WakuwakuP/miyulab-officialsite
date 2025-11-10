@@ -1,9 +1,7 @@
 import { ContentCard, Pagination } from 'components/containers'
 import { PageTitle } from 'components/parts'
-
-import type { ContentModify } from 'types'
-
 import styles from 'styles/components/templates/ContentLatest.module.css'
+import { type ContentModify } from 'types'
 
 interface ContentLatestProps {
   categoryId?: string
@@ -12,18 +10,21 @@ interface ContentLatestProps {
   page?: number
 }
 
-export const ContentLatest = ({ categoryId, contents, totalPage, page }: ContentLatestProps) => {
-  return (
-    <>
-      <PageTitle bgText='blog'>{categoryId || 'Latest'}</PageTitle>
-      <div>
-        <div className={styles.newContents}>
-          {contents.map((content: ContentModify) => (
-            <ContentCard content={content} key={content.id} />
-          ))}
-        </div>
+export const ContentLatest = ({
+  categoryId,
+  contents,
+  totalPage,
+  page,
+}: ContentLatestProps) => (
+  <>
+    <PageTitle bgText="blog">{categoryId || 'Latest'}</PageTitle>
+    <div>
+      <div className={styles.newContents}>
+        {contents.map((content: ContentModify) => (
+          <ContentCard content={content} key={content.id} />
+        ))}
       </div>
-      <Pagination totalPage={totalPage} page={page} />
-    </>
-  )
-}
+    </div>
+    <Pagination page={page} totalPage={totalPage} />
+  </>
+)

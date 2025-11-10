@@ -60,9 +60,12 @@ export const GoogleAnalytics = () => (
   <>
     {existsGaId && (
       <>
-        <script defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
         <script
-          defer
+          defer={true}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        />
+        <script
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Official Google Analytics script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -71,6 +74,7 @@ export const GoogleAnalytics = () => (
               gtag('config', '${GA_ID}');
             `,
           }}
+          defer={true}
         />
       </>
     )}
@@ -78,12 +82,12 @@ export const GoogleAnalytics = () => (
 )
 
 // イベントを型で管理
-type ContactEvent = {
+interface ContactEvent {
   action: 'submit_form'
   category: 'contact'
 }
 
-type ClickEvent = {
+interface ClickEvent {
   action: 'click'
   category: 'other'
 }

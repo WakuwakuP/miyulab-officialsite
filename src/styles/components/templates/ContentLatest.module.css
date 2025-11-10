@@ -1,21 +1,21 @@
 .categoryTitle {
   position: relative;
+  padding: 0 2.5rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  padding: 0 2.5rem;
 }
 
 .categoryTitle::before {
   position: absolute;
-  content: 'Blog';
+  top: -40px;
+  right: 18px;
   display: block;
   width: min-content;
   font-size: 6rem;
-  top: -40px;
-  right: 18px;
-  transform: rotate(-20deg);
+  content: "Blog";
   opacity: 0.1;
+  transform: rotate(-20deg);
 }
 
 .newContents {

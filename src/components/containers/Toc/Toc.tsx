@@ -12,21 +12,19 @@ interface TocProps {
   }[]
 }
 
-export const Toc = ({ toc }: TocProps) => {
-  return (
-    <div className={styles.tocContent}>
-      <h3>目次</h3>
-      <div>
-        <ul>
-          {toc.map((item) => (
-            <li key={item.id} className={styles[item.name]}>
-              <Scroll to={item.id} smooth={true} duration={200} offset={-100}>
-                {item.text}
-              </Scroll>
-            </li>
-          ))}
-        </ul>
-      </div>
+export const Toc = ({ toc }: TocProps) => (
+  <div className={styles.tocContent}>
+    <h3>目次</h3>
+    <div>
+      <ul>
+        {toc.map((item) => (
+          <li className={styles[item.name]} key={item.id}>
+            <Scroll duration={200} offset={-100} smooth={true} to={item.id}>
+              {item.text}
+            </Scroll>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  </div>
+)

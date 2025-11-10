@@ -1,15 +1,15 @@
 'use client'
 
-import Link from 'next/link'
-import { type RefObject, useEffect, useRef } from 'react'
-
 import { Toc } from 'components/containers'
 import { AdSense, PageTitle } from 'components/parts'
-import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
-
-import type { Category, ContentModify } from 'types'
-
+import {
+  type MutationCallback,
+  useMutationObserver,
+} from 'hooks/useMutationObserver'
+import Link from 'next/link'
+import { type RefObject, useEffect, useRef } from 'react'
 import styles from 'styles/components/templates/ContentDetail.module.css'
+import { type Category, type ContentModify } from 'types'
 
 import 'highlight.js/styles/github-dark.css'
 
@@ -24,7 +24,12 @@ export interface ContentDetailProps {
   previousContent?: ContentModify | null
 }
 
-export const ContentDetail = ({ content, toc, nextContent, previousContent }: ContentDetailProps) => {
+export const ContentDetail = ({
+  content,
+  toc,
+  nextContent,
+  previousContent,
+}: ContentDetailProps) => {
   const ref = useRef<HTMLDivElement>(null)
   const elemMainarea = useRef<HTMLDivElement>(null)
   const elemToc = useRef<HTMLDivElement>(null)
@@ -40,11 +45,13 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
   }
 
   useMutationObserver(
-    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
+    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(
+      (ref) => ref as RefObject<Element>,
+    ),
     handleUnsetStyling,
     {
-      attributes: true,
       attributeFilter: ['style'],
+      attributes: true,
     },
   )
 
@@ -56,18 +63,21 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
 
   return (
     <>
-      <PageTitle bgText='blog'>{content.title}</PageTitle>
+      <PageTitle bgText="blog">{content.title}</PageTitle>
       {content.publishedAt && <p>{content.publishedAt}</p>}
       <ul>
         {content.category.map((category: Category) => (
           <li key={category.id}>
-            <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
+            <Link href={`/content/category/${category.id}`}>
+              #{category.name}
+            </Link>
           </li>
         ))}
       </ul>
       <div className={styles.mainarea} ref={elemMainarea}>
         <div className={styles.content}>
           <div
+            // biome-ignore lint/security/noDangerouslySetInnerHtml: Content from trusted microCMS source
             dangerouslySetInnerHTML={{
               __html: `${content.content}`,
             }}
@@ -75,7 +85,10 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
           />
           <div className={styles.contentsLink}>
             {previousContent ? (
-              <Link href={`/content/detail/${previousContent.id}`} style={{ width: '50%' }}>
+              <Link
+                href={`/content/detail/${previousContent.id}`}
+                style={{ width: '50%' }}
+              >
                 <div>Previous</div>
                 <div>{previousContent.title}</div>
               </Link>
@@ -83,7 +96,10 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
               <div style={{ width: '50%' }} />
             )}
             {nextContent ? (
-              <Link href={`/content/detail/${nextContent.id}`} style={{ width: '50%' }}>
+              <Link
+                href={`/content/detail/${nextContent.id}`}
+                style={{ width: '50%' }}
+              >
                 <div>Next</div>
                 <div>{nextContent.title}</div>
               </Link>
@@ -96,8 +112,10 @@ export const ContentDetail = ({ content, toc, nextContent, previousContent }: Co
         <div className={styles.toc} ref={elemToc}>
           <div className={styles.tocWrapper} ref={elemTocWrapper}>
             <div className={styles.tocArea} ref={elemTocArea}>
-              {toc && toc.length > 0 && <Toc toc={toc} />}
-              {process.env.NODE_ENV !== 'development' && <AdSense adSlot='3817713745' />}
+              {toc.length > 0 && <Toc toc={toc} />}
+              {process.env.NODE_ENV !== 'development' && (
+                <AdSense adSlot="3817713745" />
+              )}
             </div>
           </div>
         </div>

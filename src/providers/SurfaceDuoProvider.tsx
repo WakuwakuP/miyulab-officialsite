@@ -1,9 +1,11 @@
 'use client'
 
-import { type ReactNode, type RefObject, useRef } from 'react'
-
 import { SiteTop } from 'components/containers'
-import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
+import {
+  type MutationCallback,
+  useMutationObserver,
+} from 'hooks/useMutationObserver'
+import { type ReactNode, type RefObject, useRef } from 'react'
 
 export default function SurfaceDuoProvider({
   children,
@@ -29,21 +31,21 @@ export default function SurfaceDuoProvider({
     [elemSurfaceDuoLeft, elemContainer].map((ref) => ref as RefObject<Element>),
     handleUnsetStyling,
     {
-      attributes: true,
       attributeFilter: ['style'],
+      attributes: true,
     },
   )
 
   return (
     <>
-      <div className='surface-duo-left' ref={elemSurfaceDuoLeft}>
+      <div className="surface-duo-left" ref={elemSurfaceDuoLeft}>
         <div>
           {header}
-          <main className='container'>{children}</main>
+          <main className="container">{children}</main>
           {footer}
         </div>
       </div>
-      <div className='surface-duo-right'>
+      <div className="surface-duo-right">
         <SiteTop />
       </div>
     </>

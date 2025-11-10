@@ -1,7 +1,6 @@
+import { client } from 'libs/client'
 import { unstable_cache } from 'next/cache'
 import Link from 'next/link'
-
-import { client } from 'libs/client'
 
 import styles from 'styles/components/containers/CategoriesDropdown.module.css'
 
@@ -12,20 +11,12 @@ export interface Category {
   name: string
 }
 
-const getCategories = async () => {
-  return await client.get({ endpoint: 'categories' })
-}
+const getCategories = async () => await client.get({ endpoint: 'categories' })
 
 const useCacheGetCategories = () =>
-  unstable_cache(
-    async () => {
-      return await getCategories()
-    },
-    ['categories'],
-    {
-      tags: ['categories'],
-    },
-  )
+  unstable_cache(async () => await getCategories(), ['categories'], {
+    tags: ['categories'],
+  })
 
 export const CategoriesDropdown = async () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks

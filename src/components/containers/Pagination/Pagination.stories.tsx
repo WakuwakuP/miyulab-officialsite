@@ -1,13 +1,12 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { Pagination } from './Pagination'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: Pagination,
   args: {
-    totalPage: 20,
     page: 5,
+    totalPage: 20,
   },
+  component: Pagination,
 } satisfies Meta<typeof Pagination>
 
 export default meta

@@ -1,15 +1,18 @@
 'use client'
+
+import {
+  type MutationCallback,
+  useMutationObserver,
+} from 'hooks/useMutationObserver'
 import { usePathname } from 'next/navigation'
 import { type RefObject, useEffect, useRef } from 'react'
-
-import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
 
 interface AdSenseProps {
   adSlot: string
 }
 
 export const AdSense = ({ adSlot }: AdSenseProps) => {
-  const asPath = usePathname()
+  const _asPath = usePathname()
   const elemAdSenseArea = useRef<HTMLDivElement>(null)
 
   const handleUnsetStyling: MutationCallback = (mutations) => {
@@ -20,29 +23,34 @@ export const AdSense = ({ adSlot }: AdSenseProps) => {
     })
   }
 
-  useMutationObserver([elemAdSenseArea as RefObject<Element>], handleUnsetStyling, {
-    attributes: true,
-    attributeFilter: ['style'],
-  })
+  useMutationObserver(
+    [elemAdSenseArea as RefObject<Element>],
+    handleUnsetStyling,
+    {
+      attributeFilter: ['style'],
+      attributes: true,
+    },
+  )
 
   useEffect(() => {
     try {
+      // biome-ignore lint/suspicious/noAssignInExpressions: Google AdSense requires this pattern
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch (error) {
       console.error(error)
     }
-  }, [asPath])
+  }, [])
 
   return (
     <div ref={elemAdSenseArea}>
       {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
         <ins
-          className='adsbygoogle'
-          style={{ display: 'block' }}
+          className="adsbygoogle"
           data-ad-client={process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}
+          data-ad-format="auto"
           data-ad-slot={adSlot}
-          data-ad-format='auto'
-          data-full-width-responsive='true'
+          data-full-width-responsive="true"
+          style={{ display: 'block' }}
         />
       )}
     </div>

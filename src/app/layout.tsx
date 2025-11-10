@@ -1,13 +1,12 @@
 import '../styles/globals.css'
-import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 
 import { SpeedInsights } from '@vercel/speed-insights/next'
-
 import { Footer, Header } from 'components/containers'
 import { CategoriesDropdown } from 'components/containers/CategoriesDropdown/CategoriesDropdown'
 import { GoogleAnalytics } from 'libs/gtag'
+import { type Metadata } from 'next'
 import SurfaceDuoProvider from 'providers/SurfaceDuoProvider'
+import { type ReactNode } from 'react'
 
 // Handle missing environment variables gracefully during build
 const BASE_URL = process.env.BASE_URL || 'localhost:3000'
@@ -29,39 +28,45 @@ const globalFont = {
 export const revalidate = 600
 
 export const metadata: Metadata = {
-  title: { default: `Home | ${SITE_NAME}`, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
   openGraph: {
-    type: 'website',
-    title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: SITE_NAME,
-    url: `https://${BASE_URL}`,
     images: [{ url: `https://${BASE_URL}/img/ogp.png` }],
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    type: 'website',
+    url: `https://${BASE_URL}`,
   },
+  title: { default: `Home | ${SITE_NAME}`, template: `%s | ${SITE_NAME}` },
   twitter: {
+    card: 'summary_large_image',
     creator: TWITTER_HANDLE,
     site: TWITTER_SITE,
-    card: 'summary_large_image',
   },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang='ja'>
+    <html lang="ja">
       <head>
         {process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN && (
           <script
-            async
+            async={true}
+            crossOrigin="anonymous"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT_TOKEN}`}
-            crossOrigin='anonymous'
           />
         )}
-        <script async src='https://platform.twitter.com/widgets.js' />
+        <script async={true} src="https://platform.twitter.com/widgets.js" />
         <GoogleAnalytics />
       </head>
-      <body className={`${globalFont.className} font-mplus`} style={globalFont.style}>
-        <SurfaceDuoProvider header={<Header categoriesDropdown={<CategoriesDropdown />} />} footer={<Footer />}>
+      <body
+        className={`${globalFont.className} font-mplus`}
+        style={globalFont.style}
+      >
+        <SurfaceDuoProvider
+          footer={<Footer />}
+          header={<Header categoriesDropdown={<CategoriesDropdown />} />}
+        >
           {children}
           <SpeedInsights />
         </SurfaceDuoProvider>

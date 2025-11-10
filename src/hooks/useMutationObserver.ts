@@ -2,12 +2,13 @@
 
 import { type RefObject, useEffect } from 'react'
 
-export interface MutationCallback {
-  (mutations: MutationRecord[], observer: MutationObserver): void
-}
+export type MutationCallback = (
+  mutations: MutationRecord[],
+  observer: MutationObserver,
+) => void
 
 export const useMutationObserver = (
-  elements: Array<RefObject<Element>>,
+  elements: RefObject<Element>[],
   callback: MutationCallback,
   config:
     | {
@@ -33,13 +34,15 @@ export const useMutationObserver = (
       mutationObserver.disconnect()
       callback(mutations, mutationObserver)
       for (const elem of elements) {
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        elem.current && mutationObserver.observe(elem.current, config)
+        if (elem.current) {
+          mutationObserver.observe(elem.current, config)
+        }
       }
     })
     for (const elem of elements) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      elem.current && mutationObserver.observe(elem.current, config)
+      if (elem.current) {
+        mutationObserver.observe(elem.current, config)
+      }
     }
     return () => mutationObserver.disconnect()
   }, [callback, config, elements])

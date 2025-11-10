@@ -1,101 +1,101 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
-  "version": "2.0.0",
   "tasks": [
     {
-      "label": "dev",
-      "type": "shell",
       "command": "yarn run dev",
-      "presentation": {
-        "group": "main",
-        "echo": true,
-        "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false,
-        "close": false
-      },
       "group": {
         "kind": "none"
-      }
+      },
+      "label": "dev",
+      "presentation": {
+        "clear": false,
+        "close": false,
+        "echo": true,
+        "focus": false,
+        "group": "main",
+        "panel": "shared",
+        "reveal": "silent",
+        "showReuseMessage": true
+      },
+      "type": "shell"
     },
     {
-      "label": "storybook",
-      "type": "shell",
       "command": "yarn run storybook",
+      "group": {
+        "kind": "none"
+      },
+      "label": "storybook",
       "presentation": {
+        "clear": false,
+        "close": false,
+        "echo": true,
+        "focus": false,
         "group": "main",
-        "echo": true,
+        "panel": "shared",
         "reveal": "silent",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
-        "clear": false,
-        "close": false
+        "showReuseMessage": false
       },
-      "group": {
-        "kind": "none"
-      }
+      "type": "shell"
     },
     {
-      "label": "hygen new",
-      "type": "shell",
       "command": "yarn run hygen:new",
-      "presentation": {
-        "group": "hygen",
-        "echo": false,
-        "reveal": "always",
-        "focus": true,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false,
-        "close": true
-      },
       "group": {
         "kind": "none"
-      }
+      },
+      "label": "hygen new",
+      "presentation": {
+        "clear": false,
+        "close": true,
+        "echo": false,
+        "focus": true,
+        "group": "hygen",
+        "panel": "shared",
+        "reveal": "always",
+        "showReuseMessage": true
+      },
+      "type": "shell"
     },
     {
-      "label": "hygen sb",
-      "type": "shell",
       "command": "yarn run hygen:sb",
-      "presentation": {
-        "group": "hygen",
-        "echo": false,
-        "reveal": "always",
-        "focus": true,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false,
-        "close": true
-      },
       "group": {
         "kind": "none"
-      }
+      },
+      "label": "hygen sb",
+      "presentation": {
+        "clear": false,
+        "close": true,
+        "echo": false,
+        "focus": true,
+        "group": "hygen",
+        "panel": "shared",
+        "reveal": "always",
+        "showReuseMessage": true
+      },
+      "type": "shell"
     },
     {
-      "label": "lint",
-      "type": "shell",
       "command": "yarn run lint-staged",
-      "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": true,
-        "clear": false
-      },
       "group": {
         "kind": "test"
-      }
+      },
+      "label": "lint",
+      "presentation": {
+        "clear": false,
+        "echo": true,
+        "focus": false,
+        "panel": "shared",
+        "reveal": "always",
+        "showReuseMessage": true
+      },
+      "type": "shell"
     },
     {
-      "type": "npm",
-      "script": "lint-staged",
+      "label": "npm: lint-staged",
       "problemMatcher": [],
-      "label": "npm: lint-staged"
+      "script": "lint-staged",
+      "type": "npm"
     }
-  ]
+  ],
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0"
 }

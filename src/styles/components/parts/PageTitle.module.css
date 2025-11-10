@@ -1,9 +1,9 @@
 .title {
   position: relative;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
 }
 
 .title > div {
@@ -12,15 +12,15 @@
 
 .title::after {
   position: absolute;
+  top: -40px;
+  right: 18px;
+  z-index: 0;
   display: block;
   width: min-content;
   font-size: 6rem;
-  top: -40px;
-  right: 18px;
-  transform: rotate(-20deg);
-  opacity: 0.1;
   user-select: none;
-  z-index: 0;
+  opacity: 0.1;
+  transform: rotate(-20deg);
 }
 
 .blog::after {

@@ -1,12 +1,11 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { Particle } from './Particle'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: Particle,
   args: {
     id: 'particle',
   },
+  component: Particle,
   parameters: {
     chromatic: {
       disableSnapshot: true,

@@ -1,29 +1,36 @@
-import { Preview } from '@storybook/react'
+import { type Preview } from '@storybook/react'
 import { allModes } from './modes'
 
 import '../src/styles/globals.css'
 
 const MY_VIEWPORTS = {
-  mobile: {
-    name: 'mobile',
-    styles: {
-      width: '480px',
-      height: '640px',
-    },
-    type: 'mobile',
-  },
   desktop: {
     name: 'desktop',
     styles: {
-      width: '1280px',
       height: '720px',
+      width: '1280px',
     },
     type: 'desktop',
+  },
+  mobile: {
+    name: 'mobile',
+    styles: {
+      height: '640px',
+      width: '480px',
+    },
+    type: 'mobile',
   },
 }
 
 const preview: Preview = {
   parameters: {
+    chromatic: {
+      modes: {
+        desktop: allModes.default,
+        mobile: allModes.mobile,
+        tablet: allModes.tablet,
+      },
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -36,13 +43,6 @@ const preview: Preview = {
     },
     viewport: {
       viewports: MY_VIEWPORTS,
-    },
-    chromatic: {
-      modes: {
-        mobile: allModes['mobile'],
-        tablet: allModes['tablet'],
-        desktop: allModes['default'],
-      },
     },
   },
 }

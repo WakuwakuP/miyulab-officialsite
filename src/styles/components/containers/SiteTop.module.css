@@ -9,20 +9,21 @@
   top: calc(50% - (3.5rem / 2));
   left: 50%;
   z-index: 2;
-  transform: translate(-50%, -50%);
-  text-align: center;
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
   letter-spacing: 0.1rem;
-  text-shadow:  1px 1px 0px var(--main-bg-color),
-                -1px -1px 0px var(--main-bg-color),
-                -1px 1px 0px var(--main-bg-color),
-                1px -1px 0px var(--main-bg-color),
-                1px 1px 0px var(--main-bg-color),
-                0px -1px 0px var(--main-bg-color),
-                0px 1px 0px var(--main-bg-color),
-                1px 0px 0px var(--main-bg-color),
-                -1px 0px 0px var(--main-bg-color);
+  text-shadow:
+    1px 1px 0px var(--main-bg-color),
+    -1px -1px 0px var(--main-bg-color),
+    -1px 1px 0px var(--main-bg-color),
+    1px -1px 0px var(--main-bg-color),
+    1px 1px 0px var(--main-bg-color),
+    0px -1px 0px var(--main-bg-color),
+    0px 1px 0px var(--main-bg-color),
+    1px 0px 0px var(--main-bg-color),
+    -1px 0px 0px var(--main-bg-color);
+  transform: translate(-50%, -50%);
 }
 
 .bgImageWrapper {
@@ -44,7 +45,7 @@
   object-position: 50% 0%;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .title {
     left: 10%;
     transform: translateY(-50%);

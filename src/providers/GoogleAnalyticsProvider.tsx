@@ -1,8 +1,7 @@
 'use client'
 
-import Head from 'next/head'
-
 import { GoogleAnalytics, usePageView } from 'libs/gtag'
+import Head from 'next/head'
 
 export const GoogleAnalyticsProvider = () => {
   usePageView()

@@ -1,75 +1,74 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { ContentLatest } from './ContentLatest'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: ContentLatest,
   args: {
     contents: [
       {
-        id: 'test',
-        title: 'test title',
-        content: 'test',
-        thumbnail: undefined,
         category: [
           {
+            createdAt: '',
             id: 'aaa',
             name: 'test category',
-            createdAt: '',
-            updatedAt: '',
             publishedAt: '',
             revisedAt: '',
+            updatedAt: '',
           },
         ],
+        content: 'test',
         contentsCategory: [],
         createdAt: '',
-        updatedAt: '',
+        id: 'test',
         revisedAt: '',
+        thumbnail: undefined,
+        title: 'test title',
+        updatedAt: '',
       },
       {
-        id: 'test2',
-        title: 'test2 title',
+        category: [
+          {
+            createdAt: '',
+            id: 'aaa2',
+            name: 'test category',
+            publishedAt: '',
+            revisedAt: '',
+            updatedAt: '',
+          },
+        ],
         content: 'test2',
-        thumbnail: undefined,
-        category: [
-          {
-            id: 'aaa2',
-            name: 'test category',
-            createdAt: '',
-            updatedAt: '',
-            publishedAt: '',
-            revisedAt: '',
-          },
-        ],
         contentsCategory: [],
         createdAt: '',
-        updatedAt: '',
+        id: 'test2',
         revisedAt: '',
+        thumbnail: undefined,
+        title: 'test2 title',
+        updatedAt: '',
       },
       {
-        id: 'test3',
-        title: 'test3 title',
-        content: 'test3',
-        thumbnail: undefined,
         category: [
           {
+            createdAt: '',
             id: 'aaa2',
             name: 'test category',
-            createdAt: '',
-            updatedAt: '',
             publishedAt: '',
             revisedAt: '',
+            updatedAt: '',
           },
         ],
+        content: 'test3',
         contentsCategory: [],
         createdAt: '',
-        updatedAt: '',
+        id: 'test3',
         revisedAt: '',
+        thumbnail: undefined,
+        title: 'test3 title',
+        updatedAt: '',
       },
     ],
     page: 1,
     totalPage: 10,
   },
+  component: ContentLatest,
 } satisfies Meta<typeof ContentLatest>
 
 export default meta

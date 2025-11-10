@@ -1,31 +1,30 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { ContentCard } from './ContentCard'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: ContentCard,
   args: {
     content: {
-      id: 'test',
-      title: 'test title',
-      content: 'test',
-      thumbnail: undefined,
       category: [
         {
+          createdAt: '',
           id: 'aaa',
           name: 'test category',
-          createdAt: '',
-          updatedAt: '',
           publishedAt: '',
           revisedAt: '',
+          updatedAt: '',
         },
       ],
+      content: 'test',
       contentsCategory: [],
       createdAt: '',
-      updatedAt: '',
+      id: 'test',
       revisedAt: '',
+      thumbnail: undefined,
+      title: 'test title',
+      updatedAt: '',
     },
   },
+  component: ContentCard,
 } satisfies Meta<typeof ContentCard>
 
 export default meta

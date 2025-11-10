@@ -1,31 +1,23 @@
-import { unstable_cache } from 'next/cache'
-
 import { Home } from 'components/templates'
 import { client } from 'libs/client'
+import { unstable_cache } from 'next/cache'
 
 export const revalidate = 600
 
-const getHomeContents = async () => {
-  return await client.get({
+const getHomeContents = async () =>
+  await client.get({
     endpoint: 'contents',
     queries: {
       filters: 'contentsCategory[contains]article',
-      orders: '-publishedAt',
       limit: 2,
+      orders: '-publishedAt',
     },
   })
-}
 
 const useCacheGetHomeContents = () =>
-  unstable_cache(
-    async () => {
-      return await getHomeContents()
-    },
-    ['home'],
-    {
-      tags: ['home'],
-    },
-  )
+  unstable_cache(async () => await getHomeContents(), ['home'], {
+    tags: ['home'],
+  })
 
 export default async function HomePage() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -34,8 +26,8 @@ export default async function HomePage() {
   const category = await client.get({ endpoint: 'categories' })
 
   const props = {
-    contents,
     categories: category.contents,
+    contents,
   }
   return <Home {...props} />
 }

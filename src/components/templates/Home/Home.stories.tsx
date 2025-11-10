@@ -1,53 +1,52 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { Home } from './Home'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: Home,
   args: {
     contents: [
       {
-        id: 'test',
-        title: 'test title',
-        content: 'test',
-        thumbnail: undefined,
         category: [
           {
+            createdAt: '',
             id: 'aaa',
             name: 'test category',
-            createdAt: '',
-            updatedAt: '',
             publishedAt: '',
             revisedAt: '',
+            updatedAt: '',
           },
         ],
+        content: 'test',
         contentsCategory: [],
         createdAt: '',
-        updatedAt: '',
+        id: 'test',
         revisedAt: '',
+        thumbnail: undefined,
+        title: 'test title',
+        updatedAt: '',
       },
       {
-        id: 'test2',
-        title: 'test2 title',
-        content: 'test2',
-        thumbnail: undefined,
         category: [
           {
+            createdAt: '',
             id: 'aaa2',
             name: 'test category',
-            createdAt: '',
-            updatedAt: '',
             publishedAt: '',
             revisedAt: '',
+            updatedAt: '',
           },
         ],
+        content: 'test2',
         contentsCategory: [],
         createdAt: '',
-        updatedAt: '',
+        id: 'test2',
         revisedAt: '',
+        thumbnail: undefined,
+        title: 'test2 title',
+        updatedAt: '',
       },
     ],
   },
+  component: Home,
 } satisfies Meta<typeof Home>
 
 export default meta

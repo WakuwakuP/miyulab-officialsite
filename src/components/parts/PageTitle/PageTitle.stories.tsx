@@ -1,13 +1,12 @@
+import { type Meta, type StoryObj } from '@storybook/react'
 import { PageTitle } from './PageTitle'
 
-import type { Meta, StoryObj } from '@storybook/react'
-
 const meta = {
-  component: PageTitle,
   args: {
     bgText: 'blog',
     children: 'TEST',
   },
+  component: PageTitle,
 } satisfies Meta<typeof PageTitle>
 
 export default meta

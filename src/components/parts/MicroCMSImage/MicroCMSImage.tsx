@@ -6,15 +6,18 @@ type MicroCMSImageProps = Omit<ImageProps, 'src' | 'width' | 'height'> & {
   height?: number
 }
 
-export const MicroCMSImage = ({ className, src, alt, ...imageProps }: MicroCMSImageProps) => {
-  return (
-    <Image
-      {...imageProps}
-      className={className}
-      src={src}
-      placeholder='blur'
-      blurDataURL={`${src}?auto=compress&w=10`}
-      alt={alt}
-    />
-  )
-}
+export const MicroCMSImage = ({
+  className,
+  src,
+  alt,
+  ...imageProps
+}: MicroCMSImageProps) => (
+  <Image
+    {...imageProps}
+    alt={alt}
+    blurDataURL={`${src}?auto=compress&w=10`}
+    className={className}
+    placeholder="blur"
+    src={src}
+  />
+)

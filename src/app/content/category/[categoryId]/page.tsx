@@ -1,9 +1,8 @@
-import { unstable_cache } from 'next/cache'
-import { notFound } from 'next/navigation'
-
 import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
+import { unstable_cache } from 'next/cache'
+import { notFound } from 'next/navigation'
 
 export const revalidate = 600
 
@@ -16,22 +15,19 @@ export async function generateMetadata({ params }: { params: Params }) {
   }
 }
 
-const getContentsCategory = async (categoryId: string) => {
-  return await client.get({
+const getContentsCategory = async (categoryId: string) =>
+  await client.get({
     endpoint: 'contents',
     queries: {
       filters: `category[contains]${categoryId},contentsCategory[contains]article`,
-      orders: '-publishedAt',
       limit: PAGE_LIMIT,
+      orders: '-publishedAt',
     },
   })
-}
 
 const cachedGetContentsCategory = (categoryId: string) =>
   unstable_cache(
-    async () => {
-      return await getContentsCategory(categoryId)
-    },
+    async () => await getContentsCategory(categoryId),
     [`contents-category-${categoryId}-page-1`],
     {
       tags: ['contents-category'],
@@ -51,8 +47,11 @@ export default async function ContentsCategory({ params }: { params: Params }) {
   }
 
   return (
-    <>
-      <ContentLatest categoryId={categoryId} contents={contents} page={1} totalPage={totalPage} />
-    </>
+    <ContentLatest
+      categoryId={categoryId}
+      contents={contents}
+      page={1}
+      totalPage={totalPage}
+    />
   )
 }

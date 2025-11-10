@@ -1,14 +1,11 @@
-import { notFound } from 'next/navigation'
-
 import * as cheerio from 'cheerio'
-import hljs from 'highlight.js'
-import { createTableOfContents, processer } from 'microcms-richedit-processer'
-import { ImgixFormat } from 'ts-imgix'
-
 import { ContentDetail } from 'components/templates'
+import hljs from 'highlight.js'
 import { client } from 'libs/client'
-
-import type { CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
+import { createTableOfContents, processer } from 'microcms-richedit-processer'
+import { type CreateTableOfContentsOptions } from 'microcms-richedit-processer/lib/types'
+import { notFound } from 'next/navigation'
+import { ImgixFormat } from 'ts-imgix'
 
 export const revalidate = 0
 
@@ -25,21 +22,17 @@ export async function generateMetadata({ params }: { params: Params }) {
   const { id } = await params
   const content = await client
     .get({
-      endpoint: 'contents',
       contentId: id,
+      endpoint: 'contents',
     })
-    .catch(() => undefined)
+    .catch(() => {})
 
   if (!content) {
     return {}
   }
 
   return {
-    title: content.title,
     openGraph: {
-      title: `${content.title} | ${SITE_TITLE}`,
-      url: `https://${BASE_URL}/content/detail/${content.id}`,
-      type: 'article',
       images: [
         {
           url: content.thumbnail?.url
@@ -47,7 +40,11 @@ export async function generateMetadata({ params }: { params: Params }) {
             : `https://${BASE_URL}/img/ogp.png`,
         },
       ],
+      title: `${content.title} | ${SITE_TITLE}`,
+      type: 'article',
+      url: `https://${BASE_URL}/content/detail/${content.id}`,
     },
+    title: content.title,
   }
 }
 
@@ -62,23 +59,26 @@ export default async function ContentDetailPage({
   const { draftKey } = await searchParams
   const key = typeof draftKey === 'string' ? draftKey : undefined
 
-  if (!key || !id) {
+  if (!(key && id)) {
     notFound()
   }
 
   const content = await client
     .get({
-      endpoint: 'contents',
       contentId: id,
+      endpoint: 'contents',
       queries: { draftKey: key },
     })
-    .catch(() => undefined)
+    .catch(() => {})
 
   if (!content) {
     notFound()
   }
 
-  const body = content.content.reduce((acc: string, cur: { fieldId: string; html: string }) => acc + cur.html, '')
+  const body = content.content.reduce(
+    (acc: string, cur: { fieldId: string; html: string }) => acc + cur.html,
+    '',
+  )
 
   const $ = cheerio.load(body)
   $('pre code').each((_, elm) => {
@@ -94,7 +94,10 @@ export default async function ContentDetailPage({
     $(elm)
       .attr('width', null)
       .attr('height', null)
-      .attr('style', 'border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;')
+      .attr(
+        'style',
+        'border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;',
+      )
   })
 
   const tocOption: CreateTableOfContentsOptions = {
@@ -106,16 +109,17 @@ export default async function ContentDetailPage({
       content={{
         ...content,
         content: await processer(body, {
+          code: { enabled: true },
+          iframe: { lazy: false },
           img: {
+            // biome-ignore lint/style/noMagicNumbers: Device sizes for responsive images from microCMS
+            deviceSizes: [640, 800],
             lazy: false,
             parameters: {
               fm: ImgixFormat.webp,
               q: 75,
             },
-            deviceSizes: [640, 800],
           },
-          iframe: { lazy: false },
-          code: { enabled: true },
         }),
       }}
       toc={createTableOfContents(body, tocOption)}

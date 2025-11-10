@@ -1,16 +1,16 @@
 .circle {
-  list-style: none;
   display: inline-block;
   padding: 0 0.5rem;
+  list-style: none;
 }
 
 .btn {
+  position: relative;
   display: block;
   width: 3.5rem;
   height: 3.5rem;
   border: 2px solid var(--main-color);
   border-radius: 100%;
-  position: relative;
 }
 
 .btn:hover {
@@ -19,10 +19,10 @@
 }
 
 .icon {
-  line-height: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  line-height: 0;
   -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }

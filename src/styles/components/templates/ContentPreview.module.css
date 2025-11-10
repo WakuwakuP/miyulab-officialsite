@@ -1,19 +1,17 @@
 .mainarea {
-  display: flex;
-  flex-wrap: wrap;
   --toc-width: 300px;
   --toc-wrap-width: 800;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
-
 .content {
+  width: clamp(calc(100% - var(--toc-width)), calc((800px - 100%) * 800), 100%);
   padding: 0 0.5rem;
-  width: clamp(calc(100% - var(--toc-width)), calc((800px - 100%) * 800),100%)
 }
 
 .toc {
-  width: clamp(var(--toc-width), calc((800px - 100%) * 800),100%)
+  width: clamp(var(--toc-width), calc((800px - 100%) * 800), 100%);
 }
 
 .tocWrapper {
@@ -25,9 +23,8 @@
   top: 100px;
 }
 
-
 .content img {
-  width:100%;
+  width: 100%;
   height: auto;
 }
 
@@ -44,9 +41,9 @@
 }
 
 .content table {
-  border: solid 1px var(--table-border-color);
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
+  border: solid 1px var(--table-border-color);
 }
 
 .content table th {

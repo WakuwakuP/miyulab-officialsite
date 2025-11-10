@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import { type RefObject, useRef } from 'react'
-
 import { Toc } from 'components/containers'
 import { PageTitle } from 'components/parts'
-import { type MutationCallback, useMutationObserver } from 'hooks/useMutationObserver'
-
-import type { Category, ContentModify } from 'types'
-
+import {
+  type MutationCallback,
+  useMutationObserver,
+} from 'hooks/useMutationObserver'
+import Link from 'next/link'
+import { type RefObject, useRef } from 'react'
 import styles from 'styles/components/templates/ContentPreview.module.css'
+import { type Category, type ContentModify } from 'types'
 
 import 'highlight.js/styles/github-dark.css'
 
@@ -35,28 +35,33 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
   }
 
   useMutationObserver(
-    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map((ref) => ref as RefObject<Element>),
+    [elemMainarea, elemToc, elemTocWrapper, elemTocArea].map(
+      (ref) => ref as RefObject<Element>,
+    ),
     handleUnsetStyling,
     {
-      attributes: true,
       attributeFilter: ['style'],
+      attributes: true,
     },
   )
 
   return (
     <>
-      <PageTitle bgText='blog'>Preview - {content.title}</PageTitle>
+      <PageTitle bgText="blog">Preview - {content.title}</PageTitle>
       {content.publishedAt && <p>{content.publishedAt}</p>}
       <ul>
         {content.category.map((category: Category) => (
           <li key={category.id}>
-            <Link href={`/content/category/${category.id}`}>#{category.name}</Link>
+            <Link href={`/content/category/${category.id}`}>
+              #{category.name}
+            </Link>
           </li>
         ))}
       </ul>
       <div className={styles.mainarea} ref={elemMainarea}>
         <div
           className={styles.content}
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: Content from trusted microCMS source
           dangerouslySetInnerHTML={{
             __html: `${content.content}`,
           }}
@@ -64,7 +69,7 @@ export const ContentPreview = ({ content, toc }: ContentPreviewProps) => {
         <div className={styles.toc} ref={elemToc}>
           <div className={styles.tocWrapper} ref={elemTocWrapper}>
             <div className={styles.tocArea} ref={elemTocArea}>
-              {toc && toc.length > 0 && <Toc toc={toc} />}
+              {toc.length > 0 && <Toc toc={toc} />}
             </div>
           </div>
         </div>

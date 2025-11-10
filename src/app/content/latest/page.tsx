@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
-import { unstable_cache } from 'next/cache'
-import { notFound } from 'next/navigation'
-
 import { ContentLatest } from 'components/templates'
 import { client } from 'libs/client'
 import { PAGE_LIMIT } from 'libs/const'
+import { type Metadata } from 'next'
+import { unstable_cache } from 'next/cache'
+import { notFound } from 'next/navigation'
 
 export const revalidate = 600
 
@@ -12,24 +11,21 @@ export const metadata: Metadata = {
   title: 'Latest',
 }
 
-const getContentLatest = async () => {
-  return await client
+const getContentLatest = async () =>
+  await client
     .get({
       endpoint: 'contents',
       queries: {
         filters: 'contentsCategory[contains]article',
-        orders: '-publishedAt',
         limit: PAGE_LIMIT,
+        orders: '-publishedAt',
       },
     })
-    .catch(() => undefined)
-}
+    .catch(() => {})
 
 const cachedGetContentLatest = () =>
   unstable_cache(
-    async () => {
-      return await getContentLatest()
-    },
+    async () => await getContentLatest(),
     ['contents-latest-page-1'],
     {
       tags: ['contents-latest'],
@@ -41,7 +37,7 @@ export default async function ContentLatestPage() {
 
   const data = await getContentLatest()
 
-  if (!data || !data.contents || data.contents.length === 0) {
+  if (!data?.contents || data.contents.length === 0) {
     notFound()
   }
 

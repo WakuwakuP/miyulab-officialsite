@@ -1,17 +1,16 @@
 .headerContainer {
   position: sticky;
   top: 0;
-  background-color: var(--main-bg-color-alpha);
   z-index: 10000;
   margin: 0;
+  background-color: var(--main-bg-color-alpha);
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 3.5rem;
-  backdrop-filter: blur(3px);
   text-shadow:
     1px 1px 0px var(--main-bg-color),
     -1px -1px 0px var(--main-bg-color),
@@ -22,6 +21,7 @@
     0px 1px 0px var(--main-bg-color),
     1px 0px 0px var(--main-bg-color),
     -1px 0px 0px var(--main-bg-color);
+  backdrop-filter: blur(3px);
 }
 
 .title {
@@ -36,8 +36,8 @@
 }
 
 .menu > li {
-  padding-right: 1rem;
   position: relative;
+  padding-right: 1rem;
 }
 
 .menu > li:last-child {
@@ -70,22 +70,22 @@
   position: absolute;
   top: 100%;
   right: -1rem;
-  background-color: var(--main-bg-color-alpha);
   z-index: 10001;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: var(--main-bg-color-alpha);
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
   opacity: 0;
-  visibility: hidden;
+  backdrop-filter: blur(10px);
   transition:
     opacity 0.2s ease,
     visibility 0s linear 0.2s;
-  pointer-events: none;
 }
 
 .menuItem:hover .dropdownContainer {
-  opacity: 1;
   visibility: visible;
-  transition: opacity 0.2s ease;
   pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
