@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from 'storybook'
+import { type Meta, type StoryObj } from '@storybook/nextjs'
 import { ContentLatest } from './ContentLatest'
 
 const meta = {

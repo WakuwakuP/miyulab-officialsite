@@ -1,4 +1,4 @@
-import { type Preview } from 'storybook'
+import { type Preview } from '@storybook/nextjs'
 import { allModes } from './modes'
 
 import '../src/styles/globals.css'

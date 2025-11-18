@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from 'storybook'
+import { type Meta, type StoryObj } from '@storybook/nextjs'
 import { Pagination } from './Pagination'
 
 const meta = {

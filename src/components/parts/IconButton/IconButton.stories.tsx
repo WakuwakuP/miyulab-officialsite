@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from 'storybook'
+import { type Meta, type StoryObj } from '@storybook/nextjs'
 import { SiX } from 'react-icons/si'
 import { IconButton } from './IconButton'
 
