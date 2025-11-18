@@ -1,4 +1,4 @@
-import { type Meta, type StoryObj } from '@storybook/react'
+import { type Meta, type StoryObj } from 'storybook'
 import { Particle } from './Particle'
 
 const meta = {

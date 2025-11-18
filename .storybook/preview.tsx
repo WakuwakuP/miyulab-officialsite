@@ -1,4 +1,4 @@
-import { type Preview } from '@storybook/react'
+import { type Preview } from 'storybook'
 import { allModes } from './modes'
 
 import '../src/styles/globals.css'
