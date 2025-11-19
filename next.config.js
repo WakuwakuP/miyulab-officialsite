@@ -1,5 +1,3 @@
-const path = require('path')
-
 /**
  *  @type {import('next').NextConfig}
  */
@@ -20,18 +18,8 @@ const nextConfig = {
         protocol: 'https',
       },
     ],
-    // Enable local image optimization
-    localPatterns: [
-      {
-        pathname: '/img/**',
-      },
-    ],
   },
   reactStrictMode: true,
-  webpack: (config) => {
-    config.resolve.alias['@public'] = path.join(__dirname, 'public')
-    return config
-  },
 }
 
 module.exports = nextConfig
