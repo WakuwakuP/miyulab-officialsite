@@ -31,6 +31,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/hooks/useImageConfig.ts",
-    "src/components/containers/ContentCard/ContentCard.stories.tsx"
+    "src/components/containers/ContentCard/ContentCard.stories.tsx",
+    ".next/dev/types/**/*.ts"
   ]
 }
