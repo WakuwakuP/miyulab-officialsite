@@ -2103,18 +2103,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:^2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/biome@npm:2.3.5"
+"@biomejs/biome@npm:^2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/biome@npm:2.3.6"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.5"
-    "@biomejs/cli-darwin-x64": "npm:2.3.5"
-    "@biomejs/cli-linux-arm64": "npm:2.3.5"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.5"
-    "@biomejs/cli-linux-x64": "npm:2.3.5"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.5"
-    "@biomejs/cli-win32-arm64": "npm:2.3.5"
-    "@biomejs/cli-win32-x64": "npm:2.3.5"
+    "@biomejs/cli-darwin-arm64": "npm:2.3.6"
+    "@biomejs/cli-darwin-x64": "npm:2.3.6"
+    "@biomejs/cli-linux-arm64": "npm:2.3.6"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.3.6"
+    "@biomejs/cli-linux-x64": "npm:2.3.6"
+    "@biomejs/cli-linux-x64-musl": "npm:2.3.6"
+    "@biomejs/cli-win32-arm64": "npm:2.3.6"
+    "@biomejs/cli-win32-x64": "npm:2.3.6"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -2134,62 +2134,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: c29264d9e3427b665a169af01aadea5584def961397ff6e1d1be4f16c5d37aca1b1b6ea1e6190c63330d0d8022009261ddc4c42a39727f77d5668b91e427b4f3
+  checksum: 61a234527fee2902690446a4bc9284ae49048808102538a959c8a057709c2452d7a60f97d826eaa181f64d0c8a1824bfd17a2065b476b8c24074528687cfe46f
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.5"
+"@biomejs/cli-darwin-arm64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.5"
+"@biomejs/cli-darwin-x64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-darwin-x64@npm:2.3.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.5"
+"@biomejs/cli-linux-arm64-musl@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.5"
+"@biomejs/cli-linux-arm64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-linux-arm64@npm:2.3.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.5"
+"@biomejs/cli-linux-x64-musl@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.5"
+"@biomejs/cli-linux-x64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-linux-x64@npm:2.3.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.5"
+"@biomejs/cli-win32-arm64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-win32-arm64@npm:2.3.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.5":
-  version: 2.3.5
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.5"
+"@biomejs/cli-win32-x64@npm:2.3.6":
+  version: 2.3.6
+  resolution: "@biomejs/cli-win32-x64@npm:2.3.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -6603,17 +6603,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/backends@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@vercel/backends@npm:0.0.7"
+"@vercel/backends@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@vercel/backends@npm:0.0.8"
   dependencies:
-    "@vercel/cervel": "npm:0.0.3"
+    "@vercel/cervel": "npm:0.0.4"
     "@vercel/introspection": "npm:0.0.2"
     "@vercel/nft": "npm:0.30.1"
     "@vercel/static-config": "npm:3.1.2"
     fs-extra: "npm:11.1.0"
     rolldown: "npm:1.0.0-beta.35"
-  checksum: 776a60be219b46acb9a889a03e15a9774a200f8af4d4ca5b47c5181c3f69b9ec02ade97992bb78c908029c71097a7f2f4eb9a9396a5ea5f8b770a9f6e0f96778
+  checksum: 6eead0bd20ab593c2c05898fcaddb672e829c9b4960f2b042ed6dc95f33542dc7044f1a916c151d421ef9bab32623eaa793bacf87ed0d00664d2b992c4cf46af
   languageName: node
   linkType: hard
 
@@ -6637,9 +6637,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/cervel@npm:0.0.3":
-  version: 0.0.3
-  resolution: "@vercel/cervel@npm:0.0.3"
+"@vercel/cervel@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@vercel/cervel@npm:0.0.4"
   dependencies:
     execa: "npm:3.2.0"
     rolldown: "npm:1.0.0-beta.35"
@@ -6649,7 +6649,7 @@ __metadata:
     typescript: ^4.0.0 || ^5.0.0
   bin:
     cervel: bin/cervel.mjs
-  checksum: c46a5b88416668ad1b62d086cec174e9088854c9419a0828522e3a3a7b2b2c2bf36654c4d4076d65646979a7330b1423797c14dcba59b88436c5c49e8cedfb87
+  checksum: c4128c48ddb43180ebf5ede3e344f3b353be9259db46a575c0de6341525c44dd05066d17ed5c48e8e5a1ee403b1412ddbbbd5a31ece9074e1a84d39566953b41
   languageName: node
   linkType: hard
 
@@ -6677,11 +6677,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:0.1.7":
-  version: 0.1.7
-  resolution: "@vercel/express@npm:0.1.7"
+"@vercel/express@npm:0.1.8":
+  version: 0.1.8
+  resolution: "@vercel/express@npm:0.1.8"
   dependencies:
-    "@vercel/cervel": "npm:0.0.3"
+    "@vercel/cervel": "npm:0.0.4"
     "@vercel/nft": "npm:0.30.1"
     "@vercel/node": "npm:5.5.6"
     "@vercel/static-config": "npm:3.1.2"
@@ -6690,7 +6690,7 @@ __metadata:
     rolldown: "npm:1.0.0-beta.35"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: dd5297deac70a292241e32d3937b11ea92060da4bd851867c82d099ada771b2554f219addf6c488705ed52faa39783e83e79187eaf5121094e7c61b6ed78d63a
+  checksum: d3d5eb96c21616d189bbaad2beeda31df296ce4eb46f7bc6b26ce102efd54b391758641d84519f7360a5132ab38b09d97119ae79d28c572c8e80dff297b3bd36
   languageName: node
   linkType: hard
 
@@ -12826,7 +12826,7 @@ __metadata:
   resolution: "miyulab-officialsite@workspace:."
   dependencies:
     "@babel/core": "npm:^7.28.5"
-    "@biomejs/biome": "npm:^2.3.5"
+    "@biomejs/biome": "npm:^2.3.6"
     "@chromatic-com/storybook": "npm:3.2.7"
     "@storybook/addon-actions": "npm:8.6.14"
     "@storybook/addon-essentials": "npm:^8.6.14"
@@ -12867,13 +12867,13 @@ __metadata:
     react-icons: "npm:^5.5.0"
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
-    sass: "npm:^1.94.0"
+    sass: "npm:1.94.0"
     storybook: "npm:8.6.14"
     storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
     typescript: "npm:5.9.3"
-    vercel: "npm:^48.10.2"
+    vercel: "npm:48.10.3"
     vite: "npm:7.2.2"
   languageName: unknown
   linkType: soft
@@ -14910,7 +14910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.94.0":
+"sass@npm:1.94.0":
   version: 1.94.0
   resolution: "sass@npm:1.94.0"
   dependencies:
@@ -16661,16 +16661,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^48.10.2":
-  version: 48.10.2
-  resolution: "vercel@npm:48.10.2"
+"vercel@npm:48.10.3":
+  version: 48.10.3
+  resolution: "vercel@npm:48.10.3"
   dependencies:
-    "@vercel/backends": "npm:0.0.7"
+    "@vercel/backends": "npm:0.0.8"
     "@vercel/blob": "npm:1.0.2"
     "@vercel/build-utils": "npm:13.0.1"
     "@vercel/detect-agent": "npm:1.0.0"
     "@vercel/elysia": "npm:0.1.4"
-    "@vercel/express": "npm:0.1.7"
+    "@vercel/express": "npm:0.1.8"
     "@vercel/fastify": "npm:0.1.7"
     "@vercel/fun": "npm:1.1.6"
     "@vercel/go": "npm:3.2.3"
@@ -16689,7 +16689,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: edb639e2919bceeb61044658b0fd0cda2f8a9b012bde81147adb3d7e79be8e880edb09c9c706dce02c394baf5c7526c04876c692e592d6419549229763fb95ce
+  checksum: 8bc75dcb79b1a03996549e6a30a579a7784a1a5f4b8e72c1e453a5ed1a910b13ea7a19c2515ea8fe55f9d8b3e532d3bea166e6e3bef0fd4a1f180b0a4336be8c
   languageName: node
   linkType: hard
 
