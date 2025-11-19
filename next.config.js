@@ -20,6 +20,12 @@ const nextConfig = {
         protocol: 'https',
       },
     ],
+    // Enable local image optimization
+    localPatterns: [
+      {
+        pathname: '/img/**',
+      },
+    ],
   },
   reactStrictMode: true,
   webpack: (config) => {
