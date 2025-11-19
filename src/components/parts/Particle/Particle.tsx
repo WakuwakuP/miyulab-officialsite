@@ -3,7 +3,7 @@
 import { loadAll } from '@tsparticles/all'
 import { type Engine } from '@tsparticles/engine'
 import { initParticlesEngine, Particles } from '@tsparticles/react'
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect } from 'react'
 
 export interface ParticleProps {
   id?: string
@@ -16,7 +16,7 @@ export const Particle = ({ id }: ParticleProps) => {
     })
   }, [])
 
-  useMemo(() => {
+  useEffect(() => {
     init()
   }, [init])
   return (
