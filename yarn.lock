@@ -6612,12 +6612,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/speed-insights@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@vercel/speed-insights@npm:1.2.0"
+"@vercel/speed-insights@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@vercel/speed-insights@npm:1.3.0"
   peerDependencies:
     "@sveltejs/kit": ^1 || ^2
     next: ">= 13"
+    nuxt: ">= 3"
     react: ^18 || ^19 || ^19.0.0-rc
     svelte: ">= 4"
     vue: ^3
@@ -6635,7 +6636,7 @@ __metadata:
       optional: true
     vue-router:
       optional: true
-  checksum: 2fb4c4a46330949182d6f63691c51310b636fc3cc464bde3c0f24f100b712c3c4ec57a9fedcd6dc3cc75951064b3295b3cb616c80ff7179fbe310cd4314fffaa
+  checksum: ec8fcf6524e086d36a6933b536da291bf6b0234f5707bafc118be19000d3f7fd9d62b6e0b9b653d1ec33dea47f2b9c6f190863fd35b3e5761e7cccb641eb20b8
   languageName: node
   linkType: hard
 
@@ -12531,7 +12532,7 @@ __metadata:
     "@types/react-scroll": "npm:^1.8.10"
     "@types/rss": "npm:^0.0.32"
     "@vercel/analytics": "npm:^1.5.0"
-    "@vercel/speed-insights": "npm:^1.2.0"
+    "@vercel/speed-insights": "npm:^1.3.0"
     babel-loader: "npm:^10.0.0"
     cheerio: "npm:^1.1.2"
     chromatic: "npm:13.3.4"
