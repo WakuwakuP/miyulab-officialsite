@@ -12612,7 +12612,7 @@ __metadata:
     react-icons: "npm:^5.5.0"
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
-    sass: "npm:1.94.2"
+    sass: "npm:1.96.0"
     storybook: "npm:10.1.8"
     storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
@@ -14617,9 +14617,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.94.2":
-  version: 1.94.2
-  resolution: "sass@npm:1.94.2"
+"sass@npm:1.96.0":
+  version: 1.96.0
+  resolution: "sass@npm:1.96.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -14630,7 +14630,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 49a656dfab58299165ef94e71483a333972daee68c49fa542858d4912accdfb1707338226a165b1a2dfcdb2509fcda5a5b4f3780d14e49b6d38d93c8043475d3
+  checksum: a932054bcee6935757417af6072d31b65ce3557798a53351b3e1369d7f06e24b0ec211e1617bdaaee998b429a44bf0f52acd240fd47f88422d5bc241eeb71672
   languageName: node
   linkType: hard
 
