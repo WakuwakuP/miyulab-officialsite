@@ -12758,7 +12758,7 @@ __metadata:
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
     sass: "npm:1.96.0"
-    storybook: "npm:10.1.9"
+    storybook: "npm:10.1.10"
     storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
@@ -15318,9 +15318,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:10.1.9":
-  version: 10.1.9
-  resolution: "storybook@npm:10.1.9"
+"storybook@npm:10.1.10":
+  version: 10.1.10
+  resolution: "storybook@npm:10.1.10"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.0"
@@ -15341,7 +15341,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: b5cc6bf6c0820bff1fdc1df120216c3a55553d801d087823b1e917f69651eebe2e47be08d65c440a61fb8fe8fc9a2d59bf29943adde1c15395b34c52331ec90e
+  checksum: beff5472ee86a995cbde2789b2aabd941f823e31ca6957bb4434cb8ee3d3703cf1248e44f4b4d402416a52bfee94677e74f233cc906487901e831e8ab610defa
   languageName: node
   linkType: hard
 
