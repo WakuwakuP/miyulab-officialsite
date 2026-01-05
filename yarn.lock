@@ -6602,10 +6602,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/go@npm:3.2.4":
-  version: 3.2.4
-  resolution: "@vercel/go@npm:3.2.4"
-  checksum: 8b77dae81683e404bb71511af3a7b693cd58deafa523c223a94ed6f5a9827582f65a2588f4693aa0e0678ffcb33590d8451c307e5b2ced463b8f622097848392
+"@vercel/go@npm:3.3.0":
+  version: 3.3.0
+  resolution: "@vercel/go@npm:3.3.0"
+  checksum: bccfbf5816eb844f508aec891e4bb37b0e3902f33b9e533129e4d264d457905031562cb005422710c08630cf5522d5d4c3013303ead2511ec4eb940b0e2e8d41
   languageName: node
   linkType: hard
 
@@ -6665,12 +6665,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.15.9":
-  version: 4.15.9
-  resolution: "@vercel/next@npm:4.15.9"
+"@vercel/next@npm:4.15.10":
+  version: 4.15.10
+  resolution: "@vercel/next@npm:4.15.10"
   dependencies:
     "@vercel/nft": "npm:1.1.1"
-  checksum: 33392def88d0c60015c7f9764abb447434437a996eab3ff1887523fe3c09241dd3987e99f3e99a259918e1fbcf20f09b35b7b6b5dc77c0281771cac759b59fd5
+  checksum: e54153f150f85e62e10f4ff4aebe2571e40529095277810321795fd2c15915a250b1dd82601ed14483eac2e43fb033f6af3f6bdfe20104c4c639a6cae85f2f3c
   languageName: node
   linkType: hard
 
@@ -6727,10 +6727,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.1.5":
-  version: 6.1.5
-  resolution: "@vercel/python@npm:6.1.5"
-  checksum: 44758f6d136f4567ac67ce8d16debab67cb281c50e020cb15bb9ad8e32a906f4efc10469668344f9ba1cb3bb765c323b15c7efe72fed1859fc6daa3332184304
+"@vercel/python@npm:6.1.6":
+  version: 6.1.6
+  resolution: "@vercel/python@npm:6.1.6"
+  checksum: 9445a85b534f13f316ef309a19a78b613f546cffe41d91855e253b6c07a2c6419b99dc569b419e75dccff308558b8e11b9264ada96465f85737ef834e51e09fc
   languageName: node
   linkType: hard
 
@@ -8188,9 +8188,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:13.3.4":
-  version: 13.3.4
-  resolution: "chromatic@npm:13.3.4"
+"chromatic@npm:13.3.5":
+  version: 13.3.5
+  resolution: "chromatic@npm:13.3.5"
   peerDependencies:
     "@chromatic-com/cypress": ^0.*.* || ^1.0.0
     "@chromatic-com/playwright": ^0.*.* || ^1.0.0
@@ -8203,7 +8203,7 @@ __metadata:
     chroma: dist/bin.js
     chromatic: dist/bin.js
     chromatic-cli: dist/bin.js
-  checksum: 1800c1640dbc168b621daeca5895698cb5a0a1def50b9d1ada5ea99ce242bf1f70d15065460948b168eedea1f56422553184f4cce1d01a7816f32c60054d704d
+  checksum: 58b3d7984db000f8c7b605788569a24c3f3cd41bb6b2d3a94f18acc9ff11ce6c6881f795c8390a94ff721ccfcf8a2d7942e78a54a1f70294a7b3d35ccc382154
   languageName: node
   linkType: hard
 
@@ -12890,7 +12890,7 @@ __metadata:
     "@vercel/speed-insights": "npm:1.3.1"
     babel-loader: "npm:^10.0.0"
     cheerio: "npm:^1.1.2"
-    chromatic: "npm:13.3.4"
+    chromatic: "npm:13.3.5"
     highlight.js: "npm:^11.11.1"
     husky: "npm:^9.1.7"
     hygen: "npm:^6.2.11"
@@ -12912,7 +12912,7 @@ __metadata:
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
     typescript: "npm:5.9.3"
-    vercel: "npm:^50.1.3"
+    vercel: "npm:^50.1.4"
     vite: "npm:7.3.0"
   languageName: unknown
   linkType: soft
@@ -16677,9 +16677,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^50.1.3":
-  version: 50.1.3
-  resolution: "vercel@npm:50.1.3"
+"vercel@npm:^50.1.4":
+  version: 50.1.4
+  resolution: "vercel@npm:50.1.4"
   dependencies:
     "@vercel/backends": "npm:0.0.17"
     "@vercel/blob": "npm:1.0.2"
@@ -16689,14 +16689,14 @@ __metadata:
     "@vercel/express": "npm:0.1.21"
     "@vercel/fastify": "npm:0.1.18"
     "@vercel/fun": "npm:1.2.0"
-    "@vercel/go": "npm:3.2.4"
+    "@vercel/go": "npm:3.3.0"
     "@vercel/h3": "npm:0.1.24"
     "@vercel/hono": "npm:0.2.18"
     "@vercel/hydrogen": "npm:1.3.3"
     "@vercel/nestjs": "npm:0.2.19"
-    "@vercel/next": "npm:4.15.9"
+    "@vercel/next": "npm:4.15.10"
     "@vercel/node": "npm:5.5.16"
-    "@vercel/python": "npm:6.1.5"
+    "@vercel/python": "npm:6.1.6"
     "@vercel/redwood": "npm:2.4.6"
     "@vercel/remix-builder": "npm:5.5.6"
     "@vercel/ruby": "npm:2.2.4"
@@ -16709,7 +16709,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: b1a26169e0a55e704cdba7e875c978c6b33b452ba7e1c63fa3499cfb2403f194eeedcd85b6b43e16b4a831d430ebb18225aeb0b385d7915413e9f4f334fde3ce
+  checksum: f0fd6f5cd5e6f789b508e116222bd35ca47bf40c2c39309f179583a78070ea56fc8e9daf14c2ee9eff740aa32afcc2063458bb07edbc82bc0dcfb128b8584c13
   languageName: node
   linkType: hard
 
