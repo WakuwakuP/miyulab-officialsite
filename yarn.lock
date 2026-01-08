@@ -6453,17 +6453,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/backends@npm:0.0.17":
-  version: 0.0.17
-  resolution: "@vercel/backends@npm:0.0.17"
+"@vercel/backends@npm:0.0.18":
+  version: 0.0.18
+  resolution: "@vercel/backends@npm:0.0.18"
   dependencies:
-    "@vercel/cervel": "npm:0.0.7"
-    "@vercel/introspection": "npm:0.0.7"
+    "@vercel/cervel": "npm:0.0.8"
+    "@vercel/introspection": "npm:0.0.8"
     "@vercel/nft": "npm:1.1.1"
     "@vercel/static-config": "npm:3.1.2"
     fs-extra: "npm:11.1.0"
     rolldown: "npm:1.0.0-beta.35"
-  checksum: 9904312f24875ec75f487b43b120bebaf8892815a431cd890362f66f9c2f53dc526cdf097affbd6da7951feaa1dcb7aadf77200481822a0446c1f36628b149be
+  checksum: 76b7dc2c0af76cb2669936710da023f9d317083f6af139d540f064b02cf1945d7531c5f5b51b264a3566ddc13d79231d60d62ab5ac9f540b23df9aa21e18696e
   languageName: node
   linkType: hard
 
@@ -6487,9 +6487,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/cervel@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@vercel/cervel@npm:0.0.7"
+"@vercel/cervel@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@vercel/cervel@npm:0.0.8"
   dependencies:
     execa: "npm:3.2.0"
     rolldown: "npm:1.0.0-beta.52"
@@ -6499,7 +6499,7 @@ __metadata:
     typescript: ^4.0.0 || ^5.0.0
   bin:
     cervel: bin/cervel.mjs
-  checksum: ea73e2261aba370ea9f66c8c39b8a944eaf5459d85566588f11fffc9cdd2862c4d8a15382a15d8f35b5eedf602a5756ea6cb49bdea2d0a9a397312dfc76f973f
+  checksum: 3e154dc2744515c918887a543179b3d7a97f779a1b8ceb2fc4f14f62fa90de6a6746daa2e534f24e784fdbed70dc169381537e3891dbd0deb22437490b9060dc
   languageName: node
   linkType: hard
 
@@ -6527,11 +6527,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:0.1.21":
-  version: 0.1.21
-  resolution: "@vercel/express@npm:0.1.21"
+"@vercel/express@npm:0.1.22":
+  version: 0.1.22
+  resolution: "@vercel/express@npm:0.1.22"
   dependencies:
-    "@vercel/cervel": "npm:0.0.7"
+    "@vercel/cervel": "npm:0.0.8"
     "@vercel/nft": "npm:1.1.1"
     "@vercel/node": "npm:5.5.16"
     "@vercel/static-config": "npm:3.1.2"
@@ -6540,7 +6540,7 @@ __metadata:
     rolldown: "npm:1.0.0-beta.35"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: 3ef67173e1cf76e8a798a0eabeee22adcf3864adbce1488c4124fa131dd6db372778da3c342fb76f69edb0ff70ea6d9e69bcdd08cc0b9ba69eaeef7ce464afb0
+  checksum: 085832d4c6edc5e04c343527b7825085102fb1532e68885ef0534aa9f640ae78ddff9a39b336c7c0301191b31b43962cab7896034f501295f6164ddb1aba4900
   languageName: node
   linkType: hard
 
@@ -6645,13 +6645,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/introspection@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@vercel/introspection@npm:0.0.7"
+"@vercel/introspection@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@vercel/introspection@npm:0.0.8"
   dependencies:
     path-to-regexp: "npm:8.3.0"
     zod: "npm:3.22.4"
-  checksum: 5bef859b73ba0a5c31856d877ac28c0ab5adbcd553c112f2cba0c9c5c19b1be71918b062907be9dc3f61cf6a01d5c2664e39533c5768e8b44f56b3015e7d2400
+  checksum: 47e4689b1e3131e7c3695a2554d12403fe5e929157375c2fbaca5fc422b15584f35e699641f4303ff2575a97e43858275ac1ee7e676acd8973cb14df71ca5b5d
   languageName: node
   linkType: hard
 
@@ -12906,14 +12906,14 @@ __metadata:
     react-icons: "npm:^5.5.0"
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
-    sass: "npm:^1.97.1"
+    sass: "npm:^1.97.2"
     storybook: "npm:^10.1.11"
     storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
     typescript: "npm:5.9.3"
-    vercel: "npm:^50.1.4"
-    vite: "npm:7.3.0"
+    vercel: "npm:^50.1.6"
+    vite: "npm:7.3.1"
   languageName: unknown
   linkType: soft
 
@@ -14985,9 +14985,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.97.1":
-  version: 1.97.1
-  resolution: "sass@npm:1.97.1"
+"sass@npm:^1.97.2":
+  version: 1.97.2
+  resolution: "sass@npm:1.97.2"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^4.0.0"
@@ -14998,7 +14998,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: c389d5d6405869b49fa2291e8328500fe7936f3b72136bc2c338bee6e7fec936bb9a48d77a1310dea66aa4669ba74ae6b82a112eb32521b9b36d740138a39ea0
+  checksum: 5622a4f9d0acf5cdfb72c73c448366b3ec7bfe2b6e1ecb62c6e9f8eaff9c02a6afd86a31ded246fc818fe660cedea6bd27335e82fc9bd7cce46c29f95774bece
   languageName: node
   linkType: hard
 
@@ -16677,16 +16677,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^50.1.4":
-  version: 50.1.4
-  resolution: "vercel@npm:50.1.4"
+"vercel@npm:^50.1.6":
+  version: 50.1.6
+  resolution: "vercel@npm:50.1.6"
   dependencies:
-    "@vercel/backends": "npm:0.0.17"
+    "@vercel/backends": "npm:0.0.18"
     "@vercel/blob": "npm:1.0.2"
     "@vercel/build-utils": "npm:13.2.4"
     "@vercel/detect-agent": "npm:1.0.0"
     "@vercel/elysia": "npm:0.1.15"
-    "@vercel/express": "npm:0.1.21"
+    "@vercel/express": "npm:0.1.22"
     "@vercel/fastify": "npm:0.1.18"
     "@vercel/fun": "npm:1.2.0"
     "@vercel/go": "npm:3.3.0"
@@ -16709,13 +16709,13 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: f0fd6f5cd5e6f789b508e116222bd35ca47bf40c2c39309f179583a78070ea56fc8e9daf14c2ee9eff740aa32afcc2063458bb07edbc82bc0dcfb128b8584c13
+  checksum: 136c5e680ba440bd7ab13d696e16f2d64dd80b0003124cc352f26c62fcab71161d65df9ea6e8c73d4c26e92317415ad1129b3f7d481fd7321bb1f465c7cbbfc0
   languageName: node
   linkType: hard
 
-"vite@npm:7.3.0":
-  version: 7.3.0
-  resolution: "vite@npm:7.3.0"
+"vite@npm:7.3.1":
+  version: 7.3.1
+  resolution: "vite@npm:7.3.1"
   dependencies:
     esbuild: "npm:^0.27.0"
     fdir: "npm:^6.5.0"
@@ -16764,7 +16764,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 0457c196cdd5761ec351c0f353945430fbad330e615b9eeab729c8ae163334f18acdc1d9cd7d9d673dbf111f07f6e4f0b25d4ac32360e65b4a6df9991046f3ff
+  checksum: 5c7548f5f43a23533e53324304db4ad85f1896b1bfd3ee32ae9b866bac2933782c77b350eb2b52a02c625c8ad1ddd4c000df077419410650c982cd97fde8d014
   languageName: node
   linkType: hard
 
