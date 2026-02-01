@@ -23,7 +23,7 @@
     "vercel": "^50.5.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.6",
+    "@babel/core": "^7.29.0",
     "@biomejs/biome": "^2.3.13",
     "@chromatic-com/storybook": "^5.0.0",
     "@storybook/nextjs": "^10.2.0",
