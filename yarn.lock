@@ -12473,12 +12473,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"microcms-js-sdk@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "microcms-js-sdk@npm:3.2.0"
+"microcms-js-sdk@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "microcms-js-sdk@npm:3.3.0"
   dependencies:
     async-retry: "npm:^1.3.3"
-  checksum: c0d6d993175cc560635f7bf8ee6aefe006d80023bf89c186f01663685a5f5d1e252ee65463fe09d85a811f73fd044c998384b9b8e88641b0bf63d2c40e0c6007
+  checksum: 5241b3fc98b303bac88fc127756bf285299edcd5da125ff6b7701eaadcee8d94a6f063f7d01621b1c1cd6c128b5afc41c20fb47afc92ff5671aa92331854514f
   languageName: node
   linkType: hard
 
@@ -12782,7 +12782,7 @@ __metadata:
     jest: "npm:^30.2.0"
     jest-environment-jsdom: "npm:^30.2.0"
     lint-staged: "npm:16.2.7"
-    microcms-js-sdk: "npm:^3.2.0"
+    microcms-js-sdk: "npm:^3.3.0"
     microcms-richedit-processer: "npm:^1.2.0"
     next: "npm:^16.1.6"
     next-seo: "npm:^7.1.0"
