@@ -18,7 +18,7 @@
     "react-icons": "^5.5.0",
     "react-scroll": "^1.9.3",
     "rss": "^1.2.2",
-    "storybook": "10.2.10",
+    "storybook": "10.2.11",
     "tsparticles": "^3.9.1",
     "vercel": "50.22.1"
   },
@@ -26,7 +26,7 @@
     "@babel/core": "^7.29.0",
     "@biomejs/biome": "2.4.4",
     "@chromatic-com/storybook": "^5.0.1",
-    "@storybook/nextjs": "10.2.10",
+    "@storybook/nextjs": "10.2.11",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "^16.3.2",
