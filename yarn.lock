@@ -2165,18 +2165,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/biome@npm:2.4.4"
+"@biomejs/biome@npm:^2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/biome@npm:2.4.6"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.4.4"
-    "@biomejs/cli-darwin-x64": "npm:2.4.4"
-    "@biomejs/cli-linux-arm64": "npm:2.4.4"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.4.4"
-    "@biomejs/cli-linux-x64": "npm:2.4.4"
-    "@biomejs/cli-linux-x64-musl": "npm:2.4.4"
-    "@biomejs/cli-win32-arm64": "npm:2.4.4"
-    "@biomejs/cli-win32-x64": "npm:2.4.4"
+    "@biomejs/cli-darwin-arm64": "npm:2.4.6"
+    "@biomejs/cli-darwin-x64": "npm:2.4.6"
+    "@biomejs/cli-linux-arm64": "npm:2.4.6"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.4.6"
+    "@biomejs/cli-linux-x64": "npm:2.4.6"
+    "@biomejs/cli-linux-x64-musl": "npm:2.4.6"
+    "@biomejs/cli-win32-arm64": "npm:2.4.6"
+    "@biomejs/cli-win32-x64": "npm:2.4.6"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -2196,62 +2196,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: f2b7620d39caeeb9e0ed070dd1065cc2378626c7fa6ecda3db84b64df4c94fb4909407726044e28c83e8a95121ad389498cc3f0e5be600a421d906ca705b821c
+  checksum: 3c0aea8069fa4bebde97ff4ef394f0383d2a3a1393a99e0cdea6c1769805cc18c5ea2c02e88779a63327d432c5858522dceae32f6a359d690f5f71f60ea4ca02
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.4.4"
+"@biomejs/cli-darwin-arm64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.4.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-darwin-x64@npm:2.4.4"
+"@biomejs/cli-darwin-x64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-darwin-x64@npm:2.4.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.4.4"
+"@biomejs/cli-linux-arm64-musl@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.4.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-linux-arm64@npm:2.4.4"
+"@biomejs/cli-linux-arm64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-linux-arm64@npm:2.4.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.4.4"
+"@biomejs/cli-linux-x64-musl@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.4.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-linux-x64@npm:2.4.4"
+"@biomejs/cli-linux-x64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-linux-x64@npm:2.4.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-win32-arm64@npm:2.4.4"
+"@biomejs/cli-win32-arm64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-win32-arm64@npm:2.4.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.4.4":
-  version: 2.4.4
-  resolution: "@biomejs/cli-win32-x64@npm:2.4.4"
+"@biomejs/cli-win32-x64@npm:2.4.6":
+  version: 2.4.6
+  resolution: "@biomejs/cli-win32-x64@npm:2.4.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4540,11 +4540,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/builder-webpack5@npm:10.2.13"
+"@storybook/builder-webpack5@npm:10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/builder-webpack5@npm:10.2.16"
   dependencies:
-    "@storybook/core-webpack": "npm:10.2.13"
+    "@storybook/core-webpack": "npm:10.2.16"
     case-sensitive-paths-webpack-plugin: "npm:^2.4.0"
     cjs-module-lexer: "npm:^1.2.3"
     css-loader: "npm:^7.1.2"
@@ -4560,11 +4560,11 @@ __metadata:
     webpack-hot-middleware: "npm:^2.25.1"
     webpack-virtual-modules: "npm:^0.6.0"
   peerDependencies:
-    storybook: ^10.2.13
+    storybook: ^10.2.16
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a63e5ec8208da92751d5f15475b4fbe3de3580af4b9b5bf8d9334ff1dda38620ea9925558ef97aa4bc66277b213d79ef90d383ebd97722193ee683877f117d1c
+  checksum: eebadc8aee254bbe3809047f2c298b2cc25342c29b4905b1f2cd8427ddfa68f8839e78f17e4ba8afee89ffd42919b80cbe761dfdedd41ee1d279c74dfd5a69e7
   languageName: node
   linkType: hard
 
@@ -4619,14 +4619,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core-webpack@npm:10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/core-webpack@npm:10.2.13"
+"@storybook/core-webpack@npm:10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/core-webpack@npm:10.2.16"
   dependencies:
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^10.2.13
-  checksum: 222a489abd78728cca649b8e091caaae6d6a4f74b1f00290640a2afe9567334b38077d274dc3c4450996445b94a743a0f72ec055a4d0685da3f1aa8d530bc544
+    storybook: ^10.2.16
+  checksum: 60607a70fc96d22ef1c692493f416d2c665a19c9d4d49e58d65a2860fb9cafc42fc7591dbb3336ca1aa9852e49cea0f8d89cb6b1d60aa122706edd4d3d737120
   languageName: node
   linkType: hard
 
@@ -4689,9 +4689,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/nextjs@npm:^10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/nextjs@npm:10.2.13"
+"@storybook/nextjs@npm:^10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/nextjs@npm:10.2.16"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-bigint": "npm:^7.8.3"
@@ -4707,9 +4707,9 @@ __metadata:
     "@babel/preset-typescript": "npm:^7.28.5"
     "@babel/runtime": "npm:^7.28.4"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
-    "@storybook/builder-webpack5": "npm:10.2.13"
-    "@storybook/preset-react-webpack": "npm:10.2.13"
-    "@storybook/react": "npm:10.2.13"
+    "@storybook/builder-webpack5": "npm:10.2.16"
+    "@storybook/preset-react-webpack": "npm:10.2.16"
+    "@storybook/react": "npm:10.2.16"
     "@types/semver": "npm:^7.7.1"
     babel-loader: "npm:^9.1.3"
     css-loader: "npm:^6.7.3"
@@ -4730,22 +4730,22 @@ __metadata:
     next: ^14.1.0 || ^15.0.0 || ^16.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.13
+    storybook: ^10.2.16
     webpack: ^5.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
     webpack:
       optional: true
-  checksum: a5c3f941068b031df12f61c2a61841f252384266368dd48b6900cefb411bfc8b58e83ec333149c65253cc6f4f4e8fa7d76e62000d905a5ee676e92efb79659fc
+  checksum: 07382bc53ac25bf659a2f0ad25c72b67cc6d94b40c7d3821e59ea78bbdb923d0390fa74f6b27a1136c2055de1b60a4f9e2d61e1f973f5e8842b44b90c244677e
   languageName: node
   linkType: hard
 
-"@storybook/preset-react-webpack@npm:10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/preset-react-webpack@npm:10.2.13"
+"@storybook/preset-react-webpack@npm:10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/preset-react-webpack@npm:10.2.16"
   dependencies:
-    "@storybook/core-webpack": "npm:10.2.13"
+    "@storybook/core-webpack": "npm:10.2.16"
     "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.0c3f3b7.0"
     "@types/semver": "npm:^7.7.1"
     magic-string: "npm:^0.30.5"
@@ -4757,11 +4757,11 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.13
+    storybook: ^10.2.16
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 827e07d79510a77834b20ebfab040e6258ead8e47b75d0e16e1732e49ac57d7e52adae2a45558c0008f3150261af63bfb2bbe9ec6efd4ec640180a2c0794b85f
+  checksum: 4d707ffd4cbe32a0bdbb56340bf49ca1a86e3f2471808cae677663741a2480816fb00868827607c2fcd4c5cc91c642b8d23be1682cd2dd4612c2cf6c271727c4
   languageName: node
   linkType: hard
 
@@ -4783,33 +4783,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-dom-shim@npm:10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/react-dom-shim@npm:10.2.13"
+"@storybook/react-dom-shim@npm:10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/react-dom-shim@npm:10.2.16"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.13
-  checksum: 78c9788748aae81541727e3cfe32dc1c14aef10af0a5c979d307ec1910d15d5105341ce1c2d5d27ae9ad40dec6de6c0c9c85dfbf12f90c14da678eee5581a3cf
+    storybook: ^10.2.16
+  checksum: 295a7ca42c21fe83039e8cea1f31329955bbdbf2190f3843ca4317072b261b940475aaa3758184d512b328c72f44680460c421c75f745666948c59147321869a
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:10.2.13":
-  version: 10.2.13
-  resolution: "@storybook/react@npm:10.2.13"
+"@storybook/react@npm:10.2.16":
+  version: 10.2.16
+  resolution: "@storybook/react@npm:10.2.16"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react-dom-shim": "npm:10.2.13"
+    "@storybook/react-dom-shim": "npm:10.2.16"
     react-docgen: "npm:^8.0.2"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.13
+    storybook: ^10.2.16
     typescript: ">= 4.9.x"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 1b2fe05730605cc785bceb8ca4f538ef69c149d54c7bd9dd6981366c38801c4f632ab2343f3e358b79bde5d0a088f38bba78d9efca169e6369a5b3fbf4153726
+  checksum: 7b426d9c7fd7675715d9d1da8276777da849fd43185e8a0da8f70ed1f885263f9901f0da27fc00b2a868d6c04a3c2f8b0927cd2f04c9a06be42d1102e5e4ffd1
   languageName: node
   linkType: hard
 
@@ -6233,12 +6233,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^25.3.3":
-  version: 25.3.3
-  resolution: "@types/node@npm:25.3.3"
+"@types/node@npm:^25.3.5":
+  version: 25.3.5
+  resolution: "@types/node@npm:25.3.5"
   dependencies:
     undici-types: "npm:~7.18.0"
-  checksum: 63e1d3816a9f4a706ab5d588d18cb98aa824b97748ff585537d327528e9438f58f69f45c7762e7cd3a1ab32c1619f551aabe8075d13172f9273cf10f6d83ab91
+  checksum: 4cf0834a6f6933bf0aca6afead117ae3db3b8f02a5f7187a24f871db0fb9344e5e46573ba387bc53b7505e1e219c4c535cbe67221ced95bb5ad98573223b19d0
   languageName: node
   linkType: hard
 
@@ -6538,11 +6538,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/backends@npm:0.0.39":
-  version: 0.0.39
-  resolution: "@vercel/backends@npm:0.0.39"
+"@vercel/backends@npm:0.0.41":
+  version: 0.0.41
+  resolution: "@vercel/backends@npm:0.0.41"
   dependencies:
-    "@vercel/build-utils": "npm:13.6.1"
+    "@vercel/build-utils": "npm:13.6.3"
     "@vercel/nft": "npm:1.3.0"
     execa: "npm:3.2.0"
     fs-extra: "npm:11.1.0"
@@ -6555,7 +6555,7 @@ __metadata:
     zod: "npm:3.22.4"
   peerDependencies:
     typescript: ^4.0.0 || ^5.0.0
-  checksum: 484f130e22e90363f9a72a0ce40c3cd6ed4599b8731af7f32518f99859c268ff29145b27d4a63685f1783ce1302dd68e28286f4c8df9b706f26f0907945cb1fb
+  checksum: 8b0e7bb059ebbcb103570466e53ca170de4b084e24c823b35c3ececd88e3a2cbe6cd1c1adafcd0249101a6fa8935bdb3f5d8fac05599188790901188f0ed6321
   languageName: node
   linkType: hard
 
@@ -6572,25 +6572,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:13.6.1":
-  version: 13.6.1
-  resolution: "@vercel/build-utils@npm:13.6.1"
+"@vercel/build-utils@npm:13.6.3":
+  version: 13.6.3
+  resolution: "@vercel/build-utils@npm:13.6.3"
   dependencies:
-    "@vercel/python-analysis": "npm:0.8.1"
-  checksum: 79ca101ad1eb736ce9b12ba9c535be01f0255075289e5d3543ce2d4b424761bf144077abd704452f71d7427cc3b05f6db34fb8b658a46b6ea13656ce13288163
+    "@vercel/python-analysis": "npm:0.8.2"
+  checksum: 0ca3d6b64a0fa324126a46519123b6afc470e4e6bcad1487d8b89d4d407d71de4781a662d174815637008f1bc25a2d2f7bbde3242354f91a60385a106e9abb7e
   languageName: node
   linkType: hard
 
-"@vercel/cervel@npm:0.0.26":
-  version: 0.0.26
-  resolution: "@vercel/cervel@npm:0.0.26"
+"@vercel/cervel@npm:0.0.28":
+  version: 0.0.28
+  resolution: "@vercel/cervel@npm:0.0.28"
   dependencies:
-    "@vercel/backends": "npm:0.0.39"
+    "@vercel/backends": "npm:0.0.41"
   peerDependencies:
     typescript: ^4.0.0 || ^5.0.0
   bin:
     cervel: bin/cervel.mjs
-  checksum: 8a840a35b8305e88ad2d42d29a6bc4e6722e91973160869f37fbffd2e0a8ea7fff246463be3a1e06cf19d1f55458a124526e3d5f970031ff7835d68e570ec823
+  checksum: 14525a8f38bf9c9412eb56970857e74ffc1e9fa16d0015a54369b3cf411f76cbb6195df36284f4609a883e4161104124c3dd7a7e51679ec3f0d1849b2114d9d9
   languageName: node
   linkType: hard
 
@@ -6601,13 +6601,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/elysia@npm:0.1.42":
-  version: 0.1.42
-  resolution: "@vercel/elysia@npm:0.1.42"
+"@vercel/elysia@npm:0.1.44":
+  version: 0.1.44
+  resolution: "@vercel/elysia@npm:0.1.44"
   dependencies:
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
-  checksum: 2c21d79181fb4c8d34f803a31cfa36f4295ee21e57b69da89c7a8e637ee7ea880b20112875c71b44d32db23ecf243c9f3b23084bdaa7acb683312d5f6a5e2515
+  checksum: 9c453ca8e3d02203279287178d2a831f0c34addf8afcdbb31010c8992d8e4dd4491a5ed0ae7dff1f609f98564f3928f45dd834808079e6c63d4022c5a529081e
   languageName: node
   linkType: hard
 
@@ -6618,29 +6618,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:0.1.51":
-  version: 0.1.51
-  resolution: "@vercel/express@npm:0.1.51"
+"@vercel/express@npm:0.1.53":
+  version: 0.1.53
+  resolution: "@vercel/express@npm:0.1.53"
   dependencies:
-    "@vercel/cervel": "npm:0.0.26"
+    "@vercel/cervel": "npm:0.0.28"
     "@vercel/nft": "npm:1.1.1"
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: ad1696cca3db394408213de0a81ebde261277e423219db85cba119bcc506c98ad19070b35b2f8de6c5f83a8cc40f427f5020ba07336cc3e734fb537a34d6dc7c
+  checksum: 367a7107d625e881d18501dbaba36bd38b67914731af2db28fa86502cabbd68ca77975066033f7ae5e83503ced3599441f9de567ceeaceb845688af6ff026d7a
   languageName: node
   linkType: hard
 
-"@vercel/fastify@npm:0.1.45":
-  version: 0.1.45
-  resolution: "@vercel/fastify@npm:0.1.45"
+"@vercel/fastify@npm:0.1.47":
+  version: 0.1.47
+  resolution: "@vercel/fastify@npm:0.1.47"
   dependencies:
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
-  checksum: 3d3f2ea66e38fe8c21b0fd58ccc4c23b61ee4b491fbadf1db98ed2e70cd15fa3ea8676e82a84fa1b9d2edd7c161e7271e71d18c48b819719349683c5441a3194
+  checksum: 5cb0515915b2070f7ccbebbcc6f1ab352c2c3dee5f8718e6f58ad1ee4ab6d448f98202cf94999ca9fba77a6bdbc16c4308003a51d369b8295825ead34c342898
   languageName: node
   linkType: hard
 
@@ -6679,16 +6679,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/gatsby-plugin-vercel-builder@npm:2.0.141":
-  version: 2.0.141
-  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.0.141"
+"@vercel/gatsby-plugin-vercel-builder@npm:2.0.143":
+  version: 2.0.143
+  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.0.143"
   dependencies:
     "@sinclair/typebox": "npm:0.25.24"
-    "@vercel/build-utils": "npm:13.6.1"
+    "@vercel/build-utils": "npm:13.6.3"
     esbuild: "npm:0.27.0"
     etag: "npm:1.8.1"
     fs-extra: "npm:11.1.0"
-  checksum: dc3a9878a215b9241784aa4579a65f5c047f1506d2fa4e5d8260a50548ad1850cd79fdce41859606ca422701e9a5dfb3a1411641383e21ac3874ebb42824d39f
+  checksum: 42c2f5b5ac3c5d59fa519c8007df9c03656a129c8c0685a0fe95143756fd6f9fb8120b0b2f9f9e08565e03be7638d4cc65556d8c2a8119c876fea7624e8cd88a
   languageName: node
   linkType: hard
 
@@ -6699,28 +6699,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/h3@npm:0.1.51":
-  version: 0.1.51
-  resolution: "@vercel/h3@npm:0.1.51"
+"@vercel/h3@npm:0.1.53":
+  version: 0.1.53
+  resolution: "@vercel/h3@npm:0.1.53"
   dependencies:
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
-  checksum: d3c58fd9f600150b1fa8e5c243ee5999fc47984a109bb869b48aea76f5936bbc612ff3cb9f4268b8df5adc6a00def87fd1cd6f29474491af46ecda6c9a1abb57
+  checksum: 5effd1c8bd8627312d410e6ed3bc1cd97b2a15c899cb6d7c1b3ada0de4b5ac63b850109adb70f54b426c8638029dc1ee9f7f706012c7621d075c3a5ee3a70fc7
   languageName: node
   linkType: hard
 
-"@vercel/hono@npm:0.2.45":
-  version: 0.2.45
-  resolution: "@vercel/hono@npm:0.2.45"
+"@vercel/hono@npm:0.2.47":
+  version: 0.2.47
+  resolution: "@vercel/hono@npm:0.2.47"
   dependencies:
     "@vercel/nft": "npm:1.1.1"
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
-  checksum: f56c37eaa41872532e72adc8d2cdc6bdf97a1c19fc7fe8fc2d96658c83cb16f457d9390df391d7f0e43ff07dac67b938e2c5224562bf31a7734eba27a1ed9d66
+  checksum: 252ffc1f3b88d02688643e478d213c3b9a69ef48822348356527ac6a5363121d253833cf7a795eb6f6c1e21dc6d793cf636f6ad0ac78b10f92a22d7225879aa7
   languageName: node
   linkType: hard
 
@@ -6734,32 +6734,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/koa@npm:0.1.25":
-  version: 0.1.25
-  resolution: "@vercel/koa@npm:0.1.25"
+"@vercel/koa@npm:0.1.27":
+  version: 0.1.27
+  resolution: "@vercel/koa@npm:0.1.27"
   dependencies:
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
-  checksum: 80e5a91db636b9d426a4a2a6df7457277a7413531a25d5d0575e2db43bf295d6403aa7842935224b49541890c610181e3dcb899fcc7b020f4ebcfac1fe11dc3b
+  checksum: 7e8a5704d2aa59ca1e37b8296ef3c4a109c440c78d0d3554ac7065c33983670777a5ca46ec0ab632b129416d6a8f875406a56b6c953f3eee13f343db609dd651
   languageName: node
   linkType: hard
 
-"@vercel/nestjs@npm:0.2.46":
-  version: 0.2.46
-  resolution: "@vercel/nestjs@npm:0.2.46"
+"@vercel/nestjs@npm:0.2.48":
+  version: 0.2.48
+  resolution: "@vercel/nestjs@npm:0.2.48"
   dependencies:
-    "@vercel/node": "npm:5.6.9"
+    "@vercel/node": "npm:5.6.11"
     "@vercel/static-config": "npm:3.1.2"
-  checksum: 99da755e691c277358fad0d7067c555a6d94d213b711141e662833e34cfbbcfae36c4f17aad80c7cc84379d9f7a2c606a34cc55bf8be030c5e16c6236ae44bc8
+  checksum: 2a00edb07533339128b9d9405020dee8c3ee7d4f97527e97e08f138c32c45ffa1f655e8a46e3cf37a415ccdb661212458d14114f8bf2f2175c9b15ba5e32718c
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.15.36":
-  version: 4.15.36
-  resolution: "@vercel/next@npm:4.15.36"
+"@vercel/next@npm:4.15.41":
+  version: 4.15.41
+  resolution: "@vercel/next@npm:4.15.41"
   dependencies:
     "@vercel/nft": "npm:1.1.1"
-  checksum: beeb02ffb76ebb9b22e929cf3956adbe7a3470b76ae5ecd5b2c5497694fcba84b23e5aa1426f2eba395539e47430be78073872e0c6fc61068d7b98413bbe514f
+  checksum: 38fa6e0b5a09905d4b0eaec2ffbcae87fc0130d9c0ab2f4c38208ac39dd78828fa3d1c7e344e85dd966778ef433755ded74d22ffa3ff2493b8dc20e8255422eb
   languageName: node
   linkType: hard
 
@@ -6807,15 +6807,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:5.6.9":
-  version: 5.6.9
-  resolution: "@vercel/node@npm:5.6.9"
+"@vercel/node@npm:5.6.11":
+  version: 5.6.11
+  resolution: "@vercel/node@npm:5.6.11"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.3.0"
     "@edge-runtime/primitives": "npm:4.1.0"
     "@edge-runtime/vm": "npm:3.2.0"
     "@types/node": "npm:20.11.0"
-    "@vercel/build-utils": "npm:13.6.1"
+    "@vercel/build-utils": "npm:13.6.3"
     "@vercel/error-utils": "npm:2.0.3"
     "@vercel/nft": "npm:1.1.1"
     "@vercel/static-config": "npm:3.1.2"
@@ -6833,13 +6833,13 @@ __metadata:
     tsx: "npm:4.21.0"
     typescript: "npm:typescript@5.9.3"
     undici: "npm:5.28.4"
-  checksum: 2701315938d8a375936aa06556d3273d2883b1494a661e288bb8349115c6c3716e17da8f993b2c05645a8e1d47c1e157a3e8696f31a3aa5409d4857a51c8f2d7
+  checksum: d003591a1b2e88e3f34d5277197679e5ad15225a59b9a38000183327912ba8d234cb5a74f580ad07ba69f760fa64ebf533236c54b431849c8765469b61abde42
   languageName: node
   linkType: hard
 
-"@vercel/python-analysis@npm:0.8.1":
-  version: 0.8.1
-  resolution: "@vercel/python-analysis@npm:0.8.1"
+"@vercel/python-analysis@npm:0.8.2":
+  version: 0.8.2
+  resolution: "@vercel/python-analysis@npm:0.8.2"
   dependencies:
     "@bytecodealliance/preview2-shim": "npm:0.17.6"
     "@renovatebot/pep440": "npm:4.2.1"
@@ -6849,16 +6849,16 @@ __metadata:
     pip-requirements-js: "npm:1.0.2"
     smol-toml: "npm:1.5.2"
     zod: "npm:3.22.4"
-  checksum: 28725fd06b4f35763d140dca8cb5273002b368952a395ae3f6b4909ccedf24193a6e1c3646fa88bb6293d3b52baa7e3eb650ffa02e96a8f71aefb3a9d0522d25
+  checksum: 545a8da67981401b5333db9017daf558f9e9e1b4bc71fa3365a998cd1ed169f454609e974ef9e76be581fe28137b3aa67a3858fb2c4fb9d735e2fefba351d73b
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:6.19.0":
-  version: 6.19.0
-  resolution: "@vercel/python@npm:6.19.0"
+"@vercel/python@npm:6.20.2":
+  version: 6.20.2
+  resolution: "@vercel/python@npm:6.20.2"
   dependencies:
-    "@vercel/python-analysis": "npm:0.8.1"
-  checksum: 62ef28d4ee0c1948fc9a3e8a728014e182977745206884b41283326a99bd47d9b5177c60209daf3094439e16d75b819a5cfa19565d46ac306a7b15a5ef1e66bf
+    "@vercel/python-analysis": "npm:0.8.2"
+  checksum: 65958371d209ffd7fa440538f2c00ebf5e317e9828785ec1d88002b3f05f4fca91f0d5bcdaf464055a5d30a7404bb3c0f7d72edf9c932abbd09c8137db3fe136
   languageName: node
   linkType: hard
 
@@ -6932,15 +6932,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:2.8.43":
-  version: 2.8.43
-  resolution: "@vercel/static-build@npm:2.8.43"
+"@vercel/static-build@npm:2.8.45":
+  version: 2.8.45
+  resolution: "@vercel/static-build@npm:2.8.45"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": "npm:1.0.11"
-    "@vercel/gatsby-plugin-vercel-builder": "npm:2.0.141"
+    "@vercel/gatsby-plugin-vercel-builder": "npm:2.0.143"
     "@vercel/static-config": "npm:3.1.2"
     ts-morph: "npm:12.0.0"
-  checksum: e80830c5ac7f77138dc67d215da7cd3b9fcf16ccf5730a09a6bb45ea4aa8e35a1d242c8bcf99f170c71e95a0533e154f5324256492a876e5b4f5648dbb7d679e
+  checksum: 43688de8ab39b6d943079bfaab45be513c738c412a81d9b7a2a901b5730b3f8bf7e6364eb85e66b521b85ef98e02a4e68f36dacdc5e2e8c081aae676a21f75dd
   languageName: node
   linkType: hard
 
@@ -7613,15 +7613,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "babel-loader@npm:10.0.0"
+"babel-loader@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "babel-loader@npm:10.1.0"
   dependencies:
     find-up: "npm:^5.0.0"
   peerDependencies:
-    "@babel/core": ^7.12.0
+    "@babel/core": ^7.12.0 || ^8.0.0-beta.1
+    "@rspack/core": ^1.0.0 || ^2.0.0-0
     webpack: ">=5.61.0"
-  checksum: 882dfacde3ee24b432ad57e468832cd0821e2a410f6c5b75ff945f069a8956592b28c6c357df5bb03db73d2741ec3db5febb106ac0bb3591c3d4288f2cf4df0e
+  peerDependenciesMeta:
+    "@rspack/core":
+      optional: true
+    webpack:
+      optional: true
+  checksum: 62296ca9a1e248bed0e93269b4bf095c66eabf9c297e4367bea96ecd0b2f9cf5b4559bb9f0980ffeb3df800bbab799fa8ceec95884e846ae51cbbeaa05bfcddf
   languageName: node
   linkType: hard
 
@@ -12228,9 +12234,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^16.3.1":
-  version: 16.3.1
-  resolution: "lint-staged@npm:16.3.1"
+"lint-staged@npm:^16.3.2":
+  version: 16.3.2
+  resolution: "lint-staged@npm:16.3.2"
   dependencies:
     commander: "npm:^14.0.3"
     listr2: "npm:^9.0.5"
@@ -12240,7 +12246,7 @@ __metadata:
     yaml: "npm:^2.8.2"
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 9aed98ab759c7acdcfb969c3c09b24597bd6717771ab1f1eec571038713bd0d0ad80304d0a737e5b7b7c64141e4ff9489022448492353f5d1b476223c43f40bc
+  checksum: 4cbaa85904a912215660ac3c69400b71beabe3fe7e82969cd32c726dbfb04b0f651d0660906215f955c1446ac6b520319e1c7a03c707353a5f038c3d0441a8c3
   languageName: node
   linkType: hard
 
@@ -12871,9 +12877,9 @@ __metadata:
   resolution: "miyulab-officialsite@workspace:."
   dependencies:
     "@babel/core": "npm:^7.29.0"
-    "@biomejs/biome": "npm:2.4.4"
+    "@biomejs/biome": "npm:^2.4.6"
     "@chromatic-com/storybook": "npm:^5.0.1"
-    "@storybook/nextjs": "npm:^10.2.13"
+    "@storybook/nextjs": "npm:^10.2.16"
     "@testing-library/dom": "npm:^10.4.1"
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:^16.3.2"
@@ -12881,14 +12887,14 @@ __metadata:
     "@tsparticles/engine": "npm:^3.9.1"
     "@tsparticles/react": "npm:^3.0.0"
     "@types/gtag.js": "npm:^0.0.20"
-    "@types/node": "npm:^25.3.3"
+    "@types/node": "npm:^25.3.5"
     "@types/react": "npm:19.2.14"
     "@types/react-dom": "npm:^19.2.3"
     "@types/react-scroll": "npm:^1.8.10"
     "@types/rss": "npm:^0.0.32"
     "@vercel/analytics": "npm:1.6.1"
     "@vercel/speed-insights": "npm:1.3.1"
-    babel-loader: "npm:^10.0.0"
+    babel-loader: "npm:^10.1.0"
     cheerio: "npm:^1.2.0"
     chromatic: "npm:^15.2.0"
     highlight.js: "npm:^11.11.1"
@@ -12896,23 +12902,23 @@ __metadata:
     hygen: "npm:^6.2.11"
     jest: "npm:^30.2.0"
     jest-environment-jsdom: "npm:^30.2.0"
-    lint-staged: "npm:^16.3.1"
+    lint-staged: "npm:^16.3.2"
     microcms-js-sdk: "npm:^3.3.0"
     microcms-richedit-processer: "npm:^1.2.0"
     next: "npm:^16.1.6"
     next-seo: "npm:7.2.0"
     react: "npm:19.2.4"
     react-dom: "npm:19.2.4"
-    react-icons: "npm:^5.5.0"
+    react-icons: "npm:^5.6.0"
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
     sass: "npm:^1.97.3"
-    storybook: "npm:^10.2.13"
+    storybook: "npm:^10.2.16"
     storybook-dark-mode: "npm:^4.0.2"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     tsparticles: "npm:^3.9.1"
     typescript: "npm:5.9.3"
-    vercel: "npm:^50.25.4"
+    vercel: "npm:^50.28.0"
     vite: "npm:7.3.1"
   languageName: unknown
   linkType: soft
@@ -14417,12 +14423,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "react-icons@npm:5.5.0"
+"react-icons@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "react-icons@npm:5.6.0"
   peerDependencies:
     react: "*"
-  checksum: a24309bfc993c19cbcbfc928157e53a137851822779977b9588f6dd41ffc4d11ebc98b447f4039b0d309a858f0a42980f6bfb4477fb19f9f2d1bc2e190fcf79c
+  checksum: addba1ebfd45cdf7f69291d0c93df64fca1271cfdb66df657abd223e3451c73356b035f50e75858627dd182b02129596c79eaaaa45d32eb52658e443a992645c
   languageName: node
   linkType: hard
 
@@ -15611,9 +15617,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^10.2.13":
-  version: 10.2.13
-  resolution: "storybook@npm:10.2.13"
+"storybook@npm:^10.2.16":
+  version: 10.2.16
+  resolution: "storybook@npm:10.2.16"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.1"
@@ -15634,7 +15640,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: 5ca338b707c3e7e94c16ecdcb00ca3c450157dceec758c15c416649e346e628a0e034d2265656650fc4fee4680631de7cc588e1a244e42cbb41af9416281a998
+  checksum: 2c2738a36f0bbe69ed8ba8fc90a439bcea397350f777b9dd8f15371b5a72042475f54b026b046623e28d71f70a709e3b066e39a7c4795fb75a7a594792d60921
   languageName: node
   linkType: hard
 
@@ -16731,32 +16737,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^50.25.4":
-  version: 50.25.4
-  resolution: "vercel@npm:50.25.4"
+"vercel@npm:^50.28.0":
+  version: 50.28.0
+  resolution: "vercel@npm:50.28.0"
   dependencies:
-    "@vercel/backends": "npm:0.0.39"
+    "@vercel/backends": "npm:0.0.41"
     "@vercel/blob": "npm:2.3.0"
-    "@vercel/build-utils": "npm:13.6.1"
+    "@vercel/build-utils": "npm:13.6.3"
     "@vercel/detect-agent": "npm:1.1.0"
-    "@vercel/elysia": "npm:0.1.42"
-    "@vercel/express": "npm:0.1.51"
-    "@vercel/fastify": "npm:0.1.45"
+    "@vercel/elysia": "npm:0.1.44"
+    "@vercel/express": "npm:0.1.53"
+    "@vercel/fastify": "npm:0.1.47"
     "@vercel/fun": "npm:1.3.0"
     "@vercel/go": "npm:3.4.3"
-    "@vercel/h3": "npm:0.1.51"
-    "@vercel/hono": "npm:0.2.45"
+    "@vercel/h3": "npm:0.1.53"
+    "@vercel/hono": "npm:0.2.47"
     "@vercel/hydrogen": "npm:1.3.5"
-    "@vercel/koa": "npm:0.1.25"
-    "@vercel/nestjs": "npm:0.2.46"
-    "@vercel/next": "npm:4.15.36"
-    "@vercel/node": "npm:5.6.9"
-    "@vercel/python": "npm:6.19.0"
+    "@vercel/koa": "npm:0.1.27"
+    "@vercel/nestjs": "npm:0.2.48"
+    "@vercel/next": "npm:4.15.41"
+    "@vercel/node": "npm:5.6.11"
+    "@vercel/python": "npm:6.20.2"
     "@vercel/redwood": "npm:2.4.9"
     "@vercel/remix-builder": "npm:5.6.0"
     "@vercel/ruby": "npm:2.3.2"
     "@vercel/rust": "npm:1.0.5"
-    "@vercel/static-build": "npm:2.8.43"
+    "@vercel/static-build": "npm:2.8.45"
     chokidar: "npm:4.0.0"
     esbuild: "npm:0.27.0"
     form-data: "npm:^4.0.0"
@@ -16766,7 +16772,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 8b69029bc9a0705a162fd1bfd1bfccb02fd72c9f0f3391820446ab6af1dce628117863f142b6446be8bfd2bcf3016b0c82fb77074e73d0995364a2c9d27d116f
+  checksum: 1931c3c9ed363f30889b6c5c0b1c1360e7674c8ed0c6ccb11e41c58236673e6db3a0b6030629a9feb7f6a7fc551bd7d77f56b5743eca02b9de3370e0856e9a41
   languageName: node
   linkType: hard
 
