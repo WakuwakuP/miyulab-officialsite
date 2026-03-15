@@ -43,7 +43,7 @@
     "jest-environment-jsdom": "^30.3.0",
     "lint-staged": "^16.4.0",
     "sass": "^1.98.0",
-    "storybook-dark-mode": "^4.0.2",
+    "storybook-dark-mode": "^5.0.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "5.9.3",
     "vite": "7.3.1"
