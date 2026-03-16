@@ -6403,7 +6403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/speed-insights@npm:^2.0.0":
+"@vercel/speed-insights@npm:2.0.0":
   version: 2.0.0
   resolution: "@vercel/speed-insights@npm:2.0.0"
   peerDependencies:
@@ -12459,7 +12459,7 @@ __metadata:
     "@types/react-scroll": "npm:^1.8.10"
     "@types/rss": "npm:^0.0.32"
     "@vercel/analytics": "npm:^2.0.1"
-    "@vercel/speed-insights": "npm:^2.0.0"
+    "@vercel/speed-insights": "npm:2.0.0"
     babel-loader: "npm:^10.1.1"
     cheerio: "npm:^1.2.0"
     chromatic: "npm:^15.2.0"
@@ -12485,7 +12485,7 @@ __metadata:
     tsparticles: "npm:^3.9.1"
     typescript: "npm:5.9.3"
     vercel: "npm:^50.32.5"
-    vite: "npm:^8.0.0"
+    vite: "npm:8.0.0"
   languageName: unknown
   linkType: soft
 
@@ -16305,7 +16305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^8.0.0":
+"vite@npm:8.0.0":
   version: 8.0.0
   resolution: "vite@npm:8.0.0"
   dependencies:
