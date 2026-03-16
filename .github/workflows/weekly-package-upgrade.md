@@ -1,5 +1,6 @@
 ---
 description: Weekly automated npm package upgrade with AI-driven verification
+timeout-minutes: 60
 on:
   schedule: weekly on sunday around 10pm
   workflow_dispatch:
@@ -24,7 +25,7 @@ safe-outputs:
     title-prefix: "📦 "
     labels: [dependencies, maintenance, automated]
     draft: false
-    expires: 7
+    expires: 7d
 ---
 
 # 📦 Weekly Package Upgrade Agent
