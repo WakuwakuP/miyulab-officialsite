@@ -11,7 +11,7 @@
     "highlight.js": "^11.11.1",
     "microcms-js-sdk": "^3.4.0",
     "microcms-richedit-processer": "^1.2.0",
-    "next": "^16.2.5",
+    "next": "^16.2.6",
     "next-seo": "7.2.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
@@ -24,14 +24,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
-    "@biomejs/biome": "^2.4.14",
+    "@biomejs/biome": "^2.4.15",
     "@chromatic-com/storybook": "^5.1.2",
     "@storybook/nextjs": "^10.3.6",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/gtag.js": "^0.0.20",
-    "@types/node": "^25.6.0",
+    "@types/node": "^25.6.2",
     "@types/react": "19.2.14",
     "@types/react-dom": "^19.2.3",
     "@types/react-scroll": "^1.8.10",
@@ -46,7 +46,7 @@
     "storybook-dark-mode": "^5.0.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^6.0.3",
-    "vite": "^8.0.10"
+    "vite": "^8.0.11"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css}": [
