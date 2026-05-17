@@ -20,7 +20,7 @@
     "rss": "^1.2.2",
     "storybook": "^10.4.0",
     "tsparticles": "^3.9.1",
-    "vercel": "^53.3.2"
+    "vercel": "^54.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
