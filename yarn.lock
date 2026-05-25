@@ -6178,7 +6178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^19.2.15":
+"@types/react@npm:19.2.15":
   version: 19.2.15
   resolution: "@types/react@npm:19.2.15"
   dependencies:
@@ -12865,7 +12865,7 @@ __metadata:
     "@tsparticles/react": "npm:^3.0.0"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/node": "npm:^25.9.1"
-    "@types/react": "npm:^19.2.15"
+    "@types/react": "npm:19.2.15"
     "@types/react-dom": "npm:^19.2.3"
     "@types/react-scroll": "npm:^1.8.10"
     "@types/rss": "npm:^0.0.32"
