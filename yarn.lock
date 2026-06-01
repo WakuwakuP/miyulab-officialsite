@@ -5732,14 +5732,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsparticles/react@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@tsparticles/react@npm:3.0.0"
+"@tsparticles/react@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "@tsparticles/react@npm:4.1.1"
   peerDependencies:
-    "@tsparticles/engine": ^3.0.2
+    "@tsparticles/engine": 4.1.1
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 3fd268b8e6f1dcbbb7acc36ef9d4f45e666b8f1169612594e7113cb56429abb5d2f564491efb5b26b22a7123188275c62fbd63fc3474a4246e1e12f77d5dbac5
+  checksum: 14a9ef3960294bae642141b7df4f3d331c9efaeef002e4a55c38b5ae175b337b3fba861c4417eafc88753e088f605c32d8cd2edc36609a2dc8191dfebd354abc
   languageName: node
   linkType: hard
 
@@ -13022,7 +13022,7 @@ __metadata:
     "@testing-library/react": "npm:^16.3.2"
     "@tsparticles/all": "npm:^3.9.1"
     "@tsparticles/engine": "npm:^3.9.1"
-    "@tsparticles/react": "npm:^3.0.0"
+    "@tsparticles/react": "npm:^4.1.1"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/node": "npm:^25.9.1"
     "@types/react": "npm:19.2.15"
