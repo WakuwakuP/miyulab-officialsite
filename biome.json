@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.14/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
   "assist": {
     "actions": {
       "source": {
@@ -96,8 +96,6 @@
         "useSingleJsDocAsterisk": "error"
       },
       "nursery": {
-        "noShadow": "off",
-        "noUnnecessaryConditions": "warn",
         "useExhaustiveSwitchCases": "error",
         "useSortedClasses": {
           "fix": "safe",
@@ -113,7 +111,7 @@
         "noReExportAll": "on",
         "useTopLevelRegex": "on"
       },
-      "recommended": true,
+      "preset": "recommended",
       "style": {
         "noImplicitBoolean": "on",
         "noInferrableTypes": "on",
@@ -135,6 +133,8 @@
         "noImportCycles": "warn",
         "noNonNullAssertedOptionalChain": "error",
         "noReactForwardRef": "error",
+        "noShadow": "off",
+        "noUnnecessaryConditions": "warn",
         "noUnusedExpressions": "warn"
       }
     }
