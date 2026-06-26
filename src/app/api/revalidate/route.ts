@@ -4,6 +4,57 @@ import { revalidateTag } from 'next/cache'
 
 export const revalidate = 0
 
+const MAX_WEBHOOK_BODY_BYTES = 64 * 1024
+const SIGNATURE_HEX_LENGTH = 64
+
+function isValidSignatureFormat(
+  signature: string | null,
+): signature is string {
+  return (
+    signature !== null &&
+    signature.length === SIGNATURE_HEX_LENGTH &&
+    /^[0-9a-f]+$/i.test(signature)
+  )
+}
+
+async function readBodyWithLimit(
+  request: Request,
+  maxBytes: number,
+): Promise<string | null> {
+  const contentLength = request.headers.get('content-length')
+  if (contentLength !== null) {
+    const length = Number.parseInt(contentLength, 10)
+    if (!Number.isFinite(length) || length < 0 || length > maxBytes) {
+      return null
+    }
+  }
+
+  const reader = request.body?.getReader()
+  if (!reader) return null
+
+  const chunks: Uint8Array[] = []
+  let totalSize = 0
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read()
+      if (done) break
+
+      totalSize += value.byteLength
+      if (totalSize > maxBytes) {
+        await reader.cancel()
+        return null
+      }
+
+      chunks.push(value)
+    }
+  } finally {
+    reader.releaseLock()
+  }
+
+  return Buffer.concat(chunks).toString('utf8')
+}
+
 function verifyMicroCMSSignature(
   body: string,
   signature: string | null,
@@ -30,10 +81,17 @@ export async function POST(request: Request) {
     return new Response(null, { status: 401 })
   }
 
+  const signature = request.headers.get('x-microcms-signature')
+  if (!isValidSignatureFormat(signature)) {
+    return new Response(null, { status: 401 })
+  }
+
   if (request.body === null) return new Response(null, { status: 400 })
 
-  const body = await request.text()
-  const signature = request.headers.get('x-microcms-signature')
+  const body = await readBodyWithLimit(request, MAX_WEBHOOK_BODY_BYTES)
+  if (body === null) {
+    return new Response(null, { status: 413 })
+  }
 
   if (!verifyMicroCMSSignature(body, signature, secret)) {
     return new Response(null, { status: 401 })
