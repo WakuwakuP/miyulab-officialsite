@@ -16,10 +16,12 @@ function verifyMicroCMSSignature(
     .update(body, 'utf8')
     .digest('hex')
 
-  return crypto.timingSafeEqual(
-    Buffer.from(signature),
-    Buffer.from(expectedSignature),
-  )
+  const signatureBuffer = Buffer.from(signature)
+  const expectedBuffer = Buffer.from(expectedSignature)
+
+  if (signatureBuffer.length !== expectedBuffer.length) return false
+
+  return crypto.timingSafeEqual(signatureBuffer, expectedBuffer)
 }
 
 export async function POST(request: Request) {
@@ -37,7 +39,12 @@ export async function POST(request: Request) {
     return new Response(null, { status: 401 })
   }
 
-  const data = JSON.parse(body)
+  let data: { id?: unknown }
+  try {
+    data = JSON.parse(body)
+  } catch {
+    return new Response(null, { status: 400 })
+  }
 
   if (data.id === undefined) return new Response(null, { status: 400 })
 
