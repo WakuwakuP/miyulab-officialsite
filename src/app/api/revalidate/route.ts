@@ -4,6 +4,14 @@ import { revalidateTag } from 'next/cache'
 export const revalidate = 0
 
 export async function POST(request: Request) {
+  const secret = request.headers.get('x-api-key')
+  if (
+    !process.env.REVALIDATE_SECRET ||
+    secret !== process.env.REVALIDATE_SECRET
+  ) {
+    return new Response(null, { status: 401 })
+  }
+
   if (request.body === null) return new Response(null, { status: 400 })
 
   const data = await request.json()
