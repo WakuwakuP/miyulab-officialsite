@@ -7,9 +7,7 @@ export const revalidate = 0
 const MAX_WEBHOOK_BODY_BYTES = 64 * 1024
 const SIGNATURE_HEX_LENGTH = 64
 
-function isValidSignatureFormat(
-  signature: string | null,
-): signature is string {
+function isValidSignatureFormat(signature: string | null): signature is string {
   return (
     signature !== null &&
     signature.length === SIGNATURE_HEX_LENGTH &&
