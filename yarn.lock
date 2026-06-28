@@ -8797,9 +8797,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^17.5.0":
-  version: 17.5.0
-  resolution: "chromatic@npm:17.5.0"
+"chromatic@npm:^17.7.2":
+  version: 17.7.2
+  resolution: "chromatic@npm:17.7.2"
   dependencies:
     semver: "npm:^7.3.5"
   peerDependencies:
@@ -8817,7 +8817,7 @@ __metadata:
     chroma: dist/bin.cjs
     chromatic: dist/bin.cjs
     chromatic-cli: dist/bin.cjs
-  checksum: 38919ba7e45d2188d22699b086a48e20f6914c80b0f21ce0aa805c3e6052d618de63a1efeadc2fbf5d0debd878476e4e33ec867779255b0bc6a4c842f5e6a09d
+  checksum: 6fcbb27833a2abd775658e6f59d6325adb6b20baf8c108e961b39c81da222964fc1568d86d9eec8d703319e0eb9b0254b2cb815d8629410c147b1c6ff9b89351
   languageName: node
   linkType: hard
 
@@ -13509,7 +13509,7 @@ __metadata:
     "@vercel/speed-insights": "npm:2.0.0"
     babel-loader: "npm:^10.1.1"
     cheerio: "npm:^1.2.0"
-    chromatic: "npm:^17.5.0"
+    chromatic: "npm:^17.7.2"
     highlight.js: "npm:^11.11.1"
     husky: "npm:^9.1.7"
     hygen: "npm:^6.2.11"
