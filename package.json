@@ -34,7 +34,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/react-scroll": "^1.8.10",
     "babel-loader": "^10.1.1",
-    "chromatic": "^17.5.0",
+    "chromatic": "^17.7.2",
     "husky": "^9.1.7",
     "hygen": "^6.2.11",
     "jest": "^30.4.2",
@@ -45,8 +45,8 @@
     "storybook-dark-mode": "^5.0.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^6.0.3",
-    "vercel": "^54.14.5",
-    "vite": "^8.0.16"
+    "vercel": "^54.18.1",
+    "vite": "^8.1.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,json,css}": [
