@@ -5470,10 +5470,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsparticles/engine@npm:3.9.1, @tsparticles/engine@npm:^3.9.1":
+"@tsparticles/engine@npm:3.9.1":
   version: 3.9.1
   resolution: "@tsparticles/engine@npm:3.9.1"
   checksum: 85106d28e9a9f5b019e80c8767376319e6fe6873af4b773727ce48edf13b964d0d1c9ca7faff9f9edd1410e001455fdf789d956b55b94f35fdf3e41fa9f0507a
+  languageName: node
+  linkType: hard
+
+"@tsparticles/engine@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "@tsparticles/engine@npm:4.3.0"
+  checksum: 6ac46765ffb914ededb32d8967488c3c0b29a2fc3a02a08a7ccea34f2e98ff6565bccff5a421b496577ae760a93c2cbc8f1649aa15eec6f2614c3f35cc1e1c86
   languageName: node
   linkType: hard
 
@@ -13470,7 +13477,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.9.1"
     "@testing-library/react": "npm:^16.3.2"
     "@tsparticles/all": "npm:^3.9.1"
-    "@tsparticles/engine": "npm:^3.9.1"
+    "@tsparticles/engine": "npm:^4.3.0"
     "@tsparticles/react": "npm:^3.0.0"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/node": "npm:^26.0.1"
