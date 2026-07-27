@@ -1,7 +1,7 @@
 'use client'
 
 import { type Engine } from '@tsparticles/engine'
-import { Particles, ParticlesProvider } from '@tsparticles/react'
+import { NextParticles, NextParticlesProvider } from '@tsparticles/nextjs'
 import { loadSlim } from '@tsparticles/slim'
 
 export interface ParticleProps {
@@ -13,9 +13,9 @@ const initParticles = async (engine: Engine) => {
 }
 
 export const Particle = ({ id }: ParticleProps) => (
-  <ParticlesProvider init={initParticles}>
+  <NextParticlesProvider init={initParticles}>
     <div className="chromatic-ignore" data-chromatic="ignore">
-      <Particles
+      <NextParticles
         id={id}
         options={{
           background: {
@@ -80,5 +80,5 @@ export const Particle = ({ id }: ParticleProps) => (
         }}
       />
     </div>
-  </ParticlesProvider>
+  </NextParticlesProvider>
 )

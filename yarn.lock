@@ -5585,6 +5585,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tsparticles/nextjs@npm:4.3.2":
+  version: 4.3.2
+  resolution: "@tsparticles/nextjs@npm:4.3.2"
+  peerDependencies:
+    "@tsparticles/engine": 4.3.2
+    "@tsparticles/react": 4.3.2
+    next: ">=13.0.0"
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  checksum: 21a852de9d355b5c3bf7618efdd74bd890fdb3698a6834c4bd05714b633b08051bf6e8ff50a8114dde4de202a45a4defdc2441f1646d06c7596ee9d14413fe28
+  languageName: node
+  linkType: hard
+
 "@tsparticles/plugin-blend@npm:4.3.2":
   version: 4.3.2
   resolution: "@tsparticles/plugin-blend@npm:4.3.2"
@@ -12714,6 +12727,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:^7.0.0"
     "@testing-library/react": "npm:^16.3.2"
     "@tsparticles/engine": "npm:4.3.2"
+    "@tsparticles/nextjs": "npm:4.3.2"
     "@tsparticles/react": "npm:4.3.2"
     "@tsparticles/slim": "npm:4.3.2"
     "@types/gtag.js": "npm:^0.0.20"

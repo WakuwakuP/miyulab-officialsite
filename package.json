@@ -2,6 +2,7 @@
   "_id": "miyulab-officialsite@0.1.0",
   "dependencies": {
     "@tsparticles/engine": "4.3.2",
+    "@tsparticles/nextjs": "4.3.2",
     "@tsparticles/react": "4.3.2",
     "@tsparticles/slim": "4.3.2",
     "@types/rss": "^0.0.32",
