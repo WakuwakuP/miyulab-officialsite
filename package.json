@@ -1,9 +1,9 @@
 {
   "_id": "miyulab-officialsite@0.1.0",
   "dependencies": {
-    "@tsparticles/all": "^3.9.1",
-    "@tsparticles/engine": "^3.9.1",
-    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/engine": "4.3.2",
+    "@tsparticles/react": "4.3.2",
+    "@tsparticles/slim": "4.3.2",
     "@types/rss": "^0.0.32",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "2.0.0",
@@ -17,8 +17,7 @@
     "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
     "react-scroll": "^1.9.3",
-    "rss": "^1.2.2",
-    "tsparticles": "^3.9.1"
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@babel/core": "^8.0.1",
