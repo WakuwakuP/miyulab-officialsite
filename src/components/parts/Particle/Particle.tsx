@@ -1,27 +1,21 @@
 'use client'
 
-import { loadAll } from '@tsparticles/all'
 import { type Engine } from '@tsparticles/engine'
-import { initParticlesEngine, Particles } from '@tsparticles/react'
-import { useCallback, useEffect } from 'react'
+import { NextParticles, NextParticlesProvider } from '@tsparticles/nextjs'
+import { loadSlim } from '@tsparticles/slim'
 
 export interface ParticleProps {
   id?: string
 }
 
-export const Particle = ({ id }: ParticleProps) => {
-  const init = useCallback(async () => {
-    await initParticlesEngine(async (engine: Engine) => {
-      await loadAll(engine)
-    })
-  }, [])
+const initParticles = async (engine: Engine) => {
+  await loadSlim(engine)
+}
 
-  useEffect(() => {
-    init()
-  }, [init])
-  return (
+export const Particle = ({ id }: ParticleProps) => (
+  <NextParticlesProvider init={initParticles}>
     <div className="chromatic-ignore" data-chromatic="ignore">
-      <Particles
+      <NextParticles
         id={id}
         options={{
           background: {
@@ -32,9 +26,6 @@ export const Particle = ({ id }: ParticleProps) => {
           },
           detectRetina: true,
           particles: {
-            color: {
-              value: ['#ff77ff', '#77ffff', '#ffff77'],
-            },
             links: {
               color: '#ffffff',
               distance: 200,
@@ -43,9 +34,6 @@ export const Particle = ({ id }: ParticleProps) => {
               width: 2,
             },
             move: {
-              attract: {
-                enable: false,
-              },
               direction: 'none',
               enable: true,
               outModes: {
@@ -69,6 +57,14 @@ export const Particle = ({ id }: ParticleProps) => {
               },
               value: 0.3,
             },
+            paint: {
+              fill: {
+                color: {
+                  value: ['#ff77ff', '#77ffff', '#ffff77'],
+                },
+                enable: true,
+              },
+            },
             shape: {
               type: 'circle',
             },
@@ -84,5 +80,5 @@ export const Particle = ({ id }: ParticleProps) => {
         }}
       />
     </div>
-  )
-}
+  </NextParticlesProvider>
+)
