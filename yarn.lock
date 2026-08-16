@@ -8206,7 +8206,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chromatic@npm:^18.0.1, chromatic@npm:^18.1.0":
+"chromatic@npm:^18.0.1":
   version: 18.1.0
   resolution: "chromatic@npm:18.1.0"
   dependencies:
@@ -8227,6 +8227,35 @@ __metadata:
     chromatic: dist/bin.cjs
     chromatic-cli: dist/bin.cjs
   checksum: cf64a6b14d6d3a3c2cc51fd024d651b4f7c90c4647fe3d5d5dee7033108f0188157b32bb98432568bc3b0fafd42966f9c527d12f171d76f4e7cd9ea50cbb1606
+  languageName: node
+  linkType: hard
+
+"chromatic@npm:^18.2.0":
+  version: 18.2.0
+  resolution: "chromatic@npm:18.2.0"
+  dependencies:
+    semver: "npm:^7.3.5"
+  peerDependencies:
+    "@chromatic-com/cypress": ^0.*.* || ^1.0.0
+    "@chromatic-com/playwright": ^0.*.* || ^1.0.0
+    "@chromatic-com/vitest": ^0.*.* || ^1.0.0
+  dependenciesMeta:
+    "@sentry/cli":
+      built: true
+    esbuild:
+      built: true
+  peerDependenciesMeta:
+    "@chromatic-com/cypress":
+      optional: true
+    "@chromatic-com/playwright":
+      optional: true
+    "@chromatic-com/vitest":
+      optional: true
+  bin:
+    chroma: dist/bin.cjs
+    chromatic: dist/bin.cjs
+    chromatic-cli: dist/bin.cjs
+  checksum: c530eb88761af134b8c15fae397729395db94c0e2c913267f0dbdb8553619cfbb38a12157bbd06386bfa6924deb64c074ad8979194e4e9d908ef47ae9dff93a7
   languageName: node
   linkType: hard
 
@@ -12702,7 +12731,7 @@ __metadata:
     "@vercel/speed-insights": "npm:2.0.0"
     babel-loader: "npm:^10.1.1"
     cheerio: "npm:^1.2.0"
-    chromatic: "npm:^18.1.0"
+    chromatic: "npm:^18.2.0"
     highlight.js: "npm:^11.11.1"
     husky: "npm:^9.1.7"
     hygen: "npm:^6.2.11"
