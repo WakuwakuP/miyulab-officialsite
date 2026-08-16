@@ -9,7 +9,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "2.0.0",
     "cheerio": "^1.2.0",
-    "highlight.js": "^11.11.1",
+    "highlight.js": "^11.12.0",
     "microcms-js-sdk": "^3.4.0",
     "microcms-richedit-processer": "^1.2.0",
     "next": "^16.3.0",
@@ -34,7 +34,7 @@
     "@types/react-dom": "^19.2.4",
     "@types/react-scroll": "^1.8.10",
     "babel-loader": "^10.1.1",
-    "chromatic": "^18.1.0",
+    "chromatic": "^18.2.0",
     "husky": "^9.1.7",
     "hygen": "^6.2.11",
     "jest": "^30.4.2",
@@ -45,7 +45,7 @@
     "storybook-dark-mode": "^5.0.0",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^6.0.3",
-    "vercel": "^58.9.0",
+    "vercel": "^58.11.0",
     "vite": "^8.2.1"
   },
   "lint-staged": {
