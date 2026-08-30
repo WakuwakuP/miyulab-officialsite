@@ -39,7 +39,7 @@
     "hygen": "^6.2.11",
     "jest": "^30.5.0",
     "jest-environment-jsdom": "^30.5.0",
-    "lint-staged": "^17.3.0",
+    "lint-staged": "^17.4.1",
     "sass": "^1.103.1",
     "storybook": "^10.5.10",
     "storybook-dark-mode": "^5.0.0",
