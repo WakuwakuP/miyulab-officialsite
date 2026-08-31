@@ -5,7 +5,7 @@ successful changes in the working tree. Read `AGENTS.md` (if present),
 `package.json`, the Yarn configuration, and relevant implementation before
 editing.
 
-Use `yarn outdated || true` to inspect available updates. Upgrade packages one
+Use `yarn npm outdated || true` to inspect available updates. Upgrade packages one
 at a time or in tightly related groups, and keep only upgrades that can be made
 compatible with the application. Pair packages with their `@types/*` counterparts, and upgrade these ecosystems together when applicable:
 
@@ -20,7 +20,7 @@ After each package group, use `yarn check:fix` as needed and verify with this
 exact sequence:
 
 1. `yarn check`
-2. `yarn test`
+2. `yarn jest --ci --watchAll=false`
 3. `yarn build`
 
 If a group fails verification, undo only that group by restoring the previous
@@ -34,7 +34,7 @@ Hard constraints:
   request. The workflow performs those operations after verification.
 - Do not read or write secrets, credentials, `.env*`, `.git/**`, or key files.
 - Do not edit `.agents/**`, `.github/**`, `.claude/**`, `.cursor/**`,
-  `.cursorignore`, `.cursorrules`, `.codex/**`, `.husky/**`, `AGENTS.md`,
+  `.cursorignore`, `.cursorrules`, `.codex/**`, `.husky/**`, `.yarnrc.yml`, `.npmrc`, `.yarn/releases/**`, `.yarn/plugins/**`, `AGENTS.md`,
   `CLAUDE.md`, `scripts/**`, or generated `src/zenstack/**` files.
 - Do not make product changes unrelated to compatibility with an upgrade.
 - Do not use npm, npx, pnpm, or another package manager.
