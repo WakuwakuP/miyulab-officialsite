@@ -34,7 +34,8 @@
       "!**/src/components/ui/**/*",
       "!**/v0/**/*",
       "!**/tests/**/*",
-      "!**/.storybook/MockAuth.tsx"
+      "!**/.storybook/MockAuth.tsx",
+      "!.github/cursor/render-package-upgrade-table.mjs"
     ]
   },
   "formatter": {
