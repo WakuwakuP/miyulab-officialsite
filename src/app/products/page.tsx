@@ -39,7 +39,7 @@ export default async function ProductsPage() {
 
   return (
     <div className={styles.page}>
-      <PageTitle bgText={undefined}>
+      <PageTitle bgText="products">
         <h1 className={styles.heading}>Products</h1>
       </PageTitle>
       <p className={styles.intro}>
@@ -47,17 +47,24 @@ export default async function ProductsPage() {
       </p>
       {contents.map((product) => (
         <article className={styles.product} key={product.id}>
-          {product.image != null && (
-            <div className={styles.visual}>
-              <MicroCMSImage
-                alt=""
-                className={styles.image}
-                fill={true}
-                sizes="(min-width: 768px) 33vw, 100vw"
-                src={product.image.url}
-              />
-            </div>
-          )}
+          <div className={styles.media}>
+            {product.image != null && (
+              <div className={styles.visual}>
+                <MicroCMSImage
+                  alt=""
+                  className={styles.image}
+                  fill={true}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  src={product.image.url}
+                />
+              </div>
+            )}
+            {EXTERNAL_URL.test(product.url) && (
+              <div className={styles.action}>
+                <TextButton href={product.url}>サイトを開く</TextButton>
+              </div>
+            )}
+          </div>
           <div className={styles.detail}>
             {Boolean(product.label) && (
               <p className={styles.label}>{product.label}</p>
@@ -69,11 +76,6 @@ export default async function ProductsPage() {
                 <summary>詳しく見る</summary>
                 <p className={styles.text}>{product.detail}</p>
               </details>
-            )}
-            {EXTERNAL_URL.test(product.url) && (
-              <div className={styles.action}>
-                <TextButton href={product.url}>サイトを開く</TextButton>
-              </div>
             )}
           </div>
         </article>

@@ -3,7 +3,7 @@ import { type ReactNode } from 'react'
 import styles from 'styles/components/parts/PageTitle.module.css'
 
 interface PageTitleProps {
-  bgText: 'blog' | undefined
+  bgText: 'blog' | 'products' | undefined
   children: ReactNode
 }
 

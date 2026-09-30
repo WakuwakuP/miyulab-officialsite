@@ -26,3 +26,7 @@
 .blog::after {
   content: "Blog";
 }
+
+.products::after {
+  content: "Products";
+}
