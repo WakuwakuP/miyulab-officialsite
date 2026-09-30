@@ -53,16 +53,18 @@ export default function ProductsPage() {
         <div className={styles.detail}>
           <p className={styles.label}>原神 · 非公式ツール集</p>
           <h2>テイワット・トイボックス</h2>
-          <p className={styles.catchphrase}>
-            テイワットの冒険に、遊び心をひとつ。
-          </p>
           <p>
-            いつもの旅に、ちょっと違う楽しみ方を。ソロでも、仲間とでも遊べる、
-            原神の冒険をもっと楽しむための道具箱です。
+            原神の冒険に、いつもと違う遊び方を。ソロでも仲間とでも楽しめるツール集。
           </p>
-          <p>
-            「こんな遊び方、どうだろう？」を少しずつ形にして、道具箱に加えていきます。
-          </p>
+          <details className={styles.more}>
+            <summary>詳しく見る</summary>
+            <p>
+              「こんな遊び方、どうだろう？」を少しずつ形にして、道具箱に加えていきます。
+            </p>
+            <p className={styles.note}>
+              HoYoverse公式のサイトではありません。ゲームに関する名称等の権利は、各権利者に帰属します。
+            </p>
+          </details>
           <div className={styles.action}>
             <TextButton href="https://teyvat-toybox.miyulab.dev/">
               道具箱をひらく
@@ -70,10 +72,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </article>
-      <p className={styles.note}>
-        テイワット・トイボックスはHoYoverse公式のサイトではありません。
-        ゲームに関する名称等の権利は、各権利者に帰属します。
-      </p>
       <article className={styles.product}>
         <div
           aria-hidden="true"
@@ -85,11 +83,18 @@ export default function ProductsPage() {
         <div className={styles.detail}>
           <p className={styles.label}>ステラソラ · 非公式ツール集</p>
           <h2>Stellasora Tools</h2>
-          <p className={styles.catchphrase}>思い描いたビルドを、かたちに。</p>
           <p>
-            ステラソラのゲームプレイを便利にするツール集です。
-            巡遊者の素質とロスレコを選択してビルドを作成し、共有できます。
+            ステラソラのビルドを作成・共有して、編成を考えるためのツール集。
           </p>
+          <details className={styles.more}>
+            <summary>詳しく見る</summary>
+            <p>
+              巡遊者の素質とロスレコを選択してビルドを作成し、共有できます。
+            </p>
+            <p className={styles.note}>
+              ゲーム公式のサイトではありません。ゲームに関する名称等の権利は、各権利者に帰属します。
+            </p>
+          </details>
           <div className={styles.action}>
             <TextButton href="https://stellasora-tools.miyulab.dev/">
               ツールを使う
@@ -97,10 +102,6 @@ export default function ProductsPage() {
           </div>
         </div>
       </article>
-      <p className={styles.note}>
-        Stellasora Toolsはゲーム公式のサイトではありません。
-        ゲームに関する名称等の権利は、各権利者に帰属します。
-      </p>
       <article className={styles.product}>
         <div
           aria-hidden="true"
@@ -112,11 +113,13 @@ export default function ProductsPage() {
         <div className={styles.detail}>
           <p className={styles.label}>運営サービス · 分散型SNS</p>
           <h2>pl.waku.dev</h2>
-          <p className={styles.catchphrase}>日々のことを、自分のペースで。</p>
-          <p>
-            Miyulabが運営する、Pleromaを使った分散型SNSです。
-            日々の出来事を投稿したり、ほかのサーバーのユーザーと交流したりできます。
-          </p>
+          <p>Miyulabが運営する分散型SNS。日々のことを、自分のペースで。</p>
+          <details className={styles.more}>
+            <summary>詳しく見る</summary>
+            <p>
+              Pleromaを使ったSNSです。日々の出来事を投稿したり、ほかのサーバーのユーザーと交流したりできます。
+            </p>
+          </details>
           <div className={styles.action}>
             <TextButton href="https://pl.waku.dev/">サイトを開く</TextButton>
           </div>

@@ -26,15 +26,15 @@
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  min-height: 16rem;
+  min-height: 12rem;
   color: #e9e1c5;
   letter-spacing: 0.2em;
   background: #183e3c;
 }
 
 .visual svg {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 .stellasora {
@@ -48,7 +48,7 @@
 }
 
 .mark {
-  font-size: 6rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
@@ -72,15 +72,20 @@
   margin: 0;
 }
 
-.catchphrase {
-  font-weight: 700;
+.more summary {
+  width: fit-content;
+  padding: 0.5rem 0;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
 }
 
 .action {
   margin-top: 2rem;
 }
 
-.action a:focus-visible {
+.action a:focus-visible,
+.more summary:focus-visible {
   outline: 2px solid var(--main-color);
   outline-offset: 4px;
 }
