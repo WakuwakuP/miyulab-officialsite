@@ -21,35 +21,12 @@
 }
 
 .visual {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  min-height: 12rem;
-  color: #e9e1c5;
-  letter-spacing: 0.2em;
-  background: #183e3c;
+  position: relative;
+  aspect-ratio: 3 / 2;
 }
 
-.visual svg {
-  width: 6rem;
-  height: 6rem;
-}
-
-.stellasora {
-  color: #eee4ff;
-  background: #393054;
-}
-
-.pleroma {
-  color: #e1f3ff;
-  background: #24475c;
-}
-
-.mark {
-  font-size: 4rem;
-  line-height: 1;
+.image {
+  object-fit: contain;
 }
 
 .detail {
@@ -63,13 +40,14 @@
   overflow-wrap: anywhere;
 }
 
-.label,
-.note {
-  font-size: 0.875rem;
+.text {
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 
 .label {
   margin: 0;
+  font-size: 0.875rem;
 }
 
 .more summary {
@@ -90,13 +68,9 @@
   outline-offset: 4px;
 }
 
-.note {
-  margin-top: 1.5rem;
-  line-height: 1.8;
-}
-
 @media (min-width: 768px) {
-  .product {
+  .product:has(.visual) {
     grid-template-columns: 1fr 2fr;
+    align-items: center;
   }
 }

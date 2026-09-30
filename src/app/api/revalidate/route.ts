@@ -119,6 +119,9 @@ export async function POST(request: Request) {
   revalidateTag(`content-detail-${data.id}`, 'max')
   console.log(`revalidate: /content/detail/${data.id}`)
 
+  revalidateTag('products', 'max')
+  console.log('revalidate: /products')
+
   revalidateTag('categories', 'max')
   console.log('revalidate: categories')
 
