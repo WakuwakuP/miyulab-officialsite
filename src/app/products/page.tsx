@@ -2,20 +2,10 @@ import { MicroCMSImage } from 'components/parts/MicroCMSImage/MicroCMSImage'
 import { PageTitle } from 'components/parts/PageTitle/PageTitle'
 import { TextButton } from 'components/parts/TextButton/TextButton'
 import { client } from 'libs/client'
-import { type MicroCMSImage as ProductImage } from 'microcms-js-sdk'
 import { type Metadata } from 'next'
 import { unstable_cache } from 'next/cache'
 import styles from 'styles/pages/Products.module.css'
-
-interface Product {
-  id: string
-  name: string
-  label?: string
-  summary: string
-  detail?: string
-  url: string
-  image?: ProductImage
-}
+import { type Product } from 'types'
 
 const EXTERNAL_URL = /^https?:\/\//i
 
