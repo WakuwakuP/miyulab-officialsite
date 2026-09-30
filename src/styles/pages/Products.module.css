@@ -1,0 +1,97 @@
+.page {
+  padding: 2rem 1rem 4rem;
+}
+
+.heading {
+  margin: 0;
+  font-size: inherit;
+}
+
+.intro {
+  margin: 0 1rem 2rem;
+  line-height: 1.8;
+}
+
+.product {
+  display: grid;
+  margin-top: 2rem;
+  overflow: hidden;
+  border: 1px solid var(--main-color);
+  border-radius: 1rem;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 16rem;
+  color: #e9e1c5;
+  letter-spacing: 0.2em;
+  background: #183e3c;
+}
+
+.visual svg {
+  width: 8rem;
+  height: 8rem;
+}
+
+.stellasora {
+  color: #eee4ff;
+  background: #393054;
+}
+
+.pleroma {
+  color: #e1f3ff;
+  background: #24475c;
+}
+
+.mark {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.detail {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  line-height: 1.9;
+}
+
+.detail h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  overflow-wrap: anywhere;
+}
+
+.label,
+.note {
+  font-size: 0.875rem;
+}
+
+.label {
+  margin: 0;
+}
+
+.catchphrase {
+  font-weight: 700;
+}
+
+.action {
+  margin-top: 2rem;
+}
+
+.action a:focus-visible {
+  outline: 2px solid var(--main-color);
+  outline-offset: 4px;
+}
+
+.note {
+  margin-top: 1.5rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 768px) {
+  .product {
+    grid-template-columns: 1fr 2fr;
+  }
+}
