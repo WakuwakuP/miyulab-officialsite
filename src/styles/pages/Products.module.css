@@ -1,5 +1,5 @@
 .page {
-  padding: 2rem 1rem 4rem;
+  padding: 0 0 4rem;
 }
 
 .heading {
@@ -14,10 +14,18 @@
 
 .product {
   display: grid;
-  margin-top: 2rem;
+  margin: 2rem 1rem 0;
   overflow: hidden;
   border: 1px solid var(--main-color);
   border-radius: 1rem;
+}
+
+.media {
+  order: 2;
+}
+
+.media:has(.visual) {
+  order: 0;
 }
 
 .visual {
@@ -30,6 +38,7 @@
 }
 
 .detail {
+  order: 1;
   padding: clamp(1.25rem, 4vw, 2.5rem);
   line-height: 1.9;
 }
@@ -59,7 +68,7 @@
 }
 
 .action {
-  margin-top: 2rem;
+  margin: 1.25rem;
 }
 
 .action a:focus-visible,
@@ -71,6 +80,6 @@
 @media (min-width: 768px) {
   .product:has(.visual) {
     grid-template-columns: 1fr 2fr;
-    align-items: center;
+    align-items: start;
   }
 }

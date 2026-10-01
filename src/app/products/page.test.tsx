@@ -40,6 +40,15 @@ test('renders products from microCMS', async () => {
   )
   expect(view.container.querySelectorAll('details')).toHaveLength(1)
   expect(view.container.querySelectorAll('img')).toHaveLength(1)
+  expect(
+    view.container
+      .querySelector('img')
+      ?.parentElement?.parentElement?.querySelector('a')
+      ?.getAttribute('href'),
+  ).toBe('https://example.com/tool')
+  expect(
+    view.container.querySelector('h1')?.parentElement?.parentElement?.className,
+  ).toContain('products')
   expect(screen.getAllByRole('link')).toHaveLength(1)
   expect(screen.getByRole('link').getAttribute('href')).toBe(
     'https://example.com/tool',
