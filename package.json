@@ -21,7 +21,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.6",
+    "@babel/core": "^8.0.7",
     "@biomejs/biome": "^2.5.14",
     "@chromatic-com/storybook": "^5.3.1",
     "@storybook/nextjs": "^10.6.0",
