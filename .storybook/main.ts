@@ -1,5 +1,9 @@
 import { type StorybookConfig } from '@storybook/nextjs'
 
+// Next.js 16.4+ useRouter() reads LayoutRouterContext.parentRenderTree.data.bfcacheId.
+// @storybook/nextjs 10.6.1 does not supply it, so Chromatic fails every story with
+// RedirectBoundary TypeError. Yarn-patched until storybookjs/storybook#36720 lands.
+
 const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
