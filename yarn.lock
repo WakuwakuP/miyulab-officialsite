@@ -2449,9 +2449,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@chromatic-com/storybook@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@chromatic-com/storybook@npm:5.4.0"
+"@chromatic-com/storybook@npm:^5.5.1":
+  version: 5.5.1
+  resolution: "@chromatic-com/storybook@npm:5.5.1"
   dependencies:
     "@neoconfetti/react": "npm:^1.0.0"
     chromatic: "npm:^18.0.1"
@@ -2459,7 +2459,7 @@ __metadata:
     strip-ansi: "npm:^7.1.0"
   peerDependencies:
     storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0 || ^10.5.0-0 || ^10.6.0-0 || ^11.0.0-0
-  checksum: 43fcd30e819546906ffb47ea5675bc02b2dd53913d83d53c31e4b8d5224e53ad6dd9a526bddd8e83df1e2ad36542b682ed7599a413d345cdf9781b8b178ac806
+  checksum: aedf057a761357b680d81f2af12336b221aad218fba43db5ab68fa0ae1305570af85212a15045f30489b37dcf1d57c9fb49851c499619aeb11b25b9ad7cf1821
   languageName: node
   linkType: hard
 
@@ -13119,12 +13119,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"microcms-js-sdk@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "microcms-js-sdk@npm:3.5.1"
+"microcms-js-sdk@npm:^3.6.0":
+  version: 3.6.0
+  resolution: "microcms-js-sdk@npm:3.6.0"
   dependencies:
     async-retry: "npm:^1.3.3"
-  checksum: 7121da37945e7d9229f3933d1b10c24ea7cb71b016f83dc8b2bf43cc815ef391caa7337857d6b3532d7c479c1310841682ca4cde7c92e97ff89c041b118b8a05
+  checksum: 390a1900e69763d88c53c2f9a4f38471d6b526d3f935aff4a5f27566aba27d49fb694999847f510132cff95b80e5af705829af33d4aea2ebe2dbc626a805d43f
   languageName: node
   linkType: hard
 
@@ -13393,7 +13393,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^8.0.7"
     "@biomejs/biome": "npm:^2.5.15"
-    "@chromatic-com/storybook": "npm:^5.4.0"
+    "@chromatic-com/storybook": "npm:^5.5.1"
     "@storybook/nextjs": "patch:@storybook/nextjs@npm%3A10.6.1#~/.yarn/patches/@storybook-nextjs-npm-10.6.1-5a32ac30a7.patch"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
@@ -13419,7 +13419,7 @@ __metadata:
     jest: "npm:^30.5.2"
     jest-environment-jsdom: "npm:^30.5.2"
     lint-staged: "npm:^17.6.0"
-    microcms-js-sdk: "npm:^3.5.1"
+    microcms-js-sdk: "npm:^3.6.0"
     microcms-richedit-processer: "npm:^1.2.0"
     next: "npm:^16.4.0"
     next-seo: "npm:^7.3.0"
