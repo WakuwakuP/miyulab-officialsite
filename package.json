@@ -21,7 +21,7 @@
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@babel/core": "^8.0.7",
+    "@babel/core": "^8.0.9",
     "@biomejs/biome": "^2.5.15",
     "@chromatic-com/storybook": "^5.5.1",
     "@storybook/nextjs": "patch:@storybook/nextjs@npm%3A10.6.1#~/.yarn/patches/@storybook-nextjs-npm-10.6.1-5a32ac30a7.patch",
