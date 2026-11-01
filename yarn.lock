@@ -4008,6 +4008,146 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@koromix/koffi-android-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-android-arm64@npm:3.3.3"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-android-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-android-x64@npm:3.3.3"
+  conditions: os=android & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-darwin-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-darwin-arm64@npm:3.3.3"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-darwin-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-darwin-x64@npm:3.3.3"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-freebsd-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-freebsd-arm64@npm:3.3.3"
+  conditions: os=freebsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-freebsd-ia32@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-freebsd-ia32@npm:3.3.3"
+  conditions: os=freebsd & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-freebsd-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-freebsd-x64@npm:3.3.3"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-arm64@npm:3.3.3"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-arm@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-arm@npm:3.3.3"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-ia32@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-ia32@npm:3.3.3"
+  conditions: os=linux & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-loong64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-loong64@npm:3.3.3"
+  conditions: os=linux & cpu=loong64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-ppc64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-ppc64@npm:3.3.3"
+  conditions: os=linux & cpu=ppc64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-riscv64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-riscv64@npm:3.3.3"
+  conditions: os=linux & cpu=riscv64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-linux-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-linux-x64@npm:3.3.3"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-openbsd-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-openbsd-arm64@npm:3.3.3"
+  conditions: os=openbsd & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-openbsd-ia32@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-openbsd-ia32@npm:3.3.3"
+  conditions: os=openbsd & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-openbsd-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-openbsd-x64@npm:3.3.3"
+  conditions: os=openbsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-win32-arm64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-win32-arm64@npm:3.3.3"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-win32-ia32@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-win32-ia32@npm:3.3.3"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@koromix/koffi-win32-x64@npm:3.3.3":
+  version: 3.3.3
+  resolution: "@koromix/koffi-win32-x64@npm:3.3.3"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@mapbox/node-pre-gyp@npm:^2.0.0":
   version: 2.0.3
   resolution: "@mapbox/node-pre-gyp@npm:2.0.3"
@@ -5874,451 +6014,451 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsparticles/animation-utils@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/animation-utils@npm:4.4.0"
+"@tsparticles/animation-utils@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/animation-utils@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: d6ec4bf7f58fa7e976c4873ded8e1547b353d6e99d5a5362e7277ebb843803e44b73c5aabc1e573d7d08caed5692f86b5281168f55c42636eb3bc829a6c40bc0
+    "@tsparticles/engine": 4.5.0
+  checksum: fc27379bf5ca9ae722defcb2da50b18c50b39e3dc62b007c2cabb914c51738b6c7461531f8941a460c2916e3f48b2f9019d95816d69abaad4744681dc1245257
   languageName: node
   linkType: hard
 
-"@tsparticles/basic@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/basic@npm:4.4.0"
+"@tsparticles/basic@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/basic@npm:4.5.0"
   dependencies:
-    "@tsparticles/engine": "npm:4.4.0"
-    "@tsparticles/plugin-blend": "npm:4.4.0"
-    "@tsparticles/plugin-hex-color": "npm:4.4.0"
-    "@tsparticles/plugin-hsl-color": "npm:4.4.0"
-    "@tsparticles/plugin-move": "npm:4.4.0"
-    "@tsparticles/plugin-rgb-color": "npm:4.4.0"
-    "@tsparticles/shape-circle": "npm:4.4.0"
-    "@tsparticles/updater-opacity": "npm:4.4.0"
-    "@tsparticles/updater-out-modes": "npm:4.4.0"
-    "@tsparticles/updater-paint": "npm:4.4.0"
-    "@tsparticles/updater-size": "npm:4.4.0"
-  checksum: 2fe0e8f4fc48e31ab8f4a231434ca6783bd77acf51e06f51edb24e44360e940b9534954b52c883a5419565cf0112353249be82dae506c73634a38dcdf31b07f7
+    "@tsparticles/engine": "npm:4.5.0"
+    "@tsparticles/plugin-blend": "npm:4.5.0"
+    "@tsparticles/plugin-hex-color": "npm:4.5.0"
+    "@tsparticles/plugin-hsl-color": "npm:4.5.0"
+    "@tsparticles/plugin-move": "npm:4.5.0"
+    "@tsparticles/plugin-rgb-color": "npm:4.5.0"
+    "@tsparticles/shape-circle": "npm:4.5.0"
+    "@tsparticles/updater-opacity": "npm:4.5.0"
+    "@tsparticles/updater-out-modes": "npm:4.5.0"
+    "@tsparticles/updater-paint": "npm:4.5.0"
+    "@tsparticles/updater-size": "npm:4.5.0"
+  checksum: 8b4319657ace6e0805f49d586608b4670ea0505f9ad2b5336044bcfd4dd78f87402cf12f783fa93ab365369441f837109a8ffe3cfae9431420e31622b0d7eeaa
   languageName: node
   linkType: hard
 
-"@tsparticles/canvas-utils@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/canvas-utils@npm:4.4.0"
+"@tsparticles/canvas-utils@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/canvas-utils@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 4f59bc6d12da50c1c12cff3ff03ab03f10736c65faa80ed0b2e96e82cd9595b2cc915b9f4e3118bfafc82cc280516870636c57a4ca3fa78edb1ade49fb7c0c9d
+    "@tsparticles/engine": 4.5.0
+  checksum: 59d6c5362fe5626ae2ea84f604b5a29e04777ac29ea00869e819891cf306a364b040668f1e8b308d72937c5175a6923450589f745899529032fd4c73f578e557
   languageName: node
   linkType: hard
 
-"@tsparticles/engine@npm:4.4.0, @tsparticles/engine@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/engine@npm:4.4.0"
-  checksum: 1418cc032df0746cdcdd757c534d6f424634ce5bcb6b24791456be0f0ee887cf8c635dce55683ab264ad00e32ee815d53eefaae2781130d837edca10c7790512
+"@tsparticles/engine@npm:4.5.0, @tsparticles/engine@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/engine@npm:4.5.0"
+  checksum: ff9d72b492849485897f67c55517f73e4e4ee8b8f634f97cb26c63bfc7038b57653bfffa7642180abfc20a3e4902c5fa0270ed2eb05b3131d0f20ba0589aabd5
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-attract@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-attract@npm:4.4.0"
+"@tsparticles/interaction-external-attract@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-attract@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 8448ee0773b795d6b9cbc33b34f999e83f20dc81fde0a6fb496748748b577be67b5b9dbc70bec3a880473ed9bc22ac99924fc54319db83ebc819a9fd45f8900b
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 2ac87268680e5095e0893753137c4234b9a2559aae7a61f4af7cd522454e14222810c1fe880c0482e1b96ae3be507e749face3ed41b51d1491d321a7fec38677
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-bounce@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-bounce@npm:4.4.0"
+"@tsparticles/interaction-external-bounce@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-bounce@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 3dede3c0074ef18da02053651f8d0592aa7eab8796d2946c9621aded29729e7c7f798818edd74428ab772a8ee9d61bd9d6f65fe90c423e7d91fd23cd5665c539
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 86315069f3e1980c69ae6e5f9717dce434781b2fa35af0a0cb5cba86590f56fd777a1e66c00cff58dba66fce097793321371b21d1b59a04d14ade716b4e64e48
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-bubble@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-bubble@npm:4.4.0"
+"@tsparticles/interaction-external-bubble@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-bubble@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: f8be38f13dcc32bf3763cc53214e3e461261fd412a5f03aa86a56f1269627806909cd032c74a7346c0d62a354a4c2a21af20f25525c89a6ae75b54b79dcacb97
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 5851190223a42e1412c1686279d7e622f52862bda7aeba7288c128ff5ab7b2808648ac2cb342190728a7a94e295017be7afce8a30d3e8da7f37473ac821e63f7
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-connect@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-connect@npm:4.4.0"
+"@tsparticles/interaction-external-connect@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-connect@npm:4.5.0"
   dependencies:
-    "@tsparticles/canvas-utils": "npm:4.4.0"
+    "@tsparticles/canvas-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: bcc5c814c5902541cec5c12cb301742c93dbab670494770d2ef9f65476887d891c3c74325d95bc3856ffffbfca2a417db67bc54127e851b62db5e76c0a8319b4
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 6d463b14cc808e62e269f501d6bb5dacca5cff96d9d6d2839ecb335a4238ae7913e135f154fea8c483c9494adf191ed1a5f5e6695a11d5609e1a177b98aa9f65
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-destroy@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-destroy@npm:4.4.0"
+"@tsparticles/interaction-external-destroy@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-destroy@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: e980f1c12984dbbbf4285a5afc8b112fb1f5a9ac2af9688e09e2428da0063246cdf74f3be32967ab9adadaed3667c8868318bc731d7a6778efe945ba99144607
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 0e86642a430ad33064d2796778999d7b9b3ecc03db7e558dd7b4569f14a1bb66a9a49009686152e71fd6438587a4a1b8164515fe49cee27031a10f5bf2e86a22
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-grab@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-grab@npm:4.4.0"
+"@tsparticles/interaction-external-grab@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-grab@npm:4.5.0"
   dependencies:
-    "@tsparticles/canvas-utils": "npm:4.4.0"
+    "@tsparticles/canvas-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 5c3cb19c813de83330664c7a4bbac7e0a298d15f12300585a13cffd15ce320dde5e74ed6868d65944f3e7461f05949222a5504756cf5772b66f19cd1b4750ab3
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: fffbef62bc101feb9ba781bafb091ed92a002fdaba1a53fe4d1128885167a039c6e114698303b66092982e228a3f295488b1e3e1bd137723cb31b7b77785eb2d
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-parallax@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-parallax@npm:4.4.0"
+"@tsparticles/interaction-external-parallax@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-parallax@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 883711cb1c1a5e8a19cc8f641a8b57bf18f62a0b90e6f6ee64f3bc348b1dd22715c67b3d36493550f4ed099b875a122b568eea5374404268a46347131c816ec8
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 15a3206a4607c8a21f0fc228832b3aa3b01431cc4e8f7cfc27a77eb7fd4c42a8a73fec6a12bd80e4c8fdbed7eb88b70bbc110ee3fc13351a9e7c63c28a100672
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-pause@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-pause@npm:4.4.0"
+"@tsparticles/interaction-external-pause@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-pause@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: cb654a482eb599d82cc6153f3e66e0931bfc32fc63b939d718f3ad760b9798094cd2d6b4d33d72d6d216cf33a4f3e366bf0f669e03c90926c81d01ff5bfa2a83
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 58996b350d20577122329d0c6006ea80fc924f7146504c4bea5cbb46270849c6afeb29fb3e20055df4ba87276fda6123c82ba6f8dbd63ce81a8956a021c569c7
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-push@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-push@npm:4.4.0"
+"@tsparticles/interaction-external-push@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-push@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 9b84be9c00b44840dcead8e79cd453913de6e432820e6b02cdaeebbef7667e6549b74290204d781bf473de73238e40b38ceda813774885166c0c2ec4e1375fe2
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: e08a75820d006c9b721b89f8fc76bd7716091f8d6c87d3f6a6dafb6be27a9ac9d1cb9fb2c0c6f2b0534938939bea0cf4015355ae5ffb4b6b41ed0e0cf51c7884
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-remove@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-remove@npm:4.4.0"
+"@tsparticles/interaction-external-remove@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-remove@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: f118bfca5c86b2d74d15e45e7a4f6fe6f5089bd5afe76da8cc9e9b9af4a18b26919c0e7c35db7733d80ce8ef555c1a0c3ef8b753c8f207099135449ec0fe1783
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 6dc01d829fd18db89feaa219632f385a5281d10913397c985487b7ee222e9feb3b10d11919792b9ea19eb4090ed8b95c29e87d2a3a27e60d7923aa798a7409ba
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-repulse@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-repulse@npm:4.4.0"
+"@tsparticles/interaction-external-repulse@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-repulse@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: c5bfa7cf8f11e7f97e065e61dd8dffb2ec4efa28cab9bfb66b26b9c2b84e83878cd586f95ba7a29ad00a908f84073010c8ea9696596164099c8b0a41451ee420
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: d9d5bd7bdc64b4cefe5c5e2582d2d6bfcd106e1a76dd1e231584fedf4938ae1a24e418c5c2ef1ddbb1fe817914c157cad1dd5ad147b12faf84a7b31cac5bd144
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-external-slow@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-external-slow@npm:4.4.0"
+"@tsparticles/interaction-external-slow@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-external-slow@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 231731761cbd45dcba3fc57c190f69d6585a927b18d2cf54b04fff8025d77002eae617861d7970e5e25c4e88d663e979e16d0851d8f0b21fd83e849299c3fa5e
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 45762ca19811715e05e17d4f64a5c7a7ab145b110e512a993de51cb80054cf5bb231967ee9612e0608143f5d582f596e26fbd10276f50d7be8fd3704f9649f86
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-particles-attract@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-particles-attract@npm:4.4.0"
+"@tsparticles/interaction-particles-attract@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-particles-attract@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: fbee072977cbc9db4a37528fc59d1ac67ce1221c6169c8f45fffcd3b1b057a01fd7e3b12124d639ba56b1c01d4aac3123595c517539728fcab7c6b4d61d4138e
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: eafd64f37d22e502a1eb674d40776ef4671c6e97fa5ed2780eabcc838bc3114956146083af969f5f123dd2d426d5575351532f2364dc1fbfc77b4f4759a5e47f
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-particles-collisions@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-particles-collisions@npm:4.4.0"
+"@tsparticles/interaction-particles-collisions@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-particles-collisions@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 354c563898809617f1eccabd44dc3db3f06640521fa74ceafc61d3bd6151126672e23c90d12cc66f328ee97d2ab22686bfe14ffcd7c0b3d6b1f0e5e4a1aa13cd
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: d5e6df23583c59f5a2e4c714484d1d88025798a2f127d984755b5615946c052f4c4a31485bb6f2277361bf96983635ccb22d90a11bbda0b1f072bbe73264a7c0
   languageName: node
   linkType: hard
 
-"@tsparticles/interaction-particles-links@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/interaction-particles-links@npm:4.4.0"
+"@tsparticles/interaction-particles-links@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/interaction-particles-links@npm:4.5.0"
   dependencies:
-    "@tsparticles/canvas-utils": "npm:4.4.0"
+    "@tsparticles/canvas-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/plugin-interactivity": 4.4.0
-  checksum: 5c993b02c2648504b48a61112acbd9ce36ec9959b746141ad0268fdf31bcc5da6b854a447be368ceda57b0375856f4f9b192969a61daf8248ed4f5732ba5ec98
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/plugin-interactivity": 4.5.0
+  checksum: 9837161fbdf6c17af3b56294bc43c43cb5816c51c341b7c98d19ea491d12c0e44cecbda95a3dea947caebdbab65fab221eea9850a36b197396a5a5f5fc860cb7
   languageName: node
   linkType: hard
 
-"@tsparticles/nextjs@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/nextjs@npm:4.4.0"
+"@tsparticles/nextjs@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/nextjs@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-    "@tsparticles/react": 4.4.0
+    "@tsparticles/engine": 4.5.0
+    "@tsparticles/react": 4.5.0
     next: ">=13.0.0"
     react: ">=18.0.0"
     react-dom: ">=18.0.0"
-  checksum: f7adb804bd564a4ae8a1cd9aa5468142a9cd48ccf115b9c3ca2bfc1bd62c7a9eaf334b54cec5e4e7cb373ce5b55222e9fc3e2363c75ddb358a62c6e6bcba2181
+  checksum: 5354a6e060499fd901ba30dd40e0172ca2f7725366e42e4b633fd50f6125ab4b73fa54f2bb43bf6838f13e1de4d92d9cfb92ce655a28f8c4b9b23f6cf5f788be
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-blend@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-blend@npm:4.4.0"
+"@tsparticles/plugin-blend@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-blend@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 6310996afd8ca524c975b32a22013c404daaa4f2fabb24f72b07cb42669d37ced3101fc6ba58aa06108829b0369690518337ef30b9c07cb6e10dda5b30d8faf5
+    "@tsparticles/engine": 4.5.0
+  checksum: 8db83a6b78cd0d6ca191552413896a96ec6cbefb104b1d8ec78a85256cb6722887286a8e0ea3710fa6dc712d74fd8211a563de07d75dda906327be25dc4eb62e
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-easing-quad@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-easing-quad@npm:4.4.0"
+"@tsparticles/plugin-easing-quad@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-easing-quad@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: d96c4c3ff2ea32d4608990807c8179a05f9b95d4e48439e8350663520c5aff55db8da330f6f0b7629e446b624369616a269522e7089f577d9b06bca2362efceb
+    "@tsparticles/engine": 4.5.0
+  checksum: f87a9b95e88f04a99eb0c89342d6bac45dc2baf57434350a7d4311eb3863a2188766c7342a438b24ebaf1a83ceed28fc16c8a4d2b9777f1151784dbe134ef5fa
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-hex-color@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-hex-color@npm:4.4.0"
+"@tsparticles/plugin-hex-color@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-hex-color@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 69bbb1710f55e29e2f2cd9ac95023c61e2da57e3cd6546d663d780020dcffe1cd3c9acb6256a26dce1662feb544139eb89d66d9315853181ba676918a42a159c
+    "@tsparticles/engine": 4.5.0
+  checksum: 077ebadec48b75843cc67ef9b961c3a975f220aac237ae2f9bfa1039197820b47857fa042ee5724efccc1d2900c31e0e02a728244bf448cc20a2b926b5de64a3
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-hsl-color@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-hsl-color@npm:4.4.0"
+"@tsparticles/plugin-hsl-color@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-hsl-color@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 34a286377aa610957a00e25fc92f3369ca36c4c8f9f91e28b5ba789a9bc72f2c59d40c43b73f890effc4c8f66cb6380565e7942e53f7eeae01904c9007cc2b85
+    "@tsparticles/engine": 4.5.0
+  checksum: 6da0bfd3b7d42773061f2bb0e3730c66a047bbb14bd196088f5447e2c32f3d4e59d4bf40d419dbd85394058d108303e357336ee216b010d45b30638e1f4e6468
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-interactivity@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-interactivity@npm:4.4.0"
+"@tsparticles/plugin-interactivity@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-interactivity@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 61993ca3f3deaa9b3122e0d78de946469f164042d2e1d45abdecba404d89d7e02ed9499c15e91180e2aebe05541220ef7cc836739750dd8fd9dd92b7ae1644bb
+    "@tsparticles/engine": 4.5.0
+  checksum: ce8c8f0c4bc490da6dbda67bac88c2b1c99229c04e57e2952ad63f3e10c7e29dffe58b6f2217d4629e6658c8b3df5405afdee6a0a61e1562f3d9aeb4d2795cce
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-move@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-move@npm:4.4.0"
+"@tsparticles/plugin-move@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-move@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 9346ddc5713c56d7f1a76b0b4ad841fa3c262d84893d875a859088ad35438fdfd1162d97805f1b003bffff9fbbb2e460dc2d81ce81a0029bc5694761d8cc0e71
+    "@tsparticles/engine": 4.5.0
+  checksum: ac891a444bbfdd5cba480642d5043adda579c8b7cd9233bf12bf3ecf5229d77d699ce4e642b3820c8595bd0e74bcd8d62f18290f29d05742a94db6f2650a50fd
   languageName: node
   linkType: hard
 
-"@tsparticles/plugin-rgb-color@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/plugin-rgb-color@npm:4.4.0"
+"@tsparticles/plugin-rgb-color@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/plugin-rgb-color@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 9e43d491d13e98c978e97a29bf8df96e1f6b62e07c041942804775577d78cf49fca03248d55d5819a24abb2574d61115cf7f5027587709c586fee9de808c6051
+    "@tsparticles/engine": 4.5.0
+  checksum: 86441b0ed3140fe5f9e29b9dbd5f082da93356d963775f0632042df16932a3ed315bab0cae3e4b72954ccca63609e4423a6b359da7de34eda021c6c86b4eba8b
   languageName: node
   linkType: hard
 
-"@tsparticles/react@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/react@npm:4.4.0"
+"@tsparticles/react@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/react@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
+    "@tsparticles/engine": 4.5.0
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 96b89422d9d51458b23df24dd96233444e2658d797023b9e293d5d57f2c4ba2a3df6226af692e2059ae8157659459305c9e92ee0ec72e69819fc19c987b819dc
+  checksum: 9eb55ade9cc53bfde5ba36d11f678fdb7b423a294ee6da6758f1a868919837d8889075a30f850343970a96fb0c3369eeaedb54c402af02970ad48701de35a505
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-circle@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-circle@npm:4.4.0"
+"@tsparticles/shape-circle@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-circle@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 732ff3cdb7cfabbb684f0ffea62580809daf0c18e63ef9f488965d6d7bcf4a5f35e06822e76323bf92227283dfb0cc997be3e556262311e7c858347590652f46
+    "@tsparticles/engine": 4.5.0
+  checksum: ccd04b832244d135109319888399ba9db45b714ba073359d5d69b45a7a46726b9f0ea5b955e057e5b3b872ac9ea13c3177dc35f888f0c7d497acef79d1d43cea
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-emoji@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-emoji@npm:4.4.0"
+"@tsparticles/shape-emoji@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-emoji@npm:4.5.0"
   dependencies:
-    "@tsparticles/canvas-utils": "npm:4.4.0"
+    "@tsparticles/canvas-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: fe2e4ef7201bf2afeee4fbcca925b20f86a73280020475ae3a3656909e4cf818e9879db33fd6f204f5169fef98440e38712bb1ff2749bafd4dfb4388f0416658
+    "@tsparticles/engine": 4.5.0
+  checksum: 48e66809cc47496d9b7edd08f9111996b366a9ae04590fb945414da8df33df2b3e8f9d442bd8dd2e132d33389761bb78752a7780ef29af41e7af87c2dd766669
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-image@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-image@npm:4.4.0"
+"@tsparticles/shape-image@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-image@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: ccbd741e7f406f83bf5a9415dac8843402146dc0e8f484907ffb2f99322e633635bff98420937a50fc7947915026fe70f55c39e891e0819c74c75ca26389bceb
+    "@tsparticles/engine": 4.5.0
+  checksum: d2a4bc710f4a1e919ec0224113484a0da72381ea8870e22a1848fc772bffc55c2e0f1c035d5315526381da3a561312409af3248d283e2b048b09f8882f644cf2
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-line@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-line@npm:4.4.0"
+"@tsparticles/shape-line@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-line@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 695a01d30d480873af9f7bf9a353f8d9edb6ea194495da9a5d53b6ca8e62770be098cc86d109e1ed8c3679c3c299f6e834c15e2322356bde7bace829560b0f3a
+    "@tsparticles/engine": 4.5.0
+  checksum: 93a13b63f41f200f1793c4a49a1cb3ba6d559625097ac6dc0af844e3cf87ce876439c6d301fa655b3730c2fdeff813f61a60165e9ad0afe000bc2ca7b1245056
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-polygon@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-polygon@npm:4.4.0"
+"@tsparticles/shape-polygon@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-polygon@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 839636492a2a5090d69c89cc19c829f42db67ed7f23e1d2d056d6895a4b4087695c9bafb38df5086e59148e38483f30af90a61849ac5f27ce5dd75a5078ccc4a
+    "@tsparticles/engine": 4.5.0
+  checksum: 792bbdfea5ba04957d176ad6fa4957e87706a3d695a66544ae261794d6190a7b490f8178aa51f2c5bbae09b62525f5d0b4fcad9ad4a94f7bde35326941826af9
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-square@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-square@npm:4.4.0"
+"@tsparticles/shape-square@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-square@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 38f7da2527572cc523ab435df4aebd34970ba3c2b5a99250b3208aa86313574272aa8c78606d814e1c8e07b8e404bc06e68201600b4b65b12897378336a62292
+    "@tsparticles/engine": 4.5.0
+  checksum: 6afcb0b6f8216b5fd6f7b00298cbd94976ac0e0e3deaf0a267ac32c63efd12b86772ddf51f211c6d367d26de011eae7d5e7a4a25b8246b6bb90dd601e8526d6a
   languageName: node
   linkType: hard
 
-"@tsparticles/shape-star@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/shape-star@npm:4.4.0"
+"@tsparticles/shape-star@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/shape-star@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 80de485e45f17baaa03b67050e5f186b145ee0c244d789273c3ebde2be974608a234043d4a0cca858bfb86dbfdb6a73a34ae89979ae722a029189f8d2fbd5525
+    "@tsparticles/engine": 4.5.0
+  checksum: d7ecf2e9003f9ba2fad3c5e3aa19137dcec21ca35a7577b1cf628b64c0dbd564fc1766d3967e5cca0a9260729007a1e5717bd88dce2bfa501b08c3d0baa53581
   languageName: node
   linkType: hard
 
-"@tsparticles/slim@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/slim@npm:4.4.0"
+"@tsparticles/slim@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/slim@npm:4.5.0"
   dependencies:
-    "@tsparticles/basic": "npm:4.4.0"
-    "@tsparticles/engine": "npm:4.4.0"
-    "@tsparticles/interaction-external-attract": "npm:4.4.0"
-    "@tsparticles/interaction-external-bounce": "npm:4.4.0"
-    "@tsparticles/interaction-external-bubble": "npm:4.4.0"
-    "@tsparticles/interaction-external-connect": "npm:4.4.0"
-    "@tsparticles/interaction-external-destroy": "npm:4.4.0"
-    "@tsparticles/interaction-external-grab": "npm:4.4.0"
-    "@tsparticles/interaction-external-parallax": "npm:4.4.0"
-    "@tsparticles/interaction-external-pause": "npm:4.4.0"
-    "@tsparticles/interaction-external-push": "npm:4.4.0"
-    "@tsparticles/interaction-external-remove": "npm:4.4.0"
-    "@tsparticles/interaction-external-repulse": "npm:4.4.0"
-    "@tsparticles/interaction-external-slow": "npm:4.4.0"
-    "@tsparticles/interaction-particles-attract": "npm:4.4.0"
-    "@tsparticles/interaction-particles-collisions": "npm:4.4.0"
-    "@tsparticles/interaction-particles-links": "npm:4.4.0"
-    "@tsparticles/plugin-easing-quad": "npm:4.4.0"
-    "@tsparticles/plugin-interactivity": "npm:4.4.0"
-    "@tsparticles/shape-emoji": "npm:4.4.0"
-    "@tsparticles/shape-image": "npm:4.4.0"
-    "@tsparticles/shape-line": "npm:4.4.0"
-    "@tsparticles/shape-polygon": "npm:4.4.0"
-    "@tsparticles/shape-square": "npm:4.4.0"
-    "@tsparticles/shape-star": "npm:4.4.0"
-    "@tsparticles/updater-life": "npm:4.4.0"
-    "@tsparticles/updater-paint": "npm:4.4.0"
-    "@tsparticles/updater-rotate": "npm:4.4.0"
-  checksum: 9904787fbcd498f6c6f7072e6762ee30286c5a0371c54b8739950c9c0764adeb1791a132eb316b6860be8c7b8941796e5d9912921bf753dc93838f7931e9f23f
+    "@tsparticles/basic": "npm:4.5.0"
+    "@tsparticles/engine": "npm:4.5.0"
+    "@tsparticles/interaction-external-attract": "npm:4.5.0"
+    "@tsparticles/interaction-external-bounce": "npm:4.5.0"
+    "@tsparticles/interaction-external-bubble": "npm:4.5.0"
+    "@tsparticles/interaction-external-connect": "npm:4.5.0"
+    "@tsparticles/interaction-external-destroy": "npm:4.5.0"
+    "@tsparticles/interaction-external-grab": "npm:4.5.0"
+    "@tsparticles/interaction-external-parallax": "npm:4.5.0"
+    "@tsparticles/interaction-external-pause": "npm:4.5.0"
+    "@tsparticles/interaction-external-push": "npm:4.5.0"
+    "@tsparticles/interaction-external-remove": "npm:4.5.0"
+    "@tsparticles/interaction-external-repulse": "npm:4.5.0"
+    "@tsparticles/interaction-external-slow": "npm:4.5.0"
+    "@tsparticles/interaction-particles-attract": "npm:4.5.0"
+    "@tsparticles/interaction-particles-collisions": "npm:4.5.0"
+    "@tsparticles/interaction-particles-links": "npm:4.5.0"
+    "@tsparticles/plugin-easing-quad": "npm:4.5.0"
+    "@tsparticles/plugin-interactivity": "npm:4.5.0"
+    "@tsparticles/shape-emoji": "npm:4.5.0"
+    "@tsparticles/shape-image": "npm:4.5.0"
+    "@tsparticles/shape-line": "npm:4.5.0"
+    "@tsparticles/shape-polygon": "npm:4.5.0"
+    "@tsparticles/shape-square": "npm:4.5.0"
+    "@tsparticles/shape-star": "npm:4.5.0"
+    "@tsparticles/updater-life": "npm:4.5.0"
+    "@tsparticles/updater-paint": "npm:4.5.0"
+    "@tsparticles/updater-rotate": "npm:4.5.0"
+  checksum: d7432982b103d22373055ebd2992400b8f437a97a1be603b779bece051cf7b4cc5452e62a391f88e310e4bc668a0f4e04db9aa90a32551a1d0a56d8ea6a0a5fc
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-life@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-life@npm:4.4.0"
+"@tsparticles/updater-life@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-life@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: ed9182664e18a1db6038f73b9ba358c5b6d720bdd8f6fb3e5f305f4b93c466bd4108c13748294315abfbaf266fe2180a5908467d52ee211b7bbec132487c576b
+    "@tsparticles/engine": 4.5.0
+  checksum: f84e8b2ded1684db4810512e8baea07f6cf0d749e2fa1fdc8f1344fe042e9fa47571d92e47e28ebcd4453ba118f5a5fa2784609aad485a78f176b86f3c3e6a7f
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-opacity@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-opacity@npm:4.4.0"
+"@tsparticles/updater-opacity@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-opacity@npm:4.5.0"
   dependencies:
-    "@tsparticles/animation-utils": "npm:4.4.0"
+    "@tsparticles/animation-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: b01f682875abca1fd15a03a14a06a1dac4b867e58748320df75715c8013a0ee8afaa53f27017c288914e00a0eb9e95e8a24f1429a1c8991736a634b8306a0d48
+    "@tsparticles/engine": 4.5.0
+  checksum: 1318ce96db95785fa216577362c50d0d0a2fba982b8493f4e586b5b7ea757170d756878569382628eadd80153fcdd714863ab48feadfd353d76b6c9b555233ba
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-out-modes@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-out-modes@npm:4.4.0"
+"@tsparticles/updater-out-modes@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-out-modes@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 4e542c3075ecd853dbd9a51f44bacdef4db2df546722014c1e785f2b95b012185f2b862e910d149f466f38aed511022738a7497efb72e55af06bbbd066639bb2
+    "@tsparticles/engine": 4.5.0
+  checksum: dc0df7604531112624c57f403145dc1af695e2aa7973a9bf868f9c6345d031543410e56cbb8ca874eae59f7867a36f7b31b6b43db040c4059716f6d9b4208ec4
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-paint@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-paint@npm:4.4.0"
+"@tsparticles/updater-paint@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-paint@npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 85b691ac7891d5a51301dfc9a6938edd5509de325ecc273ccae1bbf49e629955cc28ec81a68ea0eef0c5fcf6946ddcc2d11c7eada5204b2c6e8fa45142ee7513
+    "@tsparticles/engine": 4.5.0
+  checksum: 292cf0dc8b3234c805f6e5f37a5178d146fbd8a9b72df4d2856cd1dacede59872bca8b6c7acf4c3c8e9dd9ff1e7a4dbd76aad7d962a44d87fc5a7a07a80c0844
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-rotate@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-rotate@npm:4.4.0"
+"@tsparticles/updater-rotate@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-rotate@npm:4.5.0"
   dependencies:
-    "@tsparticles/animation-utils": "npm:4.4.0"
+    "@tsparticles/animation-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 2bf3cbd68a9edfe0c31ec641bc3d22a45a5fdc412bc0329bccd3891e303988749d979d7e988cd7fbe0562574801fb45edc37f8abeacd1bdee2df378d984ef28e
+    "@tsparticles/engine": 4.5.0
+  checksum: 7520d54a05c9312189f036d4b805c795dc67fa8b774220d82c0ae44f665b6b5fb0b6dbe40e9f1862b7b6a7ec8ce4833736a65e98d67198f45f778f1c9ea7fe06
   languageName: node
   linkType: hard
 
-"@tsparticles/updater-size@npm:4.4.0":
-  version: 4.4.0
-  resolution: "@tsparticles/updater-size@npm:4.4.0"
+"@tsparticles/updater-size@npm:4.5.0":
+  version: 4.5.0
+  resolution: "@tsparticles/updater-size@npm:4.5.0"
   dependencies:
-    "@tsparticles/animation-utils": "npm:4.4.0"
+    "@tsparticles/animation-utils": "npm:4.5.0"
   peerDependencies:
-    "@tsparticles/engine": 4.4.0
-  checksum: 4f8d7230633a33292363278d361242db0eb8047334a551e8337b0ca033389cbabcce93e8d816b32ffad90e168f03dd6015e4de01d6f45a737c7d456e853651fc
+    "@tsparticles/engine": 4.5.0
+  checksum: b776ca0a5b50f467c3d0776931a075f16ba6cc775863d9292454ca4f3ea184b1514af60ed2dfc09105dc97842a819f6567cd7ae3422937508971bb63219e9670
   languageName: node
   linkType: hard
 
@@ -7001,9 +7141,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/backends@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/backends@npm:22.0.1"
+"@vercel/backends@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/backends@npm:24.0.0"
   dependencies:
     "@vercel/nft": "npm:1.10.0"
     "@vercel/static-config": "npm:3.4.4"
@@ -7019,8 +7159,8 @@ __metadata:
     tsx: "npm:4.21.0"
     zod: "npm:3.22.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 0aea89e5330765bb360177ca4dc39621748cb3626be79b48b70e8c7ce8588689696d84e4ba39730316d4eb7e960c442ac8ce4cb173ad6e4020fac07592ec3d4a
+    "@vercel/build-utils": 15.2.0
+  checksum: 96473ca54c0b8daac9da0086d0ec43216b3eb2dd3206e1f567954b517af5a0979ba01822760e70b9fc4a88faae7a59b0ee711ae80e54055567725181f66e77c3
   languageName: node
   linkType: hard
 
@@ -7038,37 +7178,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:15.0.1":
-  version: 15.0.1
-  resolution: "@vercel/build-utils@npm:15.0.1"
+"@vercel/build-utils@npm:15.2.0":
+  version: 15.2.0
+  resolution: "@vercel/build-utils@npm:15.2.0"
   dependencies:
     cjs-module-lexer: "npm:1.2.3"
     es-module-lexer: "npm:1.5.0"
-  checksum: 6a61bea85d76f74073aa8baf52eb1c25d2dbad6e909092343d4071a69d4ac7dc4727e235b6e88be5bac33f3cc152af7f20b48a814d4eb448131fa8a6055deebc
+  checksum: 82611fac8e65efc63bbf083a7b357c04fe7d0c46e83211a134b2ab84b11ca0c00b42100288c82f3ba2e2ddf7c2715ef66b01802e2170fe8198f448fb66a14e13
   languageName: node
   linkType: hard
 
-"@vercel/cervel@npm:0.1.87":
-  version: 0.1.87
-  resolution: "@vercel/cervel@npm:0.1.87"
+"@vercel/cervel@npm:0.1.91":
+  version: 0.1.91
+  resolution: "@vercel/cervel@npm:0.1.91"
   dependencies:
-    "@vercel/backends": "npm:22.0.1"
+    "@vercel/backends": "npm:24.0.0"
   bin:
     cervel: bin/cervel.mjs
-  checksum: 40270e1e258518b5af2079eef79c893e0de149ed2e9c5f968098b4a4ba57c95a351f8bc5328a24ca44a720fc2f261f637d6a8567cb0efc17d9c9160f12de9bab
+  checksum: c759f56a55638946a25253c26328624752d8e2fce6552c8026407fcc3748ed3035537348409e869f9075a29ec275b7b7a28a8e75b20a4af05dcd499442cf449f
   languageName: node
   linkType: hard
 
-"@vercel/cli-auth@npm:0.3.12":
-  version: 0.3.12
-  resolution: "@vercel/cli-auth@npm:0.3.12"
+"@vercel/cli-auth@npm:0.3.14":
+  version: 0.3.14
+  resolution: "@vercel/cli-auth@npm:0.3.14"
   dependencies:
     "@napi-rs/keyring": "npm:1.2.0"
-    "@vercel/cli-config": "npm:0.3.3"
+    "@vercel/cli-config": "npm:0.3.5"
     async-listen: "npm:3.0.0"
+    koffi: "npm:3.3.3"
     open: "npm:8.4.0"
     zod: "npm:4.1.11"
-  checksum: e2ce43f8d14e8f693efb6745b72f1a2b7b2020ef3628d34d4effe266a8b1400e2f64e90241051e4f209690f7df9f82015b61d334318b11e219ed86b18467bc90
+  dependenciesMeta:
+    koffi:
+      optional: true
+  checksum: e3b89bbb01acd1bbf5ecdf826651a3f53454842250a2987bb4d4c49351ffebe885766e4e8401a7e63b6419b9da5ab5c05ba1b2e794820719e3678fd76ac9f598
   languageName: node
   linkType: hard
 
@@ -7082,13 +7226,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/cli-config@npm:0.3.3":
-  version: 0.3.3
-  resolution: "@vercel/cli-config@npm:0.3.3"
+"@vercel/cli-config@npm:0.3.1":
+  version: 0.3.1
+  resolution: "@vercel/cli-config@npm:0.3.1"
   dependencies:
     xdg-app-paths: "npm:5"
     zod: "npm:4.1.11"
-  checksum: f21ab7b4946181468910fef90f928a0d077f6c5423c0eadd54c43b0300bd4c808cd8ebf38b46555ae867b59d248a717f2d6e44d498bb2f651929f54e81cf1de6
+  checksum: ece39fdba257b4a364f12d2f1708af339a73ac9235edfe264aef19c74a8aba3076b220de7989ba9dc73978584e89d1546aa73c14d045a6ec76bf5848dcacecc4
+  languageName: node
+  linkType: hard
+
+"@vercel/cli-config@npm:0.3.5":
+  version: 0.3.5
+  resolution: "@vercel/cli-config@npm:0.3.5"
+  dependencies:
+    xdg-app-paths: "npm:5"
+    zod: "npm:4.1.11"
+  checksum: 51765ea79c001d18b4836d1c072050aa9720b49c16df3d7d7fa66d670998d6ef3927cbfb78dbcda3e8fb124dbc8067466ffe53ffd8e7919ad395f163d30e61eb
   languageName: node
   linkType: hard
 
@@ -7101,15 +7255,67 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/container@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/container@npm:22.0.1"
+"@vercel/cli-support@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/cli-support@npm:65.8.0"
+  dependencies:
+    "@vercel/backends": "npm:24.0.0"
+    "@vercel/blob": "npm:2.8.0"
+    "@vercel/build-utils": "npm:15.2.0"
+    "@vercel/cli-auth": "npm:0.3.14"
+    "@vercel/cli-config": "npm:0.3.5"
+    "@vercel/container": "npm:24.0.0"
+    "@vercel/detect-agent": "npm:1.2.7"
+    "@vercel/elysia": "npm:24.0.0"
+    "@vercel/express": "npm:24.0.0"
+    "@vercel/fastify": "npm:24.0.0"
+    "@vercel/fun": "npm:1.3.6"
+    "@vercel/go": "npm:27.0.0"
+    "@vercel/h3": "npm:24.0.0"
+    "@vercel/hono": "npm:24.0.0"
+    "@vercel/hydrogen": "npm:25.0.0"
+    "@vercel/koa": "npm:24.0.0"
+    "@vercel/nestjs": "npm:24.0.0"
+    "@vercel/next": "npm:28.0.0"
+    "@vercel/node": "npm:29.0.0"
+    "@vercel/prepare-flags-definitions": "npm:0.6.1"
+    "@vercel/python": "npm:30.0.0"
+    "@vercel/python-analysis": "npm:0.15.2"
+    "@vercel/redwood": "npm:26.0.0"
+    "@vercel/remix-builder": "npm:29.0.0"
+    "@vercel/ruby": "npm:26.0.0"
+    "@vercel/rust": "npm:25.0.0"
+    "@vercel/static-build": "npm:26.0.0"
+    chokidar: "npm:4.0.0"
+    esbuild: "npm:0.27.0"
+    jose: "npm:5.9.6"
+    jsonc-parser: "npm:3.3.1"
+    luxon: "npm:^3.4.0"
+    sandbox: "npm:4.11.1"
+    smol-toml: "npm:1.5.2"
+    undici: "npm:5.29.0"
+    uuid: "npm:14.0.1"
+    zod: "npm:4.1.11"
+  conditions: (!os=darwin | !os=linux)
+  languageName: node
+  linkType: hard
+
+"@vercel/container@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/container@npm:24.0.0"
   dependencies:
     smol-toml: "npm:1.5.2"
     tar: "npm:7.5.11"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: c61a01e56f998ebf79ede3cda4cb32ab7154e8e6ee3099e74718400c154e82a968d52cce6ef331ca3ac722fb48cacc175f0c0fbfee896012c44d61917ca914e0
+    "@vercel/build-utils": 15.2.0
+  checksum: 4f1169bf218baa0116f525f0a2abf478631dd90681f9be72144e52c915f5e571dd5616ae61ea3ec54dc80b6714433ab36acc5b51c97930101ddb0cd483297ddd
+  languageName: node
+  linkType: hard
+
+"@vercel/detect-agent@npm:1.2.5":
+  version: 1.2.5
+  resolution: "@vercel/detect-agent@npm:1.2.5"
+  checksum: 1d121c251268e36b042b498acae5c57ff6fa4b4561b9e3c3c6891a36f92bfd9b1b61a51bdf5020185e2a96035ba24afa86523275767432fac85f1ed2b6bd75ec
   languageName: node
   linkType: hard
 
@@ -7120,15 +7326,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/elysia@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/elysia@npm:22.0.1"
+"@vercel/elysia@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/elysia@npm:24.0.0"
   dependencies:
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: f7e79584853a301f8dd3932c9b8816a50ecd403fb6c9e35ac469b24559b40ce8a2e880cfcf2780f924e48dd3db19c627ba9c02bf8b19a8562726d6e01bc8a2ce
+    "@vercel/build-utils": 15.2.0
+  checksum: 8b11a8b5e855f9a8956dbe94265b9332bfe1bb2f83e7b0433ff26d2601fa5dcaa9dfed80b014886e4f913bb62116909392522846f4fb6d2c3092b3e1bb4568e4
   languageName: node
   linkType: hard
 
@@ -7139,33 +7345,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/express@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/express@npm:22.0.1"
+"@vercel/express@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/express@npm:24.0.0"
   dependencies:
-    "@vercel/cervel": "npm:0.1.87"
+    "@vercel/cervel": "npm:0.1.91"
     "@vercel/nft": "npm:1.10.0"
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 4c23b774bbdadb6c562dd33edd3bef0b89dac064bbc1dfd8d90621a7548cda1c2b66158e269d82d7b49cbfd5af823414017637c45f8545c728c903607e4c9031
+    "@vercel/build-utils": 15.2.0
+  checksum: 0185f1a9213150aada8ad1c4251de05205af59f2fddf0cce22b8652c92f4d11404f51551b1004d1cc814572fe2a2172ce5dabefe65ead793ca10181c6b909028
   languageName: node
   linkType: hard
 
-"@vercel/fastify@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/fastify@npm:22.0.1"
+"@vercel/fastify@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/fastify@npm:24.0.0"
   dependencies:
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: c1418e06cb3c6d4fad2c87198241c25b26d7dadaa13ed66cdbee5df9d9a9622b22e19d22d175c700fd3df0338d174a3833cb7724885f55296dc4cadec146d467
+    "@vercel/build-utils": 15.2.0
+  checksum: 1db7496004b3ebd94a9902f090bc6135e36200dba06b042b4ea70153d310fb4a1a975074e52f172de9b68bd5ebb6a05421c397039b7841826bec965c996e4e7e
   languageName: node
   linkType: hard
 
@@ -7202,101 +7408,101 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/gatsby-plugin-vercel-builder@npm:2.2.79":
-  version: 2.2.79
-  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.2.79"
+"@vercel/gatsby-plugin-vercel-builder@npm:2.2.83":
+  version: 2.2.83
+  resolution: "@vercel/gatsby-plugin-vercel-builder@npm:2.2.83"
   dependencies:
     "@sinclair/typebox": "npm:0.25.24"
-    "@vercel/build-utils": "npm:15.0.1"
+    "@vercel/build-utils": "npm:15.2.0"
     esbuild: "npm:0.27.0"
     etag: "npm:1.8.1"
     fs-extra: "npm:11.1.0"
-  checksum: aeb49d3397bfc2f68d1983b910d168917858dc8b3d7c582b244cd16cb7a33359798bf098631c48fd468410fbae5d95196124bf159505228b0c7631675064482a
+  checksum: 701ad86b3fb31e1a7f492f665e509f048f8bdc97b5bfe70030199e5b609affcebde3ecdab55f1eee9bda59fb5bdc1a380107bfbdc81adfd1e732b0fc4a5738a9
   languageName: node
   linkType: hard
 
-"@vercel/go@npm:25.0.1":
-  version: 25.0.1
-  resolution: "@vercel/go@npm:25.0.1"
+"@vercel/go@npm:27.0.0":
+  version: 27.0.0
+  resolution: "@vercel/go@npm:27.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: cd70dc2f984f8624a537835c4599b3acf92101583563d4f8c1708d6933ba28378e693e84c5b12dc4d889059a82c8b1e991507a2eff6ab50d69738cdf9b2f2a50
+    "@vercel/build-utils": 15.2.0
+  checksum: 0d392b297c961a4824056124997ba5ce91f4b07ada47fdeef2a417ac438126e0c74e467fa6019080249781c3e535b8e84f015259fbfb354ecb9aba51d93c337b
   languageName: node
   linkType: hard
 
-"@vercel/h3@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/h3@npm:22.0.1"
+"@vercel/h3@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/h3@npm:24.0.0"
   dependencies:
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: b26ee93afaea111236d2964535730634bf67a15a47940b313144baf5800bfed6776c4926925fe630a593d93640c9dc02fa532db9577a5427d02762aea9165160
+    "@vercel/build-utils": 15.2.0
+  checksum: fa70be23d327c03b4f562bf8dd92b8c8e6bd3a9b467f9a339ec7bbb86b73850b32788cdbdab6029f7638f50dd9ef42fd75714785b083318de619c9e33792ee46
   languageName: node
   linkType: hard
 
-"@vercel/hono@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/hono@npm:22.0.1"
+"@vercel/hono@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/hono@npm:24.0.0"
   dependencies:
     "@vercel/nft": "npm:1.10.0"
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
     fs-extra: "npm:11.1.0"
     path-to-regexp: "npm:8.3.0"
     ts-morph: "npm:12.0.0"
     zod: "npm:3.22.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 20ceb01ad51b1c98a8be0869c71823394c356bad6dfce975db3b03e282ff4eab88b699859addb0b92db550773d2bf9ec519781cf9878ee58106d5600d6fb4cdb
+    "@vercel/build-utils": 15.2.0
+  checksum: 6d39cd47c5c29828607f5d595f60f2cdbd197c44d1a7a1cb66fc26269aa16ddb9961adc1895da8c8f7d7a9d75f80b2ca6b46866f46bacfe81201c08432db38fa
   languageName: node
   linkType: hard
 
-"@vercel/hydrogen@npm:23.0.1":
-  version: 23.0.1
-  resolution: "@vercel/hydrogen@npm:23.0.1"
+"@vercel/hydrogen@npm:25.0.0":
+  version: 25.0.0
+  resolution: "@vercel/hydrogen@npm:25.0.0"
   dependencies:
     "@vercel/static-config": "npm:3.4.4"
     ts-morph: "npm:12.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: dd1ca1891ded1262151cebfd19b54c409478e76345a936debc44a2b9c744a55441a920120ef5d1da90e3df13bedc2d589ea9c9597884def580964ce4cfefa438
+    "@vercel/build-utils": 15.2.0
+  checksum: 682d8453ca8a750554ef2875823e5dd610bd019285db898909f1d53705a5b615a2c60a8ee4dda7d8a57a3d22d51be7c7a27dee9d3399ac67cd81cb3a6eeee1ab
   languageName: node
   linkType: hard
 
-"@vercel/koa@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/koa@npm:22.0.1"
+"@vercel/koa@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/koa@npm:24.0.0"
   dependencies:
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: aa7a36a7da6e5067794be40610fcc916fb2d3c3717c1e8ea49dcd91cf29ffce4328c9df8de26406beeda3fb29f69c32c18652b45fffd769ca96d98d8ae3053d3
+    "@vercel/build-utils": 15.2.0
+  checksum: 1bb13461b9a267697671c405bc6ca1536e2910b0b28a0840a080814d5bf48c7577172aa0bd0bbad93ca5785db9d98c255c86073472a71a6d1f70311a46613c91
   languageName: node
   linkType: hard
 
-"@vercel/nestjs@npm:22.0.1":
-  version: 22.0.1
-  resolution: "@vercel/nestjs@npm:22.0.1"
+"@vercel/nestjs@npm:24.0.0":
+  version: 24.0.0
+  resolution: "@vercel/nestjs@npm:24.0.0"
   dependencies:
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/static-config": "npm:3.4.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 04d06b10c0d51aff0d92827a05f5d9529521e8e1722d477474b24af328860db8483f29f7e762aff5379a4fcbf3049878adeb75f77f7f7d95999185f45d68e5ca
+    "@vercel/build-utils": 15.2.0
+  checksum: f0274c35fa0d8b3a934c7f5972c9088ac8d77b42d6e798f423264671f1c448c4857730fccc1ce19ef8029f344f07b2a82dfa0057c750be8bf21230b041d958c9
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:26.0.1":
-  version: 26.0.1
-  resolution: "@vercel/next@npm:26.0.1"
+"@vercel/next@npm:28.0.0":
+  version: 28.0.0
+  resolution: "@vercel/next@npm:28.0.0"
   dependencies:
     "@vercel/nft": "npm:1.10.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: e8a361611acb54f3b192bcb0ef5793933c450ce14d689f7840776407ca88b40a9d894047ac5d09894ee63023e2dfb59d3cf9ac9d0d3de2ff5c37819e66a5a7dd
+    "@vercel/build-utils": 15.2.0
+  checksum: 86ddc7b3c9977f799e53de21a5eeaaba6246e8b23d6c8256a037f680343c9d614790cd037606585f74f41a68d83681a4252c524dc24779335f38fc2094fbcf33
   languageName: node
   linkType: hard
 
@@ -7322,9 +7528,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:27.0.1":
-  version: 27.0.1
-  resolution: "@vercel/node@npm:27.0.1"
+"@vercel/node@npm:29.0.0":
+  version: 29.0.0
+  resolution: "@vercel/node@npm:29.0.0"
   dependencies:
     "@edge-runtime/node-utils": "npm:2.3.0"
     "@edge-runtime/primitives": "npm:4.1.0"
@@ -7348,15 +7554,19 @@ __metadata:
     typescript: "npm:typescript@5.9.3"
     undici: "npm:5.28.4"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: c341ebd8b219503f563d87a58e1fe1bfc2cc23728f2aa32a31ce9120ab8e53260adbc171c0759dc6953f657cb7d5cccb9b5332e39366b9356fdefb3647511d45
+    "@vercel/build-utils": 15.2.0
+  checksum: 3f427b9da26076dfd6d06f6bd604c27762324cf374ef2ed45fccf844bf59887d4981d3f79f80f6b740413c64ef9c1af20a37c063bdb5c2094f92a468bfc5bfbc
   languageName: node
   linkType: hard
 
-"@vercel/oidc@npm:3.2.0":
-  version: 3.2.0
-  resolution: "@vercel/oidc@npm:3.2.0"
-  checksum: 98318d3236f58c296616c8c2e1655b268c7bf58525bcd985adac7af6d900e05fc610f6f03ce2ff4bdcd3df7885a40c0ca44fdc761f122dcfe15a78c2756b0243
+"@vercel/oidc@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@vercel/oidc@npm:4.0.0"
+  dependencies:
+    "@vercel/cli-config": "npm:0.3.1"
+    "@vercel/cli-exec": "npm:1.0.1"
+    jose: "npm:^5.9.6"
+  checksum: 62806d8f574009e0186644026be6f610fc1c1826b3b7bca05ef46d7b2dc461da75f943cf83b216e827c1672b4c9f052b9693fe578b256d243aebd2f6d4278363
   languageName: node
   linkType: hard
 
@@ -7392,34 +7602,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/python@npm:28.0.1":
-  version: 28.0.1
-  resolution: "@vercel/python@npm:28.0.1"
+"@vercel/python@npm:30.0.0":
+  version: 30.0.0
+  resolution: "@vercel/python@npm:30.0.0"
   dependencies:
     "@vercel/python-analysis": "npm:0.15.2"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 836cba5ab5e70e0a6e05bfba77c97e0a401cf6f77d24c4898206968a6d07e13e19be176855aac80a782a562025eecd736cc402e0c42d54a137f21f841d43f62d
+    "@vercel/build-utils": 15.2.0
+  checksum: d7749bcf3bff2d269c408a62d842b50c226a7ae6d721899c77b2d325c16f454264936cc5e0c537f5f921b70d7220fef4b17f7ed807a284b0803f0cb21a00b62f
   languageName: node
   linkType: hard
 
-"@vercel/redwood@npm:24.0.1":
-  version: 24.0.1
-  resolution: "@vercel/redwood@npm:24.0.1"
+"@vercel/redwood@npm:26.0.0":
+  version: 26.0.0
+  resolution: "@vercel/redwood@npm:26.0.0"
   dependencies:
     "@vercel/nft": "npm:1.10.0"
     "@vercel/static-config": "npm:3.4.4"
     semver: "npm:6.3.1"
     ts-morph: "npm:12.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 106cccdc214c0fe7a834f6839a72c5b7736873540a80cbcc618ae2c7aeea9e8fa68bab671ca324336652c357730a354de431495f8848ac469ceb1801d7a7f1db
+    "@vercel/build-utils": 15.2.0
+  checksum: 0a7c2537a18a05eeb69af9407ce8c3c42bed69e1c0a16269e7089c7fcc8156acda64b9a21b6c0f8b4c1dbab87fc7a2d6acb176228b88fb583cfd1054de191e1f
   languageName: node
   linkType: hard
 
-"@vercel/remix-builder@npm:27.0.1":
-  version: 27.0.1
-  resolution: "@vercel/remix-builder@npm:27.0.1"
+"@vercel/remix-builder@npm:29.0.0":
+  version: 29.0.0
+  resolution: "@vercel/remix-builder@npm:29.0.0"
   dependencies:
     "@vercel/error-utils": "npm:2.2.1"
     "@vercel/nft": "npm:1.10.0"
@@ -7428,38 +7638,39 @@ __metadata:
     path-to-regexp-updated: "npm:path-to-regexp@6.3.0"
     ts-morph: "npm:12.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 87851a89e6746d6ced02f608b75c835c5fe7dc54ea0758a758317a0b3db38fb1f5f6b2cc70c632fb4d19af519654c21f5f403cf8522a043aadfeb41765d24a06
+    "@vercel/build-utils": 15.2.0
+  checksum: 22f60c77418cf1148072c7b296bbce3d76e2d8f46606cdb7ad0fc30e3f8d593c5d37f8e5965d0ae17d984d2b0cf38518de5d4ef69790a606e35ccd0e7b11ef0f
   languageName: node
   linkType: hard
 
-"@vercel/ruby@npm:24.0.1":
-  version: 24.0.1
-  resolution: "@vercel/ruby@npm:24.0.1"
+"@vercel/ruby@npm:26.0.0":
+  version: 26.0.0
+  resolution: "@vercel/ruby@npm:26.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: e4fdc390fd4c1a8dcdb4f36b66b2918487af9c51c5bc14c43b50df6df3939d14775cc37fbd1415eb61b489ed40480ed163b68956cd0bf8358aab7aec998796ab
+    "@vercel/build-utils": 15.2.0
+  checksum: 7866fad56d9736a58ba19f3c6308941c2e9bd7b8958e73a3b2295d4f90b2057f47611cea147f623ecd691d65c34f5650067dbde0a4a3693146dfadf93f931bc7
   languageName: node
   linkType: hard
 
-"@vercel/rust@npm:23.0.1":
-  version: 23.0.1
-  resolution: "@vercel/rust@npm:23.0.1"
+"@vercel/rust@npm:25.0.0":
+  version: 25.0.0
+  resolution: "@vercel/rust@npm:25.0.0"
   dependencies:
     execa: "npm:5"
     get-port: "npm:5.1.1"
     smol-toml: "npm:1.5.2"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 5d8d8ddb436f7133d8ab6face5d981c8ac8b0281ce463c43abfa82490607cc1a768f5a691f7ede3ef498308b7bea6e8360e422cda49f1c921ad5194447dd3136
+    "@vercel/build-utils": 15.2.0
+  checksum: c659247f5adace541c7005c8f9127e8f61983dbdddf89a5de4c593d3b6466bb04ae8cef755882a7cf1d46b73e265cf04771c22e6fa61cb1c71bd0685aae8e6bb
   languageName: node
   linkType: hard
 
-"@vercel/sandbox@npm:3.3.0":
-  version: 3.3.0
-  resolution: "@vercel/sandbox@npm:3.3.0"
+"@vercel/sandbox@npm:3.9.1":
+  version: 3.9.1
+  resolution: "@vercel/sandbox@npm:3.9.1"
   dependencies:
-    "@vercel/oidc": "npm:3.2.0"
+    "@vercel/detect-agent": "npm:1.2.5"
+    "@vercel/oidc": "npm:4.0.0"
     "@workflow/serde": "npm:4.1.0-beta.2"
     async-retry: "npm:1.3.3"
     jose: "npm:6.2.3"
@@ -7471,7 +7682,7 @@ __metadata:
     undici: "npm:^7.27.1"
     xdg-app-paths: "npm:5.1.0"
     zod: "npm:^4.1.1"
-  checksum: 839d1bffdd70f7ef367fd1dcd764ece816065303a42009036bc7ff9de90fcab7f177a35c5e674c1995677f3531b9aadaf8a4328cb46e5a735e51400736b3545b
+  checksum: c32ee30c0f3f8a839c1033e560afb0a2c69c281792c12f19179eb3e0d744b9e68eb84247cc7fa80419ccc2376b6b12eb6cece35166eb56bfb94a3f264f94a073
   languageName: node
   linkType: hard
 
@@ -7505,17 +7716,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/static-build@npm:24.0.1":
-  version: 24.0.1
-  resolution: "@vercel/static-build@npm:24.0.1"
+"@vercel/static-build@npm:26.0.0":
+  version: 26.0.0
+  resolution: "@vercel/static-build@npm:26.0.0"
   dependencies:
     "@vercel/gatsby-plugin-vercel-analytics": "npm:1.0.12"
-    "@vercel/gatsby-plugin-vercel-builder": "npm:2.2.79"
+    "@vercel/gatsby-plugin-vercel-builder": "npm:2.2.83"
     "@vercel/static-config": "npm:3.4.4"
     ts-morph: "npm:12.0.0"
   peerDependencies:
-    "@vercel/build-utils": 15.0.1
-  checksum: 146bca5104e3851688837b220fb48af6f9884a922154b597701596254cb95c85b3ff7da707309bf9e2925a8523f3eeb515ab0b6c2b0bdd7264bd89e2223f7f1c
+    "@vercel/build-utils": 15.2.0
+  checksum: ac2fe94e2973302f0cbfc42f81372f1510cef0e936f50fb903090a40306fa8b31530db94535bb72c2d3c7f7044589666af4189430b5b8bc0d642be006eb86420
   languageName: node
   linkType: hard
 
@@ -7531,59 +7742,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-darwin-arm64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-darwin-arm64@npm:65.2.0"
+"@vercel/vc-native-darwin-arm64@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-darwin-arm64@npm:65.8.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-darwin-x64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-darwin-x64@npm:65.2.0"
+"@vercel/vc-native-darwin-x64@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-darwin-x64@npm:65.8.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-arm64-musl@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-linux-arm64-musl@npm:65.2.0"
+"@vercel/vc-native-linux-arm64-musl@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-linux-arm64-musl@npm:65.8.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-arm64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-linux-arm64@npm:65.2.0"
+"@vercel/vc-native-linux-arm64@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-linux-arm64@npm:65.8.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-x64-musl@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-linux-x64-musl@npm:65.2.0"
+"@vercel/vc-native-linux-x64-musl@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-linux-x64-musl@npm:65.8.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-x64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-linux-x64@npm:65.2.0"
+"@vercel/vc-native-linux-x64@npm:65.8.0":
+  version: 65.8.0
+  resolution: "@vercel/vc-native-linux-x64@npm:65.8.0"
   conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@vercel/vc-native-win32-arm64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-win32-arm64@npm:65.2.0"
-  conditions: os=win32 & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@vercel/vc-native-win32-x64@npm:65.2.0":
-  version: 65.2.0
-  resolution: "@vercel/vc-native-win32-x64@npm:65.2.0"
-  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -12687,6 +12884,75 @@ __metadata:
   languageName: node
   linkType: hard
 
+"koffi@npm:3.3.3":
+  version: 3.3.3
+  resolution: "koffi@npm:3.3.3"
+  dependencies:
+    "@koromix/koffi-android-arm64": "npm:3.3.3"
+    "@koromix/koffi-android-x64": "npm:3.3.3"
+    "@koromix/koffi-darwin-arm64": "npm:3.3.3"
+    "@koromix/koffi-darwin-x64": "npm:3.3.3"
+    "@koromix/koffi-freebsd-arm64": "npm:3.3.3"
+    "@koromix/koffi-freebsd-ia32": "npm:3.3.3"
+    "@koromix/koffi-freebsd-x64": "npm:3.3.3"
+    "@koromix/koffi-linux-arm": "npm:3.3.3"
+    "@koromix/koffi-linux-arm64": "npm:3.3.3"
+    "@koromix/koffi-linux-ia32": "npm:3.3.3"
+    "@koromix/koffi-linux-loong64": "npm:3.3.3"
+    "@koromix/koffi-linux-ppc64": "npm:3.3.3"
+    "@koromix/koffi-linux-riscv64": "npm:3.3.3"
+    "@koromix/koffi-linux-x64": "npm:3.3.3"
+    "@koromix/koffi-openbsd-arm64": "npm:3.3.3"
+    "@koromix/koffi-openbsd-ia32": "npm:3.3.3"
+    "@koromix/koffi-openbsd-x64": "npm:3.3.3"
+    "@koromix/koffi-win32-arm64": "npm:3.3.3"
+    "@koromix/koffi-win32-ia32": "npm:3.3.3"
+    "@koromix/koffi-win32-x64": "npm:3.3.3"
+  dependenciesMeta:
+    "@koromix/koffi-android-arm64":
+      optional: true
+    "@koromix/koffi-android-x64":
+      optional: true
+    "@koromix/koffi-darwin-arm64":
+      optional: true
+    "@koromix/koffi-darwin-x64":
+      optional: true
+    "@koromix/koffi-freebsd-arm64":
+      optional: true
+    "@koromix/koffi-freebsd-ia32":
+      optional: true
+    "@koromix/koffi-freebsd-x64":
+      optional: true
+    "@koromix/koffi-linux-arm":
+      optional: true
+    "@koromix/koffi-linux-arm64":
+      optional: true
+    "@koromix/koffi-linux-ia32":
+      optional: true
+    "@koromix/koffi-linux-loong64":
+      optional: true
+    "@koromix/koffi-linux-ppc64":
+      optional: true
+    "@koromix/koffi-linux-riscv64":
+      optional: true
+    "@koromix/koffi-linux-x64":
+      optional: true
+    "@koromix/koffi-openbsd-arm64":
+      optional: true
+    "@koromix/koffi-openbsd-ia32":
+      optional: true
+    "@koromix/koffi-openbsd-x64":
+      optional: true
+    "@koromix/koffi-win32-arm64":
+      optional: true
+    "@koromix/koffi-win32-ia32":
+      optional: true
+    "@koromix/koffi-win32-x64":
+      optional: true
+  checksum: 85c240b59ff896261b592b31146f929fb5f419203371a97ea911d23c543bba22233406b27a39d599c8709e93092cfd7a46816099d9152355350d471077384468
+  languageName: node
+  linkType: hard
+
 "leven@npm:^3.1.0":
   version: 3.1.0
   resolution: "leven@npm:3.1.0"
@@ -13428,10 +13694,10 @@ __metadata:
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^7.0.1"
     "@testing-library/react": "npm:^16.3.3"
-    "@tsparticles/engine": "npm:^4.4.0"
-    "@tsparticles/nextjs": "npm:^4.4.0"
-    "@tsparticles/react": "npm:^4.4.0"
-    "@tsparticles/slim": "npm:^4.4.0"
+    "@tsparticles/engine": "npm:^4.5.0"
+    "@tsparticles/nextjs": "npm:^4.5.0"
+    "@tsparticles/react": "npm:^4.5.0"
+    "@tsparticles/slim": "npm:^4.5.0"
     "@types/gtag.js": "npm:^0.0.20"
     "@types/node": "npm:^26.6.5"
     "@types/react": "npm:^19.3.0"
@@ -13458,12 +13724,12 @@ __metadata:
     react-icons: "npm:^5.7.0"
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
-    sass: "npm:^1.106.1"
+    sass: "npm:^1.107.0"
     storybook: "npm:^10.6.3"
     storybook-dark-mode: "npm:^5.0.0"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     typescript: "npm:^7.0.2"
-    vercel: "npm:^65.2.0"
+    vercel: "npm:^65.8.0"
     vite: "npm:^8.3.5"
   languageName: unknown
   linkType: soft
@@ -15676,11 +15942,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sandbox@npm:4.4.0":
-  version: 4.4.0
-  resolution: "sandbox@npm:4.4.0"
+"sandbox@npm:4.11.1":
+  version: 4.11.1
+  resolution: "sandbox@npm:4.11.1"
   dependencies:
-    "@vercel/sandbox": "npm:3.3.0"
+    "@vercel/sandbox": "npm:3.9.1"
     async-retry: "npm:1.3.3"
     debug: "npm:^4.4.1"
     ws: "npm:^8.21.0"
@@ -15688,7 +15954,7 @@ __metadata:
   bin:
     sandbox: bin/sandbox.mjs
     sbx: bin/sandbox.mjs
-  checksum: 036e0d34a69fddc84fedb803d36e6ec31a5c684d725330b72399d8d7bf0d2e2c9b7104f15a4e682d121799b1531168c860bd7569364f0290cde6eb55295ea86b
+  checksum: e825c6e80e73e31365e76c841e07b15d455cdc8be279b49825431bb2a6d0dc4fbf2a4f73f8406a513016a0e9654b1e4b02ea0c8b5d120df760f096f59310a06f
   languageName: node
   linkType: hard
 
@@ -15718,9 +15984,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.106.1":
-  version: 1.106.1
-  resolution: "sass@npm:1.106.1"
+"sass@npm:^1.107.0":
+  version: 1.107.0
+  resolution: "sass@npm:1.107.0"
   dependencies:
     "@parcel/watcher": "npm:^2.4.1"
     chokidar: "npm:^5.0.0"
@@ -15731,7 +15997,7 @@ __metadata:
       optional: true
   bin:
     sass: sass.js
-  checksum: 4f1043e2d5b3b7e9cf563050040ed3d91ef1bf8eb9dd180ecfd7ec403bfbd52ac2f557d7e7b398573021f9240a134a080d11af21b802724c05cad386b768df4c
+  checksum: 5e2a8da603a7cbe4edd904f38db12136e3aba3b673e8acffa98d5b4d1d95d47c83b9f40ecc92686466f0e17e34cfb9c948313e69781392081729d93073f9bbe0
   languageName: node
   linkType: hard
 
@@ -17516,56 +17782,57 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^65.2.0":
-  version: 65.2.0
-  resolution: "vercel@npm:65.2.0"
+"vercel@npm:^65.8.0":
+  version: 65.8.0
+  resolution: "vercel@npm:65.8.0"
   dependencies:
-    "@vercel/backends": "npm:22.0.1"
+    "@vercel/backends": "npm:24.0.0"
     "@vercel/blob": "npm:2.8.0"
-    "@vercel/build-utils": "npm:15.0.1"
-    "@vercel/cli-auth": "npm:0.3.12"
-    "@vercel/cli-config": "npm:0.3.3"
-    "@vercel/container": "npm:22.0.1"
+    "@vercel/build-utils": "npm:15.2.0"
+    "@vercel/cli-auth": "npm:0.3.14"
+    "@vercel/cli-config": "npm:0.3.5"
+    "@vercel/cli-support": "npm:65.8.0"
+    "@vercel/container": "npm:24.0.0"
     "@vercel/detect-agent": "npm:1.2.7"
-    "@vercel/elysia": "npm:22.0.1"
-    "@vercel/express": "npm:22.0.1"
-    "@vercel/fastify": "npm:22.0.1"
+    "@vercel/elysia": "npm:24.0.0"
+    "@vercel/express": "npm:24.0.0"
+    "@vercel/fastify": "npm:24.0.0"
     "@vercel/fun": "npm:1.3.6"
-    "@vercel/go": "npm:25.0.1"
-    "@vercel/h3": "npm:22.0.1"
-    "@vercel/hono": "npm:22.0.1"
-    "@vercel/hydrogen": "npm:23.0.1"
-    "@vercel/koa": "npm:22.0.1"
-    "@vercel/nestjs": "npm:22.0.1"
-    "@vercel/next": "npm:26.0.1"
-    "@vercel/node": "npm:27.0.1"
+    "@vercel/go": "npm:27.0.0"
+    "@vercel/h3": "npm:24.0.0"
+    "@vercel/hono": "npm:24.0.0"
+    "@vercel/hydrogen": "npm:25.0.0"
+    "@vercel/koa": "npm:24.0.0"
+    "@vercel/nestjs": "npm:24.0.0"
+    "@vercel/next": "npm:28.0.0"
+    "@vercel/node": "npm:29.0.0"
     "@vercel/prepare-flags-definitions": "npm:0.6.1"
-    "@vercel/python": "npm:28.0.1"
+    "@vercel/python": "npm:30.0.0"
     "@vercel/python-analysis": "npm:0.15.2"
-    "@vercel/redwood": "npm:24.0.1"
-    "@vercel/remix-builder": "npm:27.0.1"
-    "@vercel/ruby": "npm:24.0.1"
-    "@vercel/rust": "npm:23.0.1"
-    "@vercel/static-build": "npm:24.0.1"
-    "@vercel/vc-native-darwin-arm64": "npm:65.2.0"
-    "@vercel/vc-native-darwin-x64": "npm:65.2.0"
-    "@vercel/vc-native-linux-arm64": "npm:65.2.0"
-    "@vercel/vc-native-linux-arm64-musl": "npm:65.2.0"
-    "@vercel/vc-native-linux-x64": "npm:65.2.0"
-    "@vercel/vc-native-linux-x64-musl": "npm:65.2.0"
-    "@vercel/vc-native-win32-arm64": "npm:65.2.0"
-    "@vercel/vc-native-win32-x64": "npm:65.2.0"
+    "@vercel/redwood": "npm:26.0.0"
+    "@vercel/remix-builder": "npm:29.0.0"
+    "@vercel/ruby": "npm:26.0.0"
+    "@vercel/rust": "npm:25.0.0"
+    "@vercel/static-build": "npm:26.0.0"
+    "@vercel/vc-native-darwin-arm64": "npm:65.8.0"
+    "@vercel/vc-native-darwin-x64": "npm:65.8.0"
+    "@vercel/vc-native-linux-arm64": "npm:65.8.0"
+    "@vercel/vc-native-linux-arm64-musl": "npm:65.8.0"
+    "@vercel/vc-native-linux-x64": "npm:65.8.0"
+    "@vercel/vc-native-linux-x64-musl": "npm:65.8.0"
     chokidar: "npm:4.0.0"
     esbuild: "npm:0.27.0"
     jose: "npm:5.9.6"
     jsonc-parser: "npm:3.3.1"
     luxon: "npm:^3.4.0"
-    sandbox: "npm:4.4.0"
+    sandbox: "npm:4.11.1"
     smol-toml: "npm:1.5.2"
     undici: "npm:5.29.0"
     uuid: "npm:14.0.1"
     zod: "npm:4.1.11"
   dependenciesMeta:
+    "@vercel/cli-support":
+      optional: true
     "@vercel/vc-native-darwin-arm64":
       optional: true
     "@vercel/vc-native-darwin-x64":
@@ -17578,14 +17845,10 @@ __metadata:
       optional: true
     "@vercel/vc-native-linux-x64-musl":
       optional: true
-    "@vercel/vc-native-win32-arm64":
-      optional: true
-    "@vercel/vc-native-win32-x64":
-      optional: true
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: d3786a35f81616c636fc9504b352d1dd3bc34d4d922e5e196f58682be4d662113a7a538625e346598c41c093ca33b41ad6c37a8ef0cdce2a0eb19757dbee9b78
+  checksum: 1d04277adab4140ddd215fc7a65d45ab53672e34b71cd0970b2a09b942eef385084908d2325da7c9b6bdb7d9f2f84ebff6477d5bea0dd460e8689d9c874ab6a2
   languageName: node
   linkType: hard
 
