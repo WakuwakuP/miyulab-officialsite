@@ -208,18 +208,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/core@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@babel/core@npm:8.1.2"
+"@babel/core@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/core@npm:8.1.3"
   dependencies:
     "@babel/code-frame": "npm:^8.0.6"
-    "@babel/generator": "npm:^8.1.2"
+    "@babel/generator": "npm:^8.1.3"
     "@babel/helper-compilation-targets": "npm:^8.0.7"
-    "@babel/helpers": "npm:^8.1.2"
-    "@babel/parser": "npm:^8.1.2"
+    "@babel/helpers": "npm:^8.1.3"
+    "@babel/parser": "npm:^8.1.3"
     "@babel/template": "npm:^8.1.2"
-    "@babel/traverse": "npm:^8.1.2"
-    "@babel/types": "npm:^8.1.2"
+    "@babel/traverse": "npm:^8.1.3"
+    "@babel/types": "npm:^8.1.3"
+    "@types/convert-source-map": "npm:^2.0.0"
     "@types/gensync": "npm:^1.0.5"
     convert-source-map: "npm:^2.0.0"
     empathic: "npm:^2.0.1"
@@ -228,7 +229,7 @@ __metadata:
     json5: "npm:^2.2.3"
     obug: "npm:^3.0.0"
     verkit: "npm:^0.5.0"
-  checksum: f1f3394f77c7ae5e3fb887e4c977ceeb432215862f2ec8dea74555e85c54afafc642f5d840e52fed1c8026d36adcface3448b67f24822ee1b7de943c85535329
+  checksum: 189efe3a7eb9cdec3e02a6559a0ee49c3dd8909ed3130ad3f84ff54eaee60eabd54e98a3f6c463b3cbddc7375b4537c8512e0af017bb5234676d66ac43d3f477
   languageName: node
   linkType: hard
 
@@ -309,17 +310,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/generator@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@babel/generator@npm:8.1.2"
+"@babel/generator@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/generator@npm:8.1.3"
   dependencies:
-    "@babel/parser": "npm:^8.1.2"
-    "@babel/types": "npm:^8.1.2"
+    "@babel/parser": "npm:^8.1.3"
+    "@babel/types": "npm:^8.1.3"
     "@jridgewell/gen-mapping": "npm:0.4.0-beta.0"
     "@jridgewell/trace-mapping": "npm:^0.3.31"
     "@types/jsesc": "npm:^2.5.0"
     jsesc: "npm:^3.0.2"
-  checksum: 03ad4c128f65ec8a2cea52ef18f48ad68711ce2bae28b5ad52bfdefe4f67ac2a97248073e1ffbaa3b307dc4393dc40148045ce342cc2e330cadd40874ed65a7c
+  checksum: 29a325e31f43ea37d8df98566fa23aa4cb5f278c215216fd3473d38250a12597b8384cf9b737bba0f3196a0081583f6f84fa023603e9eeb6819f59e198345d6c
   languageName: node
   linkType: hard
 
@@ -676,6 +677,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/helper-string-parser@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/helper-string-parser@npm:8.1.3"
+  checksum: 65f76583e868fdcba08aa93b3ccaf0c63ec9b72b0a3d33844ae25a4bb76282d0c954686386e999b27446297e2371e0cbc20ef7472d8fcc36dc0992d3230f12d5
+  languageName: node
+  linkType: hard
+
 "@babel/helper-validator-identifier@npm:^7.22.20":
   version: 7.22.20
   resolution: "@babel/helper-validator-identifier@npm:7.22.20"
@@ -777,13 +785,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/helpers@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@babel/helpers@npm:8.1.2"
+"@babel/helpers@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/helpers@npm:8.1.3"
   dependencies:
     "@babel/template": "npm:^8.1.2"
-    "@babel/types": "npm:^8.1.2"
-  checksum: c9182bf52315ab119362134fac9a78276500439cac4c7dfff3a635c4f93e4a62a6b2bd6eef4e9687c3d261327bacb3d5c0589332837356f6fe0283d430b18802
+    "@babel/types": "npm:^8.1.3"
+  checksum: 17a5c7c248f51dcd8ac72d27821e1ee98d11764a433030229afe00a5885f2fe6e22d6c3a7831b34d1cf32bc0be6fe1b623e90bb66c9359a5d854f0e286a930d4
   languageName: node
   linkType: hard
 
@@ -881,6 +889,17 @@ __metadata:
   bin:
     parser: ./bin/babel-parser.js
   checksum: d8ad2796c0f24149a0e2a5f39726c047e9f85f5b367edfb738f055181757ea4a2aa77c9d4c929e714cd26d2015c7321a9df9220f992c68be53f7f46ea409690e
+  languageName: node
+  linkType: hard
+
+"@babel/parser@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/parser@npm:8.1.3"
+  dependencies:
+    "@babel/types": "npm:^8.1.3"
+  bin:
+    parser: ./bin/babel-parser.js
+  checksum: 025d49f54b5d67131eec95d72a9d7f253c161e4daf7f2633ea3da720b229b0cf9db7098d61007e83296ba8dedc1239d5713605165176190ef512e43f4a934eda
   languageName: node
   linkType: hard
 
@@ -2182,18 +2201,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/traverse@npm:^8.1.2":
-  version: 8.1.2
-  resolution: "@babel/traverse@npm:8.1.2"
+"@babel/traverse@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/traverse@npm:8.1.3"
   dependencies:
     "@babel/code-frame": "npm:^8.0.6"
-    "@babel/generator": "npm:^8.1.2"
+    "@babel/generator": "npm:^8.1.3"
     "@babel/helper-globals": "npm:^8.0.6"
-    "@babel/parser": "npm:^8.1.2"
+    "@babel/parser": "npm:^8.1.3"
     "@babel/template": "npm:^8.1.2"
-    "@babel/types": "npm:^8.1.2"
+    "@babel/types": "npm:^8.1.3"
     obug: "npm:^3.0.0"
-  checksum: 1cd97471d5a089be9c37af8e50c57bf1dc5eb83173624404c0e7dfe6086e39caff9ceaeb0fb277e2ca26565403c9d59ae427a9ba61fde7b9663ca7b368547ece
+  checksum: 82c7e563b4631c2d42189c0708a0d4c16086bf4472638f8727092e1fd0b0e9eefd7440f85fff699b7be0781fefc7291e6235c71c7cb27c04edc8c38e2d113daf
   languageName: node
   linkType: hard
 
@@ -2285,6 +2304,16 @@ __metadata:
     "@babel/helper-string-parser": "npm:^8.1.2"
     "@babel/helper-validator-identifier": "npm:^8.0.6"
   checksum: 67e1bc97bfff2aa75cca07da2b58747caca7142b4d357c8c268bfe796ad2778fffb5f0016d466839adb43c86ed339c58226ef62b38e1edd7c705f8059e326472
+  languageName: node
+  linkType: hard
+
+"@babel/types@npm:^8.1.3":
+  version: 8.1.3
+  resolution: "@babel/types@npm:8.1.3"
+  dependencies:
+    "@babel/helper-string-parser": "npm:^8.1.3"
+    "@babel/helper-validator-identifier": "npm:^8.0.6"
+  checksum: 2473410675394e43c968183488d87f422d51024ec9e813fb2752b4e40cac5c4e70ef00ddc27e6a59e033d5e48cc87f24ff5c15bf94bfd940476814568bb18548
   languageName: node
   linkType: hard
 
@@ -5449,11 +5478,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/builder-webpack5@npm:10.6.7"
+"@storybook/builder-webpack5@npm:10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/builder-webpack5@npm:10.6.8"
   dependencies:
-    "@storybook/core-webpack": "npm:10.6.7"
+    "@storybook/core-webpack": "npm:10.6.8"
     case-sensitive-paths-webpack-plugin: "npm:^2.4.0"
     cjs-module-lexer: "npm:^1.2.3"
     css-loader: "npm:^7.1.2"
@@ -5470,22 +5499,22 @@ __metadata:
     webpack-hot-middleware: "npm:^2.25.1"
     webpack-virtual-modules: "npm:^0.6.0"
   peerDependencies:
-    storybook: ^10.6.7
+    storybook: ^10.6.8
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: b4a5f4c878bd10ea986c1c1b9a50a7f3755c45809af5edfcc3c2c8b1ebc0b907ed3115c0bc4eeef90c915f62ca92df741e2d8fe80cdbb92d08f3e19a6cc0a0cc
+  checksum: b3140e98d96dd70563e8293dba466de7575c7582b8bc3ba529f28b1a4e0ff937ff27be32df4a429e692070e938a397facff26535b107ea8a510694c78eba073f
   languageName: node
   linkType: hard
 
-"@storybook/core-webpack@npm:10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/core-webpack@npm:10.6.7"
+"@storybook/core-webpack@npm:10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/core-webpack@npm:10.6.8"
   dependencies:
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^10.6.7
-  checksum: 5c8c7d2be5caa3ed88cd10b1a3bc511bec3821b561e1540b8e5513327f00e0d9a7062a4af3134b4f98d6479ad0b8087e2c3ef04fe79dda38c3a5a9f162f0d331
+    storybook: ^10.6.8
+  checksum: ce3e7ee57c8ebd3639076f01fe7c9542f8b45dbadb98c9468429678a71536019ff5044a2aff52786e21a888a7d798c7d01c3b39394a5b9de2fc9e77951d8c7af
   languageName: node
   linkType: hard
 
@@ -5516,9 +5545,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/nextjs@npm:^10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/nextjs@npm:10.6.7"
+"@storybook/nextjs@npm:^10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/nextjs@npm:10.6.8"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-bigint": "npm:^7.8.3"
@@ -5534,9 +5563,9 @@ __metadata:
     "@babel/preset-typescript": "npm:^7.28.5"
     "@babel/runtime": "npm:^7.28.4"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
-    "@storybook/builder-webpack5": "npm:10.6.7"
-    "@storybook/preset-react-webpack": "npm:10.6.7"
-    "@storybook/react": "npm:10.6.7"
+    "@storybook/builder-webpack5": "npm:10.6.8"
+    "@storybook/preset-react-webpack": "npm:10.6.8"
+    "@storybook/react": "npm:10.6.8"
     "@types/semver": "npm:^7.7.1"
     babel-loader: "npm:^9.1.3"
     css-loader: "npm:^6.7.3"
@@ -5559,7 +5588,7 @@ __metadata:
     next: ^14.1.0 || ^15.0.0 || ^16.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.6.7
+    storybook: ^10.6.8
     webpack: ^5.0.0
   peerDependenciesMeta:
     "@types/react":
@@ -5570,15 +5599,15 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 7c6c14b01bf875524e2d9183918093872c0623875155291f73d13868fed23d6864971e4f472eef770402724a5ca8830ec6740d0bf4bd5c085e3d3fa96c2b5f4b
+  checksum: 96dd86f6accce507d2757190a47ff14cdff90ba4137a7483ffe60d859635e428d265defd9d0175a5ee5b70b262deda06f55ffdf2556c3094bff38f16ae067ffb
   languageName: node
   linkType: hard
 
-"@storybook/preset-react-webpack@npm:10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/preset-react-webpack@npm:10.6.7"
+"@storybook/preset-react-webpack@npm:10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/preset-react-webpack@npm:10.6.8"
   dependencies:
-    "@storybook/core-webpack": "npm:10.6.7"
+    "@storybook/core-webpack": "npm:10.6.8"
     "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.0c3f3b7.0"
     "@types/semver": "npm:^7.7.1"
     magic-string: "npm:^1.1.0"
@@ -5590,11 +5619,11 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.6.7
+    storybook: ^10.6.8
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 4701b16b7b22365cc60db82dd7c9abc3c7c293feb0a1a95549a39782731d51a8850bcd94123239b4a4fa7a1144be73f66a331d5fabeb0110bba208c1831e5cc9
+  checksum: 64f2a4504b0336f401404d73d5d7af97cd55f5ec72819504b9034ef01ef9f24b2bbb62317a567b2eb707993e49e7fc018d68fd8b6724441b9fbbec7aabb81f27
   languageName: node
   linkType: hard
 
@@ -5616,30 +5645,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-dom-shim@npm:10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/react-dom-shim@npm:10.6.7"
+"@storybook/react-dom-shim@npm:10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/react-dom-shim@npm:10.6.8"
   peerDependencies:
     "@types/react": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     "@types/react-dom": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.6.7
+    storybook: ^10.6.8
   peerDependenciesMeta:
     "@types/react":
       optional: true
     "@types/react-dom":
       optional: true
-  checksum: daff75acaa44f89a34e328e3b14133479e5395ecc32c81ac0a2447d6838e4490a314df957c21c02d711e867522a4449ee0acbfcfa5ff352a9795266849e7c729
+  checksum: dc406c4a6930c0a75fa8b52653d18dab89e13f66ad94f603ee204bd7dd84d593f7a986c90d95ca910daf6f0317122f6b2197597e4fa83153b65fb37efccc2180
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:10.6.7":
-  version: 10.6.7
-  resolution: "@storybook/react@npm:10.6.7"
+"@storybook/react@npm:10.6.8":
+  version: 10.6.8
+  resolution: "@storybook/react@npm:10.6.8"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react-dom-shim": "npm:10.6.7"
+    "@storybook/react-dom-shim": "npm:10.6.8"
     react-docgen: "npm:^8.0.2"
     react-docgen-typescript: "npm:^2.2.2"
   peerDependencies:
@@ -5647,7 +5676,7 @@ __metadata:
     "@types/react-dom": ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.6.7
+    storybook: ^10.6.8
     typescript: ">= 4.9.x"
   peerDependenciesMeta:
     "@types/react":
@@ -5656,7 +5685,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 4dd8166c475ffc9486927bc761a495d2062cfc4a3c9b3d3cef6c1575bc4ff86d3f9ec21e1dc69462f32f2e00b5872fb1346682e4d19243ecd15bbb8f2b055a39
+  checksum: 635475bb9357d950b8fbd5e6428bc96c8f5631da8b416bf887dee17999d4ff36dee0873bd15854c24876b77b3d8dc7dd96ae0b52ed0593ead77df4a1862f45c9
   languageName: node
   linkType: hard
 
@@ -6313,6 +6342,13 @@ __metadata:
     "@types/deep-eql": "npm:*"
     assertion-error: "npm:^2.0.1"
   checksum: e0ef1de3b6f8045a5e473e867c8565788c444271409d155588504840ad1a53611011f85072188c2833941189400228c1745d78323dac13fcede9c2b28bacfb2f
+  languageName: node
+  linkType: hard
+
+"@types/convert-source-map@npm:^2.0.0":
+  version: 2.0.3
+  resolution: "@types/convert-source-map@npm:2.0.3"
+  checksum: 43dd8ccad61489c245342220db74c1baf3b75586074f99609943fe1bdecf7d5dcff0acd038cb0063dd7533a90cc980101d5899afa70a638883752ad8d66de20b
   languageName: node
   linkType: hard
 
@@ -7025,9 +7061,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/cli-support@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/cli-support@npm:66.4.0"
+"@vercel/cli-support@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/cli-support@npm:66.6.0"
   dependencies:
     "@vercel/backends": "npm:27.0.0"
     "@vercel/blob": "npm:2.9.0"
@@ -7046,7 +7082,7 @@ __metadata:
     "@vercel/hydrogen": "npm:28.0.0"
     "@vercel/koa": "npm:27.0.0"
     "@vercel/nestjs": "npm:27.0.0"
-    "@vercel/next": "npm:31.0.0"
+    "@vercel/next": "npm:31.0.2"
     "@vercel/node": "npm:32.0.0"
     "@vercel/prepare-flags-definitions": "npm:0.6.1"
     "@vercel/python": "npm:33.0.0"
@@ -7265,14 +7301,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:31.0.0":
-  version: 31.0.0
-  resolution: "@vercel/next@npm:31.0.0"
+"@vercel/next@npm:31.0.2":
+  version: 31.0.2
+  resolution: "@vercel/next@npm:31.0.2"
   dependencies:
     "@vercel/nft": "npm:1.10.0"
   peerDependencies:
     "@vercel/build-utils": 15.5.0
-  checksum: 19b22e18d039ce4cee703c368ab6c1574e32a970d84c6542fa57ca5c74f80442ed27f46cca2219b874d06fb9cb41e895433a2dc3302ee7cd5115b9d0085f0c57
+  checksum: 528b95831522d65eda11db66c513a11c89729e20dbf4ae5b2836d8eea300a2efc3d23a5f8d120eca2db3d3d1a3476ee01e6198752e4ab768da2c73c36e2f6a00
   languageName: node
   linkType: hard
 
@@ -7512,58 +7548,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-darwin-arm64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-darwin-arm64@npm:66.4.0"
+"@vercel/vc-native-darwin-arm64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-darwin-arm64@npm:66.6.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-darwin-x64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-darwin-x64@npm:66.4.0"
+"@vercel/vc-native-darwin-x64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-darwin-x64@npm:66.6.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-arm64-musl@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-linux-arm64-musl@npm:66.4.0"
+"@vercel/vc-native-linux-arm64-musl@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-linux-arm64-musl@npm:66.6.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-arm64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-linux-arm64@npm:66.4.0"
+"@vercel/vc-native-linux-arm64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-linux-arm64@npm:66.6.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-x64-musl@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-linux-x64-musl@npm:66.4.0"
+"@vercel/vc-native-linux-x64-musl@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-linux-x64-musl@npm:66.6.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-linux-x64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-linux-x64@npm:66.4.0"
+"@vercel/vc-native-linux-x64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-linux-x64@npm:66.6.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-win32-arm64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-win32-arm64@npm:66.4.0"
+"@vercel/vc-native-win32-arm64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-win32-arm64@npm:66.6.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@vercel/vc-native-win32-x64@npm:66.4.0":
-  version: 66.4.0
-  resolution: "@vercel/vc-native-win32-x64@npm:66.4.0"
+"@vercel/vc-native-win32-x64@npm:66.6.0":
+  version: 66.6.0
+  resolution: "@vercel/vc-native-win32-x64@npm:66.6.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -12831,9 +12867,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^17.6.1":
-  version: 17.6.1
-  resolution: "lint-staged@npm:17.6.1"
+"lint-staged@npm:^17.6.2":
+  version: 17.6.2
+  resolution: "lint-staged@npm:17.6.2"
   dependencies:
     picomatch: "npm:^4.0.7"
     string-argv: "npm:^0.4.0"
@@ -12844,7 +12880,7 @@ __metadata:
       optional: true
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 4c7433079bc174c531ccaab68bc7171f726a65c1961abbc9b26617f6d427bae76c926688124c2c2519c7540150755025207644dba50de0ba3ce65bfb1b05f7e8
+  checksum: 9a5831c45885ae2a3cf6c6eaf16c8313ee746512523d26a5e9d87a78e4d1a1835350f08623e1d34a8aa01e59ea3750d46d1b0a4d188d4ee1208a07d1977be7b5
   languageName: node
   linkType: hard
 
@@ -13431,10 +13467,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "miyulab-officialsite@workspace:."
   dependencies:
-    "@babel/core": "npm:^8.1.2"
+    "@babel/core": "npm:^8.1.3"
     "@biomejs/biome": "npm:^2.6.8"
     "@chromatic-com/storybook": "npm:^5.6.0"
-    "@storybook/nextjs": "npm:^10.6.7"
+    "@storybook/nextjs": "npm:^10.6.8"
     "@testing-library/dom": "npm:^10.4.2"
     "@testing-library/jest-dom": "npm:^8.0.0"
     "@testing-library/react": "npm:^16.3.3"
@@ -13458,7 +13494,7 @@ __metadata:
     hygen: "npm:^6.2.11"
     jest: "npm:^30.5.2"
     jest-environment-jsdom: "npm:^30.5.2"
-    lint-staged: "npm:^17.6.1"
+    lint-staged: "npm:^17.6.2"
     microcms-js-sdk: "npm:^3.6.0"
     microcms-richedit-processer: "npm:^1.2.0"
     next: "npm:^16.4.6"
@@ -13469,11 +13505,11 @@ __metadata:
     react-scroll: "npm:^1.9.3"
     rss: "npm:^1.2.2"
     sass: "npm:^1.108.2"
-    storybook: "npm:^10.6.7"
+    storybook: "npm:^10.6.8"
     storybook-dark-mode: "npm:^5.0.0"
     tsconfig-paths-webpack-plugin: "npm:^4.2.0"
     typescript: "npm:^7.0.2"
-    vercel: "npm:^66.4.0"
+    vercel: "npm:^66.6.0"
     vite: "npm:^8.3.8"
   languageName: unknown
   linkType: soft
@@ -16250,9 +16286,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^10.6.7":
-  version: 10.6.7
-  resolution: "storybook@npm:10.6.7"
+"storybook@npm:^10.6.8":
+  version: 10.6.8
+  resolution: "storybook@npm:10.6.8"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.2"
@@ -16284,7 +16320,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: 504cdc8f337c22f951279ff0a8644e16dc800af87e10e7f4660e315974a437ac89e4270e30269feca303c5a17418be2ef3b4dc033caf7b9ff1051136364e6fed
+  checksum: 0f329e5191d2fdf635facbc131eecbce49746a351afca33246a02a3d9073278577d847ed6b05e3fff7a8631a603e9573cff2604c74e1bbe2610ee6c239e5af03
   languageName: node
   linkType: hard
 
@@ -17529,19 +17565,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vercel@npm:^66.4.0":
-  version: 66.4.0
-  resolution: "vercel@npm:66.4.0"
+"vercel@npm:^66.6.0":
+  version: 66.6.0
+  resolution: "vercel@npm:66.6.0"
   dependencies:
-    "@vercel/cli-support": "npm:66.4.0"
-    "@vercel/vc-native-darwin-arm64": "npm:66.4.0"
-    "@vercel/vc-native-darwin-x64": "npm:66.4.0"
-    "@vercel/vc-native-linux-arm64": "npm:66.4.0"
-    "@vercel/vc-native-linux-arm64-musl": "npm:66.4.0"
-    "@vercel/vc-native-linux-x64": "npm:66.4.0"
-    "@vercel/vc-native-linux-x64-musl": "npm:66.4.0"
-    "@vercel/vc-native-win32-arm64": "npm:66.4.0"
-    "@vercel/vc-native-win32-x64": "npm:66.4.0"
+    "@vercel/cli-support": "npm:66.6.0"
+    "@vercel/vc-native-darwin-arm64": "npm:66.6.0"
+    "@vercel/vc-native-darwin-x64": "npm:66.6.0"
+    "@vercel/vc-native-linux-arm64": "npm:66.6.0"
+    "@vercel/vc-native-linux-arm64-musl": "npm:66.6.0"
+    "@vercel/vc-native-linux-x64": "npm:66.6.0"
+    "@vercel/vc-native-linux-x64-musl": "npm:66.6.0"
+    "@vercel/vc-native-win32-arm64": "npm:66.6.0"
+    "@vercel/vc-native-win32-x64": "npm:66.6.0"
   dependenciesMeta:
     "@vercel/cli-support":
       optional: true
@@ -17564,7 +17600,7 @@ __metadata:
   bin:
     vc: dist/vc.js
     vercel: dist/vc.js
-  checksum: 677721d4bfe4d9446331b874cb98e4990a53fe79abcda8fe43bdaaa454df2abbde1641f23cc389dcb8141af2d7b30bfebd86a1800332472761aa00c9b072e6a1
+  checksum: 64c1605a892a5bba44e6b16dd3624b374ae81f89990d8ff53d11efc6b3b8bf84d769a64cdee66713d5473edd1fdd4505b7b3639a234481dd51ea106c9d63885a
   languageName: node
   linkType: hard
 
